@@ -12,7 +12,7 @@ namespace HotelDAL
     ///<summary>
     /// 系统数据库
     ///</summary>
-    static class HotelData
+    public static class HotelData
     {
         /// <summary>
         /// 临时数据库  (在程序运行中临时存储数据库中的数据)
