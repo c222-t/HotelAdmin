@@ -21,6 +21,8 @@ namespace HotelAdmin
         {
             InitializeComponent();
         }
+
+        /*------------------ 打开其他窗口 ------------------*/
         /// <summary>
         /// 管理员操作界面初始化
         /// </summary>
