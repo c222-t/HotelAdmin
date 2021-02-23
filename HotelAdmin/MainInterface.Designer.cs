@@ -66,95 +66,92 @@ namespace HotelAdmin
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // Billing
-            // 
-            this.Billing.Name = "Billing";
-            this.Billing.Size = new System.Drawing.Size(44, 21);
-            this.Billing.Text = "开单";
-            this.Billing.Click += new System.EventHandler(this.Billing_Click);
-            // 
-            // CheckOut
-            // 
-            this.CheckOut.Name = "CheckOut";
-            this.CheckOut.Size = new System.Drawing.Size(44, 21);
-            this.CheckOut.Text = "结账";
-            this.CheckOut.Click += new System.EventHandler(this.CheckOut_Click);
-            // 
-            // Book
-            // 
-            this.Book.Name = "Book";
-            this.Book.Size = new System.Drawing.Size(44, 21);
-            this.Book.Text = "预定";
-            this.Book.Click += new System.EventHandler(this.Book_Click);
-            // 
-            // TopUp
-            // 
-            this.TopUp.Name = "TopUp";
-            this.TopUp.Size = new System.Drawing.Size(44, 21);
-            this.TopUp.Text = "充值";
-            this.TopUp.Click += new System.EventHandler(this.TopUp_Click);
-            // 
             // InquiringThe
             // 
             this.InquiringThe.Name = "InquiringThe";
             this.InquiringThe.Size = new System.Drawing.Size(68, 21);
             this.InquiringThe.Text = "营业查询";
-            this.InquiringThe.Click += new System.EventHandler(this.InquiringThe_Click);
+            // 
+            // 客户管理ToolStripMenuItem
+            // 
+            this.客户管理ToolStripMenuItem.Name = "客户管理ToolStripMenuItem";
+            this.客户管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.客户管理ToolStripMenuItem.Text = "客户管理";
             // 
             // RoomKeeper
             // 
             this.RoomKeeper.Name = "RoomKeeper";
             this.RoomKeeper.Size = new System.Drawing.Size(68, 21);
             this.RoomKeeper.Text = "房间管理";
-            this.RoomKeeper.Click += new System.EventHandler(this.RoomKeeper_Click);
             // 
-            // CustomerCRM
+            // 员工管理ToolStripMenuItem
             // 
             this.CustomerCRM.Name = "CustomerCRM";
             this.CustomerCRM.Size = new System.Drawing.Size(68, 21);
             this.CustomerCRM.Text = "客户管理";
             this.CustomerCRM.Click += new System.EventHandler(this.CustomerCRM_Click);
             // 
-            // PersonnelManage
+            // 系统设置ToolStripMenuItem
             // 
-            this.PersonnelManage.Name = "PersonnelManage";
-            this.PersonnelManage.Size = new System.Drawing.Size(68, 21);
-            this.PersonnelManage.Text = "员工管理";
-            this.PersonnelManage.Click += new System.EventHandler(this.PersonnelManage_Click);
+            this.系统设置ToolStripMenuItem.Name = "系统设置ToolStripMenuItem";
+            this.系统设置ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.系统设置ToolStripMenuItem.Text = "系统设置";
             // 
-            // CommodityManager
+            // 关于ToolStripMenuItem
             // 
-            this.CommodityManager.Name = "CommodityManager";
-            this.CommodityManager.Size = new System.Drawing.Size(68, 21);
-            this.CommodityManager.Text = "商品管理";
-            this.CommodityManager.Click += new System.EventHandler(this.CommodityManager_Click);
+            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(32, 21);
+            this.关于ToolStripMenuItem.Text = "关";
             // 
-            // SystemSetup
+            // 商品管理ToolStripMenuItem
             // 
             this.SystemSetup.Name = "SystemSetup";
             this.SystemSetup.Size = new System.Drawing.Size(68, 21);
             this.SystemSetup.Text = "系统设置";
             this.SystemSetup.Click += new System.EventHandler(this.SystemSetup_Click);
             // 
-            // Suspend
+            // Billing
             // 
-            this.Suspend.Name = "Suspend";
-            this.Suspend.Size = new System.Drawing.Size(44, 21);
-            this.Suspend.Text = "挂起";
-            this.Suspend.Click += new System.EventHandler(this.Suspend_Click);
+            this.Billing.Name = "Billing";
+            this.Billing.Size = new System.Drawing.Size(44, 21);
+            this.Billing.Text = "开单";
             // 
-            // AsFor
+            // TopUp
+            // 
+            this.TopUp.Name = "TopUp";
+            this.TopUp.Size = new System.Drawing.Size(44, 21);
+            this.TopUp.Text = "充值";
+            // 
+            // CheckOut
+            // 
+            this.CheckOut.Name = "CheckOut";
+            this.CheckOut.Size = new System.Drawing.Size(44, 21);
+            this.CheckOut.Text = "结账";
+            // 
+            // Book
+            // 
+            this.Book.Name = "Book";
+            this.Book.Size = new System.Drawing.Size(44, 21);
+            this.Book.Text = "预定";
+            // 
+            // 挂起ToolStripMenuItem
             // 
             this.AsFor.Name = "AsFor";
             this.AsFor.Size = new System.Drawing.Size(44, 21);
             this.AsFor.Text = "关于";
             this.AsFor.Click += new System.EventHandler(this.AsFor_Click);
             // 
+            // 关于ToolStripMenuItem
+            // 
+            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.关于ToolStripMenuItem.Text = "关于";
+            // 
             // MainInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 881);
+            this.ClientSize = new System.Drawing.Size(1184, 749);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainInterface";
