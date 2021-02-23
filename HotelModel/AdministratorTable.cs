@@ -11,6 +11,7 @@ namespace HotelModel
     /// </summary>
     public class AdministratorTable
     {
+        public int asd;
         /// <summary>
         /// 用户编号
         /// </summary>
