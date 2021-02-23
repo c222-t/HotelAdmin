@@ -30,18 +30,18 @@ namespace HotelAdmin
         private void InitializeComponent()
         {
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.InquiringThe = new System.Windows.Forms.ToolStripMenuItem();
-            this.客户管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.RoomKeeper = new System.Windows.Forms.ToolStripMenuItem();
-            this.员工管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.系统设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.商品管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Billing = new System.Windows.Forms.ToolStripMenuItem();
-            this.TopUp = new System.Windows.Forms.ToolStripMenuItem();
             this.CheckOut = new System.Windows.Forms.ToolStripMenuItem();
             this.Book = new System.Windows.Forms.ToolStripMenuItem();
+            this.TopUp = new System.Windows.Forms.ToolStripMenuItem();
+            this.InquiringThe = new System.Windows.Forms.ToolStripMenuItem();
+            this.RoomKeeper = new System.Windows.Forms.ToolStripMenuItem();
+            this.客户管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.员工管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.商品管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.系统设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.挂起ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -66,59 +66,11 @@ namespace HotelAdmin
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // InquiringThe
-            // 
-            this.InquiringThe.Name = "InquiringThe";
-            this.InquiringThe.Size = new System.Drawing.Size(68, 21);
-            this.InquiringThe.Text = "营业查询";
-            // 
-            // 客户管理ToolStripMenuItem
-            // 
-            this.客户管理ToolStripMenuItem.Name = "客户管理ToolStripMenuItem";
-            this.客户管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.客户管理ToolStripMenuItem.Text = "客户管理";
-            // 
-            // RoomKeeper
-            // 
-            this.RoomKeeper.Name = "RoomKeeper";
-            this.RoomKeeper.Size = new System.Drawing.Size(68, 21);
-            this.RoomKeeper.Text = "房间管理";
-            // 
-            // 员工管理ToolStripMenuItem
-            // 
-            this.员工管理ToolStripMenuItem.Name = "员工管理ToolStripMenuItem";
-            this.员工管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.员工管理ToolStripMenuItem.Text = "员工管理";
-            // 
-            // 系统设置ToolStripMenuItem
-            // 
-            this.系统设置ToolStripMenuItem.Name = "系统设置ToolStripMenuItem";
-            this.系统设置ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.系统设置ToolStripMenuItem.Text = "系统设置";
-            // 
-            // 关于ToolStripMenuItem
-            // 
-            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(32, 21);
-            this.关于ToolStripMenuItem.Text = "关";
-            // 
-            // 商品管理ToolStripMenuItem
-            // 
-            this.商品管理ToolStripMenuItem.Name = "商品管理ToolStripMenuItem";
-            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.商品管理ToolStripMenuItem.Text = "商品管理";
-            // 
             // Billing
             // 
             this.Billing.Name = "Billing";
             this.Billing.Size = new System.Drawing.Size(44, 21);
             this.Billing.Text = "开单";
-            // 
-            // TopUp
-            // 
-            this.TopUp.Name = "TopUp";
-            this.TopUp.Size = new System.Drawing.Size(44, 21);
-            this.TopUp.Text = "充值";
             // 
             // CheckOut
             // 
@@ -132,17 +84,65 @@ namespace HotelAdmin
             this.Book.Size = new System.Drawing.Size(44, 21);
             this.Book.Text = "预定";
             // 
+            // TopUp
+            // 
+            this.TopUp.Name = "TopUp";
+            this.TopUp.Size = new System.Drawing.Size(44, 21);
+            this.TopUp.Text = "充值";
+            // 
+            // InquiringThe
+            // 
+            this.InquiringThe.Name = "InquiringThe";
+            this.InquiringThe.Size = new System.Drawing.Size(68, 21);
+            this.InquiringThe.Text = "营业查询";
+            // 
+            // RoomKeeper
+            // 
+            this.RoomKeeper.Name = "RoomKeeper";
+            this.RoomKeeper.Size = new System.Drawing.Size(68, 21);
+            this.RoomKeeper.Text = "房间管理";
+            // 
+            // 客户管理ToolStripMenuItem
+            // 
+            this.客户管理ToolStripMenuItem.Name = "客户管理ToolStripMenuItem";
+            this.客户管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.客户管理ToolStripMenuItem.Text = "客户管理";
+            // 
+            // 员工管理ToolStripMenuItem
+            // 
+            this.员工管理ToolStripMenuItem.Name = "员工管理ToolStripMenuItem";
+            this.员工管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.员工管理ToolStripMenuItem.Text = "员工管理";
+            // 
+            // 商品管理ToolStripMenuItem
+            // 
+            this.商品管理ToolStripMenuItem.Name = "商品管理ToolStripMenuItem";
+            this.商品管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.商品管理ToolStripMenuItem.Text = "商品管理";
+            // 
+            // 系统设置ToolStripMenuItem
+            // 
+            this.系统设置ToolStripMenuItem.Name = "系统设置ToolStripMenuItem";
+            this.系统设置ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.系统设置ToolStripMenuItem.Text = "系统设置";
+            // 
             // 挂起ToolStripMenuItem
             // 
             this.挂起ToolStripMenuItem.Name = "挂起ToolStripMenuItem";
             this.挂起ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.挂起ToolStripMenuItem.Text = "挂起";
             // 
+            // 关于ToolStripMenuItem
+            // 
+            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.关于ToolStripMenuItem.Text = "关于";
+            // 
             // MainInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1184, 881);
+            this.ClientSize = new System.Drawing.Size(1184, 749);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainInterface";

@@ -99,7 +99,7 @@ namespace HotelAdmin
             this.Controls.Add(this.txtPwd);
             this.Controls.Add(this.txtName);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "登录";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
