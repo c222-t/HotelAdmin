@@ -42,14 +42,14 @@ namespace HotelAdmin
             this.txtName.Location = new System.Drawing.Point(122, 188);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(129, 21);
-            this.txtName.TabIndex = 0;
+            this.txtName.TabIndex = 1;
             // 
             // txtPwd
             // 
             this.txtPwd.Location = new System.Drawing.Point(122, 237);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(129, 21);
-            this.txtPwd.TabIndex = 0;
+            this.txtPwd.TabIndex = 2;
             // 
             // label1
             // 
@@ -81,13 +81,14 @@ namespace HotelAdmin
             this.button1.Location = new System.Drawing.Point(150, 307);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 3;
             this.button1.Text = "登录";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // Form1
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));

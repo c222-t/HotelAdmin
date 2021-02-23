@@ -21,8 +21,8 @@ namespace HotelDAL
                 new SqlParameter ("@password",password),
                 new SqlParameter ("@AdministratorName",AdministratorName)
             };
-
-            return (int)db.ExecuteScalar(sql.ToString(), sp);
+            object a = db.ExecuteScalar(sql.ToString(), sp);
+            return a==null?0:(int)a;
         }
 
 
