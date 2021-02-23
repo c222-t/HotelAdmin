@@ -16,5 +16,15 @@ namespace HotelAdmin
         {
             InitializeComponent();
         }
+
+        private void Timer1_Tick(object sender, EventArgs e)
+        {
+            lblSJ.Text = "现在的时间是："+ DateTime.Now.ToString();
+        }
+
+        private void Regard_Load(object sender, EventArgs e)
+        {
+            lblSJ.Text = "现在的时间是：" + DateTime.Now.ToString();
+        }
     }
 }

@@ -7,15 +7,21 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Data;
+using HotelBLL;
+using HotelModel;
 
 namespace HotelAdmin
 {
     public partial class MainInterface : Form
     {
+        RoomManager rm = new RoomManager();
         public MainInterface()
         {
             InitializeComponent();
         }
+
+        /*------------------ 打开其他窗口 ------------------*/
         /// <summary>
         /// 管理员操作界面初始化
         /// </summary>
@@ -23,7 +29,7 @@ namespace HotelAdmin
         /// <param name="e"></param>
         private void MainInterface_Load(object sender, EventArgs e)
         {
-            
+            RoomLayout();
         }
         /// <summary>
         /// 开单
@@ -77,7 +83,7 @@ namespace HotelAdmin
         /// <param name="e"></param>
         private void RoomKeeper_Click(object sender, EventArgs e)
         {
-
+            
         }
         /// <summary>
         /// 客户管理
@@ -131,7 +137,33 @@ namespace HotelAdmin
         /// <param name="e"></param>
         private void AsFor_Click(object sender, EventArgs e)
         {
+            Regard frm = new Regard();
+            frm.ShowDialog();
+        }
 
+        public void RoomLayout()
+        {
+            DataTable dt = rm.RoomTable(tpTabs.Text);
+        }
+
+        /// <summary>
+        /// 选择选项卡发生改变
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TabControl2_Selecting(object sender, TabControlCancelEventArgs e)
+        {
+            MessageBox.Show("a");
+        }
+
+        /// <summary>
+        /// 关闭窗体同时关闭程序
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void MainInterface_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
