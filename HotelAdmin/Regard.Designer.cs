@@ -60,7 +60,7 @@
             this.lblSJ.AutoSize = true;
             this.lblSJ.BackColor = System.Drawing.Color.Transparent;
             this.lblSJ.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblSJ.Location = new System.Drawing.Point(155, 9);
+            this.lblSJ.Location = new System.Drawing.Point(81, 9);
             this.lblSJ.Name = "lblSJ";
             this.lblSJ.Size = new System.Drawing.Size(62, 16);
             this.lblSJ.TabIndex = 1;
@@ -68,6 +68,7 @@
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
@@ -189,8 +190,9 @@
             this.Controls.Add(this.lblSJ);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Regard";
-            this.StartPosition = System.Windows.Forms.FormStartPosition.WindowsDefaultBounds;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "关于我们";
+            this.Load += new System.EventHandler(this.Regard_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
