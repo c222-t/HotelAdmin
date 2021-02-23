@@ -43,5 +43,9 @@ namespace HotelModel
         /// 订单状态
         /// </summary>
         public OrderStatusTable Status { get; set; }
+        /// <summary>
+        /// 房间信息
+        /// </summary>
+        public RoomSchedules Room { get; set; }
     }
 }
