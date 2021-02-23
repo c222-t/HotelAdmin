@@ -55,6 +55,9 @@ namespace HotelAdmin
                 if (atm.AdministrTable(txtPwd.Text.Trim(), txtName.Text.Trim()) > 0)
                 {
                     MessageBox.Show("登录成功");
+                    MainInterface frm = new MainInterface();
+                    frm.Show();
+                    this.Hide();//隐藏登录界面
                 }
                 else
                 {
