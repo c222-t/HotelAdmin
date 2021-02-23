@@ -41,6 +41,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AdministratorService.cs" />
     <Compile Include="CommodityService.cs" />
     <Compile Include="HotelData.cs" />
     <Compile Include="DBHelper.cs" />
