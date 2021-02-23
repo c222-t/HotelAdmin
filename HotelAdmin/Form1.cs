@@ -16,5 +16,10 @@ namespace HotelAdmin
         {
             InitializeComponent();
         }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            MessageBox.Show("翟士尧");
+        }
     }
 }
