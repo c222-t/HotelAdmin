@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using HotelModel;
 using HotelDAL;
 
@@ -18,6 +19,15 @@ namespace HotelBLL
         /// </summary>
         RoomService service = new RoomService();
 
+        /// <summary>
+        /// 返回房间表
+        /// </summary>
+        /// <param name="leiXing">房间类型编号</param>
+        /// <returns></returns>
+        public DataTable RoomTable(string leiXing="")
+        {
+            return service.RoomTable(leiXing);
+        }
 
     }
 }
