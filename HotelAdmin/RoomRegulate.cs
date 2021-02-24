@@ -16,6 +16,7 @@ namespace HotelAdmin
     {
         DataTable dt = new DataTable();//暂时保存数据
         RoomTypeManager rtm = new RoomTypeManager();
+        RoomManager rm = new RoomManager();
         MoreTableManager mtm = new MoreTableManager();
         public RoomRegulate()
         {
@@ -58,12 +59,12 @@ namespace HotelAdmin
 
             if (tvCaiDan.SelectedNode.Level == 0)
             {
-                DataTable dt = mtm.MoreMore();
+                DataTable dt = rm.RoomTable();
                 dgvRoom.DataSource = dt;
             }
             else if (tvCaiDan.SelectedNode.Level == 1)
             {
-                DataTable dt = mtm.MoreMore(tvCaiDan.SelectedNode.Text);
+                DataTable dt = rm.RoomTable(tvCaiDan.SelectedNode.Text);
                 dgvRoom.DataSource = dt;
             }
         }
@@ -80,9 +81,12 @@ namespace HotelAdmin
                 return;
             }
 
-            dgvUser.DataSource = mtm.MoreMore(dgvRoom.SelectedRows[0].Cells[0].Value.ToString());
-                
-            
+            if (dgvRoom.SelectedRows[0].Cells[2].Value.ToString() == "空闲")
+            {
+                return;
+            }
+
+            dgvUser.DataSource = mtm.MoreMore(dgvRoom.SelectedRows[0].Cells[1].Value.ToString());
         }
     }
 }

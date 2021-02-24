@@ -18,12 +18,15 @@ namespace HotelDAL
         /// <returns></returns>
         public DataTable MoreMore(string roomType)
         {
-            StringBuilder sql = new StringBuilder("SELECT StatusName,Name,UserName,st.[IDCard],Gender,CheckInTime,TelephoneNumber,[CheckoutTime],MembershipLevel,st.[RoomNumber],[TotalConsumption] FROM [StatementTable] st join UserTable u on u.IDCard = st.IDCard join RoomSchedules r on r.RoomNumber = st.RoomNumber join MembershipTable m on m.MemberNumber = u.Member join RoomTypeTable rt on rt.[No] = r.RoomType join RoomStatus rs on rs.[No] = r.RoomStatus where 1=1");
+            StringBuilder sql = new StringBuilder("SELECT UserName,u.[IDCard],[TotalConsumption],[CheckInTime],[RoomNumber],TelephoneNumber,MembershipLevel FROM [StatementTable] st join UserTable u on u.IDCard =st.IDCard  join MembershipTable mt on mt.MemberNumber=u.Member where 1=1");
 
             if (roomType != "")
             {
-                sql.Append(string.Format (" and rt.Name='{0}' or st.IDCard='{0}'", roomType));
-                return db.GetTable(sql.ToString (),null,"MoreMore");
+                sql.Append(" and RoomNumber=@Name");
+                SqlParameter[] sp = {
+                    new SqlParameter ("@Name",roomType)
+                };
+                return db.GetTable(sql.ToString (),sp, "MoreMore");
             }
 
             return db.GetTable(sql.ToString(), null, "MoreMore");

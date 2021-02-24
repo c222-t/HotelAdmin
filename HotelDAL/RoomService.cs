@@ -19,11 +19,11 @@ namespace HotelDAL
         /// <returns></returns>
         public DataTable RoomTable(string leiXing="")
         {
-            StringBuilder sql = new StringBuilder("SELECT TOP 1000 [RoomNumber],[Floor],[RoomType],[RoomStatus] FROM [RoomSchedules] where 1=1");
+            StringBuilder sql = new StringBuilder("SELECT rs.[RoomNumber],[Floor],rtt.Name,r.StatusName FROM [RoomSchedules] rs join RoomTypeTable rtt on rtt.[No]=rs.RoomType join RoomStatus r on r.[No]=rs.RoomStatus where 1=1");
 
             if (leiXing != "")
             {
-                sql.Append(" and RoomType=@RoomType");
+                sql.Append(" and Name=@RoomType");
                 SqlParameter[] sp = {
                     new SqlParameter ("@RoomType",leiXing)
                 };
