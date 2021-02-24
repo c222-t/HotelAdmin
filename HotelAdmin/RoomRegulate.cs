@@ -20,8 +20,14 @@ namespace HotelAdmin
             InitializeComponent();      
         }
 
+        /// <summary>
+        /// 窗体加载时运行
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void RoomRegulate_Load(object sender, EventArgs e)
         {
+            //添加树形菜单内容
             DataTable dt = rtm.TypeTable();
 
             foreach (DataRow item in dt.Rows)
@@ -33,6 +39,21 @@ namespace HotelAdmin
                 tvCaiDan.Nodes[0].Nodes.Add(tn);
             }
             
+        }
+
+        private void TvCaiDan_Click(object sender, EventArgs e)
+        {
+            if (tvCaiDan.SelectedNode == null)
+            {
+                return;
+            }
+
+            if (tvCaiDan.SelectedNode.Parent == null)
+            {
+
+            }
+
+
         }
     }
 }
