@@ -30,10 +30,10 @@ namespace HotelDAL
 
                 return db.GetTable(sql.ToString(), sp, "RoomSchedules");
             }
-            HotelData.ConsignData.Tables.Remove(HotelData.ConsignData.Tables["RoomSchedules"]);
+            HotelData.Data.Tables.Remove(HotelData.Data.Tables["RoomSchedules"]);
             DataTable dt = db.GetTable(sql.ToString (),null, "RoomSchedules");
-            HotelData.ConsignData.Tables.Add(dt.Copy());
-            return HotelData.ConsignData.Tables["RoomSchedules"];
+            HotelData.Data.Tables.Add(dt.Copy());
+            return HotelData.Data.Tables["RoomSchedules"];
         }
 
         /// <summary>
@@ -43,16 +43,16 @@ namespace HotelDAL
         /// <returns></returns>
         public DataTable RoomInsert(RoomSchedules room)
         {
-            DataRow dr = HotelData.ConsignData.Tables["RoomSchedules"].NewRow();
+            DataRow dr = HotelData.Data.Tables["RoomSchedules"].NewRow();
 
             dr["RoomNumber"] = room.RoomNumber;
             dr["Floor"] = room.Floor;
             dr["RoomType"] = room.RoomType.No;
             dr["RoomStatus"] = room.RoomStatus.No;
 
-            HotelData.ConsignData.Tables["RoomSchedules"].Rows.Add(dr);
+            HotelData.Data.Tables["RoomSchedules"].Rows.Add(dr);
 
-            return HotelData.ConsignData.Tables["RoomSchedules"];
+            return HotelData.Data.Tables["RoomSchedules"];
         }
 
         /// <summary>
@@ -62,15 +62,15 @@ namespace HotelDAL
         /// <returns></returns>
         public DataTable RoomDelect(string name)
         {
-            foreach (DataRow item in HotelData.ConsignData.Tables["RoomSchedules"].Rows)
+            foreach (DataRow item in HotelData.Data.Tables["RoomSchedules"].Rows)
             {
                 if (item["RoomNumber"].ToString() == name)
                 {
-                    HotelData.ConsignData.Tables["RoomSchedules"].Rows.Remove(item);
+                    HotelData.Data.Tables["RoomSchedules"].Rows.Remove(item);
                     break;
                 }
             }
-            return HotelData.ConsignData.Tables["RoomSchedules"];
+            return HotelData.Data.Tables["RoomSchedules"];
         }
 
         /// <summary>
@@ -81,16 +81,16 @@ namespace HotelDAL
         /// <returns></returns>
         public DataTable RoomUpdate(string num,RoomSchedules room)
         {
-            for (int i=0;i< HotelData.ConsignData.Tables["RoomSchedules"].Rows.Count;i++)
+            for (int i=0;i< HotelData.Data.Tables["RoomSchedules"].Rows.Count;i++)
             {
-                if (HotelData.ConsignData.Tables["RoomSchedules"].Rows[i]["RoomNumber"].ToString() == num)
+                if (HotelData.Data.Tables["RoomSchedules"].Rows[i]["RoomNumber"].ToString() == num)
                 {
-                    HotelData.ConsignData.Tables["RoomSchedules"].Rows[i]["RoomType"] = room.RoomType.No;
-                    HotelData.ConsignData.Tables["RoomSchedules"].Rows[i]["RoomStatus"] = room.RoomStatus.No;
+                    HotelData.Data.Tables["RoomSchedules"].Rows[i]["RoomType"] = room.RoomType.No;
+                    HotelData.Data.Tables["RoomSchedules"].Rows[i]["RoomStatus"] = room.RoomStatus.No;
                     break;
                 }
             }
-            return HotelData.ConsignData.Tables["RoomSchedules"];
+            return HotelData.Data.Tables["RoomSchedules"];
         }
 
 
