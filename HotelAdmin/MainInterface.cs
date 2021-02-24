@@ -15,6 +15,7 @@ namespace HotelAdmin
     public partial class MainInterface : Form
     {
         RoomManager rm = new RoomManager();
+        RoomTypeManager rtm = new RoomTypeManager();
         public MainInterface()
         {
             InitializeComponent();
@@ -140,9 +141,40 @@ namespace HotelAdmin
             frm.ShowDialog();
         }
 
+        /// <summary>
+        /// 选项卡中房间布局
+        /// </summary>
         public void RoomLayout()
         {
-            DataTable dt = rm.RoomTable(tpTabs.Text);
+            tcXuanXiang.SelectedTab.Controls.Clear();
+            DataTable dt = rm.RoomTable(tcXuanXiang.SelectedTab.Text == "全部" ? "" : rtm.TypeID(tcXuanXiang.SelectedTab.Text).ToString());
+
+            for (int row = 0; row < (dt.Rows.Count % 5 == 0 ? dt.Rows.Count / 5 : dt.Rows.Count / 5 + 1); row++)
+            {
+                for (int i = 0; i < 5; i++)
+                {
+                    if (row * 5 + i >= dt.Rows.Count)
+                    {
+                        break;
+                    }
+                    Label lbl = new Label();
+                    lbl.Size = new System.Drawing.Size(81, 31);
+                    int x = (i + 1) * (lbl.Size.Width + 10) + 100;
+                    int y = (row + 1) * (lbl.Size.Height + 15) + 30;
+                    lbl.AutoSize = true;
+                    lbl.BackColor = System.Drawing.Color.Yellow;
+                    lbl.Font = new System.Drawing.Font("宋体", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+                    lbl.Location = new System.Drawing.Point(x, y);
+                    lbl.Name = "lbl_" + dt.Rows[row*5 + i]["RoomNumber"].ToString().Trim();
+                    lbl.TabIndex = 0;
+                    lbl.Text = dt.Rows[row*5 + i]["RoomNumber"].ToString().Trim();
+                    lbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+                    this.tcXuanXiang.SelectedTab.Controls.Add(lbl);
+                }
+            }
+
+
+
         }
 
         /// <summary>
@@ -152,7 +184,7 @@ namespace HotelAdmin
         /// <param name="e"></param>
         private void TabControl2_Selecting(object sender, TabControlCancelEventArgs e)
         {
-            MessageBox.Show("a");
+            RoomLayout();
         }
 
         /// <summary>

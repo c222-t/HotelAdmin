@@ -49,7 +49,7 @@ namespace HotelAdmin
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.tpTabs = new System.Windows.Forms.TabPage();
-            this.tabControl2 = new System.Windows.Forms.TabControl();
+            this.tcXuanXiang = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.tabPage5 = new System.Windows.Forms.TabPage();
@@ -88,7 +88,7 @@ namespace HotelAdmin
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            this.tabControl2.SuspendLayout();
+            this.tcXuanXiang.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
@@ -290,10 +290,10 @@ namespace HotelAdmin
             // 
             // tabPage4
             // 
-            this.tabPage4.Location = new System.Drawing.Point(4, 24);
+            this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(878, 642);
+            this.tabPage4.Size = new System.Drawing.Size(700, 655);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "标准间";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -303,26 +303,28 @@ namespace HotelAdmin
             this.tpTabs.Location = new System.Drawing.Point(4, 22);
             this.tpTabs.Name = "tpTabs";
             this.tpTabs.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTabs.Size = new System.Drawing.Size(700, 655);
+            this.tpTabs.Size = new System.Drawing.Size(700, 644);
             this.tpTabs.TabIndex = 0;
             this.tpTabs.Text = "全部";
             this.tpTabs.UseVisualStyleBackColor = true;
             // 
-            // tabControl2
+            // tcXuanXiang
             // 
-            this.tabControl2.Controls.Add(this.tpTabs);
-            this.tabControl2.Controls.Add(this.tabPage4);
-            this.tabControl2.Controls.Add(this.tabPage1);
-            this.tabControl2.Controls.Add(this.tabPage2);
-            this.tabControl2.Controls.Add(this.tabPage5);
-            this.tabControl2.Controls.Add(this.tabPage6);
-            this.tabControl2.Dock = System.Windows.Forms.DockStyle.Right;
-            this.tabControl2.Location = new System.Drawing.Point(559, 25);
-            this.tabControl2.Name = "tabControl2";
-            this.tabControl2.SelectedIndex = 0;
-            this.tabControl2.Size = new System.Drawing.Size(708, 681);
-            this.tabControl2.TabIndex = 2;
-            this.tabControl2.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.TabControl2_Selecting);
+            this.tcXuanXiang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.tcXuanXiang.Controls.Add(this.tpTabs);
+            this.tcXuanXiang.Controls.Add(this.tabPage4);
+            this.tcXuanXiang.Controls.Add(this.tabPage1);
+            this.tcXuanXiang.Controls.Add(this.tabPage2);
+            this.tcXuanXiang.Controls.Add(this.tabPage5);
+            this.tcXuanXiang.Controls.Add(this.tabPage6);
+            this.tcXuanXiang.Location = new System.Drawing.Point(559, 26);
+            this.tcXuanXiang.Name = "tcXuanXiang";
+            this.tcXuanXiang.SelectedIndex = 0;
+            this.tcXuanXiang.Size = new System.Drawing.Size(708, 670);
+            this.tcXuanXiang.TabIndex = 2;
+            this.tcXuanXiang.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.TabControl2_Selecting);
             // 
             // tabPage1
             // 
@@ -336,12 +338,12 @@ namespace HotelAdmin
             // 
             // tabPage2
             // 
-            this.tabPage2.Location = new System.Drawing.Point(4, 24);
+            this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage2.Size = new System.Drawing.Size(878, 642);
+            this.tabPage2.Size = new System.Drawing.Size(700, 644);
             this.tabPage2.TabIndex = 3;
-            this.tabPage2.Text = "豪华间";
+            this.tabPage2.Text = "豪华单人间";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // tabPage5
@@ -356,12 +358,12 @@ namespace HotelAdmin
             // 
             // tabPage6
             // 
-            this.tabPage6.Location = new System.Drawing.Point(4, 24);
+            this.tabPage6.Location = new System.Drawing.Point(4, 22);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(878, 642);
+            this.tabPage6.Size = new System.Drawing.Size(700, 644);
             this.tabPage6.TabIndex = 5;
-            this.tabPage6.Text = "总统房";
+            this.tabPage6.Text = "总统套房";
             this.tabPage6.UseVisualStyleBackColor = true;
             // 
             // menuStrip1
@@ -647,7 +649,7 @@ namespace HotelAdmin
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
-            this.Controls.Add(this.tabControl2);
+            this.Controls.Add(this.tcXuanXiang);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.MaximizeBox = false;
@@ -663,7 +665,7 @@ namespace HotelAdmin
             this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            this.tabControl2.ResumeLayout(false);
+            this.tcXuanXiang.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -686,7 +688,7 @@ namespace HotelAdmin
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TabPage tabPage4;
         private System.Windows.Forms.TabPage tpTabs;
-        private System.Windows.Forms.TabControl tabControl2;
+        private System.Windows.Forms.TabControl tcXuanXiang;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem Billing;
         private System.Windows.Forms.ToolStripMenuItem CheckOut;
