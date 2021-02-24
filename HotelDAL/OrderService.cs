@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using System.Data.SqlClient;
-using System.Linq.Expressions;
 using System.Data;
 using HotelModel;
 
@@ -22,17 +20,14 @@ namespace HotelDAL
         /// <returns>返回满足条件的订单列表</returns>
         public DataTable SeekOrderRecord(StatementTable order)
         {
-            // 创建临时数据表获取所有订单记录
-            DataTable table = HotelData.Data.Tables["StatementTable"];
+            DataTable table = HotelData.Data.Tables["StatementTable"];  // 创建临时数据表获取所有订单记录
 
             // 根据指定的条件执行相应的查询方式
-            if (order.OrderNumber.Equals(string.Empty)) {               // 是否根据编号查询订单
+            if (order.OrderNumber != null) {                            // 是否根据编号查询订单
                 CompareStatementNo(table, order);
-            }
-            else if (!order.IDCard.Equals(string.Empty)) {              // 是否根据身份证查询订单
+            } else if (order.IDCard != null) {                          // 是否根据身份证查询订单
                 CompareStatementIDCard(table, order);
-            }
-            else if (!order.Status.Number.Equals(0)) {                  // 是否根据订单状态查询订单
+            } else if (order.Status != null) {                          // 是否根据订单状态查询订单
                 CompareStatementStatus(table, order);
             }
             return table;                                               // 返回得到的订单记录
@@ -46,7 +41,9 @@ namespace HotelDAL
             // 遍历系统临时数据库搜索满足条件的记录
             foreach (DataRow row in HotelData.Data.Tables["StatementTable"].Rows)
             {
-                if (order.OrderNumber.Equals(row["orderNumber"])) {     // 删除指定条件的记录
+                // 根据订单编号删除记录
+                if (order.OrderNumber.Equals(row["OrderNumber"].ToString().Trim()))
+                {
                     HotelData.Data.Tables["StatementTable"].Rows.Remove(row);
                     break;
                 }
@@ -61,15 +58,17 @@ namespace HotelDAL
             // 遍历系统临时数据库搜索满足条件的记录
             foreach (DataRow row in HotelData.Data.Tables["StatementTable"].Rows)
             {
-                if (order.OrderNumber.Equals(row["orderNumber"]))       // 修改指定的条件的记录
+                // 根据订单编号修改指定的记录
+                if (order.OrderNumber.Equals(row["OrderNumber"].ToString().Trim()))
                 {
-                    row[1] = order.IDCard;
-                    row[2] = order.TotalConsumption;
-                    row[3] = order.PaymentMethod;
-                    row[4] = order.CheckInTime.ToString();
-                    row[5] = order.CheckoutTime.ToString();
-                    row[6] = order.OperationManager;
-                    row[7] = order.Status.Number;
+                    row["IDCard"] = order.IDCard;
+                    row["TotalConsumption"] = order.TotalConsumption;
+                    row["PaymentMethod"] = order.PaymentMethod;
+                    row["CheckInTime"] = order.CheckInTime.ToString();
+                    row["CheckoutTime"] = order.CheckoutTime.ToString();
+                    row["OperationManaer"] = order.OperationManager;
+                    row["Status"] = order.Status.Number;
+                    row["RoomNumber"] = order.Room.RoomNumber;
                     break;
                 }
             }
@@ -80,17 +79,18 @@ namespace HotelDAL
         /// <param name="order">需要添加的订单记录</param>
         public void AddOrderRecord(StatementTable order)
         {
-            if (order.OrderNumber.Equals(string.Empty))                 // 判断记录是否满足条件
+            if (order.OrderNumber != null)                              // 判断记录是否满足条件
             {
                 DataRow row = HotelData.Data.Tables["StatementTable"].NewRow();
-                row[0] = order.OrderNumber;
-                row[1] = order.IDCard;
-                row[2] = order.TotalConsumption;
-                row[3] = order.PaymentMethod;
-                row[4] = order.CheckInTime.ToString();
-                row[5] = order.CheckoutTime.ToString();
-                row[6] = order.OperationManager;
-                row[7] = order.Status.Number;
+                row["OrderNumber"] = order.OrderNumber;
+                row["IDCard"] = order.IDCard;
+                row["TotalConsumption"] = order.TotalConsumption;
+                row["PaymentMethod"] = order.PaymentMethod;
+                row["CheckInTime"] = order.CheckInTime.ToString();
+                row["CheckoutTime"] = order.CheckoutTime.ToString();
+                row["OperationManaer"] = order.OperationManager;
+                row["Status"] = order.Status.Number;
+                row["RoomNumber"] = order.Room.RoomNumber;
                 HotelData.Data.Tables["StatementTable"].Rows.Add(row);
             }
         }
@@ -104,7 +104,7 @@ namespace HotelDAL
         {
             // 根据指定订单编号查询记录
             var table = from row in dataTable.AsEnumerable()
-                        where row["orderNumber"].Equals(order.OrderNumber.ToString())
+                        where row["OrderNumber"].ToString().Trim().Equals(order.OrderNumber.ToString())
                         select row;
 
             return table.CopyToDataTable();                             // 返回得到的记录
@@ -134,7 +134,7 @@ namespace HotelDAL
         {
             // 查询满足指定状态的订单记录
             var table = from row in dataTable.AsEnumerable()
-                        where row["Number"].Equals(order.Status.Number)
+                        where row["Status"].Equals(order.Status.Number)
                         select row;
 
             return table.CopyToDataTable();                             // 返回得到的记录
