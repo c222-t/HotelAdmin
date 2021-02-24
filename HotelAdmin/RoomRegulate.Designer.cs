@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("全部");
+            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("全部");
             this.tvCaiDan = new System.Windows.Forms.TreeView();
             this.dgvRoom = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -51,10 +51,10 @@
             this.tvCaiDan.Dock = System.Windows.Forms.DockStyle.Left;
             this.tvCaiDan.Location = new System.Drawing.Point(0, 0);
             this.tvCaiDan.Name = "tvCaiDan";
-            treeNode2.Name = "节点0";
-            treeNode2.Text = "全部";
+            treeNode1.Name = "节点0";
+            treeNode1.Text = "全部";
             this.tvCaiDan.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            treeNode1});
             this.tvCaiDan.Size = new System.Drawing.Size(158, 581);
             this.tvCaiDan.TabIndex = 0;
             this.tvCaiDan.Click += new System.EventHandler(this.TvCaiDan_Click);
@@ -85,24 +85,6 @@
             this.dgvRoom.Size = new System.Drawing.Size(728, 273);
             this.dgvRoom.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(160, 2);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(728, 28);
-            this.label1.TabIndex = 3;
-            this.label1.Text = "                         用户住房情况";
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(160, 309);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(728, 28);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "                         此用户信息";
-            // 
             // Column1
             // 
             this.Column1.HeaderText = "房间号";
@@ -126,6 +108,24 @@
             this.Column4.HeaderText = "入住时间";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(160, 2);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(728, 28);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "                         用户住房情况";
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(160, 309);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(728, 28);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "                         此用户信息";
             // 
             // dataGridView1
             // 
