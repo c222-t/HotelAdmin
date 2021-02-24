@@ -29,5 +29,10 @@ namespace HotelBLL
             return service.RoomTable(leiXing);
         }
 
+        public DataTable RoomInsert(RoomSchedules room)
+        {
+            return service.RoomInsert(room);
+        }
+
     }
 }

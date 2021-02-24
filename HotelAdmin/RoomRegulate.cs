@@ -26,6 +26,28 @@ namespace HotelAdmin
         }
 
         /// <summary>
+        /// 刷新
+        /// </summary>
+        public void ShuaXin()
+        {
+            if (tvCaiDan.SelectedNode == null)
+            {
+                return;
+            }
+
+            if (tvCaiDan.SelectedNode.Level == 0)
+            {
+                DataTable dt = rm.RoomTable();
+                dgvRoom.DataSource = dt;
+            }
+            else if (tvCaiDan.SelectedNode.Level == 1)
+            {
+                DataTable dt = rm.RoomTable(tvCaiDan.SelectedNode.Text);
+                dgvRoom.DataSource = dt;
+            }
+        }
+
+        /// <summary>
         /// 窗体加载时运行
         /// </summary>
         /// <param name="sender"></param>
@@ -52,21 +74,7 @@ namespace HotelAdmin
         /// <param name="e"></param>
         private void TvCaiDan_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            if (tvCaiDan.SelectedNode == null)
-            {
-                return;
-            }
-
-            if (tvCaiDan.SelectedNode.Level == 0)
-            {
-                DataTable dt = rm.RoomTable();
-                dgvRoom.DataSource = dt;
-            }
-            else if (tvCaiDan.SelectedNode.Level == 1)
-            {
-                DataTable dt = rm.RoomTable(tvCaiDan.SelectedNode.Text);
-                dgvRoom.DataSource = dt;
-            }
+            ShuaXin();
         }
 
         /// <summary>
@@ -87,6 +95,19 @@ namespace HotelAdmin
             }
 
             dgvUser.DataSource = mtm.MoreMore(dgvRoom.SelectedRows[0].Cells[1].Value.ToString());
+        }
+
+        /// <summary>
+        /// 新增
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ToolStripButton1_Click(object sender, EventArgs e)
+        {
+            RoomInsertAndUpdate riau = new RoomInsertAndUpdate();
+            riau.frm = this;
+            riau.asd = toolStripButton1.Text;
+            riau.Show();
         }
     }
 }

@@ -30,10 +30,7 @@ namespace HotelDAL
 
                 return db.GetTable(sql.ToString(), sp, "RoomSchedules");
             }
-            HotelData.Data.Tables.Remove(HotelData.Data.Tables["RoomSchedules"]);
-            DataTable dt = db.GetTable(sql.ToString (),null, "RoomSchedules");
-            HotelData.Data.Tables.Add(dt.Copy());
-            return HotelData.Data.Tables["RoomSchedules"];
+            return db.GetTable(sql.ToString(), null, "RoomSchedules");
         }
 
         /// <summary>
@@ -51,6 +48,7 @@ namespace HotelDAL
             dr["RoomStatus"] = room.RoomStatus.No;
 
             HotelData.Data.Tables["RoomSchedules"].Rows.Add(dr);
+            HotelData.UploadData();
 
             return HotelData.Data.Tables["RoomSchedules"];
         }
@@ -70,6 +68,7 @@ namespace HotelDAL
                     break;
                 }
             }
+            HotelData.UploadData();
             return HotelData.Data.Tables["RoomSchedules"];
         }
 
@@ -90,6 +89,7 @@ namespace HotelDAL
                     break;
                 }
             }
+            HotelData.UploadData();
             return HotelData.Data.Tables["RoomSchedules"];
         }
 
