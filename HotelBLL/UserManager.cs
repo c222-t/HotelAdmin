@@ -29,6 +29,15 @@ namespace HotelBLL
             return service.SeeUserRecord(name);
         }
         /// <summary>
+        /// 查询指定顾客的消费记录
+        /// </summary>
+        /// <param name="idCard">顾客身份证</param>
+        /// <returns>返回指定的顾客消费列表</returns>
+        public DataTable GetConsumeRecord(string idCard)
+        {
+            return service.GetConsumeRecord(idCard);
+        }
+        /// <summary>
         /// 删除指定的顾客信息
         /// </summary>
         /// <param name="IDCard">顾客身份证</param>
