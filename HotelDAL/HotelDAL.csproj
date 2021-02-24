@@ -45,6 +45,7 @@
     <Compile Include="CommodityService.cs" />
     <Compile Include="HotelData.cs" />
     <Compile Include="DBHelper.cs" />
+    <Compile Include="MoreTableService.cs" />
     <Compile Include="OrderService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomService.cs" />
