@@ -85,6 +85,11 @@ namespace HotelAdmin
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.lblSoLo = new System.Windows.Forms.Label();
+            this.lblDouble = new System.Windows.Forms.Label();
+            this.lblLuxury = new System.Windows.Forms.Label();
+            this.lblBigBed = new System.Windows.Forms.Label();
+            this.lblPres = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -293,7 +298,7 @@ namespace HotelAdmin
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(700, 655);
+            this.tabPage4.Size = new System.Drawing.Size(700, 644);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "标准间";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -328,10 +333,10 @@ namespace HotelAdmin
             // 
             // tabPage1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(878, 642);
+            this.tabPage1.Size = new System.Drawing.Size(700, 644);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "双人间";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -348,10 +353,10 @@ namespace HotelAdmin
             // 
             // tabPage5
             // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 24);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(878, 642);
+            this.tabPage5.Size = new System.Drawing.Size(700, 644);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "大床房";
             this.tabPage5.UseVisualStyleBackColor = true;
@@ -479,10 +484,15 @@ namespace HotelAdmin
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.Controls.Add(this.label18);
+            this.panel2.Controls.Add(this.lblPres);
             this.panel2.Controls.Add(this.label22);
+            this.panel2.Controls.Add(this.lblBigBed);
             this.panel2.Controls.Add(this.label23);
+            this.panel2.Controls.Add(this.lblLuxury);
             this.panel2.Controls.Add(this.label25);
+            this.panel2.Controls.Add(this.lblDouble);
             this.panel2.Controls.Add(this.label26);
+            this.panel2.Controls.Add(this.lblSoLo);
             this.panel2.Controls.Add(this.label27);
             this.panel2.Controls.Add(this.label28);
             this.panel2.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -641,6 +651,51 @@ namespace HotelAdmin
             this.label8.TabIndex = 2;
             this.label8.Text = "总房态：";
             // 
+            // lblSoLo
+            // 
+            this.lblSoLo.AutoSize = true;
+            this.lblSoLo.Location = new System.Drawing.Point(106, 44);
+            this.lblSoLo.Name = "lblSoLo";
+            this.lblSoLo.Size = new System.Drawing.Size(63, 14);
+            this.lblSoLo.TabIndex = 3;
+            this.lblSoLo.Text = "单人间：";
+            // 
+            // lblDouble
+            // 
+            this.lblDouble.AutoSize = true;
+            this.lblDouble.Location = new System.Drawing.Point(108, 81);
+            this.lblDouble.Name = "lblDouble";
+            this.lblDouble.Size = new System.Drawing.Size(63, 14);
+            this.lblDouble.TabIndex = 4;
+            this.lblDouble.Text = "双人间：";
+            // 
+            // lblLuxury
+            // 
+            this.lblLuxury.AutoSize = true;
+            this.lblLuxury.Location = new System.Drawing.Point(108, 118);
+            this.lblLuxury.Name = "lblLuxury";
+            this.lblLuxury.Size = new System.Drawing.Size(63, 14);
+            this.lblLuxury.TabIndex = 5;
+            this.lblLuxury.Text = "豪华间：";
+            // 
+            // lblBigBed
+            // 
+            this.lblBigBed.AutoSize = true;
+            this.lblBigBed.Location = new System.Drawing.Point(108, 155);
+            this.lblBigBed.Name = "lblBigBed";
+            this.lblBigBed.Size = new System.Drawing.Size(63, 14);
+            this.lblBigBed.TabIndex = 7;
+            this.lblBigBed.Text = "大床房：";
+            // 
+            // lblPres
+            // 
+            this.lblPres.AutoSize = true;
+            this.lblPres.Location = new System.Drawing.Point(108, 192);
+            this.lblPres.Name = "lblPres";
+            this.lblPres.Size = new System.Drawing.Size(77, 14);
+            this.lblPres.TabIndex = 8;
+            this.lblPres.Text = "总统套房：";
+            // 
             // MainInterface
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -734,5 +789,10 @@ namespace HotelAdmin
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
         private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.Label lblPres;
+        private System.Windows.Forms.Label lblBigBed;
+        private System.Windows.Forms.Label lblLuxury;
+        private System.Windows.Forms.Label lblDouble;
+        private System.Windows.Forms.Label lblSoLo;
     }
 }

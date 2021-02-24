@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using HotelModel;
 using System.Data.SqlClient;
+using System.Data;
 
 namespace HotelDAL
 {
@@ -24,7 +25,28 @@ namespace HotelDAL
                 new SqlParameter ("@Name",name)
             };
 
-            return (int)db.ExecuteScalar(sql.ToString(),sp);
+            return (int)db.ExecuteScalar(sql.ToString(), sp);
+        }
+
+        /// <summary>
+        /// 返回房间类型表
+        /// </summary>
+        /// <param name="type">可选参数，可指定房间编号</param>
+        /// <returns></returns>
+        public DataTable TypeTable(string type="")
+        {
+            StringBuilder sql = new StringBuilder("SELECT [No],[Name],[Price],[Days] FROM [RoomTypeTable] where 1=1");
+
+            if (type != "")
+            {
+                sql.Append(" and No=@No");
+                SqlParameter[] sp = {
+                    new SqlParameter ("@No",type)
+                };
+                return db.GetTable(sql.ToString(), null, "RoomTypeTable");
+            }
+
+            return db.GetTable(sql.ToString (),null, "RoomTypeTable");
         }
 
 

@@ -7,7 +7,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using System.Data;
 using HotelBLL;
 using HotelModel;
 
@@ -173,8 +172,11 @@ namespace HotelAdmin
                     this.tcXuanXiang.SelectedTab.Controls.Add(lbl);
                 }
             }
+        }
 
 
+        public void TypePrice()
+        {
 
         }
 
