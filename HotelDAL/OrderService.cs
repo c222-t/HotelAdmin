@@ -23,7 +23,7 @@ namespace HotelDAL
         public DataTable SeekOrderRecord(StatementTable order)
         {
             // 创建临时数据表获取所有订单记录
-            DataTable table = HotelData.ConsignData.Tables["StatementTable"];
+            DataTable table = HotelData.Data.Tables["StatementTable"];
 
             // 根据指定的条件执行相应的查询方式
             if (order.OrderNumber.Equals(string.Empty)) {               // 是否根据编号查询订单
@@ -44,10 +44,10 @@ namespace HotelDAL
         public void DeleteOrderRecord(StatementTable order)
         {
             // 遍历系统临时数据库搜索满足条件的记录
-            foreach (DataRow row in HotelData.ConsignData.Tables["StatementTable"].Rows)
+            foreach (DataRow row in HotelData.Data.Tables["StatementTable"].Rows)
             {
                 if (order.OrderNumber.Equals(row["orderNumber"])) {     // 删除指定条件的记录
-                    HotelData.ConsignData.Tables["StatementTable"].Rows.Remove(row);
+                    HotelData.Data.Tables["StatementTable"].Rows.Remove(row);
                     break;
                 }
             }
@@ -59,7 +59,7 @@ namespace HotelDAL
         public void AmendOrderRecord(StatementTable order)
         {
             // 遍历系统临时数据库搜索满足条件的记录
-            foreach (DataRow row in HotelData.ConsignData.Tables["StatementTable"].Rows)
+            foreach (DataRow row in HotelData.Data.Tables["StatementTable"].Rows)
             {
                 if (order.OrderNumber.Equals(row["orderNumber"]))       // 修改指定的条件的记录
                 {
@@ -82,7 +82,7 @@ namespace HotelDAL
         {
             if (order.OrderNumber.Equals(string.Empty))                 // 判断记录是否满足条件
             {
-                DataRow row = HotelData.ConsignData.Tables["StatementTable"].NewRow();
+                DataRow row = HotelData.Data.Tables["StatementTable"].NewRow();
                 row[0] = order.OrderNumber;
                 row[1] = order.IDCard;
                 row[2] = order.TotalConsumption;
@@ -91,7 +91,7 @@ namespace HotelDAL
                 row[5] = order.CheckoutTime.ToString();
                 row[6] = order.OperationManager;
                 row[7] = order.Status.Number;
-                HotelData.ConsignData.Tables["StatementTable"].Rows.Add(row);
+                HotelData.Data.Tables["StatementTable"].Rows.Add(row);
             }
         }
         /// <summary>
