@@ -67,6 +67,12 @@
     <Compile Include="Regard.Designer.cs">
       <DependentUpon>Regard.cs</DependentUpon>
     </Compile>
+    <Compile Include="RoomRegulate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RoomRegulate.Designer.cs">
+      <DependentUpon>RoomRegulate.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +90,9 @@
     </Compile>
     <EmbeddedResource Include="Regard.resx">
       <DependentUpon>Regard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RoomRegulate.resx">
+      <DependentUpon>RoomRegulate.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
