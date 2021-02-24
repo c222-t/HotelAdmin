@@ -293,7 +293,7 @@ namespace HotelAdmin
             this.tabPage4.Location = new System.Drawing.Point(4, 22);
             this.tabPage4.Name = "tabPage4";
             this.tabPage4.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage4.Size = new System.Drawing.Size(700, 655);
+            this.tabPage4.Size = new System.Drawing.Size(700, 644);
             this.tabPage4.TabIndex = 1;
             this.tabPage4.Text = "标准间";
             this.tabPage4.UseVisualStyleBackColor = true;
@@ -303,35 +303,33 @@ namespace HotelAdmin
             this.tpTabs.Location = new System.Drawing.Point(4, 22);
             this.tpTabs.Name = "tpTabs";
             this.tpTabs.Padding = new System.Windows.Forms.Padding(3);
-            this.tpTabs.Size = new System.Drawing.Size(700, 644);
+            this.tpTabs.Size = new System.Drawing.Size(700, 655);
             this.tpTabs.TabIndex = 0;
             this.tpTabs.Text = "全部";
             this.tpTabs.UseVisualStyleBackColor = true;
             // 
             // tcXuanXiang
             // 
-            this.tcXuanXiang.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
             this.tcXuanXiang.Controls.Add(this.tpTabs);
             this.tcXuanXiang.Controls.Add(this.tabPage4);
             this.tcXuanXiang.Controls.Add(this.tabPage1);
             this.tcXuanXiang.Controls.Add(this.tabPage2);
             this.tcXuanXiang.Controls.Add(this.tabPage5);
             this.tcXuanXiang.Controls.Add(this.tabPage6);
-            this.tcXuanXiang.Location = new System.Drawing.Point(559, 26);
+            this.tcXuanXiang.Dock = System.Windows.Forms.DockStyle.Right;
+            this.tcXuanXiang.Location = new System.Drawing.Point(559, 25);
             this.tcXuanXiang.Name = "tcXuanXiang";
             this.tcXuanXiang.SelectedIndex = 0;
-            this.tcXuanXiang.Size = new System.Drawing.Size(708, 670);
+            this.tcXuanXiang.Size = new System.Drawing.Size(708, 681);
             this.tcXuanXiang.TabIndex = 2;
             this.tcXuanXiang.Selecting += new System.Windows.Forms.TabControlCancelEventHandler(this.TabControl2_Selecting);
             // 
             // tabPage1
             // 
-            this.tabPage1.Location = new System.Drawing.Point(4, 24);
+            this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(878, 642);
+            this.tabPage1.Size = new System.Drawing.Size(700, 644);
             this.tabPage1.TabIndex = 2;
             this.tabPage1.Text = "双人间";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -348,10 +346,10 @@ namespace HotelAdmin
             // 
             // tabPage5
             // 
-            this.tabPage5.Location = new System.Drawing.Point(4, 24);
+            this.tabPage5.Location = new System.Drawing.Point(4, 22);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(878, 642);
+            this.tabPage5.Size = new System.Drawing.Size(700, 644);
             this.tabPage5.TabIndex = 4;
             this.tabPage5.Text = "大床房";
             this.tabPage5.UseVisualStyleBackColor = true;

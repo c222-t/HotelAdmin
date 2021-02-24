@@ -17,7 +17,7 @@ namespace HotelDAL
         /// <summary>
         /// 临时数据库  (在程序运行中临时存储数据库中的数据)
         /// </summary>
-        public static DataSet ConsignData = new DataSet();
+        public static DataSet Data = new DataSet();
         /// <summary>
         /// 数据库访问对象
         /// </summary>
@@ -30,11 +30,12 @@ namespace HotelDAL
                 gain.GetTable("select * from RoomSchedules", null, "RoomSchedules"),    // 获取数据库的 房间 数据信息
                 gain.GetTable("select * from CommodityTable", null, "CommodityTable"),  // 获取数据库的 商品 数据信息
                 gain.GetTable("select * from StatementTable", null, "StatementTable"),  // 获取数据库的 订单 数据信息
-                gain.GetTable("select * from UserTable", null, "UserTable")             // 获取数据库的 顾客 数据信息
+                gain.GetTable("select * from UserTable", null, "UserTable"),            // 获取数据库的 顾客 数据信息
+                gain.GetTable("select * from ConsumptionRecord", null, "ConsumptionRecord") // 获取数据库的 消费 数据信息
             };
             // 向程序的临时数据库上传获得的各项数据表
             foreach (DataTable arr in tables) {
-                ConsignData.Tables.Add(arr.Copy());
+                Data.Tables.Add(arr.Copy());
             }
         }
         /// <summary>
@@ -46,7 +47,7 @@ namespace HotelDAL
             SqlCommandBuilder sqls = new SqlCommandBuilder(sqlData);        // 更新操作对象
 
             // 将临时数据库中的每张数据表保存到数据库对应的数据表中
-            foreach (DataTable arr in ConsignData.Tables) {
+            foreach (DataTable arr in Data.Tables) {
                 DataSet set = new DataSet();                                // 创建临时数据集对象
                 set.Tables.Add(arr.Copy());                                 // 获取临时数据库的数据表
                 sqlData.Update(set, arr.TableName);                         // 向数据库表上传操作后的数据
