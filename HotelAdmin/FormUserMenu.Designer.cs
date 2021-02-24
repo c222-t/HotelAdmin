@@ -75,13 +75,13 @@
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.textBox10 = new System.Windows.Forms.TextBox();
-            this.button3 = new System.Windows.Forms.Button();
             this.label23 = new System.Windows.Forms.Label();
             this.textBox12 = new System.Windows.Forms.TextBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.listView1 = new System.Windows.Forms.ListView();
+            this.button3 = new System.Windows.Forms.Button();
             this.gbUserJBXX.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -526,15 +526,6 @@
             this.textBox10.Size = new System.Drawing.Size(151, 21);
             this.textBox10.TabIndex = 17;
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(361, 165);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(71, 23);
-            this.button3.TabIndex = 10;
-            this.button3.Text = "确定信息";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
             // label23
             // 
             this.label23.AutoSize = true;
@@ -589,6 +580,15 @@
             this.listView1.Size = new System.Drawing.Size(224, 306);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(360, 168);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(71, 23);
+            this.button3.TabIndex = 10;
+            this.button3.Text = "确定信息";
+            this.button3.UseVisualStyleBackColor = true;
             // 
             // FormUserMenu
             // 
@@ -670,10 +670,10 @@
         private System.Windows.Forms.TextBox textBox12;
         private System.Windows.Forms.Label label23;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.ListView listView1;
+        private System.Windows.Forms.Button button3;
     }
 }
