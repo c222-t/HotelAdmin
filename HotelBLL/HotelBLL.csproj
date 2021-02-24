@@ -43,6 +43,7 @@
   <ItemGroup>
     <Compile Include="AdministratorManager.cs" />
     <Compile Include="CommodityManager.cs" />
+    <Compile Include="MoreTableManager.cs" />
     <Compile Include="OrderManager.cs" />
     <Compile Include="RoomManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -14,10 +14,14 @@ namespace HotelAdmin
 {
     public partial class RoomRegulate : Form
     {
+        DataTable dt = new DataTable();//暂时保存数据
         RoomTypeManager rtm = new RoomTypeManager();
+        MoreTableManager mtm = new MoreTableManager();
         public RoomRegulate()
         {
-            InitializeComponent();      
+            InitializeComponent();
+            dgvRoom.AutoGenerateColumns = false;
+            dgvUser.AutoGenerateColumns = false;
         }
 
         /// <summary>
@@ -38,22 +42,47 @@ namespace HotelAdmin
 
                 tvCaiDan.Nodes[0].Nodes.Add(tn);
             }
-            
         }
 
-        private void TvCaiDan_Click(object sender, EventArgs e)
+        /// <summary>
+        /// 选中房间类型显示信息
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TvCaiDan_AfterSelect(object sender, TreeViewEventArgs e)
         {
             if (tvCaiDan.SelectedNode == null)
             {
                 return;
             }
 
-            if (tvCaiDan.SelectedNode.Parent == null)
+            if (tvCaiDan.SelectedNode.Level == 0)
             {
+                DataTable dt = mtm.MoreMore();
+                dgvRoom.DataSource = dt;
+            }
+            else if (tvCaiDan.SelectedNode.Level == 1)
+            {
+                DataTable dt = mtm.MoreMore(tvCaiDan.SelectedNode.Text);
+                dgvRoom.DataSource = dt;
+            }
+        }
 
+        /// <summary>
+        /// 选中查看用户信息
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void DgvRoom_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgvRoom.SelectedRows.Count == 0)
+            {
+                return;
             }
 
-
+            dgvUser.DataSource = mtm.MoreMore(dgvRoom.SelectedRows[0].Cells[0].Value.ToString());
+                
+            
         }
     }
 }
