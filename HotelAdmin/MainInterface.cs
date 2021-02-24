@@ -30,6 +30,8 @@ namespace HotelAdmin
         private void MainInterface_Load(object sender, EventArgs e)
         {
             RoomLayout();
+            TypePrice();
+            RoomStatus();
         }
         /// <summary>
         /// 开单
@@ -174,10 +176,49 @@ namespace HotelAdmin
             }
         }
 
+        /// <summary>
+        /// 今日房态
+        /// </summary>
+        public void RoomStatus()
+        {
+            DataTable dt = rm.RoomTable();
 
+            int kong = 0;
+            int zhan = 0;
+            int yu = 0;
+            lblCount.Text = dt.Rows.Count.ToString();
+            foreach (DataRow item in dt.Rows)
+            {
+                if (item["RoomStatus"].ToString() == "1")
+                {
+                    kong++;
+                }
+                else if (item["RoomStatus"].ToString() == "2")
+                {
+                    zhan++;
+                }
+                else if (item["RoomStatus"].ToString() == "3")
+                {
+                    yu++;
+                }
+            }
+            lblKong.Text = kong.ToString();
+            lblZhan.Text = zhan.ToString();
+            lblYu.Text = yu.ToString();
+            prbLv.Value = (yu + zhan) / dt.Rows.Count;
+        }
+
+        /// <summary>
+        /// 今日房价
+        /// </summary>
         public void TypePrice()
         {
-
+            DataTable dt = rtm.TypeTable();
+            lblSoLo.Text = dt.Rows[0]["Price"].ToString();
+            lblBigBed.Text = dt.Rows[1]["Price"].ToString();
+            lblDouble.Text = dt.Rows[2]["Price"].ToString();
+            lblLuxury.Text = dt.Rows[3]["Price"].ToString();
+            lblPres.Text = dt.Rows[4]["Price"].ToString();
         }
 
         /// <summary>

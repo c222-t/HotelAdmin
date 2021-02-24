@@ -27,7 +27,7 @@ namespace HotelBLL
         /// </summary>
         /// <param name="type">可选参数，可指定房间编号</param>
         /// <returns></returns>
-        public DataTable TypeTable(string type)
+        public DataTable TypeTable(string type="")
         {
             return rts.TypeTable(type);
         }
