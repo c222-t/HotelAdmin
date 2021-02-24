@@ -19,26 +19,21 @@ namespace HotelDAL
         /// <returns></returns>
         public DataTable RoomTable(string leiXing="")
         {
-            DataTable dt = HotelData.ConsignData.Tables["RoomSchedules"];
-
-            DataTable d = new DataTable();
+            StringBuilder sql = new StringBuilder("SELECT TOP 1000 [RoomNumber],[Floor],[RoomType],[RoomStatus] FROM [RoomSchedules] where 1=1");
 
             if (leiXing != "")
             {
-                for (int i=0;i< dt.Rows.Count;i++)
-                {
-                    if (dt.Rows [i]["RoomType"].ToString() == leiXing)
-                    {
-                        DataRow dr = dt.NewRow();
-                        dr["RoomNumber"] = dt.Rows[i]["RoomNumber"].ToString();
-                        dr["Floor"]= dt.Rows[i]["Floor"].ToString();
-                        dr["RoomType"] = dt.Rows[i]["RoomType"].ToString();
-                        dr["RoomStatus"]= dt.Rows[i]["RoomStatus"].ToString();
-                        d.Rows.Add(dr);
-                    }
-                }
+                sql.Append(" and RoomType=@RoomType");
+                SqlParameter[] sp = {
+                    new SqlParameter ("@RoomType",leiXing)
+                };
+
+                return db.GetTable(sql.ToString(), sp, "RoomSchedules");
             }
-            return dt;
+            HotelData.ConsignData.Tables.Remove(HotelData.ConsignData.Tables["RoomSchedules"]);
+            DataTable dt = db.GetTable(sql.ToString (),null, "RoomSchedules");
+            HotelData.ConsignData.Tables.Add(dt.Copy());
+            return HotelData.ConsignData.Tables["RoomSchedules"];
         }
 
         /// <summary>
