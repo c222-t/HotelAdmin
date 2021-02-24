@@ -14,7 +14,7 @@ namespace HotelModel
         /// <summary>
         /// 订单编号
         /// </summary>
-        public int OrderNumber { get; set; }
+        public string OrderNumber { get; set; }
         /// <summary>
         /// 身份证
         /// </summary>

@@ -20,6 +20,10 @@ namespace HotelModel
         /// </summary>
         public string IDCard { get; set; }
         /// <summary>
+        /// 消费描述
+        /// </summary>
+        public string Describe { get; set; }
+        /// <summary>
         /// 消费金额
         /// </summary>
         public double Money { get; set; }
