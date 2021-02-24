@@ -22,7 +22,7 @@ namespace HotelDAL
         {
             // 搜索系统临时数据库中满足名称条件的顾客信息
             var table = from row in HotelData.Data.Tables["UserTable"].AsEnumerable()
-                        where row["UserName"].ToString().Contains(name)
+                        where row["UserName"].ToString().Trim().Contains(name)
                         select row;
 
             return table.CopyToDataTable();                             // 返回得到的记录
@@ -50,7 +50,7 @@ namespace HotelDAL
             // 遍历系统临时数据库搜索满足条件的记录
             foreach (DataRow row in HotelData.Data.Tables["ConsumptionRecord"].Rows)
             {
-                if (IDCard.Equals(row["IDCard"])) {                     // 删除指定的顾客信息
+                if (IDCard.Equals(row["IDCard"])) {                     // 根据身份证删除指定的顾客信息
                     HotelData.Data.Tables["ConsumptionRecord"].Rows.Remove(row);
                     break;
                 }
@@ -67,13 +67,12 @@ namespace HotelDAL
             {
                 if (user.IDCard.Equals(row["IDCard"]))                  // 修改指定的顾客信息
                 {
-                    row[0] = user.UserName;
-                    row[1] = user.IDCard;
-                    row[2] = user.TelephoneNumber;
-                    row[3] = user.Balance;
-                    row[4] = user.Member;
-                    row[5] = user.Gender;
-                    row[6] = user.Age;
+                    row["UserName"] = user.UserName;
+                    row["TelephoneNumber"] = user.TelephoneNumber;
+                    row["Balance"] = user.Balance;
+                    row["Member"] = user.Member.MemberNumber;
+                    row["Gender"] = user.Gender;
+                    row["Age"] = user.Age;
                     break;
                 }
             }
