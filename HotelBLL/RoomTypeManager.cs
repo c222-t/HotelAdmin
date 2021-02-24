@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data;
 using HotelDAL;
 using HotelModel;
 
@@ -19,6 +20,16 @@ namespace HotelBLL
         public int TypeID(string name)
         {
             return rts.TypeID(name);
+        }
+
+        /// <summary>
+        /// 返回房间表
+        /// </summary>
+        /// <param name="type">可选参数，可指定房间编号</param>
+        /// <returns></returns>
+        public DataTable TypeTable(string type="")
+        {
+            return rts.TypeTable(type);
         }
 
     }

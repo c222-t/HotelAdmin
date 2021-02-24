@@ -76,15 +76,23 @@ namespace HotelAdmin
             this.label26 = new System.Windows.Forms.Label();
             this.label27 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.progressBar1 = new System.Windows.Forms.ProgressBar();
+            this.prbLv = new System.Windows.Forms.ProgressBar();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
+            this.lblSoLo = new System.Windows.Forms.Label();
+            this.lblDouble = new System.Windows.Forms.Label();
+            this.lblLuxury = new System.Windows.Forms.Label();
+            this.lblBigBed = new System.Windows.Forms.Label();
+            this.lblPres = new System.Windows.Forms.Label();
+            this.lblCount = new System.Windows.Forms.Label();
+            this.lblZhan = new System.Windows.Forms.Label();
+            this.lblKong = new System.Windows.Forms.Label();
+            this.lblYu = new System.Windows.Forms.Label();
             this.panel3.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -477,10 +485,15 @@ namespace HotelAdmin
             // 
             this.panel2.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel2.Controls.Add(this.label18);
+            this.panel2.Controls.Add(this.lblPres);
             this.panel2.Controls.Add(this.label22);
+            this.panel2.Controls.Add(this.lblBigBed);
             this.panel2.Controls.Add(this.label23);
+            this.panel2.Controls.Add(this.lblLuxury);
             this.panel2.Controls.Add(this.label25);
+            this.panel2.Controls.Add(this.lblDouble);
             this.panel2.Controls.Add(this.label26);
+            this.panel2.Controls.Add(this.lblSoLo);
             this.panel2.Controls.Add(this.label27);
             this.panel2.Controls.Add(this.label28);
             this.panel2.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -500,7 +513,7 @@ namespace HotelAdmin
             // label22
             // 
             this.label22.AutoSize = true;
-            this.label22.Location = new System.Drawing.Point(23, 192);
+            this.label22.Location = new System.Drawing.Point(23, 225);
             this.label22.Name = "label22";
             this.label22.Size = new System.Drawing.Size(77, 14);
             this.label22.TabIndex = 8;
@@ -509,7 +522,7 @@ namespace HotelAdmin
             // label23
             // 
             this.label23.AutoSize = true;
-            this.label23.Location = new System.Drawing.Point(23, 155);
+            this.label23.Location = new System.Drawing.Point(35, 179);
             this.label23.Name = "label23";
             this.label23.Size = new System.Drawing.Size(63, 14);
             this.label23.TabIndex = 7;
@@ -518,7 +531,7 @@ namespace HotelAdmin
             // label25
             // 
             this.label25.AutoSize = true;
-            this.label25.Location = new System.Drawing.Point(23, 118);
+            this.label25.Location = new System.Drawing.Point(37, 135);
             this.label25.Name = "label25";
             this.label25.Size = new System.Drawing.Size(63, 14);
             this.label25.TabIndex = 5;
@@ -527,7 +540,7 @@ namespace HotelAdmin
             // label26
             // 
             this.label26.AutoSize = true;
-            this.label26.Location = new System.Drawing.Point(23, 81);
+            this.label26.Location = new System.Drawing.Point(35, 96);
             this.label26.Name = "label26";
             this.label26.Size = new System.Drawing.Size(63, 14);
             this.label26.TabIndex = 4;
@@ -536,22 +549,25 @@ namespace HotelAdmin
             // label27
             // 
             this.label27.AutoSize = true;
-            this.label27.Location = new System.Drawing.Point(21, 44);
+            this.label27.Location = new System.Drawing.Point(35, 58);
             this.label27.Name = "label27";
             this.label27.Size = new System.Drawing.Size(63, 14);
             this.label27.TabIndex = 3;
-            this.label27.Text = "单人间：";
+            this.label27.Text = "标准间：";
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.panel1.Controls.Add(this.progressBar1);
+            this.panel1.Controls.Add(this.prbLv);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.lblYu);
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.lblKong);
             this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.lblZhan);
+            this.panel1.Controls.Add(this.lblCount);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label8);
             this.panel1.Font = new System.Drawing.Font("宋体", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -560,12 +576,12 @@ namespace HotelAdmin
             this.panel1.Size = new System.Drawing.Size(248, 323);
             this.panel1.TabIndex = 4;
             // 
-            // progressBar1
+            // prbLv
             // 
-            this.progressBar1.Location = new System.Drawing.Point(109, 242);
-            this.progressBar1.Name = "progressBar1";
-            this.progressBar1.Size = new System.Drawing.Size(100, 23);
-            this.progressBar1.TabIndex = 13;
+            this.prbLv.Location = new System.Drawing.Point(94, 229);
+            this.prbLv.Name = "prbLv";
+            this.prbLv.Size = new System.Drawing.Size(100, 23);
+            this.prbLv.TabIndex = 13;
             // 
             // label1
             // 
@@ -578,7 +594,7 @@ namespace HotelAdmin
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(40, 246);
+            this.label2.Location = new System.Drawing.Point(25, 233);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 14);
             this.label2.TabIndex = 8;
@@ -587,7 +603,7 @@ namespace HotelAdmin
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(26, 206);
+            this.label3.Location = new System.Drawing.Point(11, 193);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(77, 14);
             this.label3.TabIndex = 7;
@@ -596,34 +612,25 @@ namespace HotelAdmin
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(26, 164);
+            this.label4.Location = new System.Drawing.Point(11, 151);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(77, 14);
             this.label4.TabIndex = 6;
-            this.label4.Text = "当前空脏：";
+            this.label4.Text = "当前空闲：";
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(26, 123);
+            this.label5.Location = new System.Drawing.Point(11, 110);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(77, 14);
             this.label5.TabIndex = 5;
             this.label5.Text = "当前占用：";
             // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(26, 81);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(77, 14);
-            this.label6.TabIndex = 4;
-            this.label6.Text = "当前可供：";
-            // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(26, 45);
+            this.label7.Location = new System.Drawing.Point(11, 70);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(77, 14);
             this.label7.TabIndex = 3;
@@ -638,6 +645,87 @@ namespace HotelAdmin
             this.label8.Size = new System.Drawing.Size(67, 14);
             this.label8.TabIndex = 2;
             this.label8.Text = "总房态：";
+            // 
+            // lblSoLo
+            // 
+            this.lblSoLo.AutoSize = true;
+            this.lblSoLo.Location = new System.Drawing.Point(108, 58);
+            this.lblSoLo.Name = "lblSoLo";
+            this.lblSoLo.Size = new System.Drawing.Size(63, 14);
+            this.lblSoLo.TabIndex = 3;
+            this.lblSoLo.Text = "单人间：";
+            // 
+            // lblDouble
+            // 
+            this.lblDouble.AutoSize = true;
+            this.lblDouble.Location = new System.Drawing.Point(108, 96);
+            this.lblDouble.Name = "lblDouble";
+            this.lblDouble.Size = new System.Drawing.Size(63, 14);
+            this.lblDouble.TabIndex = 4;
+            this.lblDouble.Text = "双人间：";
+            // 
+            // lblLuxury
+            // 
+            this.lblLuxury.AutoSize = true;
+            this.lblLuxury.Location = new System.Drawing.Point(110, 135);
+            this.lblLuxury.Name = "lblLuxury";
+            this.lblLuxury.Size = new System.Drawing.Size(63, 14);
+            this.lblLuxury.TabIndex = 5;
+            this.lblLuxury.Text = "豪华间：";
+            // 
+            // lblBigBed
+            // 
+            this.lblBigBed.AutoSize = true;
+            this.lblBigBed.Location = new System.Drawing.Point(108, 179);
+            this.lblBigBed.Name = "lblBigBed";
+            this.lblBigBed.Size = new System.Drawing.Size(63, 14);
+            this.lblBigBed.TabIndex = 7;
+            this.lblBigBed.Text = "大床房：";
+            // 
+            // lblPres
+            // 
+            this.lblPres.AutoSize = true;
+            this.lblPres.Location = new System.Drawing.Point(108, 225);
+            this.lblPres.Name = "lblPres";
+            this.lblPres.Size = new System.Drawing.Size(77, 14);
+            this.lblPres.TabIndex = 8;
+            this.lblPres.Text = "总统套房：";
+            // 
+            // lblCount
+            // 
+            this.lblCount.AutoSize = true;
+            this.lblCount.Location = new System.Drawing.Point(96, 70);
+            this.lblCount.Name = "lblCount";
+            this.lblCount.Size = new System.Drawing.Size(14, 14);
+            this.lblCount.TabIndex = 3;
+            this.lblCount.Text = "0";
+            // 
+            // lblZhan
+            // 
+            this.lblZhan.AutoSize = true;
+            this.lblZhan.Location = new System.Drawing.Point(96, 110);
+            this.lblZhan.Name = "lblZhan";
+            this.lblZhan.Size = new System.Drawing.Size(14, 14);
+            this.lblZhan.TabIndex = 5;
+            this.lblZhan.Text = "0";
+            // 
+            // lblKong
+            // 
+            this.lblKong.AutoSize = true;
+            this.lblKong.Location = new System.Drawing.Point(96, 151);
+            this.lblKong.Name = "lblKong";
+            this.lblKong.Size = new System.Drawing.Size(14, 14);
+            this.lblKong.TabIndex = 6;
+            this.lblKong.Text = "0";
+            // 
+            // lblYu
+            // 
+            this.lblYu.AutoSize = true;
+            this.lblYu.Location = new System.Drawing.Point(96, 193);
+            this.lblYu.Name = "lblYu";
+            this.lblYu.Size = new System.Drawing.Size(14, 14);
+            this.lblYu.TabIndex = 7;
+            this.lblYu.Text = "0";
             // 
             // MainInterface
             // 
@@ -714,7 +802,6 @@ namespace HotelAdmin
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -731,6 +818,15 @@ namespace HotelAdmin
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage5;
         private System.Windows.Forms.TabPage tabPage6;
-        private System.Windows.Forms.ProgressBar progressBar1;
+        private System.Windows.Forms.ProgressBar prbLv;
+        private System.Windows.Forms.Label lblPres;
+        private System.Windows.Forms.Label lblBigBed;
+        private System.Windows.Forms.Label lblLuxury;
+        private System.Windows.Forms.Label lblDouble;
+        private System.Windows.Forms.Label lblSoLo;
+        private System.Windows.Forms.Label lblYu;
+        private System.Windows.Forms.Label lblKong;
+        private System.Windows.Forms.Label lblZhan;
+        private System.Windows.Forms.Label lblCount;
     }
 }
