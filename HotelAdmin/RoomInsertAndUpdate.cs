@@ -16,6 +16,7 @@ namespace HotelAdmin
     {
         public RoomRegulate frm = null;
         public string asd = "";
+        public RoomSchedules room = null;
         RoomTypeManager rtm = new RoomTypeManager();
         RoomManager rm = new RoomManager();
         public RoomInsertAndUpdate()
@@ -58,9 +59,12 @@ namespace HotelAdmin
             {
                 this.Text = "增加房间";
             }
-            else
+            else if(asd=="修改")
             {
                 this.Text = "修改房间信息";
+                txtLou.Text = room.Floor;
+                txtRoomName.Text = room.RoomNumber;
+                cbRoomType.Text = room.RoomType.Name;
             }
         }
 
@@ -74,15 +78,24 @@ namespace HotelAdmin
                     RoomNumber = txtRoomName.Text,
                     RoomStatus = new RoomStatus()
                     {
-                        No=1
+                        No = 1
                     },
-                    RoomType =new RoomTypeTable()
+                    RoomType = new RoomTypeTable()
                     {
                         Name = cbRoomType.Text,
                         No = rtm.TypeID(cbRoomType.Text)
                     }
                 };
-                rm.RoomInsert(room);
+
+                if (asd == "新增")
+                {
+                    rm.RoomInsert(room);
+                }
+                else
+                {
+                    rm.RoomUpdate(room.RoomNumber ,room);
+                }
+                MessageBox.Show("操作成功");
                 frm.ShuaXin();
                 this.Close();
             }

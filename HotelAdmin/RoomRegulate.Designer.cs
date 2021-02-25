@@ -28,14 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode1 = new System.Windows.Forms.TreeNode("全部");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("全部");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoomRegulate));
             this.tvCaiDan = new System.Windows.Forms.TreeView();
             this.dgvRoom = new System.Windows.Forms.DataGridView();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvUser = new System.Windows.Forms.DataGridView();
@@ -50,6 +46,11 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.tsC.SuspendLayout();
@@ -60,10 +61,10 @@
             this.tvCaiDan.Dock = System.Windows.Forms.DockStyle.Left;
             this.tvCaiDan.Location = new System.Drawing.Point(0, 0);
             this.tvCaiDan.Name = "tvCaiDan";
-            treeNode1.Name = "节点0";
-            treeNode1.Text = "全部";
+            treeNode3.Name = "节点0";
+            treeNode3.Text = "全部";
             this.tvCaiDan.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode1});
+            treeNode3});
             this.tvCaiDan.Size = new System.Drawing.Size(158, 581);
             this.tvCaiDan.TabIndex = 0;
             this.tvCaiDan.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TvCaiDan_AfterSelect);
@@ -83,7 +84,8 @@
             this.Column7,
             this.Column1,
             this.Column3,
-            this.Column2});
+            this.Column2,
+            this.Column4});
             this.dgvRoom.Location = new System.Drawing.Point(194, 30);
             this.dgvRoom.MultiSelect = false;
             this.dgvRoom.Name = "dgvRoom";
@@ -94,35 +96,6 @@
             this.dgvRoom.Size = new System.Drawing.Size(692, 273);
             this.dgvRoom.TabIndex = 1;
             this.dgvRoom.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvRoom_CellContentClick);
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "IDCard";
-            this.Column7.HeaderText = "身份证号";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Visible = false;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "RoomNumber";
-            this.Column1.HeaderText = "房间号";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "StatusName";
-            this.Column3.HeaderText = "房间状态";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Floor";
-            this.Column2.HeaderText = "楼层";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
             // 
             // label1
             // 
@@ -264,6 +237,43 @@
             this.toolStripButton3.Text = "修改";
             this.toolStripButton3.TextDirection = System.Windows.Forms.ToolStripTextDirection.Horizontal;
             this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.toolStripButton3.Click += new System.EventHandler(this.ToolStripButton3_Click);
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "IDCard";
+            this.Column7.HeaderText = "身份证号";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "RoomNumber";
+            this.Column1.HeaderText = "房间号";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "StatusName";
+            this.Column3.HeaderText = "房间状态";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Floor";
+            this.Column2.HeaderText = "楼层";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Name";
+            this.Column4.HeaderText = "房间类型";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
             // 
             // RoomRegulate
             // 
@@ -296,10 +306,6 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dgvUser;
         private System.Windows.Forms.ToolStrip tsC;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
         private System.Windows.Forms.ToolStripButton toolStripButton1;
         private System.Windows.Forms.ToolStripButton toolStripButton2;
         private System.Windows.Forms.ToolStripButton toolStripButton3;
@@ -310,5 +316,10 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }

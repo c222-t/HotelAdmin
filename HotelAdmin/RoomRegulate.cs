@@ -89,7 +89,7 @@ namespace HotelAdmin
                 return;
             }
 
-            if (dgvRoom.SelectedRows[0].Cells[2].Value.ToString() == "空闲")
+            if (dgvRoom.SelectedRows[0].Cells[2].Value.ToString().Trim() == "空闲")
             {
                 return;
             }
@@ -112,7 +112,47 @@ namespace HotelAdmin
 
         private void ToolStripButton2_Click(object sender, EventArgs e)
         {
+            if (dgvRoom.SelectedRows[0].Cells[2].Value.ToString ().Trim() == "占用")
+            {
+                MessageBox.Show("已有顾客!");
+                return;
+            }
 
+            rm.RoomDelect(dgvRoom.SelectedRows[0].Cells[1].Value.ToString());
+            ShuaXin();
+        }
+
+        /// <summary>
+        /// 修改
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ToolStripButton3_Click(object sender, EventArgs e)
+        {
+            if (dgvRoom.SelectedRows[0].Cells[2].Value.ToString().Trim() == "占用")
+            {
+                MessageBox.Show("已有顾客!");
+                return;
+            }
+
+            RoomInsertAndUpdate riau = new RoomInsertAndUpdate();
+            riau.frm = this;
+            riau.asd = toolStripButton3.Text;
+            RoomSchedules room = new RoomSchedules()
+            {
+                Floor = dgvRoom.SelectedRows[0].Cells[3].Value.ToString(),
+                RoomNumber = dgvRoom.SelectedRows[0].Cells[1].Value.ToString(),
+                RoomStatus = new RoomStatus()
+                {
+                    StatusName = dgvRoom.SelectedRows[0].Cells[2].Value.ToString()
+                },
+                RoomType = new RoomTypeTable()
+                {
+                    Name = dgvRoom.SelectedRows[0].Cells[4].Value.ToString()
+                }
+            };
+            riau.room = room;
+            riau.Show();
         }
     }
 }
