@@ -50,7 +50,7 @@ namespace HotelAdmin
         // 查询顾客信息
         private void Btn_Inquire_Click(object sender, EventArgs e)
         {
-            // 根据顾客会员编号获取完整的顾客信息
+            // 根据顾客的会员编号获取完整的顾客信息
             var table = from row in manager.SeeUserRecord(Txt_InquireBox.Text).AsEnumerable()
                         join arr in member on (int)row["Member"] equals arr.MemberNumber
                         select new {
