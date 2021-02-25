@@ -43,16 +43,14 @@ namespace HotelDAL
         /// </summary>
         public static void UploadData()
         {
-            SqlDataAdapter sqlData = new SqlDataAdapter();                  // 更新调用对象
-            SqlCommandBuilder sqls = new SqlCommandBuilder();               // 更新操作对象
+            SqlConnection conn = new SqlConnection("server=.; database=Hotel; uid=sa; pwd=sa;");
             
             // 将临时数据库中的每张数据表保存到数据库对应的数据表中
             foreach (DataTable arr in Data.Tables)
             {
-                DataTable table = arr.Copy();                               // 获取当前数据表
-                sqlData.FillSchema(table, SchemaType.Mapped);               // 加载当前数据表的结构
-                sqls = new SqlCommandBuilder(sqlData);                      // 绑定要上传的数据表
-                sqlData.Update(table);                                      // 更新数据库中相对应的表
+                SqlDataAdapter sqlData = new SqlDataAdapter("select * from "+ arr.TableName, conn);
+                SqlCommandBuilder sqls = new SqlCommandBuilder(sqlData);    // 绑定要上传的数据表
+                sqlData.Update(arr.Copy());                                      // 更新数据库中相对应的表
             }
         }
     }
