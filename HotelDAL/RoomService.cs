@@ -64,7 +64,7 @@ namespace HotelDAL
             {
                 if (item["RoomNumber"].ToString().Trim() == name.Trim ())
                 {
-                    HotelData.Data.Tables["RoomSchedules"].Rows.Remove(item);
+                    item.Delete();
                     break;
                 }
             }
