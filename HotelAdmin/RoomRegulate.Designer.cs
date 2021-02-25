@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("全部");
+            System.Windows.Forms.TreeNode treeNode5 = new System.Windows.Forms.TreeNode("全部");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoomRegulate));
             this.tvCaiDan = new System.Windows.Forms.TreeView();
             this.dgvRoom = new System.Windows.Forms.DataGridView();
@@ -61,10 +61,10 @@
             this.tvCaiDan.Dock = System.Windows.Forms.DockStyle.Left;
             this.tvCaiDan.Location = new System.Drawing.Point(0, 0);
             this.tvCaiDan.Name = "tvCaiDan";
-            treeNode4.Name = "节点0";
-            treeNode4.Text = "全部";
+            treeNode5.Name = "节点0";
+            treeNode5.Text = "全部";
             this.tvCaiDan.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode4});
+            treeNode5});
             this.tvCaiDan.Size = new System.Drawing.Size(158, 581);
             this.tvCaiDan.TabIndex = 0;
             this.tvCaiDan.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TvCaiDan_AfterSelect);
@@ -88,14 +88,14 @@
             this.Column3,
             this.Column2,
             this.Column4});
-            this.dgvRoom.Location = new System.Drawing.Point(194, 30);
+            this.dgvRoom.Location = new System.Drawing.Point(198, 30);
             this.dgvRoom.MultiSelect = false;
             this.dgvRoom.Name = "dgvRoom";
             this.dgvRoom.ReadOnly = true;
             this.dgvRoom.RowHeadersVisible = false;
             this.dgvRoom.RowTemplate.Height = 23;
             this.dgvRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRoom.Size = new System.Drawing.Size(692, 273);
+            this.dgvRoom.Size = new System.Drawing.Size(688, 273);
             this.dgvRoom.TabIndex = 1;
             this.dgvRoom.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvRoom_CellContentClick);
             // 
