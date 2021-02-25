@@ -62,7 +62,7 @@ namespace HotelDAL
         {
             foreach (DataRow item in HotelData.Data.Tables["RoomSchedules"].Rows)
             {
-                if (item["RoomNumber"].ToString() == name)
+                if (item["RoomNumber"].ToString().Trim() == name.Trim ())
                 {
                     HotelData.Data.Tables["RoomSchedules"].Rows.Remove(item);
                     break;
