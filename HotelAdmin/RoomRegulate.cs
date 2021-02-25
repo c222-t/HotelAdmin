@@ -112,6 +112,12 @@ namespace HotelAdmin
 
         private void ToolStripButton2_Click(object sender, EventArgs e)
         {
+            if (dgvRoom.SelectedRows.Count == 0)
+            {
+                MessageBox.Show("请选中");
+                return;
+            }
+
             if (dgvRoom.SelectedRows[0].Cells[2].Value.ToString ().Trim() == "占用")
             {
                 MessageBox.Show("已有顾客!");
