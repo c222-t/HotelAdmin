@@ -33,6 +33,51 @@ namespace HotelDAL
             return table;                                               // 返回得到的订单记录
         }
         /// <summary>
+        /// 根据订单编号查询指定记录
+        /// </summary>
+        /// <param name="dataTable">订单记录表</param>
+        /// <param name="order">要查询的订单条件</param>
+        /// <returns>返回满足条件的订单记录</returns>
+        public DataTable CompareStatementNo(DataTable dataTable, StatementTable order)
+        {
+            // 根据指定订单编号查询记录
+            var table = from row in dataTable.AsEnumerable()
+                        where row["OrderNumber"].ToString().Trim().Equals(order.OrderNumber.ToString())
+                        select row;
+
+            return table.CopyToDataTable();                             // 返回得到的记录
+        }
+        /// <summary>
+        /// 根据订单身份证查询指定记录
+        /// </summary>
+        /// <param name="dataTable">订单记录表</param>
+        /// <param name="order">要查询的订单条件</param>
+        /// <returns>返回满足条件的订单记录</returns>
+        public DataTable CompareStatementIDCard(DataTable dataTable, StatementTable order)
+        {
+            // 根据指定身份证查询订单记录
+            var table = from row in dataTable.AsEnumerable()
+                        where row["IDCard"].Equals(order.IDCard)
+                        select row;
+
+            return table.CopyToDataTable();                             // 返回得到的记录
+        }
+        /// <summary>
+        /// 根据订单状态查询指定记录
+        /// </summary>
+        /// <param name="dataTable">订单记录表</param>
+        /// <param name="order">要查询的订单条件</param>
+        /// <returns>返回满足条件的订单记录</returns>
+        public DataTable CompareStatementStatus(DataTable dataTable, StatementTable order)
+        {
+            // 查询满足指定状态的订单记录
+            var table = from row in dataTable.AsEnumerable()
+                        where row["Status"].Equals(order.Status.Number)
+                        select row;
+
+            return table.CopyToDataTable();                             // 返回得到的记录
+        }
+        /// <summary>
         /// 删除指定的订单记录
         /// </summary>
         /// <param name="order">要删除的订单信息</param>
@@ -93,51 +138,6 @@ namespace HotelDAL
                 row["RoomNumber"] = order.Room.RoomNumber;
                 HotelData.Data.Tables["StatementTable"].Rows.Add(row);
             }
-        }
-        /// <summary>
-        /// 根据订单编号查询指定记录
-        /// </summary>
-        /// <param name="dataTable">订单记录表</param>
-        /// <param name="order">要查询的订单条件</param>
-        /// <returns>返回满足条件的订单记录</returns>
-        public DataTable CompareStatementNo(DataTable dataTable, StatementTable order)
-        {
-            // 根据指定订单编号查询记录
-            var table = from row in dataTable.AsEnumerable()
-                        where row["OrderNumber"].ToString().Trim().Equals(order.OrderNumber.ToString())
-                        select row;
-
-            return table.CopyToDataTable();                             // 返回得到的记录
-        }
-        /// <summary>
-        /// 根据订单身份证查询指定记录
-        /// </summary>
-        /// <param name="dataTable">订单记录表</param>
-        /// <param name="order">要查询的订单条件</param>
-        /// <returns>返回满足条件的订单记录</returns>
-        public DataTable CompareStatementIDCard(DataTable dataTable, StatementTable order)
-        {
-            // 根据指定身份证查询订单记录
-            var table = from row in dataTable.AsEnumerable()
-                        where row["IDCard"].Equals(order.IDCard)
-                        select row;
-
-            return table.CopyToDataTable();                             // 返回得到的记录
-        }
-        /// <summary>
-        /// 根据订单状态查询指定记录
-        /// </summary>
-        /// <param name="dataTable">订单记录表</param>
-        /// <param name="order">要查询的订单条件</param>
-        /// <returns>返回满足条件的订单记录</returns>
-        public DataTable CompareStatementStatus(DataTable dataTable, StatementTable order)
-        {
-            // 查询满足指定状态的订单记录
-            var table = from row in dataTable.AsEnumerable()
-                        where row["Status"].Equals(order.Status.Number)
-                        select row;
-
-            return table.CopyToDataTable();                             // 返回得到的记录
         }
     }
 }

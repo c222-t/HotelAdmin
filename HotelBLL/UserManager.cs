@@ -20,13 +20,13 @@ namespace HotelBLL
         UserService service = new UserService();
 
         /// <summary>
-        /// 查询指定或全部的顾客信息 (支持模糊查询)
+        /// 查询指定或全部的顾客信息 (传入顾客对象初始化身份证或姓名)
         /// </summary>
-        /// <param name="name">要查询的顾客姓名</param>
+        /// <param name="name">进行查询的顾客条件</param>
         /// <returns>返回满足条件的顾客信息</returns>
-        public DataTable SeeUserRecord(string name)
+        public DataTable SeeUserRecord(UserTable user)
         {
-            return service.SeeUserRecord(name);
+            return service.SeeUserRecord(user);
         }
         /// <summary>
         /// 查询指定顾客的消费记录

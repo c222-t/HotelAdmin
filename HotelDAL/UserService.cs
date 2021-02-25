@@ -18,11 +18,42 @@ namespace HotelDAL
         /// </summary>
         /// <param name="name">要查询的顾客姓名</param>
         /// <returns>返回满足条件的顾客信息</returns>
-        public DataTable SeeUserRecord(string name)
+        public DataTable SeeUserRecord(UserTable user)
+        {
+            DataTable table = HotelData.Data.Tables["UserTable"];       // 创建临时数据表获取所有顾客信息
+
+            if (user.UserName != null) {                                // 是否根据顾客名称查询
+                table = CompareUserName(user.UserName);
+            }
+            else {                                                      // 是否根据顾客身份证查询
+                table = CompareUserIDCard(user.IDCard);
+            }
+            return table;                                               // 返回得到的顾客信息
+        }
+        /// <summary>
+        /// 根据顾客名称查询指定的顾客信息 (支持模糊查询)
+        /// </summary>
+        /// <param name="name">要查询的顾客姓名</param>
+        /// <returns>返回满足条件的顾客信息</returns>
+        public DataTable CompareUserName(string name)
         {
             // 搜索系统临时数据库中满足名称条件的顾客信息
             var table = from row in HotelData.Data.Tables["UserTable"].AsEnumerable()
                         where row["UserName"].ToString().Trim().Contains(name)
+                        select row;
+
+            return table.CopyToDataTable();                             // 返回得到的记录
+        }
+        /// <summary>
+        /// 根据顾客身份证查询顾客信息
+        /// </summary>
+        /// <param name="name">要查询的顾客身份证</param>
+        /// <returns>返回满足条件的顾客信息</returns>
+        public DataTable CompareUserIDCard(string IDCard)
+        {
+            // 搜索系统临时数据库中满足身份证信息的顾客信息
+            var table = from row in HotelData.Data.Tables["UserTable"].AsEnumerable()
+                        where row["IDCard"].Equals(IDCard)
                         select row;
 
             return table.CopyToDataTable();                             // 返回得到的记录
