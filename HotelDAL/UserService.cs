@@ -22,7 +22,7 @@ namespace HotelDAL
         {
             // 搜索系统临时数据库中满足名称条件的顾客信息
             var table = from row in HotelData.Data.Tables["UserTable"].AsEnumerable()
-                        where row["UserName"].ToString().Trim().Contains(name)
+                        where row["UserName"].ToString().Trim().StartsWith(name)
                         select row;
 
             return table.CopyToDataTable();                             // 返回得到的记录
