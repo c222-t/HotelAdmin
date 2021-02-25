@@ -14,7 +14,7 @@ namespace HotelModel
         /// <summary>
         /// 房间编号
         /// </summary>
-        public int RoomNumber { get; set; }
+        public string RoomNumber { get; set; }
         /// <summary>
         /// 房间类型
         /// </summary>

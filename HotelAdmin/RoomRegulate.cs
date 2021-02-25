@@ -16,12 +16,35 @@ namespace HotelAdmin
     {
         DataTable dt = new DataTable();//暂时保存数据
         RoomTypeManager rtm = new RoomTypeManager();
+        RoomManager rm = new RoomManager();
         MoreTableManager mtm = new MoreTableManager();
         public RoomRegulate()
         {
             InitializeComponent();
             dgvRoom.AutoGenerateColumns = false;
             dgvUser.AutoGenerateColumns = false;
+        }
+
+        /// <summary>
+        /// 刷新
+        /// </summary>
+        public void ShuaXin()
+        {
+            if (tvCaiDan.SelectedNode == null)
+            {
+                return;
+            }
+
+            if (tvCaiDan.SelectedNode.Level == 0)
+            {
+                DataTable dt = rm.RoomTable();
+                dgvRoom.DataSource = dt;
+            }
+            else if (tvCaiDan.SelectedNode.Level == 1)
+            {
+                DataTable dt = rm.RoomTable(tvCaiDan.SelectedNode.Text);
+                dgvRoom.DataSource = dt;
+            }
         }
 
         /// <summary>
@@ -51,21 +74,7 @@ namespace HotelAdmin
         /// <param name="e"></param>
         private void TvCaiDan_AfterSelect(object sender, TreeViewEventArgs e)
         {
-            if (tvCaiDan.SelectedNode == null)
-            {
-                return;
-            }
-
-            if (tvCaiDan.SelectedNode.Level == 0)
-            {
-                DataTable dt = mtm.MoreMore();
-                dgvRoom.DataSource = dt;
-            }
-            else if (tvCaiDan.SelectedNode.Level == 1)
-            {
-                DataTable dt = mtm.MoreMore(tvCaiDan.SelectedNode.Text);
-                dgvRoom.DataSource = dt;
-            }
+            ShuaXin();
         }
 
         /// <summary>
@@ -80,9 +89,25 @@ namespace HotelAdmin
                 return;
             }
 
-            dgvUser.DataSource = mtm.MoreMore(dgvRoom.SelectedRows[0].Cells[0].Value.ToString());
-                
-            
+            if (dgvRoom.SelectedRows[0].Cells[2].Value.ToString() == "空闲")
+            {
+                return;
+            }
+
+            dgvUser.DataSource = mtm.MoreMore(dgvRoom.SelectedRows[0].Cells[1].Value.ToString());
+        }
+
+        /// <summary>
+        /// 新增
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void ToolStripButton1_Click(object sender, EventArgs e)
+        {
+            RoomInsertAndUpdate riau = new RoomInsertAndUpdate();
+            riau.frm = this;
+            riau.asd = toolStripButton1.Text;
+            riau.Show();
         }
     }
 }
