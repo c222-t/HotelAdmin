@@ -26,7 +26,7 @@ namespace HotelBLL
         /// <returns>返回满足条件的订单列表</returns>
         public DataTable SeekOrderRecord(StatementTable order)
         {
-            return service.SeekOrderRecord(statement);
+            return service.SeekOrderRecord(order);
         }
         /// <summary>
         /// 删除指定的订单记录
