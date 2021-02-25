@@ -26,7 +26,17 @@ namespace HotelBLL
         /// <returns>返回满足条件的订单列表</returns>
         public DataTable SeekOrderRecord(StatementTable order)
         {
-            return service.SeekOrderRecord(order);
+            DataTable table = HotelData.Data.Tables["StatementTable"];  // 创建临时数据表获取所有订单记录
+
+            // 根据指定的条件执行相应的查询方式
+            if (order.OrderNumber != null) {                            // 是否根据编号查询订单
+                service.CompareStatementNo(table, order);
+            } else if (order.IDCard != null) {                          // 是否根据身份证查询订单
+                service.CompareStatementIDCard(table, order);
+            } else if (order.Status != null) {                          // 是否根据订单状态查询订单
+                service.CompareStatementStatus(table, order);
+            }
+            return table;                                               // 返回得到的订单记录
         }
         /// <summary>
         /// 删除指定的订单记录

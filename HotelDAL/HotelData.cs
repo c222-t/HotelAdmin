@@ -7,7 +7,7 @@ using System.Data.SqlClient;
 using System.Data;
 using HotelModel;
 
-namespace HotelDAL
+namespace HotelDAL 
 {
     ///<summary>
     /// 系统数据库
@@ -43,14 +43,15 @@ namespace HotelDAL
         /// </summary>
         public static void UploadData()
         {
+            // 指定上传的数据库位置
             SqlConnection conn = new SqlConnection("server=.; database=Hotel; uid=sa; pwd=sa;");
             
-            // 将临时数据库中的每张数据表保存到数据库对应的数据表中
+            // 将临时数据库中的每张数据表保存到数据库对应的表中
             foreach (DataTable arr in Data.Tables)
             {
-                SqlDataAdapter sqlData = new SqlDataAdapter("select * from "+ arr.TableName, conn);
-                SqlCommandBuilder sqls = new SqlCommandBuilder(sqlData);    // 绑定要上传的数据表
-                sqlData.Update(arr.Copy());                                      // 更新数据库中相对应的表
+                SqlDataAdapter sqlData = new SqlDataAdapter("select * from " + arr.TableName, conn);
+                SqlCommandBuilder sqls = new SqlCommandBuilder(sqlData);                // 绑定要上传的数据表
+                sqlData.Update(arr.Copy());                                             // 更新数据库中相对应的表
             }
         }
     }

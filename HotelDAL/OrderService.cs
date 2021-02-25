@@ -14,25 +14,6 @@ namespace HotelDAL
     public class OrderService
     {
         /// <summary>
-        /// 搜索满足条件或全部的订单信息
-        /// </summary>
-        /// <param name="order">查询的订单信息</param>
-        /// <returns>返回满足条件的订单列表</returns>
-        public DataTable SeekOrderRecord(StatementTable order)
-        {
-            DataTable table = HotelData.Data.Tables["StatementTable"];  // 创建临时数据表获取所有订单记录
-
-            // 根据指定的条件执行相应的查询方式
-            if (order.OrderNumber != null) {                            // 是否根据编号查询订单
-                CompareStatementNo(table, order);
-            } else if (order.IDCard != null) {                          // 是否根据身份证查询订单
-                CompareStatementIDCard(table, order);
-            } else if (order.Status != null) {                          // 是否根据订单状态查询订单
-                CompareStatementStatus(table, order);
-            }
-            return table;                                               // 返回得到的订单记录
-        }
-        /// <summary>
         /// 根据订单编号查询指定记录
         /// </summary>
         /// <param name="dataTable">订单记录表</param>

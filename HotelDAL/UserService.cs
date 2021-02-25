@@ -14,23 +14,6 @@ namespace HotelDAL
     public class UserService
     {
         /// <summary>
-        /// 查询指定或全部的顾客信息 (传入顾客对象初始化身份证或姓名)
-        /// </summary>
-        /// <param name="user">进行查询的顾客条件</param>
-        /// <returns>返回满足条件的顾客信息</returns>
-        public DataTable SeeUserRecord(UserTable user)
-        {
-            DataTable table = HotelData.Data.Tables["UserTable"];       // 创建临时数据表获取所有顾客信息
-
-            if (user.UserName != null) {                                // 是否根据顾客名称查询
-                table = CompareUserName(user.UserName);
-            }
-            else {                                                      // 是否根据顾客身份证查询
-                table = CompareUserIDCard(user.IDCard);
-            }
-            return table;                                               // 返回得到的顾客信息
-        }
-        /// <summary>
         /// 根据顾客名称查询指定的顾客信息 (支持模糊查询)
         /// </summary>
         /// <param name="name">要查询的顾客姓名</param>
@@ -71,6 +54,14 @@ namespace HotelDAL
                         select row;
 
             return table.CopyToDataTable();                             // 返回得到的记录
+        }
+        /// <summary>
+        /// 获取顾客会员等级信息
+        /// </summary>
+        public DataTable GetMembershipRecord()
+        {
+            // 获取所有顾客会员信息
+            return new DBHelper().GetTable("select * from MembershipTable", null, "MembershipTable");
         }
         /// <summary>
         /// 删除指定的顾客信息

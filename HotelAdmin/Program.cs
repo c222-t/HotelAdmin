@@ -16,7 +16,7 @@ namespace HotelAdmin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new RoomRegulate());
+            Application.Run(new CustomerManage()/*RoomRegulate()*/);
         }
     }
 }
