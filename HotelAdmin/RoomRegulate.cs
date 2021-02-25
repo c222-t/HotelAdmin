@@ -109,5 +109,10 @@ namespace HotelAdmin
             riau.asd = toolStripButton1.Text;
             riau.Show();
         }
+
+        private void ToolStripButton2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

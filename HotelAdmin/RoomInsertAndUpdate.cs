@@ -84,7 +84,13 @@ namespace HotelAdmin
                 };
                 rm.RoomInsert(room);
                 frm.ShuaXin();
+                this.Close();
             }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
