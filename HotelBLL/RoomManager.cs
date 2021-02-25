@@ -29,10 +29,37 @@ namespace HotelBLL
             return service.RoomTable(leiXing);
         }
 
+        /// <summary>
+        /// 为房间表插入一行数据并返回,需要提供房间对象
+        /// </summary>
+        /// <param name="room"></param>
+        /// <returns></returns>
         public DataTable RoomInsert(RoomSchedules room)
         {
             return service.RoomInsert(room);
         }
+
+        /// <summary>
+        /// 为房间表删除一行数据并返回，需要提供房间编号(名称)
+        /// </summary>
+        /// <param name="num"></param>
+        /// <returns></returns>
+        public DataTable RoomDelect(string num)
+        {
+            return service.RoomDelect(num);
+        }
+
+        /// <summary>
+        /// 为房间表修改一行数据并返回，需要提供房间编号(名称),以及修改的内容
+        /// </summary>
+        /// <param name="num"></param>
+        /// <param name="room"></param>
+        /// <returns></returns>
+        public DataTable RoomUpdate(string num, RoomSchedules room)
+        {
+            return service.RoomUpdate(num,room);
+        }
+
 
     }
 }

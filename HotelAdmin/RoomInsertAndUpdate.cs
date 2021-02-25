@@ -16,6 +16,7 @@ namespace HotelAdmin
     {
         public RoomRegulate frm = null;
         public string asd = "";
+        public RoomSchedules roo = null;
         RoomTypeManager rtm = new RoomTypeManager();
         RoomManager rm = new RoomManager();
         public RoomInsertAndUpdate()
@@ -58,9 +59,12 @@ namespace HotelAdmin
             {
                 this.Text = "增加房间";
             }
-            else
+            else if(asd=="修改")
             {
                 this.Text = "修改房间信息";
+                txtLou.Text = roo.Floor.Trim ();
+                txtRoomName.Text = roo.RoomNumber.Trim ();
+                cbRoomType.Text = roo.RoomType.Name.Trim ();
             }
         }
 
@@ -68,22 +72,74 @@ namespace HotelAdmin
         {
             if (PanDuan())
             {
-                RoomSchedules room = new RoomSchedules()
+                if (lblZhu.Visible == false)
                 {
-                    Floor = txtLou.Text,
-                    RoomNumber = txtRoomName.Text,
-                    RoomStatus = new RoomStatus()
+                    RoomSchedules room = new RoomSchedules()
                     {
-                        No=1
-                    },
-                    RoomType =new RoomTypeTable()
+                        Floor = txtLou.Text,
+                        RoomNumber = txtRoomName.Text,
+                        RoomStatus = new RoomStatus()
+                        {
+                            No = 1
+                        },
+                        RoomType = new RoomTypeTable()
+                        {
+                            Name = cbRoomType.Text,
+                            No = rtm.TypeID(cbRoomType.Text)
+                        }
+                    };
+
+                    if (asd == "新增")
                     {
-                        Name = cbRoomType.Text,
-                        No = rtm.TypeID(cbRoomType.Text)
+                        rm.RoomInsert(room);
                     }
-                };
-                rm.RoomInsert(room);
-                frm.ShuaXin();
+                    else
+                    {
+                        rm.RoomUpdate(roo.RoomNumber, room);
+                    }
+                    MessageBox.Show("操作成功");
+                    frm.ShuaXin();
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("已有此房间");
+                }
+            }
+        }
+
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        /// <summary>
+        /// 修改时:当房间名称变化时检查是否重复
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void TxtRoomName_TextChanged(object sender, EventArgs e)
+        {
+            if (this.Text == "增加房间")
+            {
+                return;
+            }
+
+            lblZhu.Visible = false;
+
+            DataTable dt = rm.RoomTable();
+
+            foreach (DataRow item in dt.Rows)
+            {
+                if (item["RoomNumber"].ToString().Trim() == txtRoomName.Text.Trim())
+                {
+                    if (item["RoomNumber"].ToString().Trim() == roo.RoomNumber.Trim())
+                    {
+                        continue;
+                    }
+                    lblZhu.Visible = true;
+                    break;
+                }
             }
         }
     }

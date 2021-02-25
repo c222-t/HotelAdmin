@@ -80,15 +80,18 @@ namespace HotelDAL
         /// <returns></returns>
         public DataTable RoomUpdate(string num,RoomSchedules room)
         {
-            for (int i=0;i< HotelData.Data.Tables["RoomSchedules"].Rows.Count;i++)
+            for (int i = 0; i < HotelData.Data.Tables["RoomSchedules"].Rows.Count; i++)
             {
-                if (HotelData.Data.Tables["RoomSchedules"].Rows[i]["RoomNumber"].ToString() == num)
+                if (HotelData.Data.Tables["RoomSchedules"].Rows[i]["RoomNumber"].ToString().Trim() == num.Trim ())
                 {
-                    HotelData.Data.Tables["RoomSchedules"].Rows[i]["RoomType"] = room.RoomType.No;
+                    HotelData.Data.Tables["RoomSchedules"].Rows[i]["Floor"] = room.Floor;
+                    HotelData.Data.Tables["RoomSchedules"].Rows[i]["RoomNumber"] = room.RoomNumber;
                     HotelData.Data.Tables["RoomSchedules"].Rows[i]["RoomStatus"] = room.RoomStatus.No;
+                    HotelData.Data.Tables["RoomSchedules"].Rows[i]["RoomType"] = room.RoomType.No;
                     break;
                 }
             }
+
             HotelData.UploadData();
             return HotelData.Data.Tables["RoomSchedules"];
         }
