@@ -45,7 +45,7 @@ namespace HotelDAL
         {
             SqlDataAdapter sqlData = new SqlDataAdapter();                  // 更新调用对象
             SqlCommandBuilder sqls = new SqlCommandBuilder();               // 更新操作对象
-
+            
             // 将临时数据库中的每张数据表保存到数据库对应的数据表中
             foreach (DataTable arr in Data.Tables)
             {
