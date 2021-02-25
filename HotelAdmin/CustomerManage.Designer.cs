@@ -30,17 +30,10 @@ namespace HotelAdmin
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Pl_User = new System.Windows.Forms.Panel();
             this.Dgv_UserShow = new System.Windows.Forms.DataGridView();
-            this.label1 = new System.Windows.Forms.Label();
-            this.Txt_InquireBox = new System.Windows.Forms.TextBox();
-            this.Btn_Inquire = new System.Windows.Forms.Button();
-            this.Lab_Remind = new System.Windows.Forms.Label();
-            this.UserMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.Option_Alter = new System.Windows.Forms.ToolStripMenuItem();
-            this.Option_Delete = new System.Windows.Forms.ToolStripMenuItem();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.IDCard = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.TelephoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -49,6 +42,13 @@ namespace HotelAdmin
             this.Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MembershipLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label1 = new System.Windows.Forms.Label();
+            this.Txt_InquireBox = new System.Windows.Forms.TextBox();
+            this.Btn_Inquire = new System.Windows.Forms.Button();
+            this.Lab_Remind = new System.Windows.Forms.Label();
+            this.UserMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Option_Alter = new System.Windows.Forms.ToolStripMenuItem();
+            this.Option_Delete = new System.Windows.Forms.ToolStripMenuItem();
             this.Pl_User.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_UserShow)).BeginInit();
             this.UserMenu.SuspendLayout();
@@ -61,7 +61,7 @@ namespace HotelAdmin
             this.Pl_User.Controls.Add(this.Dgv_UserShow);
             this.Pl_User.Location = new System.Drawing.Point(12, 46);
             this.Pl_User.Name = "Pl_User";
-            this.Pl_User.Size = new System.Drawing.Size(950, 348);
+            this.Pl_User.Size = new System.Drawing.Size(950, 366);
             this.Pl_User.TabIndex = 2;
             // 
             // Dgv_UserShow
@@ -72,14 +72,14 @@ namespace HotelAdmin
             this.Dgv_UserShow.BackgroundColor = System.Drawing.Color.White;
             this.Dgv_UserShow.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_UserShow.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgv_UserShow.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_UserShow.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.Dgv_UserShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_UserShow.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UserName,
@@ -95,18 +95,74 @@ namespace HotelAdmin
             this.Dgv_UserShow.Name = "Dgv_UserShow";
             this.Dgv_UserShow.ReadOnly = true;
             this.Dgv_UserShow.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle8.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle8.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle8.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle8.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle8.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle8.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_UserShow.RowHeadersDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_UserShow.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_UserShow.RowHeadersVisible = false;
             this.Dgv_UserShow.RowTemplate.Height = 23;
-            this.Dgv_UserShow.Size = new System.Drawing.Size(950, 320);
+            this.Dgv_UserShow.Size = new System.Drawing.Size(950, 342);
             this.Dgv_UserShow.TabIndex = 1;
+            // 
+            // UserName
+            // 
+            this.UserName.DataPropertyName = "UserName";
+            this.UserName.HeaderText = "用户姓名";
+            this.UserName.Name = "UserName";
+            this.UserName.ReadOnly = true;
+            // 
+            // IDCard
+            // 
+            this.IDCard.DataPropertyName = "IDCard";
+            this.IDCard.HeaderText = "身份证";
+            this.IDCard.Name = "IDCard";
+            this.IDCard.ReadOnly = true;
+            // 
+            // TelephoneNumber
+            // 
+            this.TelephoneNumber.DataPropertyName = "TelephoneNumber";
+            this.TelephoneNumber.HeaderText = "联系电话";
+            this.TelephoneNumber.Name = "TelephoneNumber";
+            this.TelephoneNumber.ReadOnly = true;
+            // 
+            // Gender
+            // 
+            this.Gender.DataPropertyName = "Gender";
+            this.Gender.HeaderText = "性别";
+            this.Gender.Name = "Gender";
+            this.Gender.ReadOnly = true;
+            // 
+            // Age
+            // 
+            this.Age.DataPropertyName = "Age";
+            this.Age.HeaderText = "年龄";
+            this.Age.Name = "Age";
+            this.Age.ReadOnly = true;
+            // 
+            // Balance
+            // 
+            this.Balance.DataPropertyName = "Balance";
+            this.Balance.HeaderText = "用户余额";
+            this.Balance.Name = "Balance";
+            this.Balance.ReadOnly = true;
+            // 
+            // Discount
+            // 
+            this.Discount.DataPropertyName = "Discount";
+            this.Discount.HeaderText = "折扣";
+            this.Discount.Name = "Discount";
+            this.Discount.ReadOnly = true;
+            // 
+            // MembershipLevel
+            // 
+            this.MembershipLevel.DataPropertyName = "MembershipLevel";
+            this.MembershipLevel.HeaderText = "会员等级";
+            this.MembershipLevel.Name = "MembershipLevel";
+            this.MembershipLevel.ReadOnly = true;
             // 
             // label1
             // 
@@ -169,67 +225,11 @@ namespace HotelAdmin
             this.Option_Delete.Size = new System.Drawing.Size(100, 22);
             this.Option_Delete.Text = "删除";
             // 
-            // UserName
-            // 
-            this.UserName.DataPropertyName = "UserName";
-            this.UserName.HeaderText = "用户姓名";
-            this.UserName.Name = "UserName";
-            this.UserName.ReadOnly = true;
-            // 
-            // IDCard
-            // 
-            this.IDCard.DataPropertyName = "IDCard";
-            this.IDCard.HeaderText = "身份证";
-            this.IDCard.Name = "IDCard";
-            this.IDCard.ReadOnly = true;
-            // 
-            // TelephoneNumber
-            // 
-            this.TelephoneNumber.DataPropertyName = "TelephoneNumber";
-            this.TelephoneNumber.HeaderText = "联系电话";
-            this.TelephoneNumber.Name = "TelephoneNumber";
-            this.TelephoneNumber.ReadOnly = true;
-            // 
-            // Gender
-            // 
-            this.Gender.DataPropertyName = "Gender";
-            this.Gender.HeaderText = "性别";
-            this.Gender.Name = "Gender";
-            this.Gender.ReadOnly = true;
-            // 
-            // Age
-            // 
-            this.Age.DataPropertyName = "Age";
-            this.Age.HeaderText = "年龄";
-            this.Age.Name = "Age";
-            this.Age.ReadOnly = true;
-            // 
-            // Balance
-            // 
-            this.Balance.DataPropertyName = "Balance";
-            this.Balance.HeaderText = "用户余额";
-            this.Balance.Name = "Balance";
-            this.Balance.ReadOnly = true;
-            // 
-            // Discount
-            // 
-            this.Discount.DataPropertyName = "Discount";
-            this.Discount.HeaderText = "折扣";
-            this.Discount.Name = "Discount";
-            this.Discount.ReadOnly = true;
-            // 
-            // MembershipLevel
-            // 
-            this.MembershipLevel.DataPropertyName = "MembershipLevel";
-            this.MembershipLevel.HeaderText = "会员等级";
-            this.MembershipLevel.Name = "MembershipLevel";
-            this.MembershipLevel.ReadOnly = true;
-            // 
             // CustomerManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(974, 484);
+            this.ClientSize = new System.Drawing.Size(974, 424);
             this.Controls.Add(this.Lab_Remind);
             this.Controls.Add(this.Btn_Inquire);
             this.Controls.Add(this.Txt_InquireBox);
