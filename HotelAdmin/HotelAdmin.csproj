@@ -67,6 +67,12 @@
     <Compile Include="Regard.Designer.cs">
       <DependentUpon>Regard.cs</DependentUpon>
     </Compile>
+    <Compile Include="RevenueTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RevenueTable.Designer.cs">
+      <DependentUpon>RevenueTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="RoomInsertAndUpdate.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,9 @@
     </Compile>
     <EmbeddedResource Include="Regard.resx">
       <DependentUpon>Regard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RevenueTable.resx">
+      <DependentUpon>RevenueTable.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RoomInsertAndUpdate.resx">
       <DependentUpon>RoomInsertAndUpdate.cs</DependentUpon>

@@ -36,6 +36,7 @@
             this.button2 = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.txtLou = new System.Windows.Forms.TextBox();
+            this.lblZhu = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -59,9 +60,11 @@
             // txtRoomName
             // 
             this.txtRoomName.Location = new System.Drawing.Point(92, 40);
+            this.txtRoomName.MaxLength = 10;
             this.txtRoomName.Name = "txtRoomName";
             this.txtRoomName.Size = new System.Drawing.Size(144, 21);
             this.txtRoomName.TabIndex = 2;
+            this.txtRoomName.TextChanged += new System.EventHandler(this.TxtRoomName_TextChanged);
             // 
             // cbRoomType
             // 
@@ -104,9 +107,21 @@
             // txtLou
             // 
             this.txtLou.Location = new System.Drawing.Point(92, 104);
+            this.txtLou.MaxLength = 5;
             this.txtLou.Name = "txtLou";
             this.txtLou.Size = new System.Drawing.Size(144, 21);
             this.txtLou.TabIndex = 2;
+            // 
+            // lblZhu
+            // 
+            this.lblZhu.AutoSize = true;
+            this.lblZhu.ForeColor = System.Drawing.Color.Red;
+            this.lblZhu.Location = new System.Drawing.Point(92, 68);
+            this.lblZhu.Name = "lblZhu";
+            this.lblZhu.Size = new System.Drawing.Size(113, 12);
+            this.lblZhu.TabIndex = 5;
+            this.lblZhu.Text = "注意！此名称已重复";
+            this.lblZhu.Visible = false;
             // 
             // RoomInsertAndUpdate
             // 
@@ -114,6 +129,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(283, 294);
+            this.Controls.Add(this.lblZhu);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.cbRoomType);
@@ -141,5 +157,6 @@
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtLou;
+        private System.Windows.Forms.Label lblZhu;
     }
 }
