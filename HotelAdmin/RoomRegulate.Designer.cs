@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("全部");
+            System.Windows.Forms.TreeNode treeNode4 = new System.Windows.Forms.TreeNode("全部");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoomRegulate));
             this.tvCaiDan = new System.Windows.Forms.TreeView();
             this.dgvRoom = new System.Windows.Forms.DataGridView();
@@ -61,10 +61,10 @@
             this.tvCaiDan.Dock = System.Windows.Forms.DockStyle.Left;
             this.tvCaiDan.Location = new System.Drawing.Point(0, 0);
             this.tvCaiDan.Name = "tvCaiDan";
-            treeNode3.Name = "节点0";
-            treeNode3.Text = "全部";
+            treeNode4.Name = "节点0";
+            treeNode4.Text = "全部";
             this.tvCaiDan.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode3});
+            treeNode4});
             this.tvCaiDan.Size = new System.Drawing.Size(158, 581);
             this.tvCaiDan.TabIndex = 0;
             this.tvCaiDan.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TvCaiDan_AfterSelect);
@@ -73,6 +73,8 @@
             // 
             this.dgvRoom.AllowUserToAddRows = false;
             this.dgvRoom.AllowUserToDeleteRows = false;
+            this.dgvRoom.AllowUserToResizeColumns = false;
+            this.dgvRoom.AllowUserToResizeRows = false;
             this.dgvRoom.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -119,6 +121,8 @@
             // 
             this.dgvUser.AllowUserToAddRows = false;
             this.dgvUser.AllowUserToDeleteRows = false;
+            this.dgvUser.AllowUserToResizeColumns = false;
+            this.dgvUser.AllowUserToResizeRows = false;
             this.dgvUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));

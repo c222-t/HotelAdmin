@@ -16,7 +16,7 @@ namespace HotelAdmin
     {
         public RoomRegulate frm = null;
         public string asd = "";
-        public RoomSchedules room = null;
+        public RoomSchedules roo = null;
         RoomTypeManager rtm = new RoomTypeManager();
         RoomManager rm = new RoomManager();
         public RoomInsertAndUpdate()
@@ -62,9 +62,9 @@ namespace HotelAdmin
             else if(asd=="修改")
             {
                 this.Text = "修改房间信息";
-                txtLou.Text = room.Floor;
-                txtRoomName.Text = room.RoomNumber;
-                cbRoomType.Text = room.RoomType.Name;
+                txtLou.Text = roo.Floor;
+                txtRoomName.Text = roo.RoomNumber;
+                cbRoomType.Text = roo.RoomType.Name;
             }
         }
 
@@ -93,7 +93,7 @@ namespace HotelAdmin
                 }
                 else
                 {
-                    rm.RoomUpdate(room.RoomNumber ,room);
+                    rm.RoomUpdate(roo.RoomNumber ,room);
                 }
                 MessageBox.Show("操作成功");
                 frm.ShuaXin();

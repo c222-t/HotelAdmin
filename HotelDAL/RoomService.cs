@@ -84,6 +84,8 @@ namespace HotelDAL
             {
                 if (HotelData.Data.Tables["RoomSchedules"].Rows[i]["RoomNumber"].ToString() == num)
                 {
+                    HotelData.Data.Tables["RoomSchedules"].Rows[i]["Floor"] = room.Floor;
+                    HotelData.Data.Tables["RoomSchedules"].Rows[i]["RoomNumber"] = room.RoomNumber;
                     HotelData.Data.Tables["RoomSchedules"].Rows[i]["RoomType"] = room.RoomType.No;
                     HotelData.Data.Tables["RoomSchedules"].Rows[i]["RoomStatus"] = room.RoomStatus.No;
                     break;

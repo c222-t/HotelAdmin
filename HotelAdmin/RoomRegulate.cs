@@ -151,7 +151,7 @@ namespace HotelAdmin
                     Name = dgvRoom.SelectedRows[0].Cells[4].Value.ToString()
                 }
             };
-            riau.room = room;
+            riau.roo = room;
             riau.Show();
         }
     }
