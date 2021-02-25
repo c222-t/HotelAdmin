@@ -26,7 +26,7 @@ namespace HotelDAL
                         where row["OrderNumber"].ToString().Trim().Equals(order.OrderNumber.ToString())
                         select row;
 
-            return table.CopyToDataTable();                             // 返回得到的记录
+            return table.CopyToDataTable() ?? null;                     // 返回得到的记录
         }
         /// <summary>
         /// 根据订单身份证查询指定记录
@@ -41,7 +41,7 @@ namespace HotelDAL
                         where row["IDCard"].Equals(order.IDCard)
                         select row;
 
-            return table.CopyToDataTable();                             // 返回得到的记录
+            return table.CopyToDataTable() ?? null;                     // 返回得到的记录
         }
         /// <summary>
         /// 根据订单状态查询指定记录
@@ -56,7 +56,7 @@ namespace HotelDAL
                         where row["Status"].Equals(order.Status.Number)
                         select row;
 
-            return table.CopyToDataTable();                             // 返回得到的记录
+            return table.CopyToDataTable() ?? null;                     // 返回得到的记录
         }
         /// <summary>
         /// 删除指定的订单记录
