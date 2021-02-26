@@ -26,7 +26,7 @@ namespace HotelDAL
                         where row["OrderNumber"].ToString().Trim().Equals(order.OrderNumber.ToString())
                         select row;
 
-            return table.CopyToDataTable() ?? null;                     // 返回得到的记录
+            return table.CopyToDataTable();                             // 返回得到的记录
         }
         /// <summary>
         /// 根据订单身份证查询指定记录
@@ -37,11 +37,9 @@ namespace HotelDAL
         public DataTable CompareStatementIDCard(DataTable dataTable, StatementTable order)
         {
             // 根据指定身份证查询订单记录
-            var table = from row in dataTable.AsEnumerable()
-                        where row["IDCard"].Equals(order.IDCard)
-                        select row;
+            var table = dataTable.AsEnumerable().Where(r => r["IDCard"].Equals(order.IDCard));
 
-            return table.CopyToDataTable() ?? null;                     // 返回得到的记录
+            return table.CopyToDataTable();                             // 返回得到的记录
         }
         /// <summary>
         /// 根据订单状态查询指定记录
@@ -52,11 +50,9 @@ namespace HotelDAL
         public DataTable CompareStatementStatus(DataTable dataTable, StatementTable order)
         {
             // 查询满足指定状态的订单记录
-            var table = from row in dataTable.AsEnumerable()
-                        where row["Status"].Equals(order.Status.Number)
-                        select row;
+            var table = dataTable.AsEnumerable().Where(r => r["Status"].Equals(order.Status.Number));
 
-            return table.CopyToDataTable() ?? null;                     // 返回得到的记录
+            return table.CopyToDataTable();                             // 返回得到的记录
         }
         /// <summary>
         /// 删除指定的订单记录

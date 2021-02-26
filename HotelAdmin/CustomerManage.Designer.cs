@@ -30,8 +30,10 @@ namespace HotelAdmin
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.Pl_User = new System.Windows.Forms.Panel();
             this.Dgv_UserShow = new System.Windows.Forms.DataGridView();
             this.UserName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,13 +44,13 @@ namespace HotelAdmin
             this.Balance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Discount = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.MembershipLevel = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.UserMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Option_Alter = new System.Windows.Forms.ToolStripMenuItem();
+            this.Option_Delete = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.Txt_InquireBox = new System.Windows.Forms.TextBox();
             this.Btn_Inquire = new System.Windows.Forms.Button();
             this.Lab_Remind = new System.Windows.Forms.Label();
-            this.UserMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.Option_Alter = new System.Windows.Forms.ToolStripMenuItem();
-            this.Option_Delete = new System.Windows.Forms.ToolStripMenuItem();
             this.Pl_User.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_UserShow)).BeginInit();
             this.UserMenu.SuspendLayout();
@@ -68,18 +70,22 @@ namespace HotelAdmin
             // 
             this.Dgv_UserShow.AllowUserToAddRows = false;
             this.Dgv_UserShow.AllowUserToDeleteRows = false;
+            this.Dgv_UserShow.AllowUserToResizeColumns = false;
+            this.Dgv_UserShow.AllowUserToResizeRows = false;
             this.Dgv_UserShow.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.Dgv_UserShow.BackgroundColor = System.Drawing.Color.White;
             this.Dgv_UserShow.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.Dgv_UserShow.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Dgv_UserShow.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.Dgv_UserShow.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_UserShow.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.Dgv_UserShow.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_UserShow.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UserName,
@@ -90,21 +96,33 @@ namespace HotelAdmin
             this.Balance,
             this.Discount,
             this.MembershipLevel});
-            this.Dgv_UserShow.GridColor = System.Drawing.SystemColors.Control;
+            this.Dgv_UserShow.ContextMenuStrip = this.UserMenu;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.Dgv_UserShow.DefaultCellStyle = dataGridViewCellStyle6;
+            this.Dgv_UserShow.GridColor = System.Drawing.Color.White;
             this.Dgv_UserShow.Location = new System.Drawing.Point(-1, -1);
             this.Dgv_UserShow.Name = "Dgv_UserShow";
             this.Dgv_UserShow.ReadOnly = true;
             this.Dgv_UserShow.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_UserShow.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_UserShow.RowHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.Dgv_UserShow.RowHeadersVisible = false;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Dgv_UserShow.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.Dgv_UserShow.RowTemplate.Height = 23;
+            this.Dgv_UserShow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv_UserShow.Size = new System.Drawing.Size(950, 342);
             this.Dgv_UserShow.TabIndex = 1;
             // 
@@ -164,6 +182,28 @@ namespace HotelAdmin
             this.MembershipLevel.Name = "MembershipLevel";
             this.MembershipLevel.ReadOnly = true;
             // 
+            // UserMenu
+            // 
+            this.UserMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Option_Alter,
+            this.Option_Delete});
+            this.UserMenu.Name = "UserMenu";
+            this.UserMenu.Size = new System.Drawing.Size(101, 48);
+            // 
+            // Option_Alter
+            // 
+            this.Option_Alter.Name = "Option_Alter";
+            this.Option_Alter.Size = new System.Drawing.Size(180, 22);
+            this.Option_Alter.Text = "修改";
+            this.Option_Alter.Click += new System.EventHandler(this.Option_Alter_Click);
+            // 
+            // Option_Delete
+            // 
+            this.Option_Delete.Name = "Option_Delete";
+            this.Option_Delete.Size = new System.Drawing.Size(180, 22);
+            this.Option_Delete.Text = "删除";
+            this.Option_Delete.Click += new System.EventHandler(this.Option_Delete_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -199,31 +239,11 @@ namespace HotelAdmin
             this.Lab_Remind.Enabled = false;
             this.Lab_Remind.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Lab_Remind.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.Lab_Remind.Location = new System.Drawing.Point(118, 12);
+            this.Lab_Remind.Location = new System.Drawing.Point(106, 13);
             this.Lab_Remind.Name = "Lab_Remind";
-            this.Lab_Remind.Size = new System.Drawing.Size(153, 17);
+            this.Lab_Remind.Size = new System.Drawing.Size(188, 17);
             this.Lab_Remind.TabIndex = 6;
-            this.Lab_Remind.Text = "根据顾客姓名 / 身份证搜索";
-            // 
-            // UserMenu
-            // 
-            this.UserMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Option_Alter,
-            this.Option_Delete});
-            this.UserMenu.Name = "UserMenu";
-            this.UserMenu.Size = new System.Drawing.Size(101, 48);
-            // 
-            // Option_Alter
-            // 
-            this.Option_Alter.Name = "Option_Alter";
-            this.Option_Alter.Size = new System.Drawing.Size(100, 22);
-            this.Option_Alter.Text = "修改";
-            // 
-            // Option_Delete
-            // 
-            this.Option_Delete.Name = "Option_Delete";
-            this.Option_Delete.Size = new System.Drawing.Size(100, 22);
-            this.Option_Delete.Text = "删除";
+            this.Lab_Remind.Text = "请输入顾客姓名（支持模糊查询）";
             // 
             // CustomerManage
             // 

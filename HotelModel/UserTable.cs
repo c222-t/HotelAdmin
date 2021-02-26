@@ -18,7 +18,7 @@ namespace HotelModel
         /// <summary>
         /// 性别
         /// </summary>
-        public char Gender { get; set; }
+        public string Gender { get; set; }
         /// <summary>
         /// 年龄
         /// </summary>
@@ -30,7 +30,7 @@ namespace HotelModel
         /// <summary>
         /// 电话号码
         /// </summary>
-        public long TelephoneNumber { get; set; }
+        public string TelephoneNumber { get; set; }
         /// <summary>
         /// 余额
         /// </summary>

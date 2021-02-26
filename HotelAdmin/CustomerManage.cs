@@ -21,7 +21,7 @@ namespace HotelAdmin
         /// <summary>
         /// 会员等级信息列表
         /// </summary>
-        public List<MembershipTable> member = new List<MembershipTable>();
+        List<MembershipTable> member = new List<MembershipTable>();
 
         public CustomerManage()
         {
@@ -51,20 +51,52 @@ namespace HotelAdmin
         private void Btn_Inquire_Click(object sender, EventArgs e)
         {
             // 根据顾客的会员编号获取完整的顾客信息
-            var table = from row in manager.SeeUserRecord(Txt_InquireBox.Text).AsEnumerable()
-                        join arr in member on (int)row["Member"] equals arr.MemberNumber
-                        select new {
-                            UserName = row["UserName"],
-                            Gender = row["Gender"],
-                            Age = row["Age"],
-                            IDCard = row["IDCard"],
-                            TelephoneNumber = row["TelephoneNumber"],
-                            Balance = row["Balance"],
-                            arr.MembershipLevel,
-                            arr.Discount
-                        };
+            try {
+                var table = from row in manager.SeeUserRecord(Txt_InquireBox.Text).AsEnumerable()
+                            join arr in member on (int)row["Member"] equals arr.MemberNumber
+                            select new {
+                                UserName = row["UserName"],
+                                Gender = row["Gender"],
+                                Age = row["Age"],
+                                IDCard = row["IDCard"],
+                                TelephoneNumber = row["TelephoneNumber"],
+                                Balance = row["Balance"],
+                                arr.MembershipLevel,
+                                arr.Discount
+                            };
 
-            Dgv_UserShow.DataSource = table.ToArray();                  // 上传到显示控件
+                Dgv_UserShow.DataSource = table.ToArray();                  // 上传到显示控件
+            }
+            catch {
+                Dgv_UserShow.DataSource = null;                             // 未找到信息清除之前的记录
+            }
+        }
+        // 删除指定的顾客信息
+        private void Option_Delete_Click(object sender, EventArgs e)
+        {
+            // 删除指定的顾客信息
+            manager.DeleteUserRecord(Dgv_UserShow.SelectedCells[3].Value.ToString());
+
+            Btn_Inquire_Click(sender, e);                                   // 重新刷新显示记录
+        }
+        // 修改指定的顾客信息
+        private void Option_Alter_Click(object sender, EventArgs e)
+        {
+            UserTable user = new UserTable()                                // 获取要修改的顾客对象
+            {
+                UserName = Dgv_UserShow.SelectedCells[0].Value.ToString().Trim(),
+                IDCard = Dgv_UserShow.SelectedCells[3].Value.ToString(),
+                Age = (int)Dgv_UserShow.SelectedCells[2].Value,
+                Gender = Dgv_UserShow.SelectedCells[1].Value.ToString().Trim(),
+                TelephoneNumber = Dgv_UserShow.SelectedCells[4].Value.ToString(),
+                Balance = (double)Dgv_UserShow.SelectedCells[5].Value,
+                Member = new MembershipTable {
+                    MembershipLevel = Dgv_UserShow.SelectedCells[6].Value.ToString(),
+                    Discount = (double)Dgv_UserShow.SelectedCells[7].Value
+                }
+            };
+            // 激活顾客修改窗口并打开
+            new CustomerAlter() { user = user, member = this.member }.Show();
         }
     }
 }
