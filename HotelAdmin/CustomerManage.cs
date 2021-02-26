@@ -82,7 +82,7 @@ namespace HotelAdmin
         // 修改指定的顾客信息
         private void Option_Alter_Click(object sender, EventArgs e)
         {
-            UserTable user = new UserTable()                                // 创建要修改的顾客对象
+            UserTable user = new UserTable()                                // 获取要修改的顾客对象
             {
                 UserName = Dgv_UserShow.SelectedCells[0].Value.ToString().Trim(),
                 IDCard = Dgv_UserShow.SelectedCells[3].Value.ToString(),
