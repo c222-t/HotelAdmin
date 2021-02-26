@@ -79,7 +79,7 @@ namespace HotelAdmin
 
             Btn_Inquire_Click(sender, e);                                   // 重新刷新显示记录
         }
-        // 修改指定的顾客信息
+        // 修改选中的的顾客信息
         private void Option_Alter_Click(object sender, EventArgs e)
         {
             UserTable user = new UserTable()                                // 获取要修改的顾客对象
