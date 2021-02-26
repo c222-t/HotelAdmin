@@ -31,20 +31,46 @@ namespace HotelBLL
             if (trait == null) {                                        // 是否获取所有的顾客信息
                 return HotelData.Data.Tables["UserTable"];
             } else {                                                    // 根据顾客名称查询
-                table = service.CompareUserName(trait);
+                table = CompareUserName(trait);
             } if (table == null) {                                      // 根据顾客身份证查询
-                return service.CompareUserIDCard(trait);
+                return CompareUserIDCard(trait);
             }
             return table;                                               // 返回得到的顾客信息
+        }
+        /// <summary>
+        /// 根据顾客名称查询指定的顾客信息 (支持模糊查询)
+        /// </summary>
+        /// <param name="name">要查询的顾客姓名</param>
+        /// <returns>返回满足条件的顾客信息</returns>
+        public DataTable CompareUserName(string name)
+        {
+            try {
+                return service.CompareUserName(name);                   // 根据顾客名称查询
+            } catch {
+                return null;                                            // 未找到记录返回空
+            }
+        }
+        /// <summary>
+        /// 根据顾客身份证查询顾客信息
+        /// </summary>
+        /// <param name="IDCard">要查询的顾客身份证</param>
+        /// <returns>返回满足条件的顾客信息</returns>
+        public DataTable CompareUserIDCard(string IDCard)
+        {
+            try {
+                return service.CompareUserIDCard(IDCard);               // 根据顾客身份证查询
+            } catch {
+                return null;                                            // 未找到记录返回空
+            }
         }
         /// <summary>
         /// 查询指定顾客的消费记录
         /// </summary>
         /// <param name="idCard">顾客身份证</param>
         /// <returns>返回指定的顾客消费列表</returns>
-        public DataTable GetConsumeRecord(string idCard)
+        public DataTable GetConsumeRecord(string IDCard)
         {
-            return service.GetConsumeRecord(idCard);
+            return service.GetConsumeRecord(IDCard);
         }
         /// <summary>
         /// 获取顾客会员等级信息

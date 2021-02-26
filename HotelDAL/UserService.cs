@@ -25,35 +25,33 @@ namespace HotelDAL
                         where row["UserName"].ToString().Trim().StartsWith(name)
                         select row;
 
-            return table.CopyToDataTable() ?? null;                     // 返回得到的记录
+            return table.CopyToDataTable();                             // 返回得到的记录
         }
         /// <summary>
         /// 根据顾客身份证查询顾客信息
         /// </summary>
-        /// <param name="name">要查询的顾客身份证</param>
+        /// <param name="IDCard">要查询的顾客身份证</param>
         /// <returns>返回满足条件的顾客信息</returns>
         public DataTable CompareUserIDCard(string IDCard)
         {
             // 搜索系统临时数据库中满足身份证信息的顾客信息
-            var table = from row in HotelData.Data.Tables["UserTable"].AsEnumerable()
-                        where row["IDCard"].Equals(IDCard)
-                        select row;
+            var table = HotelData.Data.Tables["UserTable"].AsEnumerable().Where(u => u["IDCard"].Equals(IDCard));
 
-            return table.CopyToDataTable() ?? null;                     // 返回得到的记录
+            return table.CopyToDataTable();                             // 返回得到的记录
         }
         /// <summary>
         /// 查询指定顾客的消费记录
         /// </summary>
         /// <param name="idCard">顾客身份证</param>
         /// <returns>返回指定的顾客消费列表</returns>
-        public DataTable GetConsumeRecord(string idCard)
+        public DataTable GetConsumeRecord(string IDCard)
         {
             // 查询系统临时数据库中指定顾客的消费记录
             var table = from row in HotelData.Data.Tables["ConsumptionRecord"].AsEnumerable()
-                        where row["IDCard"].Equals(idCard)
+                        where row["IDCard"].Equals(IDCard)
                         select row;
 
-            return table.CopyToDataTable() ?? null;                     // 返回得到的记录
+            return table.CopyToDataTable();                             // 返回得到的记录
         }
         /// <summary>
         /// 获取顾客会员等级信息
@@ -70,10 +68,10 @@ namespace HotelDAL
         public void DeleteUserRecord(string IDCard)
         {
             // 遍历系统临时数据库搜索满足条件的记录
-            foreach (DataRow row in HotelData.Data.Tables["ConsumptionRecord"].Rows)
+            foreach (DataRow row in HotelData.Data.Tables["UserTable"].Rows)
             {
                 if (IDCard.Equals(row["IDCard"])) {                     // 根据身份证删除指定的顾客信息
-                    HotelData.Data.Tables["ConsumptionRecord"].Rows.Remove(row);
+                    HotelData.Data.Tables["UserTable"].Rows.Remove(row);
                     break;
                 }
             }
@@ -85,7 +83,7 @@ namespace HotelDAL
         public void AmendUserRecord(UserTable user)
         {
             // 遍历系统临时数据库搜索满足条件的记录
-            foreach (DataRow row in HotelData.Data.Tables["ConsumptionRecord"].Rows)
+            foreach (DataRow row in HotelData.Data.Tables["UserTable"].Rows)
             {
                 if (user.IDCard.Equals(row["IDCard"]))                  // 修改指定的顾客信息
                 {
