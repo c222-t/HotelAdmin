@@ -50,6 +50,7 @@
     <Compile Include="RoomManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RoomTypeManager.cs" />
+    <Compile Include="StatementTableManager.cs" />
     <Compile Include="UserManager.cs" />
     <Compile Include="UserRechargeTableManager.cs" />
   </ItemGroup>

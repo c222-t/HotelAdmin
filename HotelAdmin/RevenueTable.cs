@@ -17,12 +17,14 @@ namespace HotelAdmin
         UserRechargeTableManager urtm = new UserRechargeTableManager();
         ExpenditureTableManager etm = new ExpenditureTableManager();
         ConsumptionRecordManager crm = new ConsumptionRecordManager();
+        StatementTableManager stm = new StatementTableManager();
         public RevenueTable()
         {
             InitializeComponent();
             dgvUR.AutoGenerateColumns = false;
             dgvZhiChu.AutoGenerateColumns = false;
             dgvShang.AutoGenerateColumns = false;
+            dgvRoom.AutoGenerateColumns = false;
         }
 
         /// <summary>
@@ -35,16 +37,20 @@ namespace HotelAdmin
                 dgvUR.DataSource = urtm.UserRechargeTable();
                 dgvZhiChu.DataSource = etm.ExpenditureTable();
                 dgvShang.DataSource = crm.ConsumptionRecord();
+                dgvRoom.DataSource = stm.StatementTable();
             }
             else
             {
                 dgvUR.DataSource = urtm.UserRechargeTable(dtpKai.Value.ToString(), dtpJie.Value.ToString());
                 dgvZhiChu.DataSource = etm.ExpenditureTable(dtpKai.Value.ToString(), dtpJie.Value.ToString());
                 dgvShang.DataSource = crm.ConsumptionRecord(dtpKai.Value.ToString(), dtpJie.Value.ToString());
+                dgvRoom.DataSource = stm.StatementTable(dtpKai.Value.ToString(), dtpJie.Value.ToString());
             }
             txtZhiChu.Text = "0";
             txtChongZhi.Text = "0";
             txtShang.Text = "0";
+            txtXZ.Text = "0";
+            txtYuE.Text = "0";
 
             //计算充值营收总额
             for (int i = 0; i < dgvUR.Rows.Count; i++)
@@ -62,6 +68,19 @@ namespace HotelAdmin
             for (int i = 0; i < dgvShang.Rows.Count; i++)
             {
                 txtShang.Text = (Convert.ToDouble(txtShang.Text) + Convert.ToDouble(dgvShang.Rows[i].Cells[1].Value)).ToString();
+            }
+
+            //计算房间营收总额
+            for (int i = 0; i < dgvRoom.Rows.Count; i++)
+            {
+                if (dgvRoom.Rows[i].Cells[2].Value.ToString() == "现金支付")
+                {
+                    txtXZ.Text = (Convert.ToDouble(txtXZ.Text) + Convert.ToDouble(dgvRoom.Rows[i].Cells[1].Value)).ToString();
+                }
+                else
+                {
+                    txtYuE.Text = (Convert.ToDouble(txtYuE.Text) + Convert.ToDouble(dgvRoom.Rows[i].Cells[1].Value)).ToString();
+                }
             }
 
         }
@@ -96,6 +115,11 @@ namespace HotelAdmin
             UserRechargeTable();
         }
 
-
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            ExpendInsert ei = new ExpendInsert();
+            ei.rt = this;
+            ei.Show();
+        }
     }
 }

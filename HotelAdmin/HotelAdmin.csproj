@@ -47,6 +47,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="CheckOutTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CheckOutTable.Designer.cs">
+      <DependentUpon>CheckOutTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerAlter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -103,14 +109,14 @@
     <Compile Include="RoomRegulate.Designer.cs">
       <DependentUpon>RoomRegulate.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="CheckOutTable.resx">
+      <DependentUpon>CheckOutTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CustomerAlter.resx">
       <DependentUpon>CustomerAlter.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerManage.resx">
       <DependentUpon>CustomerManage.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CustomerOrder.resx">
-      <DependentUpon>CustomerOrder.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>

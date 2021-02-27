@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtYuE = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtXZ = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.dgvRoom = new System.Windows.Forms.DataGridView();
             this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,6 +46,8 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.dgvShang = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.txtChongZhi = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -71,8 +73,6 @@
             this.label12 = new System.Windows.Forms.Label();
             this.dtpJie = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoom)).BeginInit();
             this.groupBox2.SuspendLayout();
@@ -85,9 +85,9 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox2);
+            this.groupBox1.Controls.Add(this.txtYuE);
             this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtXZ);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Controls.Add(this.dgvRoom);
             this.groupBox1.Location = new System.Drawing.Point(4, 57);
@@ -97,14 +97,14 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "房间收入";
             // 
-            // textBox2
+            // txtYuE
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(271, 433);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 21);
-            this.textBox2.TabIndex = 4;
-            this.textBox2.Text = "0";
+            this.txtYuE.Enabled = false;
+            this.txtYuE.Location = new System.Drawing.Point(271, 433);
+            this.txtYuE.Name = "txtYuE";
+            this.txtYuE.Size = new System.Drawing.Size(100, 21);
+            this.txtYuE.TabIndex = 4;
+            this.txtYuE.Text = "0";
             // 
             // label2
             // 
@@ -115,14 +115,14 @@
             this.label2.TabIndex = 3;
             this.label2.Text = "余额收入：";
             // 
-            // textBox1
+            // txtXZ
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(74, 432);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 4;
-            this.textBox1.Text = "0";
+            this.txtXZ.Enabled = false;
+            this.txtXZ.Location = new System.Drawing.Point(74, 432);
+            this.txtXZ.Name = "txtXZ";
+            this.txtXZ.Size = new System.Drawing.Size(100, 21);
+            this.txtXZ.TabIndex = 4;
+            this.txtXZ.Text = "0";
             // 
             // label1
             // 
@@ -163,28 +163,28 @@
             // 
             // Column1
             // 
-            this.Column1.DataPropertyName = "RoomNumber";
+            this.Column1.DataPropertyName = "orderNumber";
             this.Column1.HeaderText = "订单号";
             this.Column1.Name = "Column1";
             this.Column1.ReadOnly = true;
             // 
             // Column3
             // 
-            this.Column3.DataPropertyName = "StatusName";
+            this.Column3.DataPropertyName = "TotalConsumption";
             this.Column3.HeaderText = "收款额";
             this.Column3.Name = "Column3";
             this.Column3.ReadOnly = true;
             // 
             // Column2
             // 
-            this.Column2.DataPropertyName = "Floor";
+            this.Column2.DataPropertyName = "PaymentMethod";
             this.Column2.HeaderText = "支付方式";
             this.Column2.Name = "Column2";
             this.Column2.ReadOnly = true;
             // 
             // Column4
             // 
-            this.Column4.DataPropertyName = "Name";
+            this.Column4.DataPropertyName = "CheckInTime";
             this.Column4.HeaderText = "付款时间";
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
@@ -280,6 +280,20 @@
             this.dgvShang.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvShang.Size = new System.Drawing.Size(330, 154);
             this.dgvShang.TabIndex = 2;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "SpendingTime";
+            this.dataGridViewTextBoxColumn1.HeaderText = "时间";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "money";
+            this.dataGridViewTextBoxColumn2.HeaderText = "消费额";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
             // 
             // groupBox3
             // 
@@ -533,20 +547,7 @@
             this.button1.TabIndex = 6;
             this.button1.Text = "新增支出";
             this.button1.UseVisualStyleBackColor = true;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "SpendingTime";
-            this.dataGridViewTextBoxColumn1.HeaderText = "时间";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "money";
-            this.dataGridViewTextBoxColumn2.HeaderText = "消费额";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // RevenueTable
             // 
@@ -587,9 +588,9 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.DataGridView dgvRoom;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtYuE;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtXZ;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.TextBox txtShang;
@@ -617,10 +618,6 @@
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.DateTimePicker dtpJie;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
@@ -630,5 +627,9 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn12;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
     }
 }
