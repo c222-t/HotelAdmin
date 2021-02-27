@@ -115,6 +115,11 @@ namespace HotelAdmin
             UserRechargeTable();
         }
 
-
+        private void Button1_Click(object sender, EventArgs e)
+        {
+            ExpendInsert ei = new ExpendInsert();
+            ei.rt = this;
+            ei.Show();
+        }
     }
 }

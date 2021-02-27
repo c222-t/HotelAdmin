@@ -34,6 +34,24 @@ namespace HotelDAL
             return db.GetTable(sql.ToString(), null, "ExpenditureTable");
         }
 
+        /// <summary>
+        /// 支出表增加
+        /// </summary>
+        /// <param name="et"></param>
+        /// <returns></returns>
+        public int ExpenditureInsert(ExpenditureTable et)
+        {
+            StringBuilder sql = new StringBuilder("INSERT INTO [ExpenditureTable]([SpendingTime],[ExpenditureAmount],[ExpenditureReasons]) VALUES (@SpendingTime,@ExpenditureAmount,@ExpenditureReasons)");
+
+            SqlParameter[] sp = {
+                new SqlParameter ("@SpendingTime",et.SpendingTime),
+                new SqlParameter ("@ExpenditureAmount",et.ExpenditureAmount),
+                new SqlParameter ("@ExpenditureReasons",et.ExpenditureReasons)
+            };
+
+            return db.ExecuteNonQuery(sql.ToString(), sp);
+        }
+
 
     }
 }

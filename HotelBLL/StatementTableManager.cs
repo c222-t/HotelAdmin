@@ -19,17 +19,23 @@ namespace HotelBLL
         /// <returns></returns>
         public DataTable StatementTable(string kai="",string jie="")
         {
-            DataTable dt = HotelData.Data.Tables["StatementTable"].Copy();
+            DataTable dt = HotelData.Data.Tables["StatementTable"].Clone();
+
+            DataRow[] dr = null;
             if (kai != "" && jie != "")
             {
-                foreach (DataRow item in dt.Rows)
-                {
-                    if (DateTime.Parse(item["CheckInTime"].ToString()) > DateTime.Parse(kai) && DateTime.Parse(item["CheckInTime"].ToString()) < DateTime.Parse(jie))
-                    {
-                        dt.Rows.Remove(item);
-                    }
-                }
+                dr = HotelData.Data.Tables["StatementTable"].Select(string.Format(" CheckInTime > #{0}# and CheckInTime < #{1}#", kai, jie));
             }
+            else
+            {
+                dr = HotelData.Data.Tables["StatementTable"].Select();
+            }
+
+            for (int i = 0; i < dr.Length; i++)
+            {
+                dt.ImportRow(dr[i]);
+            }
+
             return dt;
         }
 
