@@ -48,14 +48,14 @@ namespace HotelAdmin
             Lab_Remind.Visible = Txt_InquireBox.Text.Equals(string.Empty);
         }
         // 查询顾客信息
-        private void Btn_Inquire_Click(object sender, EventArgs e)
+        public void Btn_Inquire_Click(object sender, EventArgs e)
         {
             // 根据顾客的会员编号获取完整的顾客信息
             try {
                 var table = from row in manager.SeeUserRecord(Txt_InquireBox.Text).AsEnumerable()
                             join arr in member on (int)row["Member"] equals arr.MemberNumber
                             select new {
-                                UserName = row["UserName"],
+                                UserName = row["UserName"].ToString().Trim(),
                                 Gender = row["Gender"],
                                 Age = row["Age"],
                                 IDCard = row["IDCard"],
@@ -96,7 +96,7 @@ namespace HotelAdmin
                 }
             };
             // 激活顾客修改窗口并打开
-            new CustomerAlter() { user = user, member = this.member }.Show();
+            new CustomerAlter() { user = user, member = this.member, manager = this }.Show();
         }
     }
 }

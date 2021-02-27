@@ -30,6 +30,8 @@ namespace HotelAdmin
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.lab_Discount = new System.Windows.Forms.Label();
+            this.cbox_Member = new System.Windows.Forms.ComboBox();
             this.txt_Balance = new System.Windows.Forms.TextBox();
             this.txt_IDCard = new System.Windows.Forms.TextBox();
             this.txt_Name = new System.Windows.Forms.TextBox();
@@ -39,8 +41,6 @@ namespace HotelAdmin
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.Alter = new System.Windows.Forms.Button();
-            this.cbox_Member = new System.Windows.Forms.ComboBox();
-            this.lab_Discount = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -64,6 +64,24 @@ namespace HotelAdmin
             this.groupBox1.TabIndex = 11;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "修改顾客信息";
+            // 
+            // lab_Discount
+            // 
+            this.lab_Discount.AutoSize = true;
+            this.lab_Discount.Location = new System.Drawing.Point(104, 195);
+            this.lab_Discount.Name = "lab_Discount";
+            this.lab_Discount.Size = new System.Drawing.Size(96, 20);
+            this.lab_Discount.TabIndex = 21;
+            this.lab_Discount.Text = "lab_Discount";
+            // 
+            // cbox_Member
+            // 
+            this.cbox_Member.FormattingEnabled = true;
+            this.cbox_Member.Location = new System.Drawing.Point(104, 156);
+            this.cbox_Member.Name = "cbox_Member";
+            this.cbox_Member.Size = new System.Drawing.Size(181, 28);
+            this.cbox_Member.TabIndex = 20;
+            this.cbox_Member.SelectedIndexChanged += new System.EventHandler(this.Cbox_Member_SelectedIndexChanged);
             // 
             // txt_Balance
             // 
@@ -142,24 +160,6 @@ namespace HotelAdmin
             this.Alter.UseVisualStyleBackColor = true;
             this.Alter.Click += new System.EventHandler(this.Alter_Click);
             // 
-            // cbox_Member
-            // 
-            this.cbox_Member.FormattingEnabled = true;
-            this.cbox_Member.Location = new System.Drawing.Point(104, 156);
-            this.cbox_Member.Name = "cbox_Member";
-            this.cbox_Member.Size = new System.Drawing.Size(181, 28);
-            this.cbox_Member.TabIndex = 20;
-            this.cbox_Member.SelectedIndexChanged += new System.EventHandler(this.Cbox_Member_SelectedIndexChanged);
-            // 
-            // lab_Discount
-            // 
-            this.lab_Discount.AutoSize = true;
-            this.lab_Discount.Location = new System.Drawing.Point(104, 195);
-            this.lab_Discount.Name = "lab_Discount";
-            this.lab_Discount.Size = new System.Drawing.Size(96, 20);
-            this.lab_Discount.TabIndex = 21;
-            this.lab_Discount.Text = "lab_Discount";
-            // 
             // CustomerAlter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -167,6 +167,7 @@ namespace HotelAdmin
             this.ClientSize = new System.Drawing.Size(332, 296);
             this.Controls.Add(this.groupBox1);
             this.Name = "CustomerAlter";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "修改顾客信息";
             this.Load += new System.EventHandler(this.CustomerAlter_Load);
             this.groupBox1.ResumeLayout(false);

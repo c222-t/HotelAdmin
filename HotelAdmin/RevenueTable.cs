@@ -18,6 +18,7 @@ namespace HotelAdmin
         ExpenditureTableManager etm = new ExpenditureTableManager();
         ConsumptionRecordManager crm = new ConsumptionRecordManager();
         StatementTableManager stm = new StatementTableManager();
+
         public RevenueTable()
         {
             InitializeComponent();

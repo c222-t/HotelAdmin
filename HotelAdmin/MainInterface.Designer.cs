@@ -430,6 +430,7 @@ namespace HotelAdmin
             this.Billing.Name = "Billing";
             this.Billing.Size = new System.Drawing.Size(44, 21);
             this.Billing.Text = "开单";
+            this.Billing.Click += new System.EventHandler(this.Billing_Click_1);
             // 
             // CheckOut
             // 

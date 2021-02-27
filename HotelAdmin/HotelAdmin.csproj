@@ -65,6 +65,12 @@
     <Compile Include="CustomerManage.Designer.cs">
       <DependentUpon>CustomerManage.cs</DependentUpon>
     </Compile>
+    <Compile Include="CustomerOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CustomerOrder.Designer.cs">
+      <DependentUpon>CustomerOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="ExpendInsert.cs">
       <SubType>Form</SubType>
     </Compile>
