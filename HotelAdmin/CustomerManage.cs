@@ -52,7 +52,7 @@ namespace HotelAdmin
         {
             // 根据顾客的会员编号获取完整的顾客信息
             try {
-                var table = from row in manager.SeeUserRecord(Txt_InquireBox.Text).AsEnumerable()
+                var table = from row in manager.CompareUserName(Txt_InquireBox.Text).AsEnumerable()
                             join arr in member on (int)row["Member"] equals arr.MemberNumber
                             select new {
                                 UserName = row["UserName"].ToString().Trim(),
