@@ -49,6 +49,5 @@ namespace HotelDAL
             return db.GetTable(sql.ToString (),null, "RoomTypeTable");
         }
 
-
     }
 }

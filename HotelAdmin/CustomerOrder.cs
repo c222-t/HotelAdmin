@@ -73,8 +73,7 @@ namespace HotelAdmin
             try {                                                       // 查询指定房间类型的房间信息
                 var table = from row in new RoomManager().RoomTable(cbox_roomClass.Text.Equals("全部") ? "" : cbox_roomClass.Text).AsEnumerable()
                             join arr in roomType on row["Name"].ToString() equals arr.Name
-                            select new
-                            {
+                            select new {
                                 RoomNumber = row["RoomNumber"],
                                 Floor = row["Floor"],
                                 arr.Name,
@@ -104,7 +103,7 @@ namespace HotelAdmin
             {
                 StatementTable order = new StatementTable()             // 创建订单对象
                 {
-                    OrderNumber = "WZDJD00" + manager.GetOrderNumber(),
+                    OrderNumber = "WZDJD00" + manager.GetOrderNumber() + 1,
                     IDCard = txt_IDcard.Text,
                     PaymentMethod = cbox_payWay.Text,
                     CheckInTime = (DateTime)dtpicker_begin.Value,
@@ -135,6 +134,11 @@ namespace HotelAdmin
                 if (name.Equals(arr.Name)) { return arr; }              // 判断类型名称是否相等
             }
             return null;
+        }
+        ~CustomerOrder()
+        {
+            this.manager = null;
+            this.roomType = null;
         }
     }
 }
