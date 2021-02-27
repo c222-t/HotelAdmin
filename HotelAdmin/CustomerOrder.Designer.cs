@@ -64,6 +64,8 @@ namespace HotelAdmin
             this.typeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Floor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label14 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.txt_age = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_RoomList)).BeginInit();
@@ -73,6 +75,8 @@ namespace HotelAdmin
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.txt_age);
+            this.panel1.Controls.Add(this.label13);
             this.panel1.Controls.Add(this.cbox_payWay);
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.cbox_roomClass);
@@ -427,6 +431,23 @@ namespace HotelAdmin
             this.label14.TabIndex = 1;
             this.label14.Text = "房间列表";
             // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label13.Location = new System.Drawing.Point(140, 333);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(51, 20);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "年龄：";
+            // 
+            // txt_age
+            // 
+            this.txt_age.Location = new System.Drawing.Point(197, 333);
+            this.txt_age.Name = "txt_age";
+            this.txt_age.Size = new System.Drawing.Size(55, 21);
+            this.txt_age.TabIndex = 28;
+            // 
             // CustomerOrder
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -481,5 +502,7 @@ namespace HotelAdmin
         private System.Windows.Forms.DataGridViewTextBoxColumn Price;
         private System.Windows.Forms.DataGridViewTextBoxColumn typeName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Floor;
+        private System.Windows.Forms.TextBox txt_age;
+        private System.Windows.Forms.Label label13;
     }
 }

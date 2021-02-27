@@ -23,9 +23,5 @@ namespace HotelModel
         /// 房间价格
         /// </summary>
         public double Price { get; set; }
-        /// <summary>
-        /// 居住天数
-        /// </summary>
-        public int Days { get; set; }
     }
 }

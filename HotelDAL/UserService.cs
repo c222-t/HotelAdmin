@@ -97,5 +97,24 @@ namespace HotelDAL
                 }
             }
         }
+        /// <summary>
+        /// 提交新的顾客信息
+        /// </summary>
+        /// <param name="user">要添加的顾客信息</param>
+        public void AddUserRecord(UserTable user)
+        {
+            if (user != null)                                           // 判断顾客信息是否填写
+            {
+                DataRow row = HotelData.Data.Tables["UserTable"].NewRow();
+                row["UserName"] = user.UserName;
+                row["IDCard"] = user.IDCard;
+                row["TelephoneNumber"] = user.TelephoneNumber;
+                row["Balance"] = user.Balance;
+                row["Member"] = user.Member.MemberNumber;
+                row["Gender"] = user.Gender;
+                row["Age"] = user.Age;
+                HotelData.Data.Tables["UserTable"].Rows.Add(row);       // 向顾客表添加该顾客
+            }
+        }
     }
 }

@@ -20,34 +20,16 @@ namespace HotelBLL
         UserService service = new UserService();
 
         /// <summary>
-        /// 查询指定或全部的顾客信息 (传入顾客身份证或姓名)
-        /// </summary>
-        /// <param name="trait">进行查询的顾客条件</param>
-        /// <returns>返回满足条件的顾客信息</returns>
-        public DataTable SeeUserRecord(string trait)
-        {
-            DataTable table;                                            // 创建临时数据表获取数据
-
-            if (trait == null) {                                        // 是否获取所有的顾客信息
-                return HotelData.Data.Tables["UserTable"];
-            } else {                                                    // 根据顾客名称查询
-                table = CompareUserName(trait);
-            } if (table == null) {                                      // 根据顾客身份证查询
-                return CompareUserIDCard(trait);
-            }
-            return table;                                               // 返回得到的顾客信息
-        }
-        /// <summary>
         /// 根据顾客名称查询指定的顾客信息 (支持模糊查询)
         /// </summary>
         /// <param name="name">要查询的顾客姓名</param>
         /// <returns>返回满足条件的顾客信息</returns>
-        public DataTable CompareUserName(string name)
+        public DataTable CompareUserName(string name = "")
         {
             try {
                 return service.CompareUserName(name);                   // 根据顾客名称查询
             } catch {
-                return null;                                            // 未找到记录返回空
+                return HotelData.Data.Tables["UserTable"];              // 未找到记录返回空
             }
         }
         /// <summary>
@@ -94,6 +76,14 @@ namespace HotelBLL
         public void AmendUserRecord(UserTable user)
         {
             service.AmendUserRecord(user);
+        }
+        /// <summary>
+        /// 提交新的顾客信息
+        /// </summary>
+        /// <param name="user">要添加的顾客信息</param>
+        public void AddUserRecord(UserTable user)
+        {
+            service.AddUserRecord(user);
         }
     }
 }

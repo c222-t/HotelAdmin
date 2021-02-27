@@ -59,7 +59,7 @@ namespace HotelAdmin
             manager.Btn_Inquire_Click(sender, e);                       // 调用顾客查询操作
 
             // 修改后是否继续操作
-            if (MessageBox.Show("修改完毕，是否继续？", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("修改完毕，是否退出？", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
                 this.Close();
             }
