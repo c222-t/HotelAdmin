@@ -120,7 +120,7 @@ namespace HotelAdmin
                     OperationManager = waiterID,
                     TotalConsumption = (double)Dgv_RoomList.SelectedCells[3].Value * double.Parse(Discount.Text)
                 };
-                manager.AddOrderRecord(order);                          // 向数据库中添加订单记录
+                manager.AddOrderRecord(order);                          // 向数据库添加该订单记录
                 MessageBox.Show("添加成功！", "提示");
             }
             catch {
