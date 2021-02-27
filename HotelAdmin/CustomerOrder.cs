@@ -75,7 +75,7 @@ namespace HotelAdmin
                     Price = (double)row["Price"],
                     No = (int)row["No"]
                 });
-                cbox_roomClass.Items.Add(row[Name].ToString().Trim());  // 向控件房间类型列表添加信息             
+                cbox_roomClass.Items.Add(row["Name"].ToString().Trim());// 向控件房间类型列表添加信息             
             }
             cbox_roomClass.Text = cbox_roomClass.Items[0].ToString();   // 显示房间类型默认选项
         }
