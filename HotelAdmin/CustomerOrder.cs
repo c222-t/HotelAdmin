@@ -48,7 +48,7 @@ namespace HotelAdmin
             GetRoomTypeManager();                                       // 获取会员等级列表信息
             GetMembershipTable();                                       // 获取房间类型列表信息
         }
-        // 加载会员等级列表信息
+        // 加载会员等级列表
         private void GetMembershipTable()
         {
             // 遍历会员等级数据表
@@ -64,7 +64,7 @@ namespace HotelAdmin
             }
             cbox_members.Text = cbox_members.Items[0].ToString();       // 显示会员等级默认选项
         }
-        // 加载房间类型列表信息
+        // 加载房间类型列表
         private void GetRoomTypeManager()
         {
             // 遍历房间类型数据表
