@@ -123,7 +123,7 @@ namespace HotelAdmin
                 MessageBox.Show("添加成功！", "提示");
             }
             catch {
-                MessageBox.Show("订单必要信息未填写！", "提示");
+                MessageBox.Show("必要信息未填写或填写错误！", "提示");
             }
         }
         // 提交顾客信息
@@ -133,7 +133,7 @@ namespace HotelAdmin
             {
                 UserName = txt_name.Text,
                 Gender = rbtn_male.Checked ? "男" : "女",
-                Age = 1,
+                Age = int.Parse(txt_age.Text),
                 Balance = double.Parse(txt_bmikece.Text),
                 IDCard = txt_IDcard.Text,
                 Member = GetMembership(cbox_members.Text),
