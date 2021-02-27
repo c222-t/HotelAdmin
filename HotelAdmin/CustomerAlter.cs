@@ -14,6 +14,7 @@ namespace HotelAdmin
 {
     public partial class CustomerAlter : Form
     {
+        public CustomerManage manager = null;                              // 将操作传递给修改窗口
         /// <summary>
         /// 会员等级信息列表
         /// </summary>
@@ -55,6 +56,13 @@ namespace HotelAdmin
                 Member = GetMembership()
             };
             new UserManager().AmendUserRecord(user);                    // 查找该顾客进行修改
+            manager.Btn_Inquire_Click(sender, e);                       // 调用顾客查询操作
+
+            // 修改后是否继续操作
+            if (MessageBox.Show("修改完毕，是否继续？", "提示", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                this.Close();
+            }
         }
         // 加载会员等级信息
         private void ToLoadMemberList()

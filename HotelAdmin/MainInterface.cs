@@ -16,6 +16,7 @@ namespace HotelAdmin
     {
         RoomManager rm = new RoomManager();
         RoomTypeManager rtm = new RoomTypeManager();
+
         public MainInterface()
         {
             InitializeComponent();
@@ -38,9 +39,9 @@ namespace HotelAdmin
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void Billing_Click(object sender, EventArgs e)
+        private void Billing_Click_1(object sender, EventArgs e)
         {
-
+            new CustomerOrder().Show();                 // 激活顾客开单窗口
         }
         /// <summary>
         /// 结账
@@ -189,15 +190,15 @@ namespace HotelAdmin
             lblCount.Text = dt.Rows.Count.ToString();
             foreach (DataRow item in dt.Rows)
             {
-                if (item["RoomStatus"].ToString() == "1")
+                if (item["StatusName"].ToString() == "1")
                 {
                     kong++;
                 }
-                else if (item["RoomStatus"].ToString() == "2")
+                else if (item["StatusName"].ToString() == "2")
                 {
                     zhan++;
                 }
-                else if (item["RoomStatus"].ToString() == "3")
+                else if (item["StatusName"].ToString() == "3")
                 {
                     yu++;
                 }
@@ -240,5 +241,6 @@ namespace HotelAdmin
         {
             Application.Exit();
         }
+        
     }
 }

@@ -116,5 +116,11 @@ namespace HotelDAL
                 HotelData.Data.Tables["StatementTable"].Rows.Add(row);
             }
         }
+        /// <summary>
+        /// 获取订单总数量
+        /// </summary>
+        public int GetOrderNumber() {
+            return HotelData.Data.Tables["StatementTable"].Rows.Count;
+        }
     }
 }
