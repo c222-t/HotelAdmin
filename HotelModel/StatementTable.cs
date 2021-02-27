@@ -40,6 +40,10 @@ namespace HotelModel
         /// </summary>
         public int OperationManager { get; set; }
         /// <summary>
+        /// 开单天数
+        /// </summary>
+        public int Days { get; set; }
+        /// <summary>
         /// 订单状态
         /// </summary>
         public OrderStatusTable Status { get; set; }

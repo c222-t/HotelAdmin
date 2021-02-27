@@ -58,7 +58,6 @@ namespace HotelAdmin
             foreach (DataRow row in new RoomTypeManager().TypeTable().Rows)
             {
                 RoomTypeTable roomType = new RoomTypeTable() {          // 获取当前信息
-                    Days = (int)row["Days"],
                     Name = row["Name"].ToString(),
                     Price = (double)row["Price"],
                     No = (int)row["No"]
@@ -71,17 +70,17 @@ namespace HotelAdmin
         // 根据房间类型显示满足条件的信息
         private void Cbox_roomClass_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // 查询指定房间类型的房间信息
-            var table = from row in new RoomManager().RoomTable(cbox_roomClass.Text.Equals("全部") ? "" : cbox_roomClass.Text).AsEnumerable()
-                        join arr in roomType on row["Name"].ToString() equals arr.Name
-                        select new {
-                            RoomNumber = row["RoomNumber"],
-                            Floor = row["Floor"],
-                            arr.Name,
-                            arr.Price,
-                        };
+            try {                                                       // 查询指定房间类型的房间信息
+                var table = from row in new RoomManager().RoomTable(cbox_roomClass.Text.Equals("全部") ? "" : cbox_roomClass.Text).AsEnumerable()
+                            join arr in roomType on row["Name"].ToString() equals arr.Name
+                            select new
+                            {
+                                RoomNumber = row["RoomNumber"],
+                                Floor = row["Floor"],
+                                arr.Name,
+                                arr.Price,
+                            };
 
-            try {
                 Dgv_RoomList.DataSource = table.ToArray();              // 上传到显示控件
             } catch {
                 Dgv_RoomList.DataSource = null;                         // 未找到信息清除之前的记录
@@ -118,7 +117,8 @@ namespace HotelAdmin
                     },
                     Status = new OrderStatusTable { Number = 2, State = "开始" },
                     OperationManager = waiterID,
-                    TotalConsumption = (double)Dgv_RoomList.SelectedCells[3].Value * double.Parse(Discount.Text)
+                    TotalConsumption = (double)Dgv_RoomList.SelectedCells[3].Value * double.Parse(Discount.Text),
+                    Days = 1
                 };
                 manager.AddOrderRecord(order);                          // 向数据库添加本次订单记录
                 MessageBox.Show("添加成功！", "提示");

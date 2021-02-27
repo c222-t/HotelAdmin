@@ -35,7 +35,7 @@ namespace HotelDAL
         /// <returns></returns>
         public DataTable TypeTable(string type="")
         {
-            StringBuilder sql = new StringBuilder("SELECT [No],[Name],[Price],[Days] FROM [RoomTypeTable] where 1=1");
+            StringBuilder sql = new StringBuilder("SELECT [No],[Name],[Price] FROM [RoomTypeTable] where 1=1");
 
             if (type != "")
             {
