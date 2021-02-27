@@ -11,6 +11,7 @@ namespace HotelBLL
 {
     public class StatementTableManager
     {
+        StatementTableService sts = new StatementTableService();
         /// <summary>
         /// 查询订单表
         /// </summary>
@@ -38,6 +39,17 @@ namespace HotelBLL
 
             return dt;
         }
+
+        /// <summary>
+        /// 用于结账窗体
+        /// </summary>
+        /// <param name="roomName"></param>
+        /// <returns></returns>
+        public DataTable Statement(string roomName = "")
+        {
+            return sts.Statement(roomName);
+        }
+
 
     }
 }

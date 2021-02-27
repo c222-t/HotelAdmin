@@ -31,37 +31,18 @@
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvRoom = new System.Windows.Forms.DataGridView();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtRoomName = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column15 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column16 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column17 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dgvUser = new System.Windows.Forms.DataGridView();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.label7 = new System.Windows.Forms.Label();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -71,14 +52,28 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column12 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column13 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column14 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column18 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column19 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column20 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoom)).BeginInit();
             this.groupBox2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.groupBox3.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -86,7 +81,7 @@
             // 
             this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.dgvRoom);
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.txtRoomName);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
@@ -103,6 +98,7 @@
             this.button1.TabIndex = 2;
             this.button1.Text = "查找";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // dgvRoom
             // 
@@ -123,8 +119,6 @@
             this.Column2,
             this.Column4,
             this.Column5,
-            this.Column6,
-            this.Column7,
             this.Column8,
             this.Column9,
             this.Column10,
@@ -138,83 +132,14 @@
             this.dgvRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvRoom.Size = new System.Drawing.Size(957, 216);
             this.dgvRoom.TabIndex = 3;
+            this.dgvRoom.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvRoom_CellContentClick);
             // 
-            // Column1
+            // txtRoomName
             // 
-            this.Column1.DataPropertyName = "orderNumber";
-            this.Column1.HeaderText = "订单号";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "TotalConsumption";
-            this.Column3.HeaderText = "房间号";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "PaymentMethod";
-            this.Column2.HeaderText = "房客姓名";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "CheckInTime";
-            this.Column4.HeaderText = "手机号码";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.HeaderText = "入住时间";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.HeaderText = "现金收款";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.HeaderText = "余额收款";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.HeaderText = "合计金额";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            // 
-            // Column9
-            // 
-            this.Column9.HeaderText = "付款方式";
-            this.Column9.Name = "Column9";
-            this.Column9.ReadOnly = true;
-            // 
-            // Column10
-            // 
-            this.Column10.HeaderText = "折扣";
-            this.Column10.Name = "Column10";
-            this.Column10.ReadOnly = true;
-            // 
-            // Column11
-            // 
-            this.Column11.HeaderText = "价格";
-            this.Column11.Name = "Column11";
-            this.Column11.ReadOnly = true;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(218, 14);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 21);
-            this.textBox1.TabIndex = 1;
+            this.txtRoomName.Location = new System.Drawing.Point(218, 14);
+            this.txtRoomName.Name = "txtRoomName";
+            this.txtRoomName.Size = new System.Drawing.Size(100, 21);
+            this.txtRoomName.TabIndex = 1;
             // 
             // label1
             // 
@@ -227,7 +152,8 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Controls.Add(this.dataGridView1);
+            this.groupBox2.Controls.Add(this.dgvUser);
+            this.groupBox2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox2.Location = new System.Drawing.Point(13, 283);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(969, 141);
@@ -235,116 +161,38 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "准备退房的客人";
             // 
-            // dataGridView1
+            // dgvUser
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AllowUserToResizeColumns = false;
-            this.dataGridView1.AllowUserToResizeRows = false;
-            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dgvUser.AllowUserToAddRows = false;
+            this.dgvUser.AllowUserToDeleteRows = false;
+            this.dgvUser.AllowUserToResizeColumns = false;
+            this.dgvUser.AllowUserToResizeRows = false;
+            this.dgvUser.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvUser.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.Column12,
             this.Column13,
             this.Column14,
-            this.Column15,
-            this.Column16,
-            this.Column17,
             this.Column18,
             this.Column19,
             this.Column20});
-            this.dataGridView1.Location = new System.Drawing.Point(6, 20);
-            this.dataGridView1.MultiSelect = false;
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersVisible = false;
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(957, 115);
-            this.dataGridView1.TabIndex = 3;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "orderNumber";
-            this.dataGridViewTextBoxColumn1.HeaderText = "订单号";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "TotalConsumption";
-            this.dataGridViewTextBoxColumn2.HeaderText = "房间号";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "PaymentMethod";
-            this.dataGridViewTextBoxColumn3.HeaderText = "姓名";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // Column12
-            // 
-            this.Column12.HeaderText = "入住时间";
-            this.Column12.Name = "Column12";
-            this.Column12.ReadOnly = true;
-            // 
-            // Column13
-            // 
-            this.Column13.HeaderText = "实住时间";
-            this.Column13.Name = "Column13";
-            this.Column13.ReadOnly = true;
-            // 
-            // Column14
-            // 
-            this.Column14.HeaderText = "应付金额";
-            this.Column14.Name = "Column14";
-            this.Column14.ReadOnly = true;
-            // 
-            // Column15
-            // 
-            this.Column15.HeaderText = "现金收款";
-            this.Column15.Name = "Column15";
-            this.Column15.ReadOnly = true;
-            // 
-            // Column16
-            // 
-            this.Column16.HeaderText = "余额收款";
-            this.Column16.Name = "Column16";
-            this.Column16.ReadOnly = true;
-            // 
-            // Column17
-            // 
-            this.Column17.HeaderText = "合计金额";
-            this.Column17.Name = "Column17";
-            this.Column17.ReadOnly = true;
-            // 
-            // Column18
-            // 
-            this.Column18.HeaderText = "付款方式";
-            this.Column18.Name = "Column18";
-            this.Column18.ReadOnly = true;
-            // 
-            // Column19
-            // 
-            this.Column19.HeaderText = "折扣";
-            this.Column19.Name = "Column19";
-            this.Column19.ReadOnly = true;
-            // 
-            // Column20
-            // 
-            this.Column20.HeaderText = "价格";
-            this.Column20.Name = "Column20";
-            this.Column20.ReadOnly = true;
+            this.dgvUser.Location = new System.Drawing.Point(6, 26);
+            this.dgvUser.MultiSelect = false;
+            this.dgvUser.Name = "dgvUser";
+            this.dgvUser.ReadOnly = true;
+            this.dgvUser.RowHeadersVisible = false;
+            this.dgvUser.RowTemplate.Height = 23;
+            this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvUser.Size = new System.Drawing.Size(957, 115);
+            this.dgvUser.TabIndex = 3;
             // 
             // groupBox3
             // 
@@ -397,6 +245,40 @@
             this.button2.TabIndex = 2;
             this.button2.Text = "确定";
             this.button2.UseVisualStyleBackColor = true;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Enabled = false;
+            this.textBox5.Location = new System.Drawing.Point(718, 53);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 21);
+            this.textBox5.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(647, 56);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(65, 12);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "应付金额：";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Enabled = false;
+            this.textBox7.Location = new System.Drawing.Point(523, 78);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 21);
+            this.textBox7.TabIndex = 1;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(476, 81);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(41, 12);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "补差：";
             // 
             // textBox4
             // 
@@ -475,39 +357,131 @@
             this.label2.TabIndex = 0;
             this.label2.Text = "订单号：";
             // 
-            // label7
+            // Column1
             // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(476, 81);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(41, 12);
-            this.label7.TabIndex = 0;
-            this.label7.Text = "补差：";
+            this.Column1.DataPropertyName = "orderNumber";
+            this.Column1.HeaderText = "订单号";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
             // 
-            // textBox7
+            // Column3
             // 
-            this.textBox7.Enabled = false;
-            this.textBox7.Location = new System.Drawing.Point(523, 78);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 21);
-            this.textBox7.TabIndex = 1;
+            this.Column3.DataPropertyName = "RoomNumber";
+            this.Column3.HeaderText = "房间号";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
             // 
-            // label5
+            // Column2
             // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(647, 56);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(65, 12);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "应付金额：";
+            this.Column2.DataPropertyName = "UserName";
+            this.Column2.HeaderText = "房客姓名";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
             // 
-            // textBox5
+            // Column4
             // 
-            this.textBox5.Enabled = false;
-            this.textBox5.Location = new System.Drawing.Point(718, 53);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 21);
-            this.textBox5.TabIndex = 1;
+            this.Column4.DataPropertyName = "TelephoneNumber";
+            this.Column4.HeaderText = "手机号码";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "CheckInTime";
+            this.Column5.HeaderText = "入住时间";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "TotalConsumptions";
+            this.Column8.HeaderText = "总消费";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            // 
+            // Column9
+            // 
+            this.Column9.DataPropertyName = "PaymentMethod";
+            this.Column9.HeaderText = "付款方式";
+            this.Column9.Name = "Column9";
+            this.Column9.ReadOnly = true;
+            // 
+            // Column10
+            // 
+            this.Column10.DataPropertyName = "Discount";
+            this.Column10.HeaderText = "折扣";
+            this.Column10.Name = "Column10";
+            this.Column10.ReadOnly = true;
+            // 
+            // Column11
+            // 
+            this.Column11.DataPropertyName = "Prices";
+            this.Column11.HeaderText = "价格";
+            this.Column11.Name = "Column11";
+            this.Column11.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "orderNumber";
+            this.dataGridViewTextBoxColumn1.HeaderText = "订单号";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "RoomNumber";
+            this.dataGridViewTextBoxColumn2.HeaderText = "房间号";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "UserName";
+            this.dataGridViewTextBoxColumn3.HeaderText = "姓名";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // Column12
+            // 
+            this.Column12.DataPropertyName = "CheckInTime";
+            this.Column12.HeaderText = "入住时间";
+            this.Column12.Name = "Column12";
+            this.Column12.ReadOnly = true;
+            // 
+            // Column13
+            // 
+            this.Column13.DataPropertyName = "Days";
+            this.Column13.HeaderText = "实住时间";
+            this.Column13.Name = "Column13";
+            this.Column13.ReadOnly = true;
+            // 
+            // Column14
+            // 
+            this.Column14.DataPropertyName = "TotalConsumptions";
+            this.Column14.HeaderText = "应付金额";
+            this.Column14.Name = "Column14";
+            this.Column14.ReadOnly = true;
+            // 
+            // Column18
+            // 
+            this.Column18.DataPropertyName = "PaymentMethod";
+            this.Column18.HeaderText = "付款方式";
+            this.Column18.Name = "Column18";
+            this.Column18.ReadOnly = true;
+            // 
+            // Column19
+            // 
+            this.Column19.DataPropertyName = "Discount";
+            this.Column19.HeaderText = "折扣";
+            this.Column19.Name = "Column19";
+            this.Column19.ReadOnly = true;
+            // 
+            // Column20
+            // 
+            this.Column20.DataPropertyName = "Prices";
+            this.Column20.HeaderText = "实付金额";
+            this.Column20.Name = "Column20";
+            this.Column20.ReadOnly = true;
             // 
             // CheckOutTable
             // 
@@ -525,7 +499,7 @@
             this.groupBox1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoom)).EndInit();
             this.groupBox2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).EndInit();
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.ResumeLayout(false);
@@ -536,22 +510,11 @@
 
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtRoomName;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DataGridView dgvRoom;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column6;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column7;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dgvUser;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button2;
@@ -565,21 +528,27 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column8;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column12;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column13;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column14;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column15;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column16;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Column17;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column18;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column19;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column20;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox7;
-        private System.Windows.Forms.Label label7;
     }
 }
