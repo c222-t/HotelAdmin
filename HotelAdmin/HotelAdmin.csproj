@@ -124,6 +124,9 @@
     <EmbeddedResource Include="CustomerManage.resx">
       <DependentUpon>CustomerManage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CustomerOrder.resx">
+      <DependentUpon>CustomerOrder.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="ExpendInsert.resx">
       <DependentUpon>ExpendInsert.cs</DependentUpon>
     </EmbeddedResource>
