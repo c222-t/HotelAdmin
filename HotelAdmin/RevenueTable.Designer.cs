@@ -379,7 +379,7 @@
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8});
-            this.dgvUR.Location = new System.Drawing.Point(0, 20);
+            this.dgvUR.Location = new System.Drawing.Point(9, 20);
             this.dgvUR.MultiSelect = false;
             this.dgvUR.Name = "dgvUR";
             this.dgvUR.ReadOnly = true;
