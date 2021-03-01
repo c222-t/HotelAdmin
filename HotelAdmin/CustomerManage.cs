@@ -54,6 +54,7 @@ namespace HotelAdmin
             try {
                 var table = from row in manager.CompareUserName(Txt_InquireBox.Text).AsEnumerable()
                             join arr in member on (int)row["Member"] equals arr.MemberNumber
+                            //.Skip().Take()
                             select new {
                                 UserName = row["UserName"].ToString().Trim(),
                                 Gender = row["Gender"],

@@ -85,6 +85,7 @@ namespace HotelAdmin
             try {                                                       // 查询指定房间类型的房间信息
                 var table = from row in new RoomManager().RoomTable(cbox_roomClass.Text.Equals("全部") ? "" : cbox_roomClass.Text).AsEnumerable()
                             join arr in roomType on row["Name"].ToString() equals arr.Name
+                            //.Skip().Take()
                             select new {
                                 RoomNumber = row["RoomNumber"],
                                 Floor = row["Floor"],
@@ -113,7 +114,7 @@ namespace HotelAdmin
         {
             if (userManager.CompareUserIDCard(txt_IDcard.Text) != null) // 判断该用户是否已经入住
             {
-                MessageBox.Show("该顾客与入住，无法再开订单！", "提示");
+                MessageBox.Show("该顾客以入住，无法再开订单！", "提示");
                 return;
             }
             try                                                         // 向数据库添加相应的信息
@@ -167,20 +168,22 @@ namespace HotelAdmin
         // 根据会员名称获取对应的会员等级信息
         private MembershipTable GetMembership(string name)
         {
-            foreach (MembershipTable arr in MemberType)                 // 遍历会员等级列表
-            {
-                if (name.Equals(arr.MembershipLevel)) { return arr; }   // 判断等级名称是否相等
+            // 查找指定会员等级名称的会员等级信息
+            try {
+                return MemberType.Where(arr => name.Equals(arr.MembershipLevel)).FirstOrDefault();
+            } catch {
+                return null;
             }
-            return null;
         }
         // 根据房间类型名称获取相应房间类型
         private RoomTypeTable GetRoomStatus(string name)
         {
-            foreach (RoomTypeTable arr in roomType)                     // 遍历房间类型列表
-            {
-                if (name.Equals(arr.Name)) { return arr; }              // 判断类型名称是否相等
+            // 查找指定房间类型名称的房间类型信息
+            try {
+                return roomType.Where(arr => name.Equals(arr.Name)).FirstOrDefault();
+            } catch {
+                return null;
             }
-            return null;
         }
         ~CustomerOrder()
         {
