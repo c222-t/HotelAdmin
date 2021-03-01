@@ -152,7 +152,8 @@ namespace HotelAdmin
                 PaymentMethod = cbox_payWay.Text,
                 CheckInTime = (DateTime)dtpicker_begin.Value,
                 CheckoutTime = (DateTime)dtpicker_leave.Value,
-                Room = new RoomSchedules {
+                Room = new RoomSchedules
+                {
                     Floor = Dgv_RoomList.SelectedCells[1].Value.ToString().Trim(),
                     RoomNumber = Dgv_RoomList.SelectedCells[0].Value.ToString().Trim(),
                     RoomType = GetRoomStatus(Dgv_RoomList.SelectedCells[2].Value.ToString().Trim()),
