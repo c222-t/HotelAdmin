@@ -60,8 +60,8 @@ namespace HotelDAL
             {
                 DataRow row = HotelData.Data.Tables["CommodityTable"].NewRow();
                 row["Number"] = HotelData.Data.Tables["CommodityTable"].Rows.Count + 1;
-                row["CoomodityName"] = commodity.CommodityName;
-                row["CoomodityUnit"] = commodity.CommodityUnit;
+                row["CommodityName"] = commodity.CommodityName;
+                row["CommodityUnit"] = commodity.CommodityUnit;
                 row["Quantity"] = commodity.Quantity;
                 row["PurchasePice"] = commodity.PurchasePice;
                 row["retail"] = commodity.Retail;
