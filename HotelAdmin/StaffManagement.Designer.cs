@@ -1,6 +1,6 @@
 ﻿namespace HotelAdmin
 {
-    partial class OrderTable
+    partial class StaffManagement
     {
         /// <summary>
         /// Required designer variable.
@@ -28,18 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.SuspendLayout();
-            // 
-            // OrderTable
-            // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.components = new System.ComponentModel.Container();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(843, 480);
-            this.Name = "OrderTable";
-            this.Text = "OrderTable";
-            this.Load += new System.EventHandler(this.OrderTable_Load);
-            this.ResumeLayout(false);
-
+            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Text = "StaffManagement";
         }
 
         #endregion

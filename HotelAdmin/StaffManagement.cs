@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace HotelAdmin
 {
-    public partial class OrderTable : Form
+    public partial class StaffManagement : Form
     {
-        public OrderTable()
+        public StaffManagement()
         {
             InitializeComponent();
-        }
-
-        private void OrderTable_Load(object sender, EventArgs e)
-        {
-
         }
     }
 }
