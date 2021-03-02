@@ -20,18 +20,21 @@ namespace HotelDAL
         /// <returns></returns>
         public DataTable UserRechargeTable(string kai="",string jie="")
         {
-            StringBuilder sql = new StringBuilder("SELECT [UserRechargeID],[RechargeTime],[RechargeBalance],[IDCard],[GiftGiving] FROM [UserRechargeTable] where 1=1");
-
             if (kai != "" && jie != "")
             {
-                sql.Append(" and RechargeTime>@RechargeTime and RechargeTime<@RechargeTimes");
-                SqlParameter[] sp = {
-                    new SqlParameter ("RechargeTime",kai),
-                    new SqlParameter ("RechargeTimes",jie)
-                };
-                return db.GetTable(sql.ToString(), sp, "UserRechargeTable");
+                try
+                {
+                    var table = from row in HotelData.Data.Tables["UserRechargeTable"].AsEnumerable()
+                                where DateTime.Parse(row["RechargeTime"].ToString()) > DateTime.Parse(kai) && DateTime.Parse(row["RechargeTime"].ToString()) < DateTime.Parse(jie)
+                                select row;
+                    return table.CopyToDataTable();
+                }
+                catch
+                {
+                    return null;
+                }
             }
-            return db.GetTable(sql.ToString(), null, "UserRechargeTable");
+            return HotelData.Data.Tables["UserRechargeTable"];
         }
 
 
