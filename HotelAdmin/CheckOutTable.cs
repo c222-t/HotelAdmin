@@ -174,8 +174,9 @@ namespace HotelAdmin
             um.AmendUserRecord(ut);
             om.AmendOrderRecord(st);
             rm.RoomUpdate(rs.RoomNumber, rs);
+            stm.Update(dgvUser.Rows[0].Cells[0].Value.ToString().Trim());
             dgvRoom.DataSource = stm.Statement(txtRoomName.Text.Trim());
-
+            dgvUser.DataSource = null;
         }
     }
 }
