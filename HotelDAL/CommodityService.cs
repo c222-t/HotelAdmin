@@ -95,8 +95,8 @@ namespace HotelDAL
             {
                 if (commodity.Number == (int)row["Number"])         // 根据编号修改指定的商品
                 {
-                    row["CoomodityName"] = commodity.CommodityName;
-                    row["CoomodityUnit"] = commodity.CommodityUnit;
+                    row["CommodityName"] = commodity.CommodityName;
+                    row["CommodityUnit"] = commodity.CommodityUnit;
                     row["Quantity"] = commodity.Quantity;
                     row["PurchasePice"] = commodity.PurchasePice;
                     row["retail"] = commodity.Retail;
