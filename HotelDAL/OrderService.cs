@@ -101,10 +101,10 @@ namespace HotelDAL
         /// <param name="order">需要添加的订单记录</param>
         public void AddOrderRecord(StatementTable order)
         {
-            if (order.OrderNumber != null)                              // 判断记录是否满足条件
+            if (order != null)                                          // 判断记录是否满足条件
             {
                 DataRow row = HotelData.Data.Tables["StatementTable"].NewRow();
-                row["OrderNumber"] = order.OrderNumber;
+                row["OrderNumber"] = HotelData.Data.Tables["StatementTable"].Rows.Count + 1;
                 row["IDCard"] = order.IDCard;
                 row["TotalConsumption"] = order.TotalConsumption;
                 row["PaymentMethod"] = order.PaymentMethod;
@@ -115,12 +115,6 @@ namespace HotelDAL
                 row["RoomNumber"] = order.Room.RoomNumber;
                 HotelData.Data.Tables["StatementTable"].Rows.Add(row);
             }
-        }
-        /// <summary>
-        /// 获取订单总数量
-        /// </summary>
-        public int GetOrderNumber() {
-            return HotelData.Data.Tables["StatementTable"].Rows.Count;
         }
     }
 }

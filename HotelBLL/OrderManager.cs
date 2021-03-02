@@ -62,12 +62,5 @@ namespace HotelBLL
         {
             service.AddOrderRecord(order);
         }
-        /// <summary>
-        /// 获取订单总数量
-        /// </summary>
-        public int GetOrderNumber()
-        {
-            return service.GetOrderNumber();
-        }
     }
 }
