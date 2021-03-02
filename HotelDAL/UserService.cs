@@ -89,7 +89,7 @@ namespace HotelDAL
                 {
                     row["UserName"] = user.UserName;
                     row["TelephoneNumber"] = user.TelephoneNumber;
-                    row["Balance"] = user.Balance == null ? row["Balance"] : user.Balance;
+                    row["Balance"] = user.Balance == 0 ? row["Balance"] : user.Balance;
                     row["Member"] = user.Member.MemberNumber;
                     row["Gender"] = user.Gender;
                     row["Age"] = user.Age;

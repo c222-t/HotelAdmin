@@ -150,25 +150,34 @@ namespace HotelAdmin
             OrderManager om = new OrderManager();//订单表修改
             DataTable ad = om.SeekOrderRecord(new StatementTable() { OrderNumber = dgvUser.SelectedRows[0].Cells[0].Value.ToString().Trim() });
 
-            StatementTable st = new StatementTable()
+            StatementTable st = new StatementTable();
+
+            for (int i = 0; i < ad.Rows.Count; i++)
             {
-                CheckInTime = DateTime.Parse(ad.Rows[0]["CheckInTime"].ToString()),
-                CheckoutTime = DateTime.Now,
-                IDCard = ad.Rows[0]["IDCard"].ToString(),
-                OperationManager = int.Parse(ad.Rows[0]["OperationManaer"].ToString()),
-                OrderNumber = ad.Rows[0]["OrderNumber"].ToString(),
-                PaymentMethod = cbFuKuan.Text,
-                Room = new RoomSchedules()
+                if (ad.Rows[i]["OrderNumber"].ToString().Trim() == dgvUser.SelectedRows[0].Cells[0].Value.ToString().Trim())
                 {
-                    RoomNumber = ad.Rows[0]["RoomNumber"].ToString()
-                },
-                TotalConsumption = double.Parse(txtYinFu.Text),
-                Status = new OrderStatusTable()
-                {
-                    Number = 3,
-                    State = "结束"
+                    st = new StatementTable()
+                    {
+                        CheckInTime = DateTime.Parse(ad.Rows[i]["CheckInTime"].ToString()),
+                        CheckoutTime = DateTime.Now,
+                        IDCard = ad.Rows[i]["IDCard"].ToString(),
+                        OperationManager = int.Parse(ad.Rows[i]["OperationManaer"].ToString()),
+                        OrderNumber = ad.Rows[i]["OrderNumber"].ToString(),
+                        PaymentMethod = cbFuKuan.Text,
+                        Room = new RoomSchedules()
+                        {
+                            RoomNumber = ad.Rows[i]["RoomNumber"].ToString()
+                        },
+                        TotalConsumption = double.Parse(txtYinFu.Text),
+                        Status = new OrderStatusTable()
+                        {
+                            Number = 3,
+                            State = "结束"
+                        }
+                    };
+                    break;
                 }
-            };
+            }
 
             //集中修改三张表
             um.AmendUserRecord(ut);
