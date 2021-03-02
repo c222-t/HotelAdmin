@@ -89,6 +89,12 @@
     <Compile Include="GoodsRedact.Designer.cs">
       <DependentUpon>GoodsRedact.cs</DependentUpon>
     </Compile>
+    <Compile Include="LockScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LockScreen.Designer.cs">
+      <DependentUpon>LockScreen.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainInterface.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -147,6 +153,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GoodsRedact.resx">
       <DependentUpon>GoodsRedact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LockScreen.resx">
+      <DependentUpon>LockScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainInterface.resx">
       <DependentUpon>MainInterface.cs</DependentUpon>
