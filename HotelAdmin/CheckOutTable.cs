@@ -187,19 +187,19 @@ namespace HotelAdmin
             stm.Update(dgvUser.Rows[0].Cells[0].Value.ToString().Trim());
 
             //打印订单
-            string path = string.Format("{0}.txt",dgvUser.Rows [0].Cells [0].Value);
+            string path = string.Format("{0}.txt", dgvUser.Rows[0].Cells[0].Value.ToString().Trim());
             using (FileStream fs = new FileStream(path, FileMode.Create, FileAccess.Write))
             {
                 StreamWriter sw = new StreamWriter(fs);
                 sw.WriteLine("* **************************");
-                sw.WriteLine("租房客人：{0}",dgvUser .Rows [0].Cells [2].Value);
-                sw.WriteLine("所住房间：{0}",dgvUser .Rows [0].Cells [1].Value);
-                sw.WriteLine("入住时间：{0}",dgvUser .Rows [0].Cells [4].Value);
-                sw.WriteLine("结账时间：{0}",dgvUser .Rows [0].Cells [5].Value);
-                sw.WriteLine("付款方式：{0}",dgvUser .Rows [0].Cells [7].Value);
-                sw.WriteLine("应付金额：{0}",dgvUser .Rows [0].Cells [6].Value);
-                sw.WriteLine("实付金额：{0}",dgvUser .Rows [0].Cells [9].Value);
-                sw.WriteLine("折扣：{0}",dgvUser .Rows [0].Cells [8].Value);
+                sw.WriteLine("租房客人：{0}",dgvUser .Rows [0].Cells [2].Value.ToString().Trim());
+                sw.WriteLine("所住房间：{0}",dgvUser .Rows [0].Cells [1].Value.ToString().Trim());
+                sw.WriteLine("入住时间：{0}",dgvUser .Rows [0].Cells [4].Value.ToString().Trim());
+                sw.WriteLine("结账时间：{0}",dgvUser .Rows [0].Cells [5].Value.ToString().Trim());
+                sw.WriteLine("付款方式：{0}",dgvUser .Rows [0].Cells [7].Value.ToString().Trim());
+                sw.WriteLine("应付金额：{0}",dgvUser .Rows [0].Cells [6].Value.ToString().Trim());
+                sw.WriteLine("实付金额：{0}",dgvUser .Rows [0].Cells [9].Value.ToString().Trim());
+                sw.WriteLine("折扣：{0}",dgvUser .Rows [0].Cells [8].Value.ToString().Trim());
                 sw.WriteLine("* **************************");
                 sw.Close();
             }

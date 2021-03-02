@@ -16,7 +16,7 @@ namespace HotelAdmin
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new LockScreen());
+            Application.Run(new StaffManagement());
         }
     }
 }
