@@ -101,7 +101,7 @@ namespace HotelAdmin
         // 添加新商品
         private void AddGoods_Click(object sender, EventArgs e)
         {
-            goodsRedact = new GoodsRedact() { Manage = this };
+            goodsRedact = new GoodsRedact() { Manage = this };          // 激活商品编辑窗口并打开
             goodsRedact.Show();
         }
         // 退出窗口
