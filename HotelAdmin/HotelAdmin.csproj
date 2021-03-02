@@ -59,6 +59,7 @@
     <Compile Include="ClientTopUp.Designer.cs">
       <DependentUpon>ClientTopUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cun.cs" />
     <Compile Include="CustomerAlter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +96,7 @@
     <Compile Include="GoodsRedact.Designer.cs">
       <DependentUpon>GoodsRedact.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hook.cs" />
     <Compile Include="LockScreen.cs">
       <SubType>Form</SubType>
     </Compile>
