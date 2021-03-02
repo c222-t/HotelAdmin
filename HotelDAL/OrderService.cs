@@ -81,7 +81,7 @@ namespace HotelDAL
             foreach (DataRow row in HotelData.Data.Tables["StatementTable"].Rows)
             {
                 // 根据订单编号修改指定的记录
-                if (order.OrderNumber.Equals(row["OrderNumber"].ToString().Trim()))
+                if (order.OrderNumber.Trim ().Equals(row["OrderNumber"].ToString().Trim()))
                 {
                     row["IDCard"] = order.IDCard;
                     row["TotalConsumption"] = order.TotalConsumption;

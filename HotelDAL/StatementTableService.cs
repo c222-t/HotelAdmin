@@ -19,18 +19,60 @@ namespace HotelDAL
         /// <returns></returns>
         public DataTable Statement(string roomName="")
         {
-            StringBuilder sql = new StringBuilder("SELECT orderNumber,st.[RoomNumber],UserName,TelephoneNumber,[CheckInTime],[TotalConsumption]+Price*[Days] TotalConsumptions,PaymentMethod,Discount,([TotalConsumption]+Price*[Days])*Discount Prices,[Days] FROM [StatementTable] st join UserTable u on u.IDCard =st.IDCard join MembershipTable mt on mt.MemberNumber=u.Member join RoomSchedules rs on rs.RoomNumber=st.RoomNumber join RoomTypeTable rt on rt.[No]=rs.RoomType where 1=1 and st.[Status]=2");
+            if (!(HotelData .Data .Tables.Contains ("More")) )
+            {
+                StringBuilder sql = new StringBuilder("SELECT st.[Status],RoomType,st.IDCard,Floor,orderNumber,st.[RoomNumber],UserName,TelephoneNumber,[CheckInTime],[TotalConsumption]+Price*[Days] TotalConsumptions,PaymentMethod,Discount,([TotalConsumption]+Price*[Days])*Discount Prices,[Days],Balance FROM [StatementTable] st join UserTable u on u.IDCard =st.IDCard join MembershipTable mt on mt.MemberNumber=u.Member join RoomSchedules rs on rs.RoomNumber=st.RoomNumber join RoomTypeTable rt on rt.[No]=rs.RoomType where 1=1 and st.[Status]=2");
+
+                HotelData.Data.Tables.Add(db.GetTable(sql.ToString(), null, "More").Copy());
+            }
 
             if (roomName != "")
             {
-                sql.Append(" and st.RoomNumber=@RoomNumber");
-                SqlParameter[] sp = {
-                    new SqlParameter ("@RoomNumber",roomName)
-                };
-                return db.GetTable(sql.ToString (),sp,"More");
+                try
+                {
+                    var table = from row in HotelData.Data.Tables["More"].AsEnumerable()
+                                where row["RoomNumber"].Equals(roomName)
+                                select row;
+                    return table.CopyToDataTable();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    return null;
+                }
+
             }
-            return db.GetTable(sql.ToString (),null,"More");
+
+            try
+            {
+                var table = from row in HotelData.Data.Tables["More"].AsEnumerable()
+                            where (int)row["Status"]==2
+                            select row;
+                return table.CopyToDataTable();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
         }
+
+        /// <summary>
+        /// 通过订单号来改变订单状态
+        /// </summary>
+        /// <param name="MoreID"></param>
+        public void Update(string MoreID)
+        {
+            foreach (DataRow item in HotelData .Data .Tables ["More"].Rows)
+            {
+                if (item["orderNumber"].ToString().Trim() == MoreID.Trim())
+                {
+                    item["Status"] = 3;
+                    break;
+                }
+            }
+        }
+
 
     }
 }

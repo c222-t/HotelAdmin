@@ -50,6 +50,11 @@ namespace HotelBLL
             return sts.Statement(roomName);
         }
 
+        
+        public void Update(string MoreID)
+        {
+            sts.Update(MoreID);
+        }
 
     }
 }
