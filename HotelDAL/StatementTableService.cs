@@ -19,17 +19,29 @@ namespace HotelDAL
         /// <returns></returns>
         public DataTable Statement(string roomName="")
         {
-            StringBuilder sql = new StringBuilder("SELECT RoomType,st.IDCard,Floor,orderNumber,st.[RoomNumber],UserName,TelephoneNumber,[CheckInTime],[TotalConsumption]+Price*[Days] TotalConsumptions,PaymentMethod,Discount,([TotalConsumption]+Price*[Days])*Discount Prices,[Days],Balance FROM [StatementTable] st join UserTable u on u.IDCard =st.IDCard join MembershipTable mt on mt.MemberNumber=u.Member join RoomSchedules rs on rs.RoomNumber=st.RoomNumber join RoomTypeTable rt on rt.[No]=rs.RoomType where 1=1 and st.[Status]=2");
+            if (!(HotelData .Data .Tables.Contains ("More")) )
+            {
+                StringBuilder sql = new StringBuilder("SELECT RoomType,st.IDCard,Floor,orderNumber,st.[RoomNumber],UserName,TelephoneNumber,[CheckInTime],[TotalConsumption]+Price*[Days] TotalConsumptions,PaymentMethod,Discount,([TotalConsumption]+Price*[Days])*Discount Prices,[Days],Balance FROM [StatementTable] st join UserTable u on u.IDCard =st.IDCard join MembershipTable mt on mt.MemberNumber=u.Member join RoomSchedules rs on rs.RoomNumber=st.RoomNumber join RoomTypeTable rt on rt.[No]=rs.RoomType where 1=1 and st.[Status]=2");
+
+                HotelData.Data.Tables.Add(db.GetTable(sql.ToString(), null, "More").Copy());
+            }
 
             if (roomName != "")
             {
-                sql.Append(" and st.RoomNumber=@RoomNumber");
-                SqlParameter[] sp = {
-                    new SqlParameter ("@RoomNumber",roomName)
-                };
-                return db.GetTable(sql.ToString (),sp,"More");
+                try
+                {
+                    var table = from row in HotelData.Data.Tables["More"].AsEnumerable()
+                                where row["RoomNumber"].Equals(roomName)
+                                select row;
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    return null;
+                }
+
             }
-            return db.GetTable(sql.ToString (),null,"More");
+            return HotelData.Data.Tables["More"];
         }
 
     }

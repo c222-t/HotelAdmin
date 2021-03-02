@@ -29,7 +29,7 @@ namespace HotelAdmin
         /// <param name="e"></param>
         private void Button1_Click(object sender, EventArgs e)
         {
-            dgvRoom.DataSource = stm.Statement(txtRoomName.Text.Trim());
+            dgvRoom .DataSource = stm.Statement(txtRoomName.Text.Trim());
         }
 
         /// <summary>
@@ -117,7 +117,6 @@ namespace HotelAdmin
             DataTable dt= um.CompareUserIDCard(dgvUser.SelectedRows[0].Cells[10].Value.ToString());
             UserTable ut = new UserTable();
             ut.Age = int.Parse(dt.Rows[0]["Age"].ToString());
-            ut.Balance = double.Parse(txtLing.Text) < 0 ? 0 : double.Parse(txtLing.Text);
             ut.Gender = dt.Rows[0]["Gender"].ToString();
             ut.IDCard = dt.Rows[0]["IDCard"].ToString();
             ut.Member = new MembershipTable()
@@ -126,6 +125,10 @@ namespace HotelAdmin
             };
             ut.TelephoneNumber = dt.Rows[0]["TelephoneNumber"].ToString();
             ut.UserName = dt.Rows[0]["UserName"].ToString();
+            if (cbFuKuan.Text == "余额支付")
+            {
+                ut.Balance = double.Parse(txtLing.Text) < 0 ? 0 : double.Parse(txtLing.Text);
+            }
 
             RoomManager rm = new RoomManager();//房间表修改
 
@@ -172,6 +175,7 @@ namespace HotelAdmin
             om.AmendOrderRecord(st);
             rm.RoomUpdate(rs.RoomNumber, rs);
             dgvRoom.DataSource = stm.Statement(txtRoomName.Text.Trim());
+
         }
     }
 }
