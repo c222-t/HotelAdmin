@@ -53,6 +53,12 @@
     <Compile Include="CheckOutTable.Designer.cs">
       <DependentUpon>CheckOutTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClientTopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientTopUp.Designer.cs">
+      <DependentUpon>ClientTopUp.cs</DependentUpon>
+    </Compile>
     <Compile Include="CustomerAlter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,6 +141,9 @@
     </Compile>
     <EmbeddedResource Include="CheckOutTable.resx">
       <DependentUpon>CheckOutTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientTopUp.resx">
+      <DependentUpon>ClientTopUp.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CustomerAlter.resx">
       <DependentUpon>CustomerAlter.cs</DependentUpon>

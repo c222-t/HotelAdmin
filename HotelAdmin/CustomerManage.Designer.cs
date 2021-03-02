@@ -188,19 +188,19 @@ namespace HotelAdmin
             this.Option_Alter,
             this.Option_Delete});
             this.UserMenu.Name = "UserMenu";
-            this.UserMenu.Size = new System.Drawing.Size(101, 48);
+            this.UserMenu.Size = new System.Drawing.Size(181, 70);
             // 
             // Option_Alter
             // 
             this.Option_Alter.Name = "Option_Alter";
-            this.Option_Alter.Size = new System.Drawing.Size(100, 22);
+            this.Option_Alter.Size = new System.Drawing.Size(180, 22);
             this.Option_Alter.Text = "修改";
             this.Option_Alter.Click += new System.EventHandler(this.Option_Alter_Click);
             // 
             // Option_Delete
             // 
             this.Option_Delete.Name = "Option_Delete";
-            this.Option_Delete.Size = new System.Drawing.Size(100, 22);
+            this.Option_Delete.Size = new System.Drawing.Size(180, 22);
             this.Option_Delete.Text = "删除";
             this.Option_Delete.Click += new System.EventHandler(this.Option_Delete_Click);
             // 
@@ -249,7 +249,7 @@ namespace HotelAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(974, 424);
+            this.ClientSize = new System.Drawing.Size(974, 444);
             this.Controls.Add(this.Lab_Remind);
             this.Controls.Add(this.Btn_Inquire);
             this.Controls.Add(this.Txt_InquireBox);
