@@ -147,7 +147,6 @@ namespace HotelAdmin
         {
             StatementTable order = new StatementTable()             // 创建订单对象
             {
-                OrderNumber = "WZDJD00" + orderManager.GetOrderNumber() + 1,
                 IDCard = txt_IDcard.Text,
                 PaymentMethod = cbox_payWay.Text,
                 CheckInTime = (DateTime)dtpicker_begin.Value,
