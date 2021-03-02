@@ -34,6 +34,25 @@ namespace HotelBLL
             return ams.AdminisreTable(zh);
         }
 
+        /// <summary>
+        /// 新增
+        /// </summary>
+        /// <param name="at"></param>
+        /// <returns></returns>
+        public int AdminisreInsert(AdministratorTable at)
+        {
+            return ams.AdminisreInsert(at);
+        }
+
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="hao"></param>
+        /// <returns></returns>
+        public int AdminisreDelect(string hao)
+        {
+            return ams.AdminisreDelect(hao);
+        }
 
     }
 }

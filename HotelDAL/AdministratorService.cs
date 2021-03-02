@@ -50,6 +50,39 @@ namespace HotelDAL
             return db.GetTable(sql.ToString (),null, "AdministratorTable");
         }
 
+        /// <summary>
+        /// 新增
+        /// </summary>
+        /// <param name="at"></param>
+        /// <returns></returns>
+        public int AdminisreInsert(AdministratorTable at)
+        {
+            StringBuilder sql = new StringBuilder("INSERT INTO [AdministratorTable]([password],[AdministratorName],[jurisdiction])VALUES(@password,@AdministratorName,@jurisdiction)");
+
+            SqlParameter[] sp = {
+                new SqlParameter ("@password",at.Password),
+                new SqlParameter ("@AdministratorName",at.AdministratorName),
+                new SqlParameter ("@jurisdiction",at.jurisdiction)
+            };
+
+            return db.ExecuteNonQuery(sql.ToString (),sp);
+        }
+
+        /// <summary>
+        /// 删除
+        /// </summary>
+        /// <param name="hao"></param>
+        /// <returns></returns>
+        public int AdminisreDelect(string hao)
+        {
+            StringBuilder sql = new StringBuilder("delete from AdministratorTable where 1=1 and No=@No");
+
+            SqlParameter[] sp = {
+                new SqlParameter ("@No",hao)
+            };
+
+            return db.ExecuteNonQuery(sql.ToString (),sp);
+        }
 
     }
 }
