@@ -169,21 +169,13 @@ namespace HotelAdmin
         private MembershipTable GetMembership(string name)
         {
             // 查找指定会员等级名称的会员等级信息
-            try {
-                return MemberType.Where(arr => name.Equals(arr.MembershipLevel)).FirstOrDefault();
-            } catch {
-                return null;
-            }
+            return MemberType.Where(arr => name.Equals(arr.MembershipLevel)).FirstOrDefault();
         }
         // 根据房间类型名称获取相应房间类型
         private RoomTypeTable GetRoomStatus(string name)
         {
             // 查找指定房间类型名称的房间类型信息
-            try {
-                return roomType.Where(arr => name.Equals(arr.Name)).FirstOrDefault();
-            } catch {
-                return null;
-            }
+            return roomType.Where(arr => name.Equals(arr.Name)).FirstOrDefault();
         }
         ~CustomerOrder()
         {
