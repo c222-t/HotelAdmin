@@ -45,11 +45,11 @@ namespace HotelAdmin
             this.lab_gift = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.Txt_NameInquire = new System.Windows.Forms.TextBox();
             this.dgv_Client = new System.Windows.Forms.DataGridView();
             this.dgv_topUpRecord = new System.Windows.Forms.DataGridView();
             this.label7 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Client)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_topUpRecord)).BeginInit();
@@ -58,14 +58,14 @@ namespace HotelAdmin
             // cbox_Member
             // 
             this.cbox_Member.FormattingEnabled = true;
-            this.cbox_Member.Location = new System.Drawing.Point(116, 401);
+            this.cbox_Member.Location = new System.Drawing.Point(116, 277);
             this.cbox_Member.Name = "cbox_Member";
             this.cbox_Member.Size = new System.Drawing.Size(124, 20);
             this.cbox_Member.TabIndex = 50;
             // 
             // txt_Balance
             // 
-            this.txt_Balance.Location = new System.Drawing.Point(118, 332);
+            this.txt_Balance.Location = new System.Drawing.Point(116, 233);
             this.txt_Balance.Name = "txt_Balance";
             this.txt_Balance.Size = new System.Drawing.Size(124, 21);
             this.txt_Balance.TabIndex = 49;
@@ -74,7 +74,7 @@ namespace HotelAdmin
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(31, 401);
+            this.label4.Location = new System.Drawing.Point(31, 277);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 20);
             this.label4.TabIndex = 45;
@@ -84,7 +84,7 @@ namespace HotelAdmin
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(33, 333);
+            this.label3.Location = new System.Drawing.Point(31, 234);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 20);
             this.label3.TabIndex = 44;
@@ -94,7 +94,7 @@ namespace HotelAdmin
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(45, 94);
+            this.label2.Location = new System.Drawing.Point(45, 80);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(65, 20);
             this.label2.TabIndex = 43;
@@ -104,7 +104,7 @@ namespace HotelAdmin
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(33, 53);
+            this.label1.Location = new System.Drawing.Point(31, 44);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 42;
@@ -114,7 +114,7 @@ namespace HotelAdmin
             // 
             this.lab_name.AutoSize = true;
             this.lab_name.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lab_name.Location = new System.Drawing.Point(104, 53);
+            this.lab_name.Location = new System.Drawing.Point(102, 44);
             this.lab_name.Name = "lab_name";
             this.lab_name.Size = new System.Drawing.Size(50, 20);
             this.lab_name.TabIndex = 52;
@@ -124,7 +124,7 @@ namespace HotelAdmin
             // 
             this.lab_IDCard.AutoSize = true;
             this.lab_IDCard.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lab_IDCard.Location = new System.Drawing.Point(104, 94);
+            this.lab_IDCard.Location = new System.Drawing.Point(104, 80);
             this.lab_IDCard.Name = "lab_IDCard";
             this.lab_IDCard.Size = new System.Drawing.Size(50, 20);
             this.lab_IDCard.TabIndex = 53;
@@ -134,7 +134,7 @@ namespace HotelAdmin
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(33, 233);
+            this.label5.Location = new System.Drawing.Point(31, 118);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 20);
             this.label5.TabIndex = 54;
@@ -144,7 +144,7 @@ namespace HotelAdmin
             // 
             this.lab_balance.AutoSize = true;
             this.lab_balance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lab_balance.Location = new System.Drawing.Point(104, 233);
+            this.lab_balance.Location = new System.Drawing.Point(102, 118);
             this.lab_balance.Name = "lab_balance";
             this.lab_balance.Size = new System.Drawing.Size(50, 20);
             this.lab_balance.TabIndex = 55;
@@ -154,7 +154,7 @@ namespace HotelAdmin
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(33, 265);
+            this.label6.Location = new System.Drawing.Point(31, 155);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(79, 20);
             this.label6.TabIndex = 56;
@@ -164,7 +164,7 @@ namespace HotelAdmin
             // 
             this.lab_money.AutoSize = true;
             this.lab_money.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lab_money.Location = new System.Drawing.Point(104, 265);
+            this.lab_money.Location = new System.Drawing.Point(102, 155);
             this.lab_money.Name = "lab_money";
             this.lab_money.Size = new System.Drawing.Size(50, 20);
             this.lab_money.TabIndex = 57;
@@ -174,7 +174,7 @@ namespace HotelAdmin
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.Location = new System.Drawing.Point(33, 297);
+            this.label8.Location = new System.Drawing.Point(31, 194);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 20);
             this.label8.TabIndex = 58;
@@ -184,7 +184,7 @@ namespace HotelAdmin
             // 
             this.lab_gift.AutoSize = true;
             this.lab_gift.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lab_gift.Location = new System.Drawing.Point(104, 297);
+            this.lab_gift.Location = new System.Drawing.Point(102, 194);
             this.lab_gift.Name = "lab_gift";
             this.lab_gift.Size = new System.Drawing.Size(50, 20);
             this.lab_gift.TabIndex = 59;
@@ -192,7 +192,7 @@ namespace HotelAdmin
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(151, 434);
+            this.button1.Location = new System.Drawing.Point(165, 322);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 60;
@@ -202,7 +202,7 @@ namespace HotelAdmin
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.textBox1);
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label2);
@@ -220,13 +220,20 @@ namespace HotelAdmin
             this.panel1.Controls.Add(this.lab_IDCard);
             this.panel1.Location = new System.Drawing.Point(765, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(255, 702);
+            this.panel1.Size = new System.Drawing.Size(307, 717);
             this.panel1.TabIndex = 61;
+            // 
+            // Txt_NameInquire
+            // 
+            this.Txt_NameInquire.Location = new System.Drawing.Point(566, 12);
+            this.Txt_NameInquire.Name = "Txt_NameInquire";
+            this.Txt_NameInquire.Size = new System.Drawing.Size(193, 21);
+            this.Txt_NameInquire.TabIndex = 61;
             // 
             // dgv_Client
             // 
             this.dgv_Client.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_Client.Location = new System.Drawing.Point(12, 43);
+            this.dgv_Client.Location = new System.Drawing.Point(12, 39);
             this.dgv_Client.Name = "dgv_Client";
             this.dgv_Client.RowTemplate.Height = 23;
             this.dgv_Client.Size = new System.Drawing.Size(747, 301);
@@ -235,7 +242,7 @@ namespace HotelAdmin
             // dgv_topUpRecord
             // 
             this.dgv_topUpRecord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgv_topUpRecord.Location = new System.Drawing.Point(12, 413);
+            this.dgv_topUpRecord.Location = new System.Drawing.Point(12, 401);
             this.dgv_topUpRecord.Name = "dgv_topUpRecord";
             this.dgv_topUpRecord.RowTemplate.Height = 23;
             this.dgv_topUpRecord.Size = new System.Drawing.Size(747, 301);
@@ -245,7 +252,7 @@ namespace HotelAdmin
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(12, 12);
+            this.label7.Location = new System.Drawing.Point(12, 13);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 20);
             this.label7.TabIndex = 64;
@@ -255,24 +262,18 @@ namespace HotelAdmin
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(12, 380);
+            this.label9.Location = new System.Drawing.Point(12, 369);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(65, 20);
             this.label9.TabIndex = 65;
             this.label9.Text = "充值记录";
             // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(35, 10);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(193, 21);
-            this.textBox1.TabIndex = 61;
-            // 
             // ClientTopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1032, 741);
+            this.ClientSize = new System.Drawing.Size(1084, 741);
+            this.Controls.Add(this.Txt_NameInquire);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.dgv_topUpRecord);
@@ -311,6 +312,6 @@ namespace HotelAdmin
         private System.Windows.Forms.DataGridView dgv_topUpRecord;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox Txt_NameInquire;
     }
 }
