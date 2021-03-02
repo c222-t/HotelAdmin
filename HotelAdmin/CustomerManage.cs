@@ -22,6 +22,10 @@ namespace HotelAdmin
         /// 会员等级信息列表
         /// </summary>
         List<MembershipTable> member = new List<MembershipTable>();
+        /// <summary>
+        /// 顾客修改窗口
+        /// </summary>
+        CustomerAlter alter = null;
 
         public CustomerManage()
         {
@@ -83,7 +87,7 @@ namespace HotelAdmin
         // 修改选中的的顾客信息
         private void Option_Alter_Click(object sender, EventArgs e)
         {
-            UserTable user = new UserTable()                                // 获取要修改的顾客对象
+            UserTable user = new UserTable()                                // 获取选中的顾客对象
             {
                 UserName = Dgv_UserShow.SelectedCells[0].Value.ToString().Trim(),
                 IDCard = Dgv_UserShow.SelectedCells[3].Value.ToString(),
@@ -91,13 +95,26 @@ namespace HotelAdmin
                 Gender = Dgv_UserShow.SelectedCells[1].Value.ToString().Trim(),
                 TelephoneNumber = Dgv_UserShow.SelectedCells[4].Value.ToString(),
                 Balance = (double)Dgv_UserShow.SelectedCells[5].Value,
-                Member = new MembershipTable {
+                Member = new MembershipTable
+                {
                     MembershipLevel = Dgv_UserShow.SelectedCells[6].Value.ToString(),
                     Discount = (double)Dgv_UserShow.SelectedCells[7].Value
                 }
             };
-            // 激活顾客修改窗口并打开
-            new CustomerAlter() { user = user, member = this.member, manager = this }.Show();
+            alter = new CustomerAlter()                                     // 激活顾客修改窗口并打开
+            {
+                user = user,
+                member = this.member,
+                manager = this
+            };
+            alter.Show();
+        }
+        ~CustomerManage()
+        {
+            this.alter.Close();
+            this.manager = null;
+            this.member = null;
+            this.alter = null;
         }
     }
 }
