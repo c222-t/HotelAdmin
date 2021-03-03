@@ -123,24 +123,37 @@ namespace HotelDAL
                 dtNew.Rows.Add(item.orderNumber.Trim (),item.UserName.Trim(), item.TelephoneNumber.Trim(), item.RoomNumber.Trim(), item.Name.Trim(), item.CheckInTime, item.CheckOutTime, item.OperationManaer, item.Price, item.State.Trim(), item.IDCard.Trim());
             }
 
-            if (userName != "")
+            try
             {
-                try
-                {
-                    var tableNew = from row in dtNew.AsEnumerable()
-                                   where row["UserName"].ToString().Equals(userName)
-                                   select row;
+                var tableNew = from row in dtNew.AsEnumerable()
+                               where row["State"].ToString() == "未开始"
+                               select row;
 
-                    return tableNew.CopyToDataTable();
-                }
-                catch (Exception ex)
+                if (userName != "")
                 {
-                    Console.WriteLine(ex.Message);
-                    return null;
+                    try
+                    {
+                        var tableNewNew = from row in tableNew.AsEnumerable()
+                                          where row["UserName"].ToString().Equals(userName)
+                                          select row;
+
+                        return tableNewNew.CopyToDataTable();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        return null;
+                    }
                 }
+
+                return tableNew.CopyToDataTable();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
             }
 
-            return dtNew;
         }
 
         /// <summary>
