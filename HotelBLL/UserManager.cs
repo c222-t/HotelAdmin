@@ -26,11 +26,10 @@ namespace HotelBLL
         /// <returns>返回满足条件的顾客信息</returns>
         public DataTable CompareUserName(string name = "")
         {
-            try {
-                return service.CompareUserName(name);                   // 根据顾客名称查询
-            } catch {
-                return HotelData.Data.Tables["UserTable"];              // 未找到记录返回空
-            }
+            if (!name.Equals(""))                                    // 根据顾客名称查询
+                return service.CompareUserName(name);
+            else
+                return HotelData.Data.Tables["UserTable"];           // 返回所有记录
         }
         /// <summary>
         /// 根据顾客身份证查询顾客信息
