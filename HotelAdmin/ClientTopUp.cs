@@ -129,7 +129,7 @@ namespace HotelAdmin
                 cbox_Member.Items.Add("大会员");
             }
             else {
-                dgv_Client.Enabled = false;
+                cbox_Member.Enabled = false;
             }
 
             // 显示赠送商品列表
@@ -148,12 +148,16 @@ namespace HotelAdmin
         // 计算本次充值的总消费
         private void Txt_Balance_TextChanged(object sender, EventArgs e)
         {
-            // 根据充值的会员等级获取充值价格
-            int member = cbox_Member.Text.Equals("会员") ? 100 : cbox_Member.Text.Equals("大会员") ? 200 : 0;
-            // 获取余额价格
-            double balance = txt_Balance.Text.Equals("") ? 0 : double.Parse(txt_Balance.Text);
-            // 求出本次充值消费
-            lab_Recharge.Text = (member + balance).ToString();
+            if (recharge.Enabled)
+            {
+                // 根据充值的会员等级获取充值价格
+                //int member = cbox_Member.Text.Equals("会员") ? 100 : cbox_Member.Text.Equals("大会员") ? 200 : 0;
+                // 获取余额价格
+                double balance = txt_Balance.Text.Equals("") ? 0 : double.Parse(txt_Balance.Text);
+                if () { }
+                // 求出本次充值消费
+                lab_Recharge.Text = (member + balance).ToString();
+            }
         }
         // 获取选中的赠送商品
         private void Dgv_Commodity_Click(object sender, EventArgs e)
@@ -165,7 +169,9 @@ namespace HotelAdmin
         {
             rechargeManager.DeleteUserRecharge((int)dgv_topUpRecord.SelectedCells[0].Value);
 
-            Dgv_Client_Click(sender, e);                                        // 删除后重新刷新
+            // 删除在控件中选中的充值记录
+            DataRowView drv = dgv_topUpRecord.SelectedRows[0].DataBoundItem as DataRowView;
+            drv.Delete();
         }
         // 顾客充值
         private void Recharge_Click(object sender, EventArgs e)
@@ -183,7 +189,7 @@ namespace HotelAdmin
         private void AlterPitchOnUser(object sender, EventArgs e)
         {
             // 获取充值的顾客信息
-            var table = userManager.CompareUserIDCard(dgv_Client.SelectedCells[1].ToolTipText);
+            var table = userManager.CompareUserIDCard(dgv_Client.SelectedCells[1].Value.ToString());
 
             foreach (DataRow row in table.AsEnumerable().CopyToDataTable().Rows)
             {
