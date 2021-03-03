@@ -118,6 +118,7 @@ namespace HotelAdmin
             this.dgv_Commodity.AllowUserToResizeColumns = false;
             this.dgv_Commodity.AllowUserToResizeRows = false;
             this.dgv_Commodity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Commodity.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Commodity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Commodity.ColumnHeadersVisible = false;
             this.dgv_Commodity.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -546,7 +547,7 @@ namespace HotelAdmin
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1134, 797);
+            this.ClientSize = new System.Drawing.Size(1134, 749);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
