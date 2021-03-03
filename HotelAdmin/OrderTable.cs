@@ -30,7 +30,9 @@ namespace HotelAdmin
             dgvYY.DataSource = stm.StatementNew(txtUserName.Text.Trim());
         }
 
+        private void DgvYY_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
-
+        }
     }
 }
