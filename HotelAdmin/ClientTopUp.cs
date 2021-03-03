@@ -31,7 +31,7 @@ namespace HotelAdmin
         {
             InitializeComponent();
         }
-        // 加载顾客初始化信息
+        // 加载初始化信息
         private void ClientTopUp_Load(object sender, EventArgs e)
         {
             foreach (DataRow row in userManager.GetMembershipRecord().Rows)      // 遍历会员等级信息
