@@ -97,11 +97,11 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(312, 32);
+            this.button1.Location = new System.Drawing.Point(312, 31);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
-            this.button1.Text = "button1";
+            this.button1.Text = "查找";
             this.button1.UseVisualStyleBackColor = true;
             // 
             // label2
@@ -201,7 +201,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "OrderTable";
-            this.Text = "OrderTable";
+            this.Text = "预定房间";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
