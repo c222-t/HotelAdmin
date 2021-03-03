@@ -118,6 +118,7 @@ namespace HotelAdmin
             this.dgv_Commodity.AllowUserToResizeColumns = false;
             this.dgv_Commodity.AllowUserToResizeRows = false;
             this.dgv_Commodity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgv_Commodity.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Commodity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Commodity.ColumnHeadersVisible = false;
             this.dgv_Commodity.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
