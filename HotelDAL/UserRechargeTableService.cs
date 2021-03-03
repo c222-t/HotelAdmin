@@ -11,7 +11,6 @@ namespace HotelDAL
 {
     public class UserRechargeTableService
     {
-        DBHelper db = new DBHelper();
         /// <summary>
         /// 查询用户充值
         /// </summary>
@@ -41,17 +40,10 @@ namespace HotelDAL
         /// <param name="IDCard">顾客身份证</param>
         public DataTable SeekRechargeIDCard(string IDCard)
         {
-            try
-            {
-                // 遍历充值记录列表根据身份证获取指定用户的充值记录
-                var table = HotelData.Data.Tables["UserRechargeTable"].AsEnumerable()
-                            .Where(row => IDCard.Equals(row["IDCard"].ToString()));
-
-                return table.CopyToDataTable();                                 // 返回得到的列表
-            }
-            catch {
-                return null;
-            }
+            // 遍历充值记录列表根据身份证获取指定用户的充值记录
+            return HotelData.Data.Tables["UserRechargeTable"].AsEnumerable()
+                   .Where(row => IDCard.Equals(row["IDCard"].ToString()))
+                   .CopyToDataTable();
         }
         /// <summary>
         /// 删除用户充值记录

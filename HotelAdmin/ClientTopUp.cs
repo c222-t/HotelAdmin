@@ -122,13 +122,16 @@ namespace HotelAdmin
             recharge.Enabled = true;
 
             // 显示当前用户能充值的会员等级
-            if (dgv_Client.SelectedCells[4].ToString().Equals("普通客户")) {
+            if (dgv_Client.SelectedCells[4].ToString().Equals("普通客户"))
+            {
                 cbox_Member.Items.AddRange((from arr in memberships select new { arr.MembershipLevel }).ToArray());
             }
-            else if (dgv_Client.SelectedCells[4].ToString().Equals("会员")) {
+            else if (dgv_Client.SelectedCells[4].ToString().Equals("会员"))
+            {
                 cbox_Member.Items.Add("大会员");
             }
-            else {
+            else
+            {
                 cbox_Member.Enabled = false;
             }
 
@@ -148,15 +151,19 @@ namespace HotelAdmin
         // 计算本次充值的总消费
         private void Txt_Balance_TextChanged(object sender, EventArgs e)
         {
-            if (recharge.Enabled)
+            // 根据充值的会员等级获取充值价格
+            if (dgv_Client.SelectedCells[3].Value.ToString().Equals(cbox_Member.Text))
             {
-                // 根据充值的会员等级获取充值价格
-                //int member = cbox_Member.Text.Equals("会员") ? 100 : cbox_Member.Text.Equals("大会员") ? 200 : 0;
-                // 获取余额价格
-                double balance = txt_Balance.Text.Equals("") ? 0 : double.Parse(txt_Balance.Text);
-                if () { }
+                lab_Recharge.Text = txt_Balance.Text.Equals("") ? "0" : txt_Balance.Text;
+            }
+            else
+            {
+                // 获取本次会员等级充值价格
+                int member = cbox_Member.Text.Equals("会员") ? 100 : cbox_Member.Text.Equals("大会员") ? 200 : 0;
+                // 获取余额充值价格
+                double money = txt_Balance.Text.Equals("") ? 0 : double.Parse(txt_Balance.Text);
                 // 求出本次充值消费
-                lab_Recharge.Text = (member + balance).ToString();
+                lab_Recharge.Text = (member + money).ToString();
             }
         }
         // 获取选中的赠送商品
@@ -169,9 +176,7 @@ namespace HotelAdmin
         {
             rechargeManager.DeleteUserRecharge((int)dgv_topUpRecord.SelectedCells[0].Value);
 
-            // 删除在控件中选中的充值记录
-            DataRowView drv = dgv_topUpRecord.SelectedRows[0].DataBoundItem as DataRowView;
-            drv.Delete();
+            Dgv_Client_Click(sender, e);                                        // 重新刷新显示
         }
         // 顾客充值
         private void Recharge_Click(object sender, EventArgs e)
@@ -193,7 +198,7 @@ namespace HotelAdmin
 
             foreach (DataRow row in table.AsEnumerable().CopyToDataTable().Rows)
             {
-                userManager.AmendUserRecord(new UserTable                       // 修改充值后的顾客信息
+                userManager.AmendUserRecord(new UserTable                       // 获取修改充值后的顾客信息
                 {
                     UserName = row["UserName"].ToString(),
                     IDCard = row["IDCard"].ToString(),
