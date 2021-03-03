@@ -154,6 +154,7 @@
             this.dgvYY.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvYY.Size = new System.Drawing.Size(840, 392);
             this.dgvYY.TabIndex = 3;
+            this.dgvYY.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvYY_CellContentClick);
             // 
             // Column1
             // 
