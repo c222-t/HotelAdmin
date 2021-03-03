@@ -131,7 +131,8 @@ namespace HotelAdmin
         /// <param name="e"></param>
         private void Suspend_Click(object sender, EventArgs e)
         {
-
+            LockScreen ls = new LockScreen();
+            ls.Show();
         }
         /// <summary>
         /// 关于
@@ -162,7 +163,7 @@ namespace HotelAdmin
                     }
                     Label lbl = new Label();
                     lbl.Size = new System.Drawing.Size(81, 31);
-                    int x = (i + 1) * (lbl.Size.Width + 10) + 100;
+                    int x = (i + 1) * (lbl.Size.Width + 10) + 70;
                     int y = (row + 1) * (lbl.Size.Height + 15) + 30;
                     lbl.AutoSize = true;
                     lbl.BackColor = System.Drawing.Color.Yellow;

@@ -23,7 +23,7 @@ namespace HotelDAL
 
             if (leiXing != "")
             {
-                sql.Append(" and Name=@RoomType");
+                sql.Append(" and RoomType=@RoomType");
                 SqlParameter[] sp = {
                     new SqlParameter ("@RoomType",leiXing)
                 };
