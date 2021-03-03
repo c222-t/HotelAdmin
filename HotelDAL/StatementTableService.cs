@@ -23,14 +23,14 @@ namespace HotelDAL
             {
                 StringBuilder sql = new StringBuilder("SELECT st.[Status],RoomType,st.IDCard,Floor,orderNumber,st.[RoomNumber],UserName,TelephoneNumber,[CheckInTime],[TotalConsumption]+Price*[Days] TotalConsumptions,PaymentMethod,Discount,([TotalConsumption]+Price*[Days])*Discount Prices,[Days],Balance FROM [StatementTable] st join UserTable u on u.IDCard =st.IDCard join MembershipTable mt on mt.MemberNumber=u.Member join RoomSchedules rs on rs.RoomNumber=st.RoomNumber join RoomTypeTable rt on rt.[No]=rs.RoomType where 1=1 and st.[Status]=2");
 
-                HotelData.Data.Tables.Add(db.GetTable(sql.ToString(), null, "More").Copy());
+                HotelData.Usele.Tables.Add(db.GetTable(sql.ToString(), null, "More").Copy());
             }
 
             if (roomName != "")
             {
                 try
                 {
-                    var table = from row in HotelData.Data.Tables["More"].AsEnumerable()
+                    var table = from row in HotelData.Usele.Tables["More"].AsEnumerable()
                                 where row["RoomNumber"].Equals(roomName)
                                 select row;
                     return table.CopyToDataTable();
@@ -45,7 +45,7 @@ namespace HotelDAL
 
             try
             {
-                var table = from row in HotelData.Data.Tables["More"].AsEnumerable()
+                var table = from row in HotelData.Usele.Tables["More"].AsEnumerable()
                             where (int)row["Status"]==2
                             select row;
                 return table.CopyToDataTable();
@@ -63,7 +63,7 @@ namespace HotelDAL
         /// <param name="MoreID"></param>
         public void Update(string MoreID)
         {
-            foreach (DataRow item in HotelData .Data .Tables ["More"].Rows)
+            foreach (DataRow item in HotelData .Usele .Tables ["More"].Rows)
             {
                 if (item["orderNumber"].ToString().Trim() == MoreID.Trim())
                 {
@@ -72,6 +72,40 @@ namespace HotelDAL
                 }
             }
         }
+
+        /// <summary>
+        /// 用于预约窗体
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        public DataTable StatementNew(string userName="")
+        {
+            if (!(HotelData.Usele.Tables.Contains("StatementNew")))
+            {
+                StringBuilder sql = new StringBuilder("SELECT orderNumber,UserName,TelephoneNumber,st.[RoomNumber],Name,[CheckInTime],CheckOutTime,OperationManaer,Price,os.[State] FROM [StatementTable] st join UserTable u on u.IDCard =st.IDCard join RoomSchedules rs on rs.RoomNumber=st.RoomNumber join RoomTypeTable rt on rt.[No]=rs.RoomType join OrderStatusTable os on os.Number =st.[Status] where 1=1 and st.[Status]=1");
+
+                HotelData.Usele.Tables.Add(db.GetTable(sql.ToString(), null, "StatementNew").Copy());
+            }
+
+            if (userName != "")
+            {
+                try
+                {
+                    var table = from row in HotelData.Usele.Tables["StatementNew"].AsEnumerable()
+                                where row["UserName"].Equals(userName)
+                                select row;
+                    return table.CopyToDataTable();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    return null;
+                }
+            }
+
+            return HotelData.Usele.Tables["StatementNew"];
+        }
+
 
 
     }
