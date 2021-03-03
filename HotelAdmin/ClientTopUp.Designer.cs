@@ -459,7 +459,6 @@ namespace HotelAdmin
             // dgv_topUpRecord
             // 
             this.dgv_topUpRecord.AllowUserToAddRows = false;
-            this.dgv_topUpRecord.AllowUserToDeleteRows = false;
             this.dgv_topUpRecord.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgv_topUpRecord.BackgroundColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
