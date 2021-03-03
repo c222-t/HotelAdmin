@@ -26,9 +26,6 @@ namespace HotelModel
         /// <summary>
         /// 用户权限（0.普通用户 1.管理员）
         /// </summary>
-        public int jurisdiction {
-            get { return this.jurisdiction; }
-            set { this.jurisdiction = (value == 1) ? 1 : 0; }
-        }
+        public int jurisdiction { get; set; }
     }
 }

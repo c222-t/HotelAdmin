@@ -59,6 +59,7 @@
     <Compile Include="ClientTopUp.Designer.cs">
       <DependentUpon>ClientTopUp.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cun.cs" />
     <Compile Include="CustomerAlter.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,6 +96,7 @@
     <Compile Include="GoodsRedact.Designer.cs">
       <DependentUpon>GoodsRedact.cs</DependentUpon>
     </Compile>
+    <Compile Include="Hook.cs" />
     <Compile Include="LockScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -112,6 +114,12 @@
     </Compile>
     <Compile Include="MerchandiseManage.Designer.cs">
       <DependentUpon>MerchandiseManage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="OrderTable.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="OrderTable.Designer.cs">
+      <DependentUpon>OrderTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -138,6 +146,12 @@
     </Compile>
     <Compile Include="RoomRegulate.Designer.cs">
       <DependentUpon>RoomRegulate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StaffManagement.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StaffManagement.Designer.cs">
+      <DependentUpon>StaffManagement.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="CheckOutTable.resx">
       <DependentUpon>CheckOutTable.cs</DependentUpon>
@@ -172,6 +186,9 @@
     <EmbeddedResource Include="MerchandiseManage.resx">
       <DependentUpon>MerchandiseManage.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="OrderTable.resx">
+      <DependentUpon>OrderTable.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -192,6 +209,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="RoomRegulate.resx">
       <DependentUpon>RoomRegulate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StaffManagement.resx">
+      <DependentUpon>StaffManagement.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

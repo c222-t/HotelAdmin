@@ -18,6 +18,7 @@ namespace HotelDAL
         /// 临时数据库  (在程序运行中临时存储数据库中的数据)
         /// </summary>
         public static DataSet Data = new DataSet();
+        public static DataSet Usele = new DataSet();
         /// <summary>
         /// 数据库访问对象
         /// </summary>
@@ -50,10 +51,6 @@ namespace HotelDAL
             // 将临时数据库中的每张数据表保存到数据库对应的表中
             foreach (DataTable arr in Data.Tables)
             {
-                if (arr.TableName == "More")
-                {
-                    continue;
-                }
                 SqlDataAdapter sqlData = new SqlDataAdapter("select * from "+ arr.TableName, conn);
                 SqlCommandBuilder sqls = new SqlCommandBuilder(sqlData);    // 绑定要上传的数据表
                 sqlData.Update(arr.Copy());                                 // 更新数据库中相对应的表

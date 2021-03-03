@@ -28,22 +28,29 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LockScreen));
             this.txtPwd = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.trmCloseTaskmgr = new System.Windows.Forms.Timer(this.components);
+            this.lblPwd = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // txtPwd
             // 
-            this.txtPwd.Location = new System.Drawing.Point(321, 198);
+            this.txtPwd.Location = new System.Drawing.Point(551, 231);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(100, 21);
             this.txtPwd.TabIndex = 0;
+            this.txtPwd.Click += new System.EventHandler(this.TxtPwd_Click);
+            this.txtPwd.TextChanged += new System.EventHandler(this.TxtPwd_TextChanged);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(274, 202);
+            this.label1.BackColor = System.Drawing.Color.Transparent;
+            this.label1.Location = new System.Drawing.Point(504, 235);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(41, 12);
             this.label1.TabIndex = 1;
@@ -51,24 +58,51 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(427, 197);
+            this.button1.Location = new System.Drawing.Point(657, 230);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
-            this.button1.Text = "button1";
+            this.button1.Text = "确认";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
+            // trmCloseTaskmgr
+            // 
+            this.trmCloseTaskmgr.Enabled = true;
+            this.trmCloseTaskmgr.Interval = 1;
+            this.trmCloseTaskmgr.Tick += new System.EventHandler(this.TrmCloseTaskmgr_Tick);
+            // 
+            // lblPwd
+            // 
+            this.lblPwd.AutoSize = true;
+            this.lblPwd.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.lblPwd.ForeColor = System.Drawing.Color.Red;
+            this.lblPwd.Location = new System.Drawing.Point(560, 235);
+            this.lblPwd.Name = "lblPwd";
+            this.lblPwd.Size = new System.Drawing.Size(53, 12);
+            this.lblPwd.TabIndex = 3;
+            this.lblPwd.Text = "密码错误";
+            this.lblPwd.Visible = false;
+            // 
             // LockScreen
             // 
+            this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(780, 459);
+            this.Controls.Add(this.lblPwd);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPwd);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "LockScreen";
             this.Text = "LockScreen";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.LockScreen_Load);
+            this.LocationChanged += new System.EventHandler(this.LockScreen_LocationChanged);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.LockScreen_KeyDown);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -79,5 +113,7 @@
         private System.Windows.Forms.TextBox txtPwd;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Timer trmCloseTaskmgr;
+        private System.Windows.Forms.Label lblPwd;
     }
 }

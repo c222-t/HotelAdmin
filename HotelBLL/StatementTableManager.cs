@@ -50,10 +50,23 @@ namespace HotelBLL
             return sts.Statement(roomName);
         }
 
-        
+        /// <summary>
+        /// 修改usele中More表的状态
+        /// </summary>
+        /// <param name="MoreID"></param>
         public void Update(string MoreID)
         {
             sts.Update(MoreID);
+        }
+
+        /// <summary>
+        /// 用于预约窗体
+        /// </summary>
+        /// <param name="userName"></param>
+        /// <returns></returns>
+        public DataTable StatementNew(string userName = "")
+        {
+            return sts.StatementNew(userName);
         }
 
     }
