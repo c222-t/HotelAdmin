@@ -20,19 +20,26 @@ namespace HotelAdmin
             InitializeComponent();
         }
 
-        private void OrderTable_Load(object sender, EventArgs e)
+        public void ShuaXin()
         {
             dgvYY.DataSource = stm.StatementNew(txtUserName.Text.Trim());
+        }
+
+        private void OrderTable_Load(object sender, EventArgs e)
+        {
+            ShuaXin();
         }
 
         private void Button1_Click(object sender, EventArgs e)
         {
-            dgvYY.DataSource = stm.StatementNew(txtUserName.Text.Trim());
+            ShuaXin();
         }
 
-        private void DgvYY_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void 预定房间ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            CustomerOrder frm = new CustomerOrder();
+            frm.frm = this;
+            frm.Show();
         }
     }
 }

@@ -80,21 +80,58 @@ namespace HotelDAL
         /// <returns></returns>
         public DataTable StatementNew(string userName="")
         {
-            if (!(HotelData.Usele.Tables.Contains("StatementNew")))
-            {
-                StringBuilder sql = new StringBuilder("SELECT orderNumber,UserName,TelephoneNumber,st.[RoomNumber],Name,[CheckInTime],CheckOutTime,OperationManaer,Price,os.[State] FROM [StatementTable] st join UserTable u on u.IDCard =st.IDCard join RoomSchedules rs on rs.RoomNumber=st.RoomNumber join RoomTypeTable rt on rt.[No]=rs.RoomType join OrderStatusTable os on os.Number =st.[Status] where 1=1 and st.[Status]=1");
+            var table = from st in HotelData.Data.Tables["StatementTable"].AsEnumerable()
+                        join u in HotelData.Data.Tables["UserTable"].AsEnumerable()
+                        on st.Field<string>("IDCard") equals u.Field<string>("IDCard")
+                        join rs in HotelData.Data.Tables["RoomSchedules"].AsEnumerable()
+                        on st.Field<string>("RoomNumber") equals rs.Field<string>("RoomNumber")
+                        join os in StatementZT().AsEnumerable()
+                        on st.Field<int>("Status") equals os.Field<int>("Number")
+                        join rt in new RoomTypeService().TypeTable().AsEnumerable()
+                        on rs.Field<int>("RoomType") equals rt.Field<int>("No")
+                        select new
+                        {
+                            orderNumber=st.Field<string>("orderNumber"),
+                            UserName=u.Field <string>("UserName"),
+                            TelephoneNumber=u.Field <string>("TelephoneNumber"),
+                            RoomNumber=rs.Field <string>("RoomNumber"),
+                            Name=rt.Field <string>("Name"),
+                            CheckInTime=st.Field <DateTime>("CheckInTime"),
+                            CheckOutTime=st.Field <DateTime>("CheckInTime"),
+                            OperationManaer=st.Field <Int32>("OperationManaer"),
+                            Price=rt.Field <double>("Price"),
+                            State=os.Field <string>("State"),
+                            IDCard=st.Field <string>("IDCard")
+                        };
+            DataTable dt = new DataTable();
+            dt.Columns.Add("orderNumber", typeof(string));
+            dt.Columns.Add("UserName", typeof(string));
+            dt.Columns.Add("TelephoneNumber", typeof(string));
+            dt.Columns.Add("RoomNumber", typeof(string));
+            dt.Columns.Add("Name", typeof(string));
+            dt.Columns.Add("CheckInTime", typeof(DateTime));
+            dt.Columns.Add("CheckOutTime", typeof(DateTime));
+            dt.Columns.Add("OperationManaer", typeof(Int32));
+            dt.Columns.Add("Price", typeof(double));
+            dt.Columns.Add("State", typeof(string));
+            dt.Columns.Add("IDCard", typeof(string));
 
-                HotelData.Usele.Tables.Add(db.GetTable(sql.ToString(), null, "StatementNew").Copy());
+            DataTable dtNew = dt.Copy();
+
+            foreach (var item in table)
+            {
+                dtNew.Rows.Add(item.orderNumber.Trim (),item.UserName.Trim(), item.TelephoneNumber.Trim(), item.RoomNumber.Trim(), item.Name.Trim(), item.CheckInTime, item.CheckOutTime, item.OperationManaer, item.Price, item.State.Trim(), item.IDCard.Trim());
             }
 
             if (userName != "")
             {
                 try
                 {
-                    var table = from row in HotelData.Usele.Tables["StatementNew"].AsEnumerable()
-                                where row["UserName"].Equals(userName)
-                                select row;
-                    return table.CopyToDataTable();
+                    var tableNew = from row in dtNew.AsEnumerable()
+                                   where row["UserName"].ToString().Equals(userName)
+                                   select row;
+
+                    return tableNew.CopyToDataTable();
                 }
                 catch (Exception ex)
                 {
@@ -103,10 +140,19 @@ namespace HotelDAL
                 }
             }
 
-            return HotelData.Usele.Tables["StatementNew"];
+            return dtNew;
         }
 
+        /// <summary>
+        /// 返回所有订单状态
+        /// </summary>
+        /// <returns></returns>
+        public DataTable StatementZT()
+        {
+            string sql = "SELECT [Number],[State] FROM [OrderStatusTable]";
 
+            return db.GetTable(sql,null, "OrderStatusTable");
+        }
 
     }
 }
