@@ -132,8 +132,8 @@ namespace HotelAdmin
         // 获取商品图片路径
         private void Btn_SelectionPath_Click(object sender, EventArgs e)
         {
-            this.Folder_ImgPath.ShowDialog();
-            this.fileName.Text = Folder_ImgPath.SelectedPath;
+            this.Folder_ImgPath.ShowDialog();                               // 选择路径
+            this.fileName.Text = Folder_ImgPath.SelectedPath;               // 获取路径
         }
     }
 }
