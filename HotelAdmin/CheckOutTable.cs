@@ -52,6 +52,7 @@ namespace HotelAdmin
         {
             txtYinFu.Text = dgvUser.SelectedRows[0].Cells[9].Value.ToString();
             txtDingDan.Text = dgvUser.SelectedRows[0].Cells[0].Value.ToString().Trim();
+            txtZon.Enabled = true;
             cbFuKuan.Enabled = true;
             cbFuKuan.SelectedIndex = 0;
 
