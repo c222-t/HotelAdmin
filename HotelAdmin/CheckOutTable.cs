@@ -208,6 +208,11 @@ namespace HotelAdmin
             dgvRoom.DataSource = stm.Statement(txtRoomName.Text.Trim());
             dgvUser.DataSource = null;
 
+            txtLing.Text = "";
+            txtDingDan.Text = "";
+            txtYinFu.Text = "";
+            txtZon.Text = "";
+            cbFuKuan.Text = "";
         }
     }
 }

@@ -31,7 +31,7 @@ namespace HotelDAL
                 try
                 {
                     var table = from row in HotelData.Usele.Tables["More"].AsEnumerable()
-                                where row["RoomNumber"].ToString ().Trim ().Equals(roomName)
+                                where row["RoomNumber"].ToString ().Trim ().Equals(roomName.Trim())
                                 select row;
                     return table.CopyToDataTable();
                 }
