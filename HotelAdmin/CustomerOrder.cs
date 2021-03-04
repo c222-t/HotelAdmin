@@ -129,6 +129,8 @@ namespace HotelAdmin
                 if (frm != null)
                 {
                     MessageBox.Show("预约成功！", "提示");
+                    frm.ShuaXin();
+                    this.Close();
                 }
                 else
                 {

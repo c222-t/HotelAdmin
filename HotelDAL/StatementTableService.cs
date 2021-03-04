@@ -82,9 +82,9 @@ namespace HotelDAL
         {
             var table = from st in HotelData.Data.Tables["StatementTable"].AsEnumerable()
                         join u in HotelData.Data.Tables["UserTable"].AsEnumerable()
-                        on st.Field<string>("IDCard") equals u.Field<string>("IDCard")
+                        on st.Field<string>("IDCard").Trim() equals u.Field<string>("IDCard").Trim()
                         join rs in HotelData.Data.Tables["RoomSchedules"].AsEnumerable()
-                        on st.Field<string>("RoomNumber") equals rs.Field<string>("RoomNumber")
+                        on st.Field<string>("RoomNumber").Trim() equals rs.Field<string>("RoomNumber").Trim()
                         join os in StatementZT().AsEnumerable()
                         on st.Field<int>("Status") equals os.Field<int>("Number")
                         join rt in new RoomTypeService().TypeTable().AsEnumerable()
