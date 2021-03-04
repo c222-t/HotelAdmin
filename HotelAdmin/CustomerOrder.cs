@@ -17,6 +17,7 @@ namespace HotelAdmin
     /// </summary>
     public partial class CustomerOrder : Form
     {
+        public OrderTable frm = null;
         /// <summary>
         /// 服务员编号
         /// </summary>
@@ -45,6 +46,10 @@ namespace HotelAdmin
         // 加载初始化数据信息
         private void CustomerOrder_Load(object sender, EventArgs e)
         {
+            if (frm != null)
+            {
+                this.Text = "新增预约订单";
+            }
             GetRoomTypeManager();                                       // 获取会员等级列表信息
             GetMembershipTable();                                       // 获取房间类型列表信息
         }
@@ -121,7 +126,15 @@ namespace HotelAdmin
             {
                 SubmitNewClient();
                 SubmitNewOrder();
-                MessageBox.Show("添加成功！", "提示");
+                if (frm != null)
+                {
+                    MessageBox.Show("预约成功！", "提示");
+                    frm.ShuaXin();
+                }
+                else
+                {
+                    MessageBox.Show("添加成功！", "提示");
+                }
             }
             catch {
                 MessageBox.Show("必要信息未填写或填写错误！", "提示");
@@ -157,7 +170,7 @@ namespace HotelAdmin
                     RoomType = GetRoomStatus(Dgv_RoomList.SelectedCells[2].Value.ToString().Trim()),
                     RoomStatus = new RoomStatus { No = 2, StatusName = "占用" }
                 },
-                Status = new OrderStatusTable { Number = 2, State = "开始" },
+                Status = new OrderStatusTable { Number = frm==null?2:1, State = frm==null?"开始":"未开始" },
                 OperationManager = waiterID,
                 TotalConsumption = (double)Dgv_RoomList.SelectedCells[3].Value * double.Parse(Discount.Text),
                 Days = 1

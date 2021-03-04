@@ -70,6 +70,7 @@
             this.预定房间ToolStripMenuItem.Name = "预定房间ToolStripMenuItem";
             this.预定房间ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.预定房间ToolStripMenuItem.Text = "预定房间";
+            this.预定房间ToolStripMenuItem.Click += new System.EventHandler(this.预定房间ToolStripMenuItem_Click);
             // 
             // 修改信息ToolStripMenuItem
             // 
@@ -154,7 +155,6 @@
             this.dgvYY.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvYY.Size = new System.Drawing.Size(840, 392);
             this.dgvYY.TabIndex = 3;
-            this.dgvYY.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvYY_CellContentClick);
             // 
             // Column1
             // 
