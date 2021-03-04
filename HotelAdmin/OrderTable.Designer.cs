@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.预定房间ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.修改信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.返回ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.txtUserName = new System.Windows.Forms.TextBox();
@@ -48,16 +48,18 @@
             this.Column9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.取消预定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvYY)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.预定房间ToolStripMenuItem,
-            this.修改信息ToolStripMenuItem,
             this.返回ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -71,12 +73,6 @@
             this.预定房间ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.预定房间ToolStripMenuItem.Text = "预定房间";
             this.预定房间ToolStripMenuItem.Click += new System.EventHandler(this.预定房间ToolStripMenuItem_Click);
-            // 
-            // 修改信息ToolStripMenuItem
-            // 
-            this.修改信息ToolStripMenuItem.Name = "修改信息ToolStripMenuItem";
-            this.修改信息ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.修改信息ToolStripMenuItem.Text = "修改信息";
             // 
             // 返回ToolStripMenuItem
             // 
@@ -146,6 +142,7 @@
             this.Column9,
             this.Column10,
             this.Column11});
+            this.dgvYY.ContextMenuStrip = this.contextMenuStrip1;
             this.dgvYY.Location = new System.Drawing.Point(6, 20);
             this.dgvYY.MultiSelect = false;
             this.dgvYY.Name = "dgvYY";
@@ -234,6 +231,20 @@
             this.Column11.ReadOnly = true;
             this.Column11.Visible = false;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.取消预定ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(181, 48);
+            // 
+            // 取消预定ToolStripMenuItem
+            // 
+            this.取消预定ToolStripMenuItem.Name = "取消预定ToolStripMenuItem";
+            this.取消预定ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.取消预定ToolStripMenuItem.Text = "取消预定";
+            this.取消预定ToolStripMenuItem.Click += new System.EventHandler(this.取消预定ToolStripMenuItem_Click);
+            // 
             // OrderTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -252,6 +263,7 @@
             this.menuStrip1.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dgvYY)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -261,7 +273,6 @@
 
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 预定房间ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 修改信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 返回ToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox txtUserName;
@@ -279,5 +290,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column9;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 取消预定ToolStripMenuItem;
     }
 }

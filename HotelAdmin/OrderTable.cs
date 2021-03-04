@@ -41,5 +41,12 @@ namespace HotelAdmin
             frm.frm = this;
             frm.Show();
         }
+
+        private void 取消预定ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            OrderManager om = new OrderManager();
+            om.DeleteOrderRecord(new StatementTable() { OrderNumber = dgvYY.SelectedRows[0].Cells[0].Value.ToString() });
+            ShuaXin();
+        }
     }
 }
