@@ -76,6 +76,7 @@ namespace HotelAdmin
             // 
             // cbox_Member
             // 
+            this.cbox_Member.BackColor = System.Drawing.Color.Beige;
             this.cbox_Member.FormattingEnabled = true;
             this.cbox_Member.Location = new System.Drawing.Point(104, 156);
             this.cbox_Member.Name = "cbox_Member";
@@ -85,6 +86,7 @@ namespace HotelAdmin
             // 
             // txt_Balance
             // 
+            this.txt_Balance.BackColor = System.Drawing.Color.Beige;
             this.txt_Balance.Location = new System.Drawing.Point(104, 112);
             this.txt_Balance.Name = "txt_Balance";
             this.txt_Balance.Size = new System.Drawing.Size(181, 26);
@@ -92,6 +94,7 @@ namespace HotelAdmin
             // 
             // txt_IDCard
             // 
+            this.txt_IDCard.BackColor = System.Drawing.Color.Beige;
             this.txt_IDCard.Enabled = false;
             this.txt_IDCard.Location = new System.Drawing.Point(104, 68);
             this.txt_IDCard.Name = "txt_IDCard";
@@ -100,6 +103,7 @@ namespace HotelAdmin
             // 
             // txt_Name
             // 
+            this.txt_Name.BackColor = System.Drawing.Color.Beige;
             this.txt_Name.Location = new System.Drawing.Point(104, 24);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(181, 26);
@@ -152,18 +156,22 @@ namespace HotelAdmin
             // 
             // Alter
             // 
+            this.Alter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.Alter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.Alter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Alter.Location = new System.Drawing.Point(210, 225);
             this.Alter.Name = "Alter";
             this.Alter.Size = new System.Drawing.Size(75, 27);
             this.Alter.TabIndex = 11;
             this.Alter.Text = "修 改";
-            this.Alter.UseVisualStyleBackColor = true;
+            this.Alter.UseVisualStyleBackColor = false;
             this.Alter.Click += new System.EventHandler(this.Alter_Click);
             // 
             // CustomerAlter
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(332, 296);
             this.Controls.Add(this.groupBox1);
             this.Name = "CustomerAlter";

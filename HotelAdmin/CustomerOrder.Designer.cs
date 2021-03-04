@@ -73,7 +73,7 @@ namespace HotelAdmin
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.Beige;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txt_age);
             this.panel1.Controls.Add(this.label13);
@@ -109,6 +109,7 @@ namespace HotelAdmin
             // 
             // txt_age
             // 
+            this.txt_age.BackColor = System.Drawing.Color.Beige;
             this.txt_age.Location = new System.Drawing.Point(197, 333);
             this.txt_age.Name = "txt_age";
             this.txt_age.Size = new System.Drawing.Size(55, 21);
@@ -129,6 +130,7 @@ namespace HotelAdmin
             this.cbox_payWay.AutoCompleteCustomSource.AddRange(new string[] {
             "现金支付",
             "余额支付"});
+            this.cbox_payWay.BackColor = System.Drawing.Color.Beige;
             this.cbox_payWay.FormattingEnabled = true;
             this.cbox_payWay.Location = new System.Drawing.Point(92, 457);
             this.cbox_payWay.Name = "cbox_payWay";
@@ -148,6 +150,7 @@ namespace HotelAdmin
             // 
             // cbox_roomClass
             // 
+            this.cbox_roomClass.BackColor = System.Drawing.Color.Beige;
             this.cbox_roomClass.FormattingEnabled = true;
             this.cbox_roomClass.Items.AddRange(new object[] {
             "全部"});
@@ -184,6 +187,7 @@ namespace HotelAdmin
             // 
             // cbox_members
             // 
+            this.cbox_members.BackColor = System.Drawing.Color.Beige;
             this.cbox_members.FormattingEnabled = true;
             this.cbox_members.Location = new System.Drawing.Point(92, 293);
             this.cbox_members.Name = "cbox_members";
@@ -215,6 +219,7 @@ namespace HotelAdmin
             // 
             // txt_bmikece
             // 
+            this.txt_bmikece.BackColor = System.Drawing.Color.Beige;
             this.txt_bmikece.Location = new System.Drawing.Point(92, 251);
             this.txt_bmikece.Name = "txt_bmikece";
             this.txt_bmikece.Size = new System.Drawing.Size(160, 21);
@@ -222,6 +227,7 @@ namespace HotelAdmin
             // 
             // txt_phone
             // 
+            this.txt_phone.BackColor = System.Drawing.Color.Beige;
             this.txt_phone.Location = new System.Drawing.Point(92, 169);
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(160, 21);
@@ -229,6 +235,7 @@ namespace HotelAdmin
             // 
             // txt_IDcard
             // 
+            this.txt_IDcard.BackColor = System.Drawing.Color.Beige;
             this.txt_IDcard.Location = new System.Drawing.Point(92, 129);
             this.txt_IDcard.Name = "txt_IDcard";
             this.txt_IDcard.Size = new System.Drawing.Size(160, 21);
@@ -236,6 +243,7 @@ namespace HotelAdmin
             // 
             // txt_name
             // 
+            this.txt_name.BackColor = System.Drawing.Color.Beige;
             this.txt_name.Location = new System.Drawing.Point(92, 46);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(160, 21);
@@ -243,13 +251,16 @@ namespace HotelAdmin
             // 
             // Btn_Billing
             // 
+            this.Btn_Billing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.Btn_Billing.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.Btn_Billing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Billing.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Btn_Billing.Location = new System.Drawing.Point(92, 506);
             this.Btn_Billing.Name = "Btn_Billing";
             this.Btn_Billing.Size = new System.Drawing.Size(99, 32);
             this.Btn_Billing.TabIndex = 12;
             this.Btn_Billing.Text = "开 单";
-            this.Btn_Billing.UseVisualStyleBackColor = true;
+            this.Btn_Billing.UseVisualStyleBackColor = false;
             this.Btn_Billing.Click += new System.EventHandler(this.Btn_Billing_Click);
             // 
             // label12
@@ -364,7 +375,7 @@ namespace HotelAdmin
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.Beige;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.Dgv_RoomList);
             this.panel2.Controls.Add(this.label14);
@@ -380,7 +391,7 @@ namespace HotelAdmin
             this.Dgv_RoomList.AllowUserToResizeColumns = false;
             this.Dgv_RoomList.AllowUserToResizeRows = false;
             this.Dgv_RoomList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Dgv_RoomList.BackgroundColor = System.Drawing.Color.White;
+            this.Dgv_RoomList.BackgroundColor = System.Drawing.Color.Beige;
             this.Dgv_RoomList.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_RoomList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
@@ -452,7 +463,7 @@ namespace HotelAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(964, 607);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);

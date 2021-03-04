@@ -58,12 +58,12 @@ namespace HotelAdmin
             // 
             // Pl_User
             // 
-            this.Pl_User.BackColor = System.Drawing.Color.White;
+            this.Pl_User.BackColor = System.Drawing.Color.Beige;
             this.Pl_User.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Pl_User.Controls.Add(this.Dgv_UserShow);
-            this.Pl_User.Location = new System.Drawing.Point(12, 46);
+            this.Pl_User.Location = new System.Drawing.Point(111, 55);
             this.Pl_User.Name = "Pl_User";
-            this.Pl_User.Size = new System.Drawing.Size(950, 366);
+            this.Pl_User.Size = new System.Drawing.Size(940, 483);
             this.Pl_User.TabIndex = 2;
             // 
             // Dgv_UserShow
@@ -73,7 +73,7 @@ namespace HotelAdmin
             this.Dgv_UserShow.AllowUserToResizeColumns = false;
             this.Dgv_UserShow.AllowUserToResizeRows = false;
             this.Dgv_UserShow.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Dgv_UserShow.BackgroundColor = System.Drawing.Color.White;
+            this.Dgv_UserShow.BackgroundColor = System.Drawing.Color.Beige;
             this.Dgv_UserShow.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_UserShow.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Dgv_UserShow.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -106,7 +106,7 @@ namespace HotelAdmin
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.Dgv_UserShow.DefaultCellStyle = dataGridViewCellStyle2;
             this.Dgv_UserShow.GridColor = System.Drawing.Color.White;
-            this.Dgv_UserShow.Location = new System.Drawing.Point(-1, -1);
+            this.Dgv_UserShow.Location = new System.Drawing.Point(3, -1);
             this.Dgv_UserShow.Name = "Dgv_UserShow";
             this.Dgv_UserShow.ReadOnly = true;
             this.Dgv_UserShow.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -123,7 +123,7 @@ namespace HotelAdmin
             this.Dgv_UserShow.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgv_UserShow.RowTemplate.Height = 23;
             this.Dgv_UserShow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_UserShow.Size = new System.Drawing.Size(950, 342);
+            this.Dgv_UserShow.Size = new System.Drawing.Size(936, 478);
             this.Dgv_UserShow.TabIndex = 1;
             // 
             // UserName
@@ -188,19 +188,19 @@ namespace HotelAdmin
             this.Option_Alter,
             this.Option_Delete});
             this.UserMenu.Name = "UserMenu";
-            this.UserMenu.Size = new System.Drawing.Size(181, 70);
+            this.UserMenu.Size = new System.Drawing.Size(101, 48);
             // 
             // Option_Alter
             // 
             this.Option_Alter.Name = "Option_Alter";
-            this.Option_Alter.Size = new System.Drawing.Size(180, 22);
+            this.Option_Alter.Size = new System.Drawing.Size(100, 22);
             this.Option_Alter.Text = "修改";
             this.Option_Alter.Click += new System.EventHandler(this.Option_Alter_Click);
             // 
             // Option_Delete
             // 
             this.Option_Delete.Name = "Option_Delete";
-            this.Option_Delete.Size = new System.Drawing.Size(180, 22);
+            this.Option_Delete.Size = new System.Drawing.Size(100, 22);
             this.Option_Delete.Text = "删除";
             this.Option_Delete.Click += new System.EventHandler(this.Option_Delete_Click);
             // 
@@ -208,7 +208,7 @@ namespace HotelAdmin
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(12, 12);
+            this.label1.Location = new System.Drawing.Point(382, 25);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 3;
@@ -216,7 +216,8 @@ namespace HotelAdmin
             // 
             // Txt_InquireBox
             // 
-            this.Txt_InquireBox.Location = new System.Drawing.Point(97, 11);
+            this.Txt_InquireBox.BackColor = System.Drawing.Color.Beige;
+            this.Txt_InquireBox.Location = new System.Drawing.Point(467, 24);
             this.Txt_InquireBox.Name = "Txt_InquireBox";
             this.Txt_InquireBox.Size = new System.Drawing.Size(233, 21);
             this.Txt_InquireBox.TabIndex = 4;
@@ -224,22 +225,26 @@ namespace HotelAdmin
             // 
             // Btn_Inquire
             // 
-            this.Btn_Inquire.Location = new System.Drawing.Point(887, 11);
+            this.Btn_Inquire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.Btn_Inquire.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.Btn_Inquire.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_Inquire.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Btn_Inquire.Location = new System.Drawing.Point(706, 21);
             this.Btn_Inquire.Name = "Btn_Inquire";
-            this.Btn_Inquire.Size = new System.Drawing.Size(75, 23);
+            this.Btn_Inquire.Size = new System.Drawing.Size(75, 28);
             this.Btn_Inquire.TabIndex = 5;
             this.Btn_Inquire.Text = "查 询";
-            this.Btn_Inquire.UseVisualStyleBackColor = true;
+            this.Btn_Inquire.UseVisualStyleBackColor = false;
             this.Btn_Inquire.Click += new System.EventHandler(this.Btn_Inquire_Click);
             // 
             // Lab_Remind
             // 
             this.Lab_Remind.AutoSize = true;
-            this.Lab_Remind.BackColor = System.Drawing.Color.White;
+            this.Lab_Remind.BackColor = System.Drawing.Color.Beige;
             this.Lab_Remind.Enabled = false;
             this.Lab_Remind.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Lab_Remind.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
-            this.Lab_Remind.Location = new System.Drawing.Point(106, 13);
+            this.Lab_Remind.Location = new System.Drawing.Point(476, 26);
             this.Lab_Remind.Name = "Lab_Remind";
             this.Lab_Remind.Size = new System.Drawing.Size(188, 17);
             this.Lab_Remind.TabIndex = 6;
@@ -249,7 +254,8 @@ namespace HotelAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(974, 444);
+            this.BackColor = System.Drawing.Color.Beige;
+            this.ClientSize = new System.Drawing.Size(1168, 708);
             this.Controls.Add(this.Lab_Remind);
             this.Controls.Add(this.Btn_Inquire);
             this.Controls.Add(this.Txt_InquireBox);

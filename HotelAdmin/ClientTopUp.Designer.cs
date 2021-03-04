@@ -30,10 +30,10 @@ namespace HotelAdmin
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgv_Commodity = new System.Windows.Forms.DataGridView();
@@ -90,14 +90,14 @@ namespace HotelAdmin
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.BackColor = System.Drawing.Color.Beige;
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
             this.panel1.Controls.Add(this.groupBox1);
             this.panel1.Location = new System.Drawing.Point(815, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(307, 773);
+            this.panel1.Size = new System.Drawing.Size(341, 690);
             this.panel1.TabIndex = 61;
             // 
             // groupBox4
@@ -106,7 +106,7 @@ namespace HotelAdmin
             this.groupBox4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox4.Location = new System.Drawing.Point(12, 478);
             this.groupBox4.Name = "groupBox4";
-            this.groupBox4.Size = new System.Drawing.Size(281, 279);
+            this.groupBox4.Size = new System.Drawing.Size(313, 206);
             this.groupBox4.TabIndex = 77;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "商品列表";
@@ -118,7 +118,7 @@ namespace HotelAdmin
             this.dgv_Commodity.AllowUserToResizeColumns = false;
             this.dgv_Commodity.AllowUserToResizeRows = false;
             this.dgv_Commodity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Commodity.BackgroundColor = System.Drawing.Color.White;
+            this.dgv_Commodity.BackgroundColor = System.Drawing.Color.Beige;
             this.dgv_Commodity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Commodity.ColumnHeadersVisible = false;
             this.dgv_Commodity.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -130,7 +130,7 @@ namespace HotelAdmin
             this.dgv_Commodity.RowHeadersVisible = false;
             this.dgv_Commodity.RowTemplate.Height = 23;
             this.dgv_Commodity.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_Commodity.Size = new System.Drawing.Size(260, 221);
+            this.dgv_Commodity.Size = new System.Drawing.Size(297, 172);
             this.dgv_Commodity.TabIndex = 0;
             this.dgv_Commodity.Click += new System.EventHandler(this.Dgv_Commodity_Click);
             // 
@@ -148,14 +148,14 @@ namespace HotelAdmin
             this.groupBox3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox3.Location = new System.Drawing.Point(12, 107);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(281, 100);
+            this.groupBox3.Size = new System.Drawing.Size(313, 100);
             this.groupBox3.TabIndex = 76;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "充值时间";
             // 
             // PhoneTime
             // 
-            this.PhoneTime.Location = new System.Drawing.Point(10, 34);
+            this.PhoneTime.Location = new System.Drawing.Point(33, 34);
             this.PhoneTime.Name = "PhoneTime";
             this.PhoneTime.Size = new System.Drawing.Size(260, 26);
             this.PhoneTime.TabIndex = 72;
@@ -166,7 +166,7 @@ namespace HotelAdmin
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label11.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label11.Location = new System.Drawing.Point(13, 68);
+            this.label11.Location = new System.Drawing.Point(30, 63);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(152, 17);
             this.label11.TabIndex = 73;
@@ -188,7 +188,7 @@ namespace HotelAdmin
             this.groupBox2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox2.Location = new System.Drawing.Point(12, 213);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(281, 259);
+            this.groupBox2.Size = new System.Drawing.Size(313, 259);
             this.groupBox2.TabIndex = 75;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "顾客充值";
@@ -197,7 +197,7 @@ namespace HotelAdmin
             // 
             this.lab_Recharge.AutoSize = true;
             this.lab_Recharge.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lab_Recharge.Location = new System.Drawing.Point(97, 105);
+            this.lab_Recharge.Location = new System.Drawing.Point(120, 105);
             this.lab_Recharge.Name = "lab_Recharge";
             this.lab_Recharge.Size = new System.Drawing.Size(23, 20);
             this.lab_Recharge.TabIndex = 77;
@@ -206,7 +206,7 @@ namespace HotelAdmin
             // lab_1
             // 
             this.lab_1.AutoSize = true;
-            this.lab_1.Location = new System.Drawing.Point(12, 105);
+            this.lab_1.Location = new System.Drawing.Point(35, 105);
             this.lab_1.Name = "lab_1";
             this.lab_1.Size = new System.Drawing.Size(79, 20);
             this.lab_1.TabIndex = 76;
@@ -216,7 +216,7 @@ namespace HotelAdmin
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(12, 32);
+            this.label1.Location = new System.Drawing.Point(35, 32);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(79, 20);
             this.label1.TabIndex = 61;
@@ -224,20 +224,23 @@ namespace HotelAdmin
             // 
             // recharge
             // 
+            this.recharge.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.recharge.Enabled = false;
-            this.recharge.Location = new System.Drawing.Point(97, 214);
+            this.recharge.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.recharge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.recharge.Location = new System.Drawing.Point(120, 214);
             this.recharge.Name = "recharge";
             this.recharge.Size = new System.Drawing.Size(75, 34);
             this.recharge.TabIndex = 75;
             this.recharge.Text = "充 值";
-            this.recharge.UseVisualStyleBackColor = true;
+            this.recharge.UseVisualStyleBackColor = false;
             this.recharge.Click += new System.EventHandler(this.Recharge_Click);
             // 
             // lab_gift
             // 
             this.lab_gift.AutoSize = true;
             this.lab_gift.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lab_gift.Location = new System.Drawing.Point(97, 69);
+            this.lab_gift.Location = new System.Drawing.Point(120, 69);
             this.lab_gift.Name = "lab_gift";
             this.lab_gift.Size = new System.Drawing.Size(23, 20);
             this.lab_gift.TabIndex = 74;
@@ -247,7 +250,7 @@ namespace HotelAdmin
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(12, 138);
+            this.label3.Location = new System.Drawing.Point(35, 138);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 20);
             this.label3.TabIndex = 63;
@@ -257,7 +260,7 @@ namespace HotelAdmin
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.Location = new System.Drawing.Point(12, 69);
+            this.label8.Location = new System.Drawing.Point(35, 69);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(79, 20);
             this.label8.TabIndex = 73;
@@ -267,7 +270,7 @@ namespace HotelAdmin
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(12, 176);
+            this.label4.Location = new System.Drawing.Point(35, 176);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(79, 20);
             this.label4.TabIndex = 64;
@@ -275,7 +278,7 @@ namespace HotelAdmin
             // 
             // txt_Balance
             // 
-            this.txt_Balance.Location = new System.Drawing.Point(97, 138);
+            this.txt_Balance.Location = new System.Drawing.Point(120, 138);
             this.txt_Balance.Name = "txt_Balance";
             this.txt_Balance.ReadOnly = true;
             this.txt_Balance.Size = new System.Drawing.Size(143, 26);
@@ -285,9 +288,10 @@ namespace HotelAdmin
             // 
             // cbox_Member
             // 
+            this.cbox_Member.BackColor = System.Drawing.Color.Beige;
             this.cbox_Member.Enabled = false;
             this.cbox_Member.FormattingEnabled = true;
-            this.cbox_Member.Location = new System.Drawing.Point(97, 173);
+            this.cbox_Member.Location = new System.Drawing.Point(120, 173);
             this.cbox_Member.Name = "cbox_Member";
             this.cbox_Member.Size = new System.Drawing.Size(143, 28);
             this.cbox_Member.TabIndex = 66;
@@ -297,7 +301,7 @@ namespace HotelAdmin
             // 
             this.lab_balance.AutoSize = true;
             this.lab_balance.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lab_balance.Location = new System.Drawing.Point(97, 32);
+            this.lab_balance.Location = new System.Drawing.Point(120, 32);
             this.lab_balance.Name = "lab_balance";
             this.lab_balance.Size = new System.Drawing.Size(23, 20);
             this.lab_balance.TabIndex = 67;
@@ -311,7 +315,7 @@ namespace HotelAdmin
             this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox1.Location = new System.Drawing.Point(12, 11);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(281, 90);
+            this.groupBox1.Size = new System.Drawing.Size(313, 90);
             this.groupBox1.TabIndex = 74;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "名称查询";
@@ -321,7 +325,7 @@ namespace HotelAdmin
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label10.ForeColor = System.Drawing.SystemColors.AppWorkspace;
-            this.label10.Location = new System.Drawing.Point(13, 59);
+            this.label10.Location = new System.Drawing.Point(35, 59);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(104, 17);
             this.label10.TabIndex = 74;
@@ -329,7 +333,8 @@ namespace HotelAdmin
             // 
             // Txt_Name
             // 
-            this.Txt_Name.Location = new System.Drawing.Point(10, 30);
+            this.Txt_Name.BackColor = System.Drawing.Color.Beige;
+            this.Txt_Name.Location = new System.Drawing.Point(32, 30);
             this.Txt_Name.Name = "Txt_Name";
             this.Txt_Name.Size = new System.Drawing.Size(179, 26);
             this.Txt_Name.TabIndex = 61;
@@ -337,17 +342,21 @@ namespace HotelAdmin
             // 
             // inquire
             // 
-            this.inquire.Location = new System.Drawing.Point(195, 29);
+            this.inquire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.inquire.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.inquire.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inquire.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.inquire.Location = new System.Drawing.Point(217, 29);
             this.inquire.Name = "inquire";
             this.inquire.Size = new System.Drawing.Size(75, 27);
             this.inquire.TabIndex = 69;
             this.inquire.Text = "查 询";
-            this.inquire.UseVisualStyleBackColor = true;
+            this.inquire.UseVisualStyleBackColor = false;
             this.inquire.Click += new System.EventHandler(this.Txt_NameInquire_TextChanged);
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.BackColor = System.Drawing.Color.Beige;
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.dgv_Client);
             this.panel2.Location = new System.Drawing.Point(12, 12);
@@ -370,16 +379,16 @@ namespace HotelAdmin
             this.dgv_Client.AllowUserToAddRows = false;
             this.dgv_Client.AllowUserToDeleteRows = false;
             this.dgv_Client.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Client.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Client.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dgv_Client.BackgroundColor = System.Drawing.Color.Beige;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Client.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.dgv_Client.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Client.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UserName,
@@ -393,8 +402,8 @@ namespace HotelAdmin
             this.dgv_Client.ReadOnly = true;
             this.dgv_Client.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_Client.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgv_Client.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgv_Client.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.dgv_Client.RowTemplate.Height = 23;
             this.dgv_Client.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Client.Size = new System.Drawing.Size(747, 301);
@@ -438,12 +447,12 @@ namespace HotelAdmin
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.White;
+            this.panel3.BackColor = System.Drawing.Color.Beige;
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.dgv_topUpRecord);
-            this.panel3.Location = new System.Drawing.Point(12, 401);
+            this.panel3.Location = new System.Drawing.Point(12, 390);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(786, 384);
+            this.panel3.Size = new System.Drawing.Size(786, 312);
             this.panel3.TabIndex = 71;
             // 
             // label9
@@ -460,16 +469,16 @@ namespace HotelAdmin
             // 
             this.dgv_topUpRecord.AllowUserToAddRows = false;
             this.dgv_topUpRecord.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_topUpRecord.BackgroundColor = System.Drawing.Color.White;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_topUpRecord.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dgv_topUpRecord.BackgroundColor = System.Drawing.Color.Beige;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_topUpRecord.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgv_topUpRecord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_topUpRecord.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UserRechargeID,
@@ -483,11 +492,11 @@ namespace HotelAdmin
             this.dgv_topUpRecord.Name = "dgv_topUpRecord";
             this.dgv_topUpRecord.ReadOnly = true;
             this.dgv_topUpRecord.RowHeadersVisible = false;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgv_topUpRecord.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgv_topUpRecord.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_topUpRecord.RowTemplate.Height = 23;
             this.dgv_topUpRecord.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgv_topUpRecord.Size = new System.Drawing.Size(747, 301);
+            this.dgv_topUpRecord.Size = new System.Drawing.Size(747, 272);
             this.dgv_topUpRecord.TabIndex = 70;
             // 
             // UserRechargeID
@@ -545,8 +554,8 @@ namespace HotelAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1134, 749);
+            this.BackColor = System.Drawing.Color.Beige;
+            this.ClientSize = new System.Drawing.Size(1168, 708);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
