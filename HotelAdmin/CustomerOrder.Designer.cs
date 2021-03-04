@@ -32,6 +32,8 @@ namespace HotelAdmin
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.txt_age = new System.Windows.Forms.TextBox();
+            this.label13 = new System.Windows.Forms.Label();
             this.cbox_payWay = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.cbox_roomClass = new System.Windows.Forms.ComboBox();
@@ -64,8 +66,6 @@ namespace HotelAdmin
             this.typeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Floor = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label14 = new System.Windows.Forms.Label();
-            this.label13 = new System.Windows.Forms.Label();
-            this.txt_age = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_RoomList)).BeginInit();
@@ -106,6 +106,23 @@ namespace HotelAdmin
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(283, 583);
             this.panel1.TabIndex = 2;
+            // 
+            // txt_age
+            // 
+            this.txt_age.Location = new System.Drawing.Point(197, 333);
+            this.txt_age.Name = "txt_age";
+            this.txt_age.Size = new System.Drawing.Size(55, 21);
+            this.txt_age.TabIndex = 28;
+            // 
+            // label13
+            // 
+            this.label13.AutoSize = true;
+            this.label13.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label13.Location = new System.Drawing.Point(140, 333);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(51, 20);
+            this.label13.TabIndex = 27;
+            this.label13.Text = "年龄：";
             // 
             // cbox_payWay
             // 
@@ -430,23 +447,6 @@ namespace HotelAdmin
             this.label14.Size = new System.Drawing.Size(74, 21);
             this.label14.TabIndex = 1;
             this.label14.Text = "房间列表";
-            // 
-            // label13
-            // 
-            this.label13.AutoSize = true;
-            this.label13.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label13.Location = new System.Drawing.Point(140, 333);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(51, 20);
-            this.label13.TabIndex = 27;
-            this.label13.Text = "年龄：";
-            // 
-            // txt_age
-            // 
-            this.txt_age.Location = new System.Drawing.Point(197, 333);
-            this.txt_age.Name = "txt_age";
-            this.txt_age.Size = new System.Drawing.Size(55, 21);
-            this.txt_age.TabIndex = 28;
             // 
             // CustomerOrder
             // 
