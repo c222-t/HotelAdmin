@@ -97,7 +97,7 @@ namespace HotelDAL
                             RoomNumber=rs.Field <string>("RoomNumber"),
                             Name=rt.Field <string>("Name"),
                             CheckInTime=st.Field <DateTime>("CheckInTime"),
-                            CheckOutTime=st.Field <DateTime>("CheckInTime"),
+                            CheckOutTime=st.Field <DateTime>("CheckOutTime"),
                             OperationManaer=st.Field <Int32>("OperationManaer"),
                             Price=rt.Field <double>("Price"),
                             State=os.Field <string>("State"),
