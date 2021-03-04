@@ -97,6 +97,12 @@
       <DependentUpon>GoodsRedact.cs</DependentUpon>
     </Compile>
     <Compile Include="Hook.cs" />
+    <Compile Include="HotelWireshark.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="HotelWireshark.Designer.cs">
+      <DependentUpon>HotelWireshark.cs</DependentUpon>
+    </Compile>
     <Compile Include="LockScreen.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -176,6 +182,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="GoodsRedact.resx">
       <DependentUpon>GoodsRedact.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="HotelWireshark.resx">
+      <DependentUpon>HotelWireshark.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LockScreen.resx">
       <DependentUpon>LockScreen.cs</DependentUpon>

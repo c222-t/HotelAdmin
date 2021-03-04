@@ -50,16 +50,17 @@ namespace HotelAdmin
             try
             {
                 // 根据名称查询满足条件的顾客
-                dgv_Client.DataSource = (
-                    from row in userManager.CompareUserName(Txt_Name.Text).AsEnumerable()
-                    join arr in memberships on row["Member"] equals arr.MemberNumber
-                    select new {
-                        UserName = row["UserName"].ToString().Trim(),
-                        IDCard = row["IDCard"],
-                        Balance = row["Balance"],
-                        arr.MembershipLevel,
-                        arr.Discount
-                    }).ToArray();
+                var gain = from row in userManager.CompareUserName(Txt_Name.Text).AsEnumerable()
+                           join arr in memberships on row["Member"] equals arr.MemberNumber
+                           select new {
+                               UserName = row["UserName"].ToString().Trim(),
+                               IDCard = row["IDCard"],
+                               Balance = row["Balance"],
+                               arr.MembershipLevel,
+                               arr.Discount
+                           };
+
+                dgv_Client.DataSource = gain.ToArray();                          // 获取得到的记录
             }
             catch {
                 dgv_Client.DataSource = null;                                    // 未找到清除之前的信息
@@ -71,17 +72,18 @@ namespace HotelAdmin
             try
             {
                 // 根据充值时间查询满足条件的充值记录
-                dgv_topUpRecord.DataSource = (
-                    from row in rechargeManager.UserRechargeTable(PhoneTime.ToString(), DateTime.Now.AddDays(1).ToString()).AsEnumerable()
-                    join arr in new CommodityManager().GetCommodityRecord(-1).AsEnumerable()
-                    on row["GiftGiving"] equals arr["CommodityName"]
-                    select new {
-                        UserRechargeID = row["UserRechargeID"],
-                        RechargeBalance = row["RechargeBalance"],
-                        IDCard = row["IDCard"],
-                        RechargeTime = row["RechargeTime"],
-                        CommodityName = arr["CommodityName"].ToString().Trim()
-                    }).ToArray();
+                var gain = from row in rechargeManager.UserRechargeTable(PhoneTime.ToString(), DateTime.Now.AddDays(1).ToString()).AsEnumerable()
+                           join arr in new CommodityManager().GetCommodityRecord(-1).AsEnumerable()
+                           on row["GiftGiving"] equals arr["CommodityName"]
+                           select new {
+                               编号 = row["UserRechargeID"],
+                               充值金额 = row["RechargeBalance"],
+                               身份证 = row["IDCard"],
+                               充值时间 = row["RechargeTime"],
+                               赠送商品 = arr["CommodityName"].ToString().Trim()
+                           };
+
+                dgv_topUpRecord.DataSource = gain.ToArray();                     // 获取得到的记录
             }
             catch {
                 dgv_topUpRecord.DataSource = null;                               // 未找到清除之前的信息
@@ -90,22 +92,22 @@ namespace HotelAdmin
         // 根据顾客身份证获取该顾客的充值记录
         private void Dgv_Client_Click(object sender, EventArgs e)
         {
+            EnablePrepaidPhone();                                                // 激活充值选项控件
             try
             {
                 // 根据顾客身份证查询满足条件的充值记录
-                dgv_topUpRecord.DataSource = (
-                    from row in rechargeManager.SeekRechargeIDCard(dgv_Client.SelectedCells[1].Value.ToString()).AsEnumerable()
-                    join arr in new CommodityManager().GetCommodityRecord(-1).AsEnumerable()
-                    on row["GiftGiving"] equals arr["CommodityName"]
-                    select new {
-                        UserRechargeID = row["UserRechargeID"],
-                        RechargeBalance = row["RechargeBalance"],
-                        IDCard = row["IDCard"],
-                        RechargeTime = row["RechargeTime"],
-                        CommodityName = arr["CommodityName"].ToString().Trim()
-                    }).ToArray();
-
-                EnablePrepaidPhone();                                            // 激活充值选项控件
+                var gain = from row in rechargeManager.SeekRechargeIDCard(dgv_Client.SelectedCells[1].Value.ToString()).AsEnumerable()
+                           join arr in new CommodityManager().GetCommodityRecord(-1).AsEnumerable()
+                           on row["GiftGiving"] equals arr["CommodityName"]
+                           select new {
+                               编号 = row["UserRechargeID"],
+                               充值金额 = row["RechargeBalance"],
+                               身份证 = row["IDCard"],
+                               充值时间 = row["RechargeTime"],
+                               赠送商品 = arr["CommodityName"].ToString().Trim()
+                           };
+                
+                dgv_topUpRecord.DataSource = gain.ToArray();                     // 获取得到的记录
             }
             catch {
                 dgv_topUpRecord.DataSource = null;                               // 未找到清除之前的信息
@@ -122,11 +124,11 @@ namespace HotelAdmin
             recharge.Enabled = true;
 
             // 显示当前用户能充值的会员等级
-            if (dgv_Client.SelectedCells[4].ToString().Equals("普通客户"))
+            if (dgv_Client.SelectedCells[3].Value.ToString().Equals("普通客户"))
             {
                 cbox_Member.Items.AddRange((from arr in memberships select new { arr.MembershipLevel }).ToArray());
             }
-            else if (dgv_Client.SelectedCells[4].ToString().Equals("会员"))
+            else if (dgv_Client.SelectedCells[3].Value.ToString().Equals("会员"))
             {
                 cbox_Member.Items.Add("大会员");
             }

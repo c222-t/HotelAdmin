@@ -68,13 +68,13 @@ namespace HotelAdmin
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.dgv_topUpRecord = new System.Windows.Forms.DataGridView();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Delete = new System.Windows.Forms.ToolStripMenuItem();
             this.UserRechargeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RechargeBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.identity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RechargeTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CommodityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.Delete = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Commodity)).BeginInit();
@@ -490,43 +490,6 @@ namespace HotelAdmin
             this.dgv_topUpRecord.Size = new System.Drawing.Size(747, 301);
             this.dgv_topUpRecord.TabIndex = 70;
             // 
-            // UserRechargeID
-            // 
-            this.UserRechargeID.DataPropertyName = "UserRechargeID";
-            this.UserRechargeID.Frozen = true;
-            this.UserRechargeID.HeaderText = "编号";
-            this.UserRechargeID.Name = "UserRechargeID";
-            this.UserRechargeID.ReadOnly = true;
-            this.UserRechargeID.Visible = false;
-            // 
-            // RechargeBalance
-            // 
-            this.RechargeBalance.DataPropertyName = "RechargeBalance";
-            this.RechargeBalance.HeaderText = "充值金额";
-            this.RechargeBalance.Name = "RechargeBalance";
-            this.RechargeBalance.ReadOnly = true;
-            // 
-            // identity
-            // 
-            this.identity.DataPropertyName = "IDCard";
-            this.identity.HeaderText = "身份证";
-            this.identity.Name = "identity";
-            this.identity.ReadOnly = true;
-            // 
-            // RechargeTime
-            // 
-            this.RechargeTime.DataPropertyName = "RechargeTime";
-            this.RechargeTime.HeaderText = "充值时间";
-            this.RechargeTime.Name = "RechargeTime";
-            this.RechargeTime.ReadOnly = true;
-            // 
-            // CommodityName
-            // 
-            this.CommodityName.DataPropertyName = "CommodityName";
-            this.CommodityName.HeaderText = "赠送商品";
-            this.CommodityName.Name = "CommodityName";
-            this.CommodityName.ReadOnly = true;
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -541,12 +504,49 @@ namespace HotelAdmin
             this.Delete.Text = "删除";
             this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
+            // UserRechargeID
+            // 
+            this.UserRechargeID.DataPropertyName = "编号";
+            this.UserRechargeID.Frozen = true;
+            this.UserRechargeID.HeaderText = "编号";
+            this.UserRechargeID.Name = "UserRechargeID";
+            this.UserRechargeID.ReadOnly = true;
+            this.UserRechargeID.Visible = false;
+            // 
+            // RechargeBalance
+            // 
+            this.RechargeBalance.DataPropertyName = "充值金额";
+            this.RechargeBalance.HeaderText = "充值金额";
+            this.RechargeBalance.Name = "RechargeBalance";
+            this.RechargeBalance.ReadOnly = true;
+            // 
+            // identity
+            // 
+            this.identity.DataPropertyName = "身份证";
+            this.identity.HeaderText = "身份证";
+            this.identity.Name = "identity";
+            this.identity.ReadOnly = true;
+            // 
+            // RechargeTime
+            // 
+            this.RechargeTime.DataPropertyName = "充值时间";
+            this.RechargeTime.HeaderText = "充值时间";
+            this.RechargeTime.Name = "RechargeTime";
+            this.RechargeTime.ReadOnly = true;
+            // 
+            // CommodityName
+            // 
+            this.CommodityName.DataPropertyName = "赠送商品";
+            this.CommodityName.HeaderText = "赠送商品";
+            this.CommodityName.Name = "CommodityName";
+            this.CommodityName.ReadOnly = true;
+            // 
             // ClientTopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.ClientSize = new System.Drawing.Size(1134, 749);
+            this.ClientSize = new System.Drawing.Size(1134, 798);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -603,11 +603,6 @@ namespace HotelAdmin
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox3;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.DataGridViewTextBoxColumn UserRechargeID;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RechargeBalance;
-        private System.Windows.Forms.DataGridViewTextBoxColumn identity;
-        private System.Windows.Forms.DataGridViewTextBoxColumn RechargeTime;
-        private System.Windows.Forms.DataGridViewTextBoxColumn CommodityName;
         private System.Windows.Forms.GroupBox groupBox4;
         private System.Windows.Forms.DataGridView dgv_Commodity;
         private System.Windows.Forms.Label lab_1;
@@ -615,5 +610,10 @@ namespace HotelAdmin
         private System.Windows.Forms.DataGridViewTextBoxColumn GoodsName;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem Delete;
+        private System.Windows.Forms.DataGridViewTextBoxColumn UserRechargeID;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RechargeBalance;
+        private System.Windows.Forms.DataGridViewTextBoxColumn identity;
+        private System.Windows.Forms.DataGridViewTextBoxColumn RechargeTime;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CommodityName;
     }
 }
