@@ -12,6 +12,9 @@ using HotelModel;
 
 namespace HotelAdmin
 {
+    /// <summary>
+    /// 员工管理窗口
+    /// </summary>
     public partial class StaffManagement : Form
     {
         AdministratorManager am = new AdministratorManager();
@@ -102,6 +105,9 @@ namespace HotelAdmin
             }
                     
         }
-
+        ~StaffManagement()
+        {
+            this.am = null;
+        }
     }
 }

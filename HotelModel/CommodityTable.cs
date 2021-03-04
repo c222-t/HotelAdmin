@@ -39,5 +39,9 @@ namespace HotelModel
         /// 商品零售
         /// </summary>
         public double Retail { get; set; }
+        /// <summary>
+        /// 商品图片地址
+        /// </summary>
+        public string Path { get; set; }
     }
 }

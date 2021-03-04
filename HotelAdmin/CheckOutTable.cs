@@ -13,9 +13,13 @@ using HotelModel;
 
 namespace HotelAdmin
 {
+    /// <summary>
+    /// 结账窗口
+    /// </summary>
     public partial class CheckOutTable : Form
     {
         StatementTableManager stm = new StatementTableManager();
+
         public CheckOutTable()
         {
             InitializeComponent();
@@ -207,6 +211,10 @@ namespace HotelAdmin
             dgvRoom.DataSource = stm.Statement(txtRoomName.Text.Trim());
             dgvUser.DataSource = null;
 
+        }
+        ~CheckOutTable()
+        {
+            this.stm = null;
         }
     }
 }

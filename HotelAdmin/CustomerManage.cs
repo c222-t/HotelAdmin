@@ -12,6 +12,9 @@ using HotelBLL;
 
 namespace HotelAdmin
 {
+    /// <summary>
+    /// 顾客管理窗口
+    /// </summary>
     public partial class CustomerManage : Form
     {
         /// <summary>
@@ -111,7 +114,6 @@ namespace HotelAdmin
         }
         ~CustomerManage()
         {
-            this.alter.Close();
             this.manager = null;
             this.member = null;
             this.alter = null;

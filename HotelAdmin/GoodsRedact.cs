@@ -50,10 +50,11 @@ namespace HotelAdmin
                 importPrice.Text = commodity.PurchasePice.ToString();
                 Retail.Text = commodity.Retail.ToString();
                 Type.Text = commodity.Type.TypeName;
+                Pic_Goods.Image = Image.FromFile(commodity.Path);
             }
         }
         // 进行修改或添加操作
-        private void Button1_Click(object sender, EventArgs e)
+        private void Btn_Preserve_Click(object sender, EventArgs e)
         {
             try
             {
@@ -80,7 +81,8 @@ namespace HotelAdmin
                 PurchasePice = double.Parse(importPrice.Text),
                 Quantity = int.Parse(txt_conut.Text),
                 Retail = double.Parse(Retail.Text),
-                Type = GetCommodityType(Type.Text)
+                Type = GetCommodityType(Type.Text),
+                Path = fileName.Text
             });
         }
         // 进行添加商品
@@ -93,7 +95,8 @@ namespace HotelAdmin
                 PurchasePice = double.Parse(importPrice.Text),
                 Quantity = int.Parse(txt_conut.Text),
                 Retail = double.Parse(Retail.Text),
-                Type = GetCommodityType(Type.Text)
+                Type = GetCommodityType(Type.Text),
+                Path = fileName.Text
             });
         }
         // 根据类型名称返回商品类型信息
@@ -125,6 +128,12 @@ namespace HotelAdmin
             int num = e.KeyChar;
 
             e.Handled = ((num < '0' || num > '9' || num == '.') && num != 8 && num != 46);
+        }
+        // 获取商品图片路径
+        private void Btn_SelectionPath_Click(object sender, EventArgs e)
+        {
+            this.Folder_ImgPath.ShowDialog();
+            this.fileName.Text = Folder_ImgPath.SelectedPath;
         }
     }
 }

@@ -12,6 +12,9 @@ using HotelBLL;
 
 namespace HotelAdmin
 {
+    /// <summary>
+    /// 顾客充值窗口
+    /// </summary>
     public partial class ClientTopUp : Form
     {
         /// <summary>
@@ -227,7 +230,6 @@ namespace HotelAdmin
             this.memberships = null;
             this.rechargeManager = null;
             this.userManager = null;
-            this.Close();
         }
     }
 }

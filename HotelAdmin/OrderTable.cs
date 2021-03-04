@@ -12,9 +12,13 @@ using HotelModel;
 
 namespace HotelAdmin
 {
+    /// <summary>
+    /// 预定管理窗口
+    /// </summary>
     public partial class OrderTable : Form
     {
         StatementTableManager stm = new StatementTableManager();
+
         public OrderTable()
         {
             InitializeComponent();
@@ -40,6 +44,10 @@ namespace HotelAdmin
             CustomerOrder frm = new CustomerOrder();
             frm.frm = this;
             frm.Show();
+        }
+        ~OrderTable()
+        {
+            this.stm = null;
         }
     }
 }
