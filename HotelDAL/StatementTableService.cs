@@ -19,7 +19,7 @@ namespace HotelDAL
         /// <returns></returns>
         public DataTable Statement(string roomName="")
         {
-            if (!(HotelData .Data .Tables.Contains ("More")) )
+            if (!(HotelData .Usele .Tables.Contains ("More")) )
             {
                 StringBuilder sql = new StringBuilder("SELECT st.[Status],RoomType,st.IDCard,Floor,orderNumber,st.[RoomNumber],UserName,TelephoneNumber,[CheckInTime],[TotalConsumption]+Price*[Days] TotalConsumptions,PaymentMethod,Discount,([TotalConsumption]+Price*[Days])*Discount Prices,[Days],Balance FROM [StatementTable] st join UserTable u on u.IDCard =st.IDCard join MembershipTable mt on mt.MemberNumber=u.Member join RoomSchedules rs on rs.RoomNumber=st.RoomNumber join RoomTypeTable rt on rt.[No]=rs.RoomType where 1=1 and st.[Status]=2");
 
@@ -31,7 +31,7 @@ namespace HotelDAL
                 try
                 {
                     var table = from row in HotelData.Usele.Tables["More"].AsEnumerable()
-                                where row["RoomNumber"].Equals(roomName)
+                                where row["RoomNumber"].ToString ().Trim ().Equals(roomName.Trim())
                                 select row;
                     return table.CopyToDataTable();
                 }
@@ -97,7 +97,7 @@ namespace HotelDAL
                             RoomNumber=rs.Field <string>("RoomNumber"),
                             Name=rt.Field <string>("Name"),
                             CheckInTime=st.Field <DateTime>("CheckInTime"),
-                            CheckOutTime=st.Field <DateTime>("CheckInTime"),
+                            CheckOutTime=st.Field <DateTime>("CheckOutTime"),
                             OperationManaer=st.Field <Int32>("OperationManaer"),
                             Price=rt.Field <double>("Price"),
                             State=os.Field <string>("State"),

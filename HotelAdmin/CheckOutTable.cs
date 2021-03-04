@@ -56,6 +56,7 @@ namespace HotelAdmin
         {
             txtYinFu.Text = dgvUser.SelectedRows[0].Cells[9].Value.ToString();
             txtDingDan.Text = dgvUser.SelectedRows[0].Cells[0].Value.ToString().Trim();
+            txtZon.Enabled = true;
             cbFuKuan.Enabled = true;
             cbFuKuan.SelectedIndex = 0;
 
@@ -211,6 +212,11 @@ namespace HotelAdmin
             dgvRoom.DataSource = stm.Statement(txtRoomName.Text.Trim());
             dgvUser.DataSource = null;
 
+            txtLing.Text = "";
+            txtDingDan.Text = "";
+            txtYinFu.Text = "";
+            txtZon.Text = "";
+            cbFuKuan.Text = "";
         }
         ~CheckOutTable()
         {
