@@ -30,16 +30,11 @@ namespace HotelAdmin
         {
             InitializeComponent();
         }
-
-        #region 初始化操作
-
         // 加载初始化信息
         private void HotelWireshark_Load(object sender, EventArgs e)
         {
             
         }
-
-        #endregion
 
         #region 显示或切换操作界面
 
