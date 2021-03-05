@@ -88,10 +88,12 @@ namespace HotelAdmin
             // 
             // txt_conut
             // 
-            this.txt_conut.Location = new System.Drawing.Point(69, 93);
+            this.txt_conut.BackColor = System.Drawing.Color.Beige;
+            this.txt_conut.Location = new System.Drawing.Point(69, 106);
             this.txt_conut.Name = "txt_conut";
             this.txt_conut.Size = new System.Drawing.Size(171, 21);
-            this.txt_conut.TabIndex = 28;
+            this.txt_conut.TabIndex = 13;
+            this.txt_conut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_conut_KeyPress);
             // 
             // unit
             // 
@@ -103,26 +105,31 @@ namespace HotelAdmin
             // 
             // Type
             // 
+            this.Type.BackColor = System.Drawing.Color.Beige;
             this.Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Type.FormattingEnabled = true;
-            this.Type.Location = new System.Drawing.Point(69, 225);
+            this.Type.Location = new System.Drawing.Point(69, 235);
             this.Type.Name = "Type";
             this.Type.Size = new System.Drawing.Size(171, 20);
-            this.Type.TabIndex = 26;
+            this.Type.TabIndex = 10;
             // 
             // Retail
             // 
-            this.Retail.Location = new System.Drawing.Point(69, 179);
+            this.Retail.BackColor = System.Drawing.Color.Beige;
+            this.Retail.Location = new System.Drawing.Point(69, 192);
             this.Retail.Name = "Retail";
             this.Retail.Size = new System.Drawing.Size(171, 21);
-            this.Retail.TabIndex = 25;
+            this.Retail.TabIndex = 9;
+            this.Retail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Retail_KeyPress);
             // 
             // importPrice
             // 
-            this.importPrice.Location = new System.Drawing.Point(69, 137);
+            this.importPrice.BackColor = System.Drawing.Color.Beige;
+            this.importPrice.Location = new System.Drawing.Point(69, 150);
             this.importPrice.Name = "importPrice";
             this.importPrice.Size = new System.Drawing.Size(171, 21);
-            this.importPrice.TabIndex = 24;
+            this.importPrice.TabIndex = 8;
+            this.importPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ImportPrice_KeyPress);
             // 
             // txt_name
             // 
@@ -133,31 +140,31 @@ namespace HotelAdmin
             // 
             // label6
             // 
-            this.importPrice.BackColor = System.Drawing.Color.Beige;
-            this.importPrice.Location = new System.Drawing.Point(69, 150);
-            this.importPrice.Name = "importPrice";
-            this.importPrice.Size = new System.Drawing.Size(171, 21);
-            this.importPrice.TabIndex = 8;
-            this.importPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ImportPrice_KeyPress);
+            this.label6.Location = new System.Drawing.Point(0, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(100, 23);
+            this.label6.TabIndex = 28;
             // 
             // label5
             // 
-            this.Retail.BackColor = System.Drawing.Color.Beige;
-            this.Retail.Location = new System.Drawing.Point(69, 192);
-            this.Retail.Name = "Retail";
-            this.Retail.Size = new System.Drawing.Size(171, 21);
-            this.Retail.TabIndex = 9;
-            this.Retail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Retail_KeyPress);
+            this.label5.Location = new System.Drawing.Point(0, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(100, 23);
+            this.label5.TabIndex = 29;
             // 
             // label4
             // 
-            this.Type.BackColor = System.Drawing.Color.Beige;
-            this.Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.Type.FormattingEnabled = true;
-            this.Type.Location = new System.Drawing.Point(69, 235);
-            this.Type.Name = "Type";
-            this.Type.Size = new System.Drawing.Size(171, 20);
-            this.Type.TabIndex = 10;
+            this.label4.Location = new System.Drawing.Point(0, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(100, 23);
+            this.label4.TabIndex = 30;
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(0, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(100, 23);
+            this.label3.TabIndex = 31;
             // 
             // label2
             // 
@@ -171,19 +178,17 @@ namespace HotelAdmin
             // 
             // label1
             // 
-            this.txt_conut.BackColor = System.Drawing.Color.Beige;
-            this.txt_conut.Location = new System.Drawing.Point(69, 106);
-            this.txt_conut.Name = "txt_conut";
-            this.txt_conut.Size = new System.Drawing.Size(171, 21);
-            this.txt_conut.TabIndex = 13;
-            this.txt_conut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_conut_KeyPress);
+            this.label1.Location = new System.Drawing.Point(0, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(100, 23);
+            this.label1.TabIndex = 32;
             // 
             // GoodsRedact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(282, 317);
+            this.ClientSize = new System.Drawing.Size(516, 317);
             this.Controls.Add(this.txt_conut);
             this.Controls.Add(this.unit);
             this.Controls.Add(this.Type);
