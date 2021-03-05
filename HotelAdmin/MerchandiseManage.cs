@@ -93,6 +93,7 @@ namespace HotelAdmin
                 },
                 Manage = this,
             };
+            goodsRedact.Show();
         }
         // 删除指定的商品
         private void GoodsDelete_Click(object sender, EventArgs e)
