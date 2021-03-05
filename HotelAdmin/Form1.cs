@@ -55,11 +55,10 @@ namespace HotelAdmin
                 int asd = atm.Administr(txtPwd.Text.Trim(), txtName.Text.Trim());
                 if (asd != 0)
                 {
-                    MessageBox.Show("登录成功");
                     Cun.ID = asd;
                     Cun.Name = txtName.Text.Trim();
                     Cun.Pwd = txtPwd.Text.Trim();
-                    MainInterface frm = new MainInterface();
+                    HotelWireshark frm = new HotelWireshark();
                     frm.Show();
                     this.Hide();//隐藏登录界面
                 }
