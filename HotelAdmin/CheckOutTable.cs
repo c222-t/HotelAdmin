@@ -138,20 +138,19 @@ namespace HotelAdmin
 
             RoomManager rm = new RoomManager();//房间表修改
 
-            RoomSchedules rs = new RoomSchedules()
+            RoomSchedules rs = new RoomSchedules();
+            rs.Floor = dgvUser.SelectedRows[0].Cells[11].Value.ToString();
+            rs.RoomNumber = dgvUser.SelectedRows[0].Cells[1].Value.ToString();
+            rs.RoomType = new RoomTypeTable()
             {
-                Floor =dgvUser .SelectedRows [0].Cells [11].Value .ToString (),
-                RoomNumber =dgvUser .SelectedRows [0].Cells [1].Value .ToString (),
-                RoomType =new RoomTypeTable()
-                {
-                    No =int.Parse(dgvUser .SelectedRows [0].Cells [12].Value .ToString ())
-                },
-                RoomStatus =new RoomStatus()
-                {
-                    No =1,
-                    StatusName ="空闲"
-                }
+                No = int.Parse(dgvUser.SelectedRows[0].Cells[12].Value.ToString())
             };
+            rs.RoomStatus = new RoomStatus()
+            {
+                No = 1,
+                StatusName = "空闲"
+            };
+            
 
             OrderManager om = new OrderManager();//订单表修改
             DataTable ad = om.SeekOrderRecord(new StatementTable() { OrderNumber = dgvUser.SelectedRows[0].Cells[0].Value.ToString().Trim() });
@@ -189,7 +188,6 @@ namespace HotelAdmin
             um.AmendUserRecord(ut);
             om.AmendOrderRecord(st);
             rm.RoomUpdate(rs.RoomNumber, rs);
-            stm.Update(dgvUser.Rows[0].Cells[0].Value.ToString().Trim());
 
             //打印订单
             string path = string.Format("{0}.txt", dgvUser.Rows[0].Cells[0].Value.ToString().Trim());
