@@ -71,7 +71,7 @@ namespace HotelAdmin
             // Btn_SelectionPath
             // 
             this.Btn_SelectionPath.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Btn_SelectionPath.Location = new System.Drawing.Point(214, 267);
+            this.Btn_SelectionPath.Location = new System.Drawing.Point(207, 269);
             this.Btn_SelectionPath.Name = "Btn_SelectionPath";
             this.Btn_SelectionPath.Size = new System.Drawing.Size(75, 28);
             this.Btn_SelectionPath.TabIndex = 15;
@@ -81,9 +81,9 @@ namespace HotelAdmin
             // 
             // fileName
             // 
-            this.fileName.Location = new System.Drawing.Point(16, 271);
+            this.fileName.Location = new System.Drawing.Point(16, 273);
             this.fileName.Name = "fileName";
-            this.fileName.Size = new System.Drawing.Size(182, 21);
+            this.fileName.Size = new System.Drawing.Size(185, 21);
             this.fileName.TabIndex = 16;
             // 
             // txt_conut
@@ -105,7 +105,7 @@ namespace HotelAdmin
             // 
             this.Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Type.FormattingEnabled = true;
-            this.Type.Location = new System.Drawing.Point(69, 222);
+            this.Type.Location = new System.Drawing.Point(69, 225);
             this.Type.Name = "Type";
             this.Type.Size = new System.Drawing.Size(171, 20);
             this.Type.TabIndex = 26;
