@@ -29,6 +29,9 @@ namespace HotelAdmin
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, ""),
+            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134))))}, -1);
             this.Pl_OptionList = new System.Windows.Forms.Panel();
             this.Btn_MessageLists = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -47,7 +50,6 @@ namespace HotelAdmin
             this.Btn_CheckOut = new System.Windows.Forms.Button();
             this.Pl_MessageLists = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -61,10 +63,10 @@ namespace HotelAdmin
             this.panel1 = new System.Windows.Forms.Panel();
             this.lvw_Themessagelist = new System.Windows.Forms.ListView();
             this.Pl_Interface = new System.Windows.Forms.Panel();
+            this.lvw_GoodsList = new System.Windows.Forms.ListView();
             this.Pl_OptionList.SuspendLayout();
             this.Pl_MessageLists.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -325,21 +327,12 @@ namespace HotelAdmin
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.lvw_GoodsList);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Location = new System.Drawing.Point(934, 385);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(238, 348);
             this.panel4.TabIndex = 3;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 40);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 276);
-            this.dataGridView1.TabIndex = 34;
             // 
             // label6
             // 
@@ -477,6 +470,18 @@ namespace HotelAdmin
             this.Pl_Interface.Size = new System.Drawing.Size(1184, 748);
             this.Pl_Interface.TabIndex = 1;
             // 
+            // lvw_GoodsList
+            // 
+            this.lvw_GoodsList.HideSelection = false;
+            this.lvw_GoodsList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
+            listViewItem1});
+            this.lvw_GoodsList.Location = new System.Drawing.Point(0, 39);
+            this.lvw_GoodsList.Name = "lvw_GoodsList";
+            this.lvw_GoodsList.Size = new System.Drawing.Size(238, 279);
+            this.lvw_GoodsList.TabIndex = 34;
+            this.lvw_GoodsList.UseCompatibleStateImageBehavior = false;
+            this.lvw_GoodsList.View = System.Windows.Forms.View.List;
+            // 
             // HotelWireshark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -497,7 +502,6 @@ namespace HotelAdmin
             this.Pl_MessageLists.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -537,7 +541,7 @@ namespace HotelAdmin
         private System.Windows.Forms.Label label17;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button Btn_MessageLists;
+        private System.Windows.Forms.ListView lvw_GoodsList;
     }
 }

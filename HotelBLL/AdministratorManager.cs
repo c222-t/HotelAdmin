@@ -59,6 +59,7 @@ namespace HotelBLL
         {
             return ams.AdminisreDelect(hao);
         }
+
         /// <summary>
         /// 数据上传
         /// </summary>

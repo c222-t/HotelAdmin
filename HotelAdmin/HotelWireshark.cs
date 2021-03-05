@@ -17,18 +17,18 @@ namespace HotelAdmin
 {
     public partial class HotelWireshark : Form
     {
+        // 绑定客户端服务器
+        static IPEndPoint host = new IPEndPoint(IPAddress.Any, 2001);
+        // 创建socket对象
+        static Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         /// <summary>
         /// 当前操作界面
         /// </summary>
         private Form currentWindow = new Form();
         /// <summary>
-        /// 后端服务绑定
-        /// </summary>
-        static ThreadStart ServiceBinding = new ThreadStart(ReceiveAMessage);
-        /// <summary>
         /// 接收客户消息业务
         /// </summary>
-        static Thread listenTo = new Thread(ServiceBinding);
+        static Thread listenTo = new Thread(new ParameterizedThreadStart(ReceiveAMessage));
 
         public HotelWireshark()
         {
@@ -38,6 +38,7 @@ namespace HotelAdmin
         private void HotelWireshark_Load(object sender, EventArgs e)
         {
             this.lab_name.Text = Cun.Name;                                  // 获取当前用户名称
+            listenTo.IsBackground = true;                                   // 将收听消息设为后台服务
         }
 
         #region 显示或切换操作界面
@@ -251,9 +252,19 @@ namespace HotelAdmin
         #endregion
 
         // 接收来自客户发送的需求信息
-        private static void ReceiveAMessage()
+        private static void ReceiveAMessage(object obj)
         {
-            
+            socket.Bind(host);                                              // 服务器绑定
+            socket.Listen(10);                                              // 开始监听,且指定监听数量
+            listenTo.Start();                                               // 开始接收
+
+            Socket newSocket = (Socket)obj;
+            while (true)
+            {
+                byte[] resMsg = new byte[1024];
+                int resMsgLenght = newSocket.Receive(resMsg, resMsg.Length, 0);
+                MessageBox.Show(Encoding.UTF8.GetString(resMsg, 0, resMsgLenght), "客户");
+            }
         }
         // 主界面关闭时将系统临时数据上传到数据库
         private void HotelWireshark_FormClosing(object sender, FormClosingEventArgs e)
