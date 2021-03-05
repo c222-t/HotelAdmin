@@ -13,6 +13,10 @@ namespace HotelAdmin
         /// </summary>
         public static int ID { get; set; }
         /// <summary>
+        /// 用户名称
+        /// </summary>
+        public static string Name { get; set; }
+        /// <summary>
         /// 用户密码
         /// </summary>
         public static string Pwd { get; set; }
