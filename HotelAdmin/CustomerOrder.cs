@@ -19,10 +19,6 @@ namespace HotelAdmin
     {
         public OrderTable frm = null;
         /// <summary>
-        /// 服务员编号
-        /// </summary>
-        public int waiterID = -1;
-        /// <summary>
         /// 顾客业务处理对象
         /// </summary>
         UserManager userManager = new UserManager();
@@ -46,6 +42,7 @@ namespace HotelAdmin
         // 加载初始化数据信息
         private void CustomerOrder_Load(object sender, EventArgs e)
         {
+            cbox_payWay.SelectedIndex = 0;
             if (frm != null)
             {
                 this.Text = "新增预约订单";
@@ -100,7 +97,7 @@ namespace HotelAdmin
                             };
 
                 Dgv_RoomList.DataSource = table.ToArray();              // 上传到显示控件
-            } catch(Exception x) {
+            } catch {
                 Dgv_RoomList.DataSource = null;                         // 未找到信息清除之前的记录
             }
         }
@@ -130,15 +127,18 @@ namespace HotelAdmin
                 if (frm != null)
                 {
                     MessageBox.Show("预约成功！", "提示");
+                    AlterRoomStatr();
                     frm.ShuaXin();
                     this.Close();
                 }
                 else
                 {
                     MessageBox.Show("添加成功！", "提示");
+                    AlterRoomStatr();
                 }
+                Cbox_roomClass_SelectedIndexChanged(sender, e);
             }
-            catch {
+            catch (Exception ee){
                 MessageBox.Show("必要信息未填写或填写错误！", "提示");
             }
         }
@@ -166,18 +166,39 @@ namespace HotelAdmin
                 PaymentMethod = cbox_payWay.Text,
                 CheckInTime = (DateTime)dtpicker_begin.Value,
                 CheckoutTime = (DateTime)dtpicker_leave.Value,
-                Room = new RoomSchedules {
+                Room = new RoomSchedules
+                {
                     Floor = Dgv_RoomList.SelectedCells[1].Value.ToString().Trim(),
                     RoomNumber = Dgv_RoomList.SelectedCells[0].Value.ToString().Trim(),
                     RoomType = GetRoomStatus(Dgv_RoomList.SelectedCells[2].Value.ToString().Trim()),
                     RoomStatus = new RoomStatus { No = 2, StatusName = "占用" }
                 },
-                Status = new OrderStatusTable { Number = frm==null?2:1, State = frm==null?"开始":"未开始" },
-                OperationManager = waiterID,
-                TotalConsumption = (double)Dgv_RoomList.SelectedCells[3].Value * double.Parse(Discount.Text),
+                Status = new OrderStatusTable { Number = frm == null ? 2 : 1, State = frm == null ? "开始" : "未开始" },
+                OperationManager = Cun.ID,
+                TotalConsumption = (double)Dgv_RoomList.SelectedCells[1].Value * double.Parse(Discount.Text),
                 Days = 1
             };
             orderManager.AddOrderRecord(order);                     // 向数据库添加本次订单记录
+        }
+        // 修改预定的房间状态
+        private void AlterRoomStatr()
+        {
+            //新增房间或者预定房间时修改房间状态
+            RoomSchedules room = new RoomSchedules()
+            {
+                Floor = this.Dgv_RoomList.SelectedRows[0].Cells[2].Value.ToString(),
+                RoomNumber = this.Dgv_RoomList.SelectedRows[0].Cells[0].Value.ToString(),
+                RoomStatus = new RoomStatus
+                {
+                    No = 2
+                },
+                RoomType = new RoomTypeTable
+                {
+                    No=new RoomTypeManager ().TypeID (this.Dgv_RoomList .SelectedRows [0].Cells [3].Value .ToString ())
+                }
+            };
+
+            new RoomManager().RoomUpdate(room.RoomNumber, room);
         }
         // 根据会员名称获取对应的会员等级信息
         private MembershipTable GetMembership(string name)
@@ -199,5 +220,37 @@ namespace HotelAdmin
             this.roomType = null;
             this.MemberType = null;
         }
+
+        /// <summary>
+        /// 余额的输入限制，只能输入数字和小数点
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Txt_bmikece_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int key = e.KeyChar;
+            if ((key < '0' || key > '9') && (key != 8 && key != 46))
+                e.Handled = true;
+        }
+
+        /// <summary>
+        /// 联系电话的输入限制，只能输入数字和小数点
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Txt_phone_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int key = e.KeyChar;
+            if ((key < '0' || key > '9') && (key != 8 && key != 46))
+                e.Handled = true;
+        }
+
+        private void Txt_IDcard_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            int key = e.KeyChar;
+            if ((key < '0' || key > '9' || key == 'x') && (key != 8 && key != 46 && key != 120))
+                e.Handled = true;
+        }
+
     }
 }
