@@ -20,7 +20,7 @@ namespace HotelDAL
         /// <returns></returns>
         public int Administr(string password,string AdministratorName)
         {
-            StringBuilder sql = new StringBuilder("SELECT [No],[password],[AdministratorName],[jurisdiction] FROM [AdministratorTable] where password=@password and AdministratorName=@AdministratorName");
+            StringBuilder sql = new StringBuilder("SELECT [No] where password=@password and AdministratorName=@AdministratorName");
 
             SqlParameter[] sp = {
                 new SqlParameter ("@password",password),

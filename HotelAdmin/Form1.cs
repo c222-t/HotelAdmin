@@ -52,9 +52,12 @@ namespace HotelAdmin
         {
             if (PanDuan())
             {
-                if (atm.Administr(txtPwd.Text.Trim(), txtName.Text.Trim()) > 0)
+                int asd = atm.Administr(txtPwd.Text.Trim(), txtName.Text.Trim());
+                if (asd != 0)
                 {
                     MessageBox.Show("登录成功");
+                    Cun.No = asd;
+                    Cun.Name = txtName.Text.Trim();
                     Cun.Pwd = txtPwd.Text.Trim();
                     MainInterface frm = new MainInterface();
                     frm.Show();
@@ -65,8 +68,11 @@ namespace HotelAdmin
                     MessageBox.Show("登录失败，用户名或密码错误");
                 }
             }
+        }
 
-
+        private void Button2_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }

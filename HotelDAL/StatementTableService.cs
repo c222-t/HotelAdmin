@@ -82,26 +82,26 @@ namespace HotelDAL
         {
             var table = from st in HotelData.Data.Tables["StatementTable"].AsEnumerable()
                         join u in HotelData.Data.Tables["UserTable"].AsEnumerable()
-                        on st.Field<string>("IDCard") equals u.Field<string>("IDCard")
+                        on st.Field<string>("IDCard").Trim() equals u.Field<string>("IDCard").Trim()
                         join rs in HotelData.Data.Tables["RoomSchedules"].AsEnumerable()
-                        on st.Field<string>("RoomNumber") equals rs.Field<string>("RoomNumber")
+                        on st.Field<string>("RoomNumber").Trim() equals rs.Field<string>("RoomNumber").Trim()
                         join os in StatementZT().AsEnumerable()
                         on st.Field<int>("Status") equals os.Field<int>("Number")
                         join rt in new RoomTypeService().TypeTable().AsEnumerable()
                         on rs.Field<int>("RoomType") equals rt.Field<int>("No")
                         select new
                         {
-                            orderNumber=st.Field<string>("orderNumber"),
-                            UserName=u.Field <string>("UserName"),
-                            TelephoneNumber=u.Field <string>("TelephoneNumber"),
-                            RoomNumber=rs.Field <string>("RoomNumber"),
-                            Name=rt.Field <string>("Name"),
-                            CheckInTime=st.Field <DateTime>("CheckInTime"),
-                            CheckOutTime=st.Field <DateTime>("CheckOutTime"),
-                            OperationManaer=st.Field <Int32>("OperationManaer"),
-                            Price=rt.Field <double>("Price"),
-                            State=os.Field <string>("State"),
-                            IDCard=st.Field <string>("IDCard")
+                            orderNumber = st.Field<string>("orderNumber"),
+                            UserName = u.Field<string>("UserName"),
+                            TelephoneNumber = u.Field<string>("TelephoneNumber"),
+                            RoomNumber = rs.Field<string>("RoomNumber"),
+                            Name = rt.Field<string>("Name"),
+                            CheckInTime = st.Field<DateTime>("CheckInTime"),
+                            CheckOutTime = st.Field<DateTime>("CheckOutTime"),
+                            OperationManaer = st.Field<Int32>("OperationManaer"),
+                            Price = rt.Field<double>("Price"),
+                            State = os.Field<string>("State"),
+                            IDCard = st.Field<string>("IDCard")
                         };
             DataTable dt = new DataTable();
             dt.Columns.Add("orderNumber", typeof(string));
@@ -120,7 +120,7 @@ namespace HotelDAL
 
             foreach (var item in table)
             {
-                dtNew.Rows.Add(item.orderNumber.Trim (),item.UserName.Trim(), item.TelephoneNumber.Trim(), item.RoomNumber.Trim(), item.Name.Trim(), item.CheckInTime, item.CheckOutTime, item.OperationManaer, item.Price, item.State.Trim(), item.IDCard.Trim());
+                dtNew.Rows.Add(item.orderNumber.Trim(), item.UserName.Trim(), item.TelephoneNumber.Trim(), item.RoomNumber.Trim(), item.Name.Trim(), item.CheckInTime, item.CheckOutTime, item.OperationManaer, item.Price, item.State.Trim(), item.IDCard.Trim());
             }
 
             try

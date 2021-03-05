@@ -85,19 +85,24 @@
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(13, 13);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(969, 263);
+            this.groupBox1.Size = new System.Drawing.Size(1143, 264);
             this.groupBox1.TabIndex = 0;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "在住客房";
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(324, 13);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button1.Location = new System.Drawing.Point(523, 13);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(65, 25);
             this.button1.TabIndex = 2;
             this.button1.Text = "查找";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // dgvRoom
@@ -110,7 +115,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvRoom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRoom.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvRoom.BackgroundColor = System.Drawing.Color.Beige;
             this.dgvRoom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRoom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -123,14 +128,14 @@
             this.Column9,
             this.Column10,
             this.Column11});
-            this.dgvRoom.Location = new System.Drawing.Point(6, 41);
+            this.dgvRoom.Location = new System.Drawing.Point(6, 44);
             this.dgvRoom.MultiSelect = false;
             this.dgvRoom.Name = "dgvRoom";
             this.dgvRoom.ReadOnly = true;
             this.dgvRoom.RowHeadersVisible = false;
             this.dgvRoom.RowTemplate.Height = 23;
             this.dgvRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRoom.Size = new System.Drawing.Size(957, 216);
+            this.dgvRoom.Size = new System.Drawing.Size(1131, 214);
             this.dgvRoom.TabIndex = 3;
             this.dgvRoom.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvRoom_CellContentClick);
             // 
@@ -199,7 +204,8 @@
             // 
             // txtRoomName
             // 
-            this.txtRoomName.Location = new System.Drawing.Point(218, 14);
+            this.txtRoomName.BackColor = System.Drawing.Color.Beige;
+            this.txtRoomName.Location = new System.Drawing.Point(417, 14);
             this.txtRoomName.Name = "txtRoomName";
             this.txtRoomName.Size = new System.Drawing.Size(100, 21);
             this.txtRoomName.TabIndex = 1;
@@ -207,7 +213,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(159, 17);
+            this.label1.Location = new System.Drawing.Point(358, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(53, 12);
             this.label1.TabIndex = 0;
@@ -219,7 +225,7 @@
             this.groupBox2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.groupBox2.Location = new System.Drawing.Point(13, 283);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(969, 141);
+            this.groupBox2.Size = new System.Drawing.Size(1143, 292);
             this.groupBox2.TabIndex = 4;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "准备退房的客人";
@@ -234,7 +240,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUser.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvUser.BackgroundColor = System.Drawing.Color.Beige;
             this.dgvUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -258,7 +264,7 @@
             this.dgvUser.RowHeadersVisible = false;
             this.dgvUser.RowTemplate.Height = 23;
             this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUser.Size = new System.Drawing.Size(957, 115);
+            this.dgvUser.Size = new System.Drawing.Size(1131, 266);
             this.dgvUser.TabIndex = 3;
             this.dgvUser.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvUser_CellContentClick);
             // 
@@ -370,15 +376,16 @@
             this.groupBox3.Controls.Add(this.txtDingDan);
             this.groupBox3.Controls.Add(this.label8);
             this.groupBox3.Controls.Add(this.label2);
-            this.groupBox3.Location = new System.Drawing.Point(13, 430);
+            this.groupBox3.Location = new System.Drawing.Point(13, 581);
             this.groupBox3.Name = "groupBox3";
-            this.groupBox3.Size = new System.Drawing.Size(969, 115);
+            this.groupBox3.Size = new System.Drawing.Size(1143, 115);
             this.groupBox3.TabIndex = 5;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "结账区";
             // 
             // cbFuKuan
             // 
+            this.cbFuKuan.BackColor = System.Drawing.Color.Beige;
             this.cbFuKuan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFuKuan.Enabled = false;
             this.cbFuKuan.FormattingEnabled = true;
@@ -393,25 +400,36 @@
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(849, 81);
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button3.Location = new System.Drawing.Point(933, 84);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(85, 23);
+            this.button3.Size = new System.Drawing.Size(85, 25);
             this.button3.TabIndex = 2;
             this.button3.Text = "退出";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(849, 31);
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button2.Location = new System.Drawing.Point(802, 84);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 37);
+            this.button2.Size = new System.Drawing.Size(85, 25);
             this.button2.TabIndex = 2;
             this.button2.Text = "确定";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // txtZon
             // 
+            this.txtZon.BackColor = System.Drawing.Color.Beige;
             this.txtZon.Enabled = false;
             this.txtZon.Location = new System.Drawing.Point(723, 31);
             this.txtZon.Name = "txtZon";
@@ -431,6 +449,7 @@
             // 
             // txtYinFu
             // 
+            this.txtYinFu.BackColor = System.Drawing.Color.Beige;
             this.txtYinFu.Enabled = false;
             this.txtYinFu.Location = new System.Drawing.Point(523, 31);
             this.txtYinFu.Name = "txtYinFu";
@@ -439,8 +458,9 @@
             // 
             // txtLing
             // 
+            this.txtLing.BackColor = System.Drawing.Color.Beige;
             this.txtLing.Enabled = false;
-            this.txtLing.Location = new System.Drawing.Point(723, 83);
+            this.txtLing.Location = new System.Drawing.Point(918, 31);
             this.txtLing.Name = "txtLing";
             this.txtLing.Size = new System.Drawing.Size(100, 21);
             this.txtLing.TabIndex = 1;
@@ -457,7 +477,7 @@
             // lblLing
             // 
             this.lblLing.AutoSize = true;
-            this.lblLing.Location = new System.Drawing.Point(652, 86);
+            this.lblLing.Location = new System.Drawing.Point(847, 34);
             this.lblLing.Name = "lblLing";
             this.lblLing.Size = new System.Drawing.Size(65, 12);
             this.lblLing.TabIndex = 0;
@@ -465,6 +485,7 @@
             // 
             // txtDingDan
             // 
+            this.txtDingDan.BackColor = System.Drawing.Color.Beige;
             this.txtDingDan.Enabled = false;
             this.txtDingDan.Location = new System.Drawing.Point(74, 31);
             this.txtDingDan.Name = "txtDingDan";
@@ -494,7 +515,8 @@
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(994, 557);
+            this.BackColor = System.Drawing.Color.Beige;
+            this.ClientSize = new System.Drawing.Size(1168, 708);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
