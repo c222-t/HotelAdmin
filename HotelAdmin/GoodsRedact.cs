@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.IO;
 using HotelModel;
 using HotelBLL;
 
@@ -50,7 +51,10 @@ namespace HotelAdmin
                 importPrice.Text = commodity.PurchasePice.ToString();
                 Retail.Text = commodity.Retail.ToString();
                 Type.Text = commodity.Type.TypeName;
-                Pic_Goods.Image = Image.FromFile(commodity.Path);
+
+                if (!commodity.Path.Equals("")) {
+                    Pic_Goods.BackgroundImage = Image.FromFile(commodity.Path);
+                }
             }
         }
         // 进行修改或添加操作
@@ -66,13 +70,18 @@ namespace HotelAdmin
                 Manage.Cbox_GoodsType_SelectedIndexChanged(sender, e);   // 操作后刷新商品显示界面
                 this.Close();
             }
-            catch {
+            catch
+            {
                 MessageBox.Show("信息填写错误！", "提示");
             }
         }
         // 进行修改商品
         private void AlterCommodity()
         {
+            if (DialogResult.No == Folder_ImgPath.ShowDialog())
+            {
+                return;
+            }
             Manage.manager.AlterCommodity(new CommodityTable            // 进行修改操作
             {
                 Number = this.commodity.Number,
@@ -82,7 +91,6 @@ namespace HotelAdmin
                 Quantity = int.Parse(txt_conut.Text),
                 Retail = double.Parse(Retail.Text),
                 Type = GetCommodityType(Type.Text),
-                Path = fileName.Text
             });
         }
         // 进行添加商品
@@ -96,7 +104,6 @@ namespace HotelAdmin
                 Quantity = int.Parse(txt_conut.Text),
                 Retail = double.Parse(Retail.Text),
                 Type = GetCommodityType(Type.Text),
-                Path = fileName.Text
             });
         }
         // 根据类型名称返回商品类型信息
@@ -129,12 +136,5 @@ namespace HotelAdmin
 
             e.Handled = ((num < '0' || num > '9' || num == '.') && num != 8 && num != 46);
         }
-        // 获取商品图片路径
-        private void Btn_SelectionPath_Click(object sender, EventArgs e)
-        {
-            this.Folder_ImgPath.ShowDialog();                               // 选择图片路径
-            this.fileName.Text = Folder_ImgPath.SelectedPath;               // 获取图片路径
-        }
-
     }
 }

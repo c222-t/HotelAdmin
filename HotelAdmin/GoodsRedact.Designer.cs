@@ -31,9 +31,7 @@ namespace HotelAdmin
         {
             this.Btn_Preserve = new System.Windows.Forms.Button();
             this.Pic_Goods = new System.Windows.Forms.PictureBox();
-            this.Btn_SelectionPath = new System.Windows.Forms.Button();
             this.Folder_ImgPath = new System.Windows.Forms.FolderBrowserDialog();
-            this.fileName = new System.Windows.Forms.TextBox();
             this.txt_conut = new System.Windows.Forms.TextBox();
             this.unit = new System.Windows.Forms.DomainUpDown();
             this.Type = new System.Windows.Forms.ComboBox();
@@ -47,6 +45,7 @@ namespace HotelAdmin
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
             this.label11 = new System.Windows.Forms.Label();
+            this.ofdPath = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.Pic_Goods)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,30 +62,13 @@ namespace HotelAdmin
             // 
             // Pic_Goods
             // 
+            this.Pic_Goods.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.Pic_Goods.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Pic_Goods.Location = new System.Drawing.Point(309, 12);
             this.Pic_Goods.Name = "Pic_Goods";
-            this.Pic_Goods.Size = new System.Drawing.Size(182, 230);
+            this.Pic_Goods.Size = new System.Drawing.Size(182, 243);
             this.Pic_Goods.TabIndex = 14;
             this.Pic_Goods.TabStop = false;
-            // 
-            // Btn_SelectionPath
-            // 
-            this.Btn_SelectionPath.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Btn_SelectionPath.Location = new System.Drawing.Point(207, 269);
-            this.Btn_SelectionPath.Name = "Btn_SelectionPath";
-            this.Btn_SelectionPath.Size = new System.Drawing.Size(75, 28);
-            this.Btn_SelectionPath.TabIndex = 15;
-            this.Btn_SelectionPath.Text = "图片路径";
-            this.Btn_SelectionPath.UseVisualStyleBackColor = true;
-            this.Btn_SelectionPath.Click += new System.EventHandler(this.Btn_SelectionPath_Click);
-            // 
-            // fileName
-            // 
-            this.fileName.Location = new System.Drawing.Point(16, 273);
-            this.fileName.Name = "fileName";
-            this.fileName.Size = new System.Drawing.Size(185, 21);
-            this.fileName.TabIndex = 16;
             // 
             // txt_conut
             // 
@@ -207,6 +189,10 @@ namespace HotelAdmin
             this.label11.TabIndex = 18;
             this.label11.Text = "类型：";
             // 
+            // ofdPath
+            // 
+            this.ofdPath.FileName = "openFileDialog1";
+            // 
             // GoodsRedact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -226,8 +212,6 @@ namespace HotelAdmin
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.fileName);
-            this.Controls.Add(this.Btn_SelectionPath);
             this.Controls.Add(this.Pic_Goods);
             this.Controls.Add(this.Btn_Preserve);
             this.MaximizeBox = false;
@@ -244,9 +228,7 @@ namespace HotelAdmin
         #endregion
         private System.Windows.Forms.Button Btn_Preserve;
         private System.Windows.Forms.PictureBox Pic_Goods;
-        private System.Windows.Forms.Button Btn_SelectionPath;
         private System.Windows.Forms.FolderBrowserDialog Folder_ImgPath;
-        private System.Windows.Forms.TextBox fileName;
         private System.Windows.Forms.TextBox txt_conut;
         private System.Windows.Forms.DomainUpDown unit;
         private System.Windows.Forms.ComboBox Type;
@@ -260,5 +242,6 @@ namespace HotelAdmin
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.OpenFileDialog ofdPath;
     }
 }
