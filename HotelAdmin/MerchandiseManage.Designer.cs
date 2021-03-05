@@ -59,6 +59,7 @@ namespace HotelAdmin
             this.Dgv_GoodsList.AllowUserToResizeColumns = false;
             this.Dgv_GoodsList.AllowUserToResizeRows = false;
             this.Dgv_GoodsList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Dgv_GoodsList.BackgroundColor = System.Drawing.Color.Beige;
             this.Dgv_GoodsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_GoodsList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Number,
@@ -69,7 +70,7 @@ namespace HotelAdmin
             this.retail,
             this.TypeName});
             this.Dgv_GoodsList.ContextMenuStrip = this.Menu_goodsList;
-            this.Dgv_GoodsList.Location = new System.Drawing.Point(12, 68);
+            this.Dgv_GoodsList.Location = new System.Drawing.Point(116, 71);
             this.Dgv_GoodsList.MultiSelect = false;
             this.Dgv_GoodsList.Name = "Dgv_GoodsList";
             this.Dgv_GoodsList.ReadOnly = true;
@@ -155,7 +156,7 @@ namespace HotelAdmin
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(12, 32);
+            this.label1.Location = new System.Drawing.Point(112, 33);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(74, 21);
             this.label1.TabIndex = 2;
@@ -165,7 +166,7 @@ namespace HotelAdmin
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(694, 32);
+            this.label2.Location = new System.Drawing.Point(798, 36);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(90, 21);
             this.label2.TabIndex = 3;
@@ -173,10 +174,11 @@ namespace HotelAdmin
             // 
             // Cbox_GoodsType
             // 
+            this.Cbox_GoodsType.BackColor = System.Drawing.Color.Beige;
             this.Cbox_GoodsType.FormattingEnabled = true;
             this.Cbox_GoodsType.Items.AddRange(new object[] {
             "全部"});
-            this.Cbox_GoodsType.Location = new System.Drawing.Point(790, 33);
+            this.Cbox_GoodsType.Location = new System.Drawing.Point(894, 37);
             this.Cbox_GoodsType.Name = "Cbox_GoodsType";
             this.Cbox_GoodsType.Size = new System.Drawing.Size(164, 20);
             this.Cbox_GoodsType.TabIndex = 4;
@@ -189,7 +191,7 @@ namespace HotelAdmin
             this.Exit});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(966, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1168, 25);
             this.menuStrip1.TabIndex = 5;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -211,7 +213,8 @@ namespace HotelAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(966, 521);
+            this.BackColor = System.Drawing.Color.Beige;
+            this.ClientSize = new System.Drawing.Size(1168, 708);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.Cbox_GoodsType);
             this.Controls.Add(this.label2);

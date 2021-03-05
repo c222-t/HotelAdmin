@@ -63,7 +63,7 @@
             this.返回ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(877, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1168, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -84,7 +84,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(279, 37);
+            this.label1.Location = new System.Drawing.Point(411, 36);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(93, 16);
             this.label1.TabIndex = 1;
@@ -92,27 +92,32 @@
             // 
             // txtUserName
             // 
-            this.txtUserName.Location = new System.Drawing.Point(364, 34);
+            this.txtUserName.BackColor = System.Drawing.Color.Beige;
+            this.txtUserName.Location = new System.Drawing.Point(496, 33);
             this.txtUserName.Name = "txtUserName";
             this.txtUserName.Size = new System.Drawing.Size(100, 21);
             this.txtUserName.TabIndex = 2;
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(470, 33);
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.Location = new System.Drawing.Point(602, 32);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 25);
             this.button1.TabIndex = 3;
             this.button1.Text = "查找";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvYY);
-            this.groupBox1.Location = new System.Drawing.Point(13, 61);
+            this.groupBox1.Location = new System.Drawing.Point(97, 61);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(852, 418);
+            this.groupBox1.Size = new System.Drawing.Size(961, 413);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "预定订单";
@@ -127,7 +132,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvYY.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvYY.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvYY.BackgroundColor = System.Drawing.Color.Beige;
             this.dgvYY.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvYY.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvYY.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -150,7 +155,7 @@
             this.dgvYY.RowHeadersVisible = false;
             this.dgvYY.RowTemplate.Height = 23;
             this.dgvYY.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvYY.Size = new System.Drawing.Size(840, 392);
+            this.dgvYY.Size = new System.Drawing.Size(949, 387);
             this.dgvYY.TabIndex = 3;
             // 
             // Column1
@@ -241,7 +246,7 @@
             // 取消预定ToolStripMenuItem
             // 
             this.取消预定ToolStripMenuItem.Name = "取消预定ToolStripMenuItem";
-            this.取消预定ToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.取消预定ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.取消预定ToolStripMenuItem.Text = "取消预定";
             this.取消预定ToolStripMenuItem.Click += new System.EventHandler(this.取消预定ToolStripMenuItem_Click);
             // 
@@ -249,7 +254,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(877, 491);
+            this.BackColor = System.Drawing.Color.Beige;
+            this.ClientSize = new System.Drawing.Size(1168, 708);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtUserName);
@@ -257,6 +263,7 @@
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "OrderTable";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "预 定 管 理";
             this.Load += new System.EventHandler(this.OrderTable_Load);
             this.menuStrip1.ResumeLayout(false);

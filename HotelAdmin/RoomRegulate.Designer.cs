@@ -58,6 +58,7 @@
             // 
             // tvCaiDan
             // 
+            this.tvCaiDan.BackColor = System.Drawing.Color.Beige;
             this.tvCaiDan.Dock = System.Windows.Forms.DockStyle.Left;
             this.tvCaiDan.Location = new System.Drawing.Point(0, 0);
             this.tvCaiDan.Name = "tvCaiDan";
@@ -65,7 +66,7 @@
             treeNode1.Text = "全部";
             this.tvCaiDan.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
             treeNode1});
-            this.tvCaiDan.Size = new System.Drawing.Size(158, 581);
+            this.tvCaiDan.Size = new System.Drawing.Size(158, 708);
             this.tvCaiDan.TabIndex = 0;
             this.tvCaiDan.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TvCaiDan_AfterSelect);
             // 
@@ -79,7 +80,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvRoom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRoom.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvRoom.BackgroundColor = System.Drawing.Color.Beige;
             this.dgvRoom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRoom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -95,7 +96,7 @@
             this.dgvRoom.RowHeadersVisible = false;
             this.dgvRoom.RowTemplate.Height = 23;
             this.dgvRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvRoom.Size = new System.Drawing.Size(688, 273);
+            this.dgvRoom.Size = new System.Drawing.Size(968, 301);
             this.dgvRoom.TabIndex = 1;
             this.dgvRoom.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvRoom_CellContentClick);
             // 
@@ -163,7 +164,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUser.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.dgvUser.BackgroundColor = System.Drawing.Color.Beige;
             this.dgvUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -181,7 +182,7 @@
             this.dgvUser.RowHeadersVisible = false;
             this.dgvUser.RowTemplate.Height = 23;
             this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvUser.Size = new System.Drawing.Size(692, 244);
+            this.dgvUser.Size = new System.Drawing.Size(972, 371);
             this.dgvUser.TabIndex = 1;
             // 
             // dataGridViewTextBoxColumn2
@@ -242,7 +243,7 @@
             this.toolStripButton3});
             this.tsC.Location = new System.Drawing.Point(158, 0);
             this.tsC.Name = "tsC";
-            this.tsC.Size = new System.Drawing.Size(37, 581);
+            this.tsC.Size = new System.Drawing.Size(37, 708);
             this.tsC.TabIndex = 4;
             this.tsC.Text = "toolStrip1";
             // 
@@ -283,7 +284,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(888, 581);
+            this.BackColor = System.Drawing.Color.Beige;
+            this.ClientSize = new System.Drawing.Size(1168, 708);
             this.Controls.Add(this.tsC);
             this.Controls.Add(this.dgvUser);
             this.Controls.Add(this.dgvRoom);

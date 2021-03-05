@@ -106,17 +106,21 @@ namespace HotelAdmin
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button1.Location = new System.Drawing.Point(165, 272);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 33);
             this.button1.TabIndex = 6;
             this.button1.Text = "保 存";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // txt_name
             // 
+            this.txt_name.BackColor = System.Drawing.Color.Beige;
             this.txt_name.Location = new System.Drawing.Point(69, 25);
             this.txt_name.Name = "txt_name";
             this.txt_name.Size = new System.Drawing.Size(171, 21);
@@ -124,6 +128,7 @@ namespace HotelAdmin
             // 
             // importPrice
             // 
+            this.importPrice.BackColor = System.Drawing.Color.Beige;
             this.importPrice.Location = new System.Drawing.Point(69, 150);
             this.importPrice.Name = "importPrice";
             this.importPrice.Size = new System.Drawing.Size(171, 21);
@@ -132,6 +137,7 @@ namespace HotelAdmin
             // 
             // Retail
             // 
+            this.Retail.BackColor = System.Drawing.Color.Beige;
             this.Retail.Location = new System.Drawing.Point(69, 192);
             this.Retail.Name = "Retail";
             this.Retail.Size = new System.Drawing.Size(171, 21);
@@ -140,6 +146,7 @@ namespace HotelAdmin
             // 
             // Type
             // 
+            this.Type.BackColor = System.Drawing.Color.Beige;
             this.Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.Type.FormattingEnabled = true;
             this.Type.Location = new System.Drawing.Point(69, 235);
@@ -157,6 +164,7 @@ namespace HotelAdmin
             // 
             // txt_conut
             // 
+            this.txt_conut.BackColor = System.Drawing.Color.Beige;
             this.txt_conut.Location = new System.Drawing.Point(69, 106);
             this.txt_conut.Name = "txt_conut";
             this.txt_conut.Size = new System.Drawing.Size(171, 21);
@@ -167,6 +175,7 @@ namespace HotelAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(282, 317);
             this.Controls.Add(this.txt_conut);
             this.Controls.Add(this.unit);
