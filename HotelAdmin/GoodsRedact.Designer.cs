@@ -63,6 +63,7 @@ namespace HotelAdmin
             // 
             // Pic_Goods
             // 
+            this.Pic_Goods.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.Pic_Goods.Location = new System.Drawing.Point(309, 12);
             this.Pic_Goods.Name = "Pic_Goods";
             this.Pic_Goods.Size = new System.Drawing.Size(182, 230);
