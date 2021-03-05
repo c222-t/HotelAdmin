@@ -42,7 +42,7 @@ namespace HotelDAL
             if (zh != "")
             {
                 sql.Append(" and AdministratorName=@AdministratorName");
-                SqlParameter[] sp ={
+                SqlParameter[] sp = {
                     new SqlParameter ("@AdministratorName",zh)
                 };
                 return db.GetTable(sql.ToString(), sp, "AdministratorTable");
@@ -83,6 +83,12 @@ namespace HotelDAL
 
             return db.ExecuteNonQuery(sql.ToString (),sp);
         }
-
+        /// <summary>
+        /// 数据上传
+        /// </summary>
+        public void UploadData()
+        {
+            HotelData.UploadData();
+        }
     }
 }

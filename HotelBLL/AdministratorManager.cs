@@ -9,8 +9,14 @@ using HotelModel;
 
 namespace HotelBLL
 {
+    /// <summary>
+    /// 管理员业务处理
+    /// </summary>
     public class AdministratorManager
     {
+        /// <summary>
+        /// 管理员数据处理
+        /// </summary>
         AdministratorService ams = new AdministratorService();
 
         /// <summary>
@@ -53,6 +59,12 @@ namespace HotelBLL
         {
             return ams.AdminisreDelect(hao);
         }
-
+        /// <summary>
+        /// 数据上传
+        /// </summary>
+        public void UploadData()
+        {
+            ams.UploadData();
+        }
     }
 }

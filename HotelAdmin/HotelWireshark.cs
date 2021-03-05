@@ -21,40 +21,36 @@ namespace HotelAdmin
         /// 当前操作界面
         /// </summary>
         private Form currentWindow = new Form();
-        //将IP和端口绑定
-        static IPEndPoint ipe = new IPEndPoint(IPAddress.Any, 2001);
-        //创建TcpListener对象
-        static TcpListener tcpListener = new TcpListener(ipe);
+        /// <summary>
+        /// 后端服务绑定
+        /// </summary>
+        static ThreadStart ServiceBinding = new ThreadStart(ReceiveAMessage);
+        /// <summary>
+        /// 接收客户消息业务
+        /// </summary>
+        static Thread listenTo = new Thread(ServiceBinding);
 
         public HotelWireshark()
         {
             InitializeComponent();
         }
-
-        #region 初始化操作
-
         // 加载初始化信息
         private void HotelWireshark_Load(object sender, EventArgs e)
         {
-            lab_name.Text = Cun.Name;
-            Thread threadRes = new Thread(new ParameterizedThreadStart(ReceivingTheQuery)) { IsBackground = true };
+            this.lab_name.Text = Cun.Name;                                  // 获取当前用户名称
         }
-
-        #endregion
 
         #region 显示或切换操作界面
 
         // 挂起窗口
         private void HungWindow(object sender, EventArgs e)
         {
-            LockScreen ls = new LockScreen();
-            ls.Show();
+            new LockScreen().Show();
         }
         // 打开系统信息窗口
         private void Label5_Click(object sender, EventArgs e)
         {
-            Regard frm = new Regard();
-            frm.ShowDialog();
+            new Regard().ShowDialog();
         }
         // 打开消息列表界面
         private void Btn_MessageLists_Click_1(object sender, EventArgs e)
@@ -141,49 +137,128 @@ namespace HotelAdmin
         #endregion
 
         #region 界面显示效果
-        // 设计鼠标移动到选项列表时显示的效果
-        private void Btn_MessageLists_Enter(object sender, EventArgs e)
+
+        private void Btn_MessageLists_MouseDown(object sender, MouseEventArgs e)
         {
-
+            Btn_MessageLists.ForeColor = Color.FromArgb(116, 77, 255);
+            Btn_MessageLists.BackColor = Color.FromArgb(255, 255, 255);
         }
-
         private void Btn_MessageLists_Leave(object sender, EventArgs e)
         {
-
+            Btn_MessageLists.ForeColor = Color.FromArgb(255, 255, 255);
+            Btn_MessageLists.BackColor = Color.FromArgb(116, 77, 255);
         }
 
-        private void Btn_MessageLists_MouseMove(object sender, MouseEventArgs e)
+        private void Btn_OpenInquire_MouseDown(object sender, MouseEventArgs e)
         {
+            Btn_OpenInquire.ForeColor = Color.FromArgb(116, 77, 255);
+            Btn_OpenInquire.BackColor = Color.FromArgb(255, 255, 255);
+        }
+        private void Btn_OpenInquire_Leave(object sender, EventArgs e)
+        {
+            Btn_OpenInquire.ForeColor = Color.FromArgb(255, 255, 255);
+            Btn_OpenInquire.BackColor = Color.FromArgb(116, 77, 255);
+        }
 
+        private void Btn_SalesOrders_MouseDown(object sender, MouseEventArgs e)
+        {
+            Btn_SalesOrders.ForeColor = Color.FromArgb(116, 77, 255);
+            Btn_SalesOrders.BackColor = Color.FromArgb(255, 255, 255);
+        }
+        private void Btn_SalesOrders_Leave(object sender, EventArgs e)
+        {
+            Btn_SalesOrders.ForeColor = Color.FromArgb(255, 255, 255);
+            Btn_SalesOrders.BackColor = Color.FromArgb(116, 77, 255);
+        }
+
+        private void Btn_CheckOut_MouseDown(object sender, MouseEventArgs e)
+        {
+            Btn_CheckOut.ForeColor = Color.FromArgb(116, 77, 255);
+            Btn_CheckOut.BackColor = Color.FromArgb(255, 255, 255);
+        }
+        private void Btn_CheckOut_Leave(object sender, EventArgs e)
+        {
+            Btn_CheckOut.ForeColor = Color.FromArgb(255, 255, 255);
+            Btn_CheckOut.BackColor = Color.FromArgb(116, 77, 255);
+        }
+
+        private void Btn_Reserve_MouseDown(object sender, MouseEventArgs e)
+        {
+            Btn_Reserve.ForeColor = Color.FromArgb(116, 77, 255);
+            Btn_Reserve.BackColor = Color.FromArgb(255, 255, 255);
+        }
+        private void Btn_Reserve_Leave(object sender, EventArgs e)
+        {
+            Btn_Reserve.ForeColor = Color.FromArgb(255, 255, 255);
+            Btn_Reserve.BackColor = Color.FromArgb(116, 77, 255);
+        }
+
+        private void Btn_TopUp_MouseDown(object sender, MouseEventArgs e)
+        {
+            Btn_TopUp.ForeColor = Color.FromArgb(116, 77, 255);
+            Btn_TopUp.BackColor = Color.FromArgb(255, 255, 255);
+        }
+        private void Btn_TopUp_Leave(object sender, EventArgs e)
+        {
+            Btn_TopUp.ForeColor = Color.FromArgb(255, 255, 255);
+            Btn_TopUp.BackColor = Color.FromArgb(116, 77, 255);
+        }
+
+        private void Btn_RoomKeeper_MouseDown(object sender, MouseEventArgs e)
+        {
+            Btn_RoomKeeper.ForeColor = Color.FromArgb(116, 77, 255);
+            Btn_RoomKeeper.BackColor = Color.FromArgb(255, 255, 255);
+        }
+        private void Btn_RoomKeeper_Leave(object sender, EventArgs e)
+        {
+            Btn_RoomKeeper.ForeColor = Color.FromArgb(255, 255, 255);
+            Btn_RoomKeeper.BackColor = Color.FromArgb(116, 77, 255);
+        }
+
+        private void Btn_Customer_MouseDown(object sender, MouseEventArgs e)
+        {
+            Btn_Customer.ForeColor = Color.FromArgb(116, 77, 255);
+            Btn_Customer.BackColor = Color.FromArgb(255, 255, 255);
+        }
+        private void Btn_Customer_Leave(object sender, EventArgs e)
+        {
+            Btn_Customer.ForeColor = Color.FromArgb(255, 255, 255);
+            Btn_Customer.BackColor = Color.FromArgb(116, 77, 255);
+        }
+
+        private void Btn_Personnel_MouseDown(object sender, MouseEventArgs e)
+        {
+            Btn_Personnel.ForeColor = Color.FromArgb(116, 77, 255);
+            Btn_Personnel.BackColor = Color.FromArgb(255, 255, 255);
+        }
+        private void Btn_Personnel_Leave(object sender, EventArgs e)
+        {
+            Btn_Personnel.ForeColor = Color.FromArgb(255, 255, 255);
+            Btn_Personnel.BackColor = Color.FromArgb(116, 77, 255);
+        }
+
+        private void Btn_Commodity_MouseDown(object sender, MouseEventArgs e)
+        {
+            Btn_Commodity.ForeColor = Color.FromArgb(116, 77, 255);
+            Btn_Commodity.BackColor = Color.FromArgb(255, 255, 255);
+        }
+        private void Btn_Commodity_Leave(object sender, EventArgs e)
+        {
+            Btn_Commodity.ForeColor = Color.FromArgb(255, 255, 255);
+            Btn_Commodity.BackColor = Color.FromArgb(116, 77, 255);
         }
 
         #endregion
 
-        /*---------------- 监听顾客需求业务 ----------------*/
-        static void ReceivingTheQuery(object obj)
+        // 接收来自客户发送的需求信息
+        private static void ReceiveAMessage()
         {
-            //开始监听
-            tcpListener.Start();
-
-            byte[] resMsgByte = new byte[1024];
-            while (true)
-            {
-                //获取客户端的连接请求
-                TcpClient tcpClient = tcpListener.AcceptTcpClient();
-
-                //Thread thread = new Thread(new ParameterizedThreadStart(SendMsg));
-                //thread.IsBackground = true;
-                //thread.Start(tcpClient);
-
-                while (true)
-                {
-                    //接收数据
-                    NetworkStream ns = tcpClient.GetStream();
-                    //读取数据
-                    int readLength = ns.Read(resMsgByte, 0, resMsgByte.Length);
-                    MessageBox.Show(Encoding.UTF8.GetString(resMsgByte, 0, readLength), "客户");
-                }
-            }
+            
+        }
+        // 主界面关闭时将系统临时数据上传到数据库
+        private void HotelWireshark_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            new AdministratorManager().UploadData();
         }
     }
 }
