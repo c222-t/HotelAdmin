@@ -322,10 +322,7 @@ namespace HotelAdmin
             // Pl_MessageLists
             // 
             this.Pl_MessageLists.BackColor = System.Drawing.Color.WhiteSmoke;
-            this.Pl_MessageLists.Controls.Add(this.panel4);
-            this.Pl_MessageLists.Controls.Add(this.panel3);
             this.Pl_MessageLists.Controls.Add(this.panel2);
-            this.Pl_MessageLists.Controls.Add(this.panel1);
             this.Pl_MessageLists.Location = new System.Drawing.Point(200, 1);
             this.Pl_MessageLists.Name = "Pl_MessageLists";
             this.Pl_MessageLists.Size = new System.Drawing.Size(1184, 747);
@@ -471,9 +468,12 @@ namespace HotelAdmin
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(230, 13);
+            this.panel2.Controls.Add(this.txtContent);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(689, 720);
+            this.panel2.Size = new System.Drawing.Size(1184, 747);
             this.panel2.TabIndex = 1;
             // 
             // panel1

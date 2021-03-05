@@ -85,8 +85,8 @@ namespace HotelAdmin
                     Number = (int)Dgv_GoodsList.SelectedCells[0].Value,
                     CommodityName = Dgv_GoodsList.SelectedCells[1].Value.ToString().Trim(),
                     CommodityUnit = Dgv_GoodsList.SelectedCells[2].Value.ToString(),
-                    Quantity = int.Parse(Dgv_GoodsList.SelectedCells[3].Value.ToString().Trim()),
-                    PurchasePice = double.Parse(Dgv_GoodsList.SelectedCells[4].Value.ToString()),
+                    Quantity = int.Parse(Dgv_GoodsList.SelectedCells[4].Value.ToString()),
+                    PurchasePice = double.Parse(Dgv_GoodsList.SelectedCells[3].Value.ToString().Trim()),
                     Retail = double.Parse(Dgv_GoodsList.SelectedCells[5].Value.ToString()),
                     Type = new CommodityTypeTable { TypeName = Dgv_GoodsList.SelectedCells[6].Value.ToString() },
                     Path = Dgv_GoodsList.SelectedCells[7].Value.ToString().Trim()

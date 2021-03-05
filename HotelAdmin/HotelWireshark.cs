@@ -30,6 +30,34 @@ namespace HotelAdmin
         /// </summary>
         private Form currentWindow = new Form();
 
+                    //如果获取的IP地址族格式等于IP4地址格式
+                    if (IpEntry.AddressList[i].AddressFamily == AddressFamily.InterNetwork)
+                    {
+                        //返回获得的IP4地址
+                        return IpEntry.AddressList[i].ToString();
+                    }
+                }
+                return "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("获取本机IP出错:" + ex.Message);
+                return "";
+            }
+        }
+        /// <summary>
+        /// 程序启动执行操作
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Service()
+        {
+            //使CPU不检查线程
+            Control.CheckForIllegalCrossThreadCalls = false;
+            //调用IP的方法使他的返回值赋予txtIP.text
+            ip = IP();
+        }
+        #endregion
         public HotelWireshark()
         {
             InitializeComponent();

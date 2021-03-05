@@ -211,7 +211,7 @@ namespace HotelAdmin
                     Gender = row["Gender"].ToString(),
                     Age = (int)row["Age"],
                     Member = GetMembership((int)row["Member"]),
-                    Balance = (double)row["Balance"]
+                    Balance = double.Parse(txt_Balance.Text)
                 });
             }
             Dgv_Client_Click(sender, e);                                        // 删除后重新刷新

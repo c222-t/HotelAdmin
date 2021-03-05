@@ -113,6 +113,7 @@ namespace HotelDAL
                 row["OperationManaer"] = order.OperationManager;
                 row["Status"] = order.Status.Number;
                 row["RoomNumber"] = order.Room.RoomNumber;
+                row["Days"] = order.Days;
                 HotelData.Data.Tables["StatementTable"].Rows.Add(row);
             }
         }
