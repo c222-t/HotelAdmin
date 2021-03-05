@@ -88,18 +88,19 @@ namespace HotelAdmin
         private void Cbox_roomClass_SelectedIndexChanged(object sender, EventArgs e)
         {
             try {                                                       // 查询指定房间类型的房间信息
-                var table = from row in new RoomManager().RoomTable(cbox_roomClass.Text.Equals("全部") ? "" : cbox_roomClass.Text).AsEnumerable()
-                            join arr in roomType on row["Name"].ToString() equals arr.Name
-                            //.Skip().Take()
-                            select new {
+                var table = from row in new RoomManager().RoomTable(cbox_roomClass.Text.Equals("全部") ? "" : cbox_roomClass.Text.Trim()).AsEnumerable()
+                                //join arr in roomType on row["Name"].ToString() equals arr.Name
+                                //.Skip().Take()
+                            select new
+                            {
                                 RoomNumber = row["RoomNumber"],
+                                Price = row["Price"],
                                 Floor = row["Floor"],
-                                arr.Name,
-                                arr.Price,
+                                Name = row["Name"],
                             };
 
                 Dgv_RoomList.DataSource = table.ToArray();              // 上传到显示控件
-            } catch {
+            } catch(Exception x) {
                 Dgv_RoomList.DataSource = null;                         // 未找到信息清除之前的记录
             }
         }
