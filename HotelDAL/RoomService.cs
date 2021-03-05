@@ -21,16 +21,63 @@ namespace HotelDAL
         {
             StringBuilder sql = new StringBuilder("SELECT rs.[RoomNumber],[Floor],rtt.Name,r.StatusName FROM [RoomSchedules] rs join RoomTypeTable rtt on rtt.[No]=rs.RoomType join RoomStatus r on r.[No]=rs.RoomStatus where 1=1");
 
-            if (leiXing != "")
-            {
-                sql.Append(" and RoomType=@RoomType");
-                SqlParameter[] sp = {
-                    new SqlParameter ("@RoomType",leiXing)
-                };
+            var table = from rs in HotelData.Data.Tables["RoomSchedules"].AsEnumerable()
+                        join rtt in new RoomTypeService().TypeTable().AsEnumerable()
+                        on rs.Field<Int32>("RoomType") equals rtt.Field<Int32>("No")
+                        join r in new RoomTypeService().RoomStatus ().AsEnumerable ()
+                        on rs.Field <Int32>("RoomStatus") equals r.Field <Int32>("No")
+                        select new
+                        {
+                            RoomNumber = rs.Field<string>("RoomNumber"),
+                            Floor = rs.Field<string>("Floor"),
+                            RoomType = rtt.Field<string>("name"),
+                            RoomStatus = rs.Field<Int32>("RoomStatus"),
+                            StatusName=r.Field <string>("StatusName"),
+                            Price = rtt.Field<double>("Price")
+                        };
 
-                return db.GetTable(sql.ToString(), sp, "RoomSchedules");
+            DataTable dt = new DataTable();
+            dt.Columns.Add("RoomNumber", typeof(string));
+            dt.Columns.Add("StatusName", typeof(Int32));
+            dt.Columns.Add("Floor", typeof(string));
+            dt.Columns.Add("Name", typeof(string));
+            dt.Columns.Add("Price", typeof(double));
+            dt.Columns.Add("statusName", typeof(string));
+
+            DataTable dtNew = dt.Copy();
+
+            foreach (var item in table)
+            {
+                dtNew.Rows.Add(item.RoomNumber.Trim(), item.RoomStatus, item.Floor.Trim(), item.RoomType.Trim(), item.Price, item.StatusName.Trim());
             }
-            return db.GetTable(sql.ToString(), null, "RoomSchedules");
+
+            try
+            {
+                var tableNew = from row in dtNew.AsEnumerable()
+                               where row["StatusName"].ToString().Equals("1")
+                               select row;
+
+                if (leiXing != "")
+                {
+                    try
+                    {
+                        var tableN = from row in tableNew.CopyToDataTable().AsEnumerable()
+                                     where row["Name"].Equals(leiXing)
+                                     select row;
+                        return tableN.CopyToDataTable();
+                    }
+                    catch (Exception ee)
+                    {
+                        return null;
+                    }
+                }
+                return tableNew.CopyToDataTable();
+            }
+            catch (Exception ee)
+            {
+                return null;
+            }
+                
         }
 
         /// <summary>

@@ -49,5 +49,16 @@ namespace HotelDAL
             return db.GetTable(sql.ToString (),null, "RoomTypeTable");
         }
 
+        /// <summary>
+        /// 返回状态表
+        /// </summary>
+        /// <returns></returns>
+        public DataTable RoomStatus()
+        {
+            string sql = "SELECT [No],[StatusName] FROM [RoomStatus]";
+
+            return db.GetTable(sql,null,"RoomStatus");
+        }
+
     }
 }
