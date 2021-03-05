@@ -22,7 +22,7 @@ namespace HotelAdmin
         /// </summary>
         private Form currentWindow = new Form();
         //将IP和端口绑定
-        static IPEndPoint ipe = new IPEndPoint(IPAddress.Any, 6666);
+        static IPEndPoint ipe = new IPEndPoint(IPAddress.Any, 2001);
         //创建TcpListener对象
         static TcpListener tcpListener = new TcpListener(ipe);
 
