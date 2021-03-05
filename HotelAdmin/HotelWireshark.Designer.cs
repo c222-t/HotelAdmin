@@ -30,6 +30,7 @@ namespace HotelAdmin
         private void InitializeComponent()
         {
             this.Pl_OptionList = new System.Windows.Forms.Panel();
+            this.Btn_MessageLists = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,34 +45,34 @@ namespace HotelAdmin
             this.Btn_TopUp = new System.Windows.Forms.Button();
             this.Btn_Reserve = new System.Windows.Forms.Button();
             this.Btn_CheckOut = new System.Windows.Forms.Button();
-            this.Btn_MessageLists = new System.Windows.Forms.Button();
             this.Pl_MessageLists = new System.Windows.Forms.Panel();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.lvw_Themessagelist = new System.Windows.Forms.ListView();
-            this.Pl_Interface = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.label6 = new System.Windows.Forms.Label();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
             this.label35 = new System.Windows.Forms.Label();
             this.label33 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label21 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.lvw_Themessagelist = new System.Windows.Forms.ListView();
+            this.Pl_Interface = new System.Windows.Forms.Panel();
             this.Pl_OptionList.SuspendLayout();
             this.Pl_MessageLists.SuspendLayout();
-            this.panel1.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // Pl_OptionList
             // 
             this.Pl_OptionList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.Pl_OptionList.Controls.Add(this.Btn_MessageLists);
             this.Pl_OptionList.Controls.Add(this.label5);
             this.Pl_OptionList.Controls.Add(this.label4);
             this.Pl_OptionList.Controls.Add(this.label3);
@@ -86,11 +87,26 @@ namespace HotelAdmin
             this.Pl_OptionList.Controls.Add(this.Btn_TopUp);
             this.Pl_OptionList.Controls.Add(this.Btn_Reserve);
             this.Pl_OptionList.Controls.Add(this.Btn_CheckOut);
-            this.Pl_OptionList.Controls.Add(this.Btn_MessageLists);
             this.Pl_OptionList.Location = new System.Drawing.Point(0, 0);
             this.Pl_OptionList.Name = "Pl_OptionList";
             this.Pl_OptionList.Size = new System.Drawing.Size(200, 760);
             this.Pl_OptionList.TabIndex = 0;
+            // 
+            // Btn_MessageLists
+            // 
+            this.Btn_MessageLists.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.Btn_MessageLists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Btn_MessageLists.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Btn_MessageLists.ForeColor = System.Drawing.Color.White;
+            this.Btn_MessageLists.Location = new System.Drawing.Point(0, 72);
+            this.Btn_MessageLists.Name = "Btn_MessageLists";
+            this.Btn_MessageLists.Size = new System.Drawing.Size(200, 40);
+            this.Btn_MessageLists.TabIndex = 16;
+            this.Btn_MessageLists.Text = "消息列表";
+            this.Btn_MessageLists.UseVisualStyleBackColor = true;
+            this.Btn_MessageLists.Click += new System.EventHandler(this.Btn_MessageLists_Click_1);
+            this.Btn_MessageLists.Leave += new System.EventHandler(this.Btn_MessageLists_Leave);
+            this.Btn_MessageLists.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_MessageLists_MouseDown);
             // 
             // label5
             // 
@@ -162,6 +178,8 @@ namespace HotelAdmin
             this.Btn_OpenInquire.Text = "营业查询";
             this.Btn_OpenInquire.UseVisualStyleBackColor = true;
             this.Btn_OpenInquire.Click += new System.EventHandler(this.Btn_OpenInquire_Click_1);
+            this.Btn_OpenInquire.Leave += new System.EventHandler(this.Btn_OpenInquire_Leave);
+            this.Btn_OpenInquire.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_OpenInquire_MouseDown);
             // 
             // Btn_SalesOrders
             // 
@@ -176,6 +194,8 @@ namespace HotelAdmin
             this.Btn_SalesOrders.Text = "顾客开单";
             this.Btn_SalesOrders.UseVisualStyleBackColor = true;
             this.Btn_SalesOrders.Click += new System.EventHandler(this.Btn_SalesOrders_Click);
+            this.Btn_SalesOrders.Leave += new System.EventHandler(this.Btn_SalesOrders_Leave);
+            this.Btn_SalesOrders.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_SalesOrders_MouseDown);
             // 
             // Btn_Commodity
             // 
@@ -190,6 +210,8 @@ namespace HotelAdmin
             this.Btn_Commodity.Text = "商品管理";
             this.Btn_Commodity.UseVisualStyleBackColor = true;
             this.Btn_Commodity.Click += new System.EventHandler(this.Btn_Commodity_Click);
+            this.Btn_Commodity.Leave += new System.EventHandler(this.Btn_Commodity_Leave);
+            this.Btn_Commodity.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_Commodity_MouseDown);
             // 
             // Btn_Personnel
             // 
@@ -204,6 +226,8 @@ namespace HotelAdmin
             this.Btn_Personnel.Text = "员工管理";
             this.Btn_Personnel.UseVisualStyleBackColor = true;
             this.Btn_Personnel.Click += new System.EventHandler(this.Btn_Personnel_Click);
+            this.Btn_Personnel.Leave += new System.EventHandler(this.Btn_Personnel_Leave);
+            this.Btn_Personnel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_Personnel_MouseDown);
             // 
             // Btn_Customer
             // 
@@ -219,6 +243,8 @@ namespace HotelAdmin
             this.Btn_Customer.Text = "客户管理";
             this.Btn_Customer.UseVisualStyleBackColor = true;
             this.Btn_Customer.Click += new System.EventHandler(this.Btn_Customer_Click);
+            this.Btn_Customer.Leave += new System.EventHandler(this.Btn_Customer_Leave);
+            this.Btn_Customer.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_Customer_MouseDown);
             // 
             // Btn_RoomKeeper
             // 
@@ -233,6 +259,8 @@ namespace HotelAdmin
             this.Btn_RoomKeeper.Text = "房间管理";
             this.Btn_RoomKeeper.UseVisualStyleBackColor = true;
             this.Btn_RoomKeeper.Click += new System.EventHandler(this.Btn_RoomKeeper_Click);
+            this.Btn_RoomKeeper.Leave += new System.EventHandler(this.Btn_RoomKeeper_Leave);
+            this.Btn_RoomKeeper.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_RoomKeeper_MouseDown);
             // 
             // Btn_TopUp
             // 
@@ -247,6 +275,8 @@ namespace HotelAdmin
             this.Btn_TopUp.Text = "充值管理";
             this.Btn_TopUp.UseVisualStyleBackColor = true;
             this.Btn_TopUp.Click += new System.EventHandler(this.Btn_TopUp_Click);
+            this.Btn_TopUp.Leave += new System.EventHandler(this.Btn_TopUp_Leave);
+            this.Btn_TopUp.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_TopUp_MouseDown);
             // 
             // Btn_Reserve
             // 
@@ -261,6 +291,8 @@ namespace HotelAdmin
             this.Btn_Reserve.Text = "预定管理";
             this.Btn_Reserve.UseVisualStyleBackColor = true;
             this.Btn_Reserve.Click += new System.EventHandler(this.Btn_Reserve_Click);
+            this.Btn_Reserve.Leave += new System.EventHandler(this.Btn_Reserve_Leave);
+            this.Btn_Reserve.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_Reserve_MouseDown);
             // 
             // Btn_CheckOut
             // 
@@ -275,27 +307,8 @@ namespace HotelAdmin
             this.Btn_CheckOut.Text = "顾客结账";
             this.Btn_CheckOut.UseVisualStyleBackColor = true;
             this.Btn_CheckOut.Click += new System.EventHandler(this.Btn_CheckOut_Click);
-            // 
-            // Btn_MessageLists
-            // 
-            this.Btn_MessageLists.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
-            this.Btn_MessageLists.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
-            this.Btn_MessageLists.FlatAppearance.BorderSize = 0;
-            this.Btn_MessageLists.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
-            this.Btn_MessageLists.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
-            this.Btn_MessageLists.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_MessageLists.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Btn_MessageLists.ForeColor = System.Drawing.Color.White;
-            this.Btn_MessageLists.Location = new System.Drawing.Point(0, 74);
-            this.Btn_MessageLists.Name = "Btn_MessageLists";
-            this.Btn_MessageLists.Size = new System.Drawing.Size(200, 40);
-            this.Btn_MessageLists.TabIndex = 1;
-            this.Btn_MessageLists.Text = "消息列表";
-            this.Btn_MessageLists.UseVisualStyleBackColor = false;
-            this.Btn_MessageLists.Click += new System.EventHandler(this.Btn_MessageLists_Click_1);
-            this.Btn_MessageLists.Enter += new System.EventHandler(this.Btn_MessageLists_Enter);
-            this.Btn_MessageLists.Leave += new System.EventHandler(this.Btn_MessageLists_Leave);
-            this.Btn_MessageLists.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Btn_MessageLists_MouseMove);
+            this.Btn_CheckOut.Leave += new System.EventHandler(this.Btn_CheckOut_Leave);
+            this.Btn_CheckOut.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_CheckOut_MouseDown);
             // 
             // Pl_MessageLists
             // 
@@ -309,39 +322,34 @@ namespace HotelAdmin
             this.Pl_MessageLists.Size = new System.Drawing.Size(1184, 747);
             this.Pl_MessageLists.TabIndex = 2;
             // 
-            // panel1
+            // panel4
             // 
-            this.panel1.BackColor = System.Drawing.Color.White;
-            this.panel1.Controls.Add(this.lvw_Themessagelist);
-            this.panel1.Location = new System.Drawing.Point(15, 13);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(200, 720);
-            this.panel1.TabIndex = 0;
+            this.panel4.BackColor = System.Drawing.Color.White;
+            this.panel4.Controls.Add(this.dataGridView1);
+            this.panel4.Controls.Add(this.label6);
+            this.panel4.Location = new System.Drawing.Point(934, 385);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(238, 348);
+            this.panel4.TabIndex = 3;
             // 
-            // lvw_Themessagelist
+            // dataGridView1
             // 
-            this.lvw_Themessagelist.HideSelection = false;
-            this.lvw_Themessagelist.Location = new System.Drawing.Point(0, 42);
-            this.lvw_Themessagelist.Name = "lvw_Themessagelist";
-            this.lvw_Themessagelist.Size = new System.Drawing.Size(200, 678);
-            this.lvw_Themessagelist.TabIndex = 0;
-            this.lvw_Themessagelist.UseCompatibleStateImageBehavior = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 40);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(240, 276);
+            this.dataGridView1.TabIndex = 34;
             // 
-            // Pl_Interface
+            // label6
             // 
-            this.Pl_Interface.BackColor = System.Drawing.Color.Beige;
-            this.Pl_Interface.Location = new System.Drawing.Point(200, 0);
-            this.Pl_Interface.Name = "Pl_Interface";
-            this.Pl_Interface.Size = new System.Drawing.Size(1184, 748);
-            this.Pl_Interface.TabIndex = 1;
-            // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(221, 13);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(707, 720);
-            this.panel2.TabIndex = 1;
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label6.Location = new System.Drawing.Point(82, 9);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(74, 21);
+            this.label6.TabIndex = 33;
+            this.label6.Text = "需要商品";
             // 
             // panel3
             // 
@@ -358,15 +366,15 @@ namespace HotelAdmin
             this.panel3.Size = new System.Drawing.Size(238, 362);
             this.panel3.TabIndex = 2;
             // 
-            // panel4
+            // label2
             // 
-            this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.dataGridView1);
-            this.panel4.Controls.Add(this.label6);
-            this.panel4.Location = new System.Drawing.Point(934, 385);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(238, 348);
-            this.panel4.TabIndex = 3;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(84, 14);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(74, 21);
+            this.label2.TabIndex = 32;
+            this.label2.Text = "顾客信息";
             // 
             // label35
             // 
@@ -434,34 +442,39 @@ namespace HotelAdmin
             this.label17.TabIndex = 29;
             this.label17.Text = "联系方式：";
             // 
-            // label2
+            // panel2
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(84, 14);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(74, 21);
-            this.label2.TabIndex = 32;
-            this.label2.Text = "顾客信息";
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Location = new System.Drawing.Point(221, 13);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(707, 720);
+            this.panel2.TabIndex = 1;
             // 
-            // label6
+            // panel1
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(82, 9);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(74, 21);
-            this.label6.TabIndex = 33;
-            this.label6.Text = "需要商品";
+            this.panel1.BackColor = System.Drawing.Color.White;
+            this.panel1.Controls.Add(this.lvw_Themessagelist);
+            this.panel1.Location = new System.Drawing.Point(15, 13);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(200, 720);
+            this.panel1.TabIndex = 0;
             // 
-            // dataGridView1
+            // lvw_Themessagelist
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 40);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(240, 276);
-            this.dataGridView1.TabIndex = 34;
+            this.lvw_Themessagelist.HideSelection = false;
+            this.lvw_Themessagelist.Location = new System.Drawing.Point(0, 42);
+            this.lvw_Themessagelist.Name = "lvw_Themessagelist";
+            this.lvw_Themessagelist.Size = new System.Drawing.Size(200, 678);
+            this.lvw_Themessagelist.TabIndex = 0;
+            this.lvw_Themessagelist.UseCompatibleStateImageBehavior = false;
+            // 
+            // Pl_Interface
+            // 
+            this.Pl_Interface.BackColor = System.Drawing.Color.Beige;
+            this.Pl_Interface.Location = new System.Drawing.Point(200, 0);
+            this.Pl_Interface.Name = "Pl_Interface";
+            this.Pl_Interface.Size = new System.Drawing.Size(1184, 748);
+            this.Pl_Interface.TabIndex = 1;
             // 
             // HotelWireshark
             // 
@@ -480,12 +493,12 @@ namespace HotelAdmin
             this.Pl_OptionList.ResumeLayout(false);
             this.Pl_OptionList.PerformLayout();
             this.Pl_MessageLists.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -497,7 +510,6 @@ namespace HotelAdmin
         private System.Windows.Forms.Button Btn_TopUp;
         private System.Windows.Forms.Button Btn_Reserve;
         private System.Windows.Forms.Button Btn_CheckOut;
-        private System.Windows.Forms.Button Btn_MessageLists;
         private System.Windows.Forms.Button Btn_SalesOrders;
         private System.Windows.Forms.Button Btn_Commodity;
         private System.Windows.Forms.Button Btn_Personnel;
@@ -524,5 +536,6 @@ namespace HotelAdmin
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button Btn_MessageLists;
     }
 }
