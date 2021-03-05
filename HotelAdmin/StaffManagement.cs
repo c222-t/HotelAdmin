@@ -90,7 +90,7 @@ namespace HotelAdmin
             {
                 AdministratorName = txtZHnew.Text.Trim(),
                 Password = int.Parse(txtPwd.Text.Trim()),
-                jurisdiction = int.Parse(cbQuan.Text.Trim())
+                Jurisdiction = int.Parse(cbQuan.Text.Trim())
             };
 
             if (am.AdminisreInsert(at) > 0)

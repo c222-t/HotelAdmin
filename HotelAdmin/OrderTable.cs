@@ -18,6 +18,7 @@ namespace HotelAdmin
     public partial class OrderTable : Form
     {
         StatementTableManager stm = new StatementTableManager();
+        CustomerOrder frm;
 
         public OrderTable()
         {
@@ -41,12 +42,20 @@ namespace HotelAdmin
 
         private void 预定房间ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CustomerOrder frm = new CustomerOrder();
-            frm.frm = this;
+            frm = new CustomerOrder() { frm = this };
             frm.Show();
+        }
+        // 取消预定
+        private void Cancellation_Click(object sender, EventArgs e)
+        {
+            OrderManager om = new OrderManager();
+            om.DeleteOrderRecord(new StatementTable() { OrderNumber = dgvYY.SelectedRows[0].Cells[0].Value.ToString().Trim() });
+            ShuaXin();
         }
         ~OrderTable()
         {
+            this.frm.Close();
+            this.frm = null;
             this.stm = null;
         }
     }

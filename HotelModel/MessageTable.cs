@@ -31,6 +31,11 @@ namespace HotelModel
         /// 消息发送时间
         /// </summary>
         public DateTime MessageSendingTime { get; set; }
+        /// <summary>
+        /// 商品列表
+        /// </summary>
+        public List<CommodityTable> Gogoods { get; set; }
+
 
         public MessageTable() {
             this.MessageSendingTime = DateTime.Now;                           // 获取当前消息发送时间

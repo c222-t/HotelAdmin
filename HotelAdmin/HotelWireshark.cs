@@ -7,6 +7,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Net;
+using System.Net.Sockets;
+using System.Threading;
+using HotelModel;
+using HotelBLL;
 
 namespace HotelAdmin
 {
@@ -16,19 +21,28 @@ namespace HotelAdmin
         /// 当前操作界面
         /// </summary>
         private Form currentWindow = new Form();
+        //将IP和端口绑定
+        static IPEndPoint ipe = new IPEndPoint(IPAddress.Any, 6666);
+        //创建TcpListener对象
+        static TcpListener tcpListener = new TcpListener(ipe);
 
         public HotelWireshark()
         {
             InitializeComponent();
         }
 
-        #region 显示或切换操作界面
+        #region 初始化操作
 
         // 加载初始化信息
         private void HotelWireshark_Load(object sender, EventArgs e)
         {
-
+            Thread threadRes = new Thread(new ParameterizedThreadStart(ReceivingTheQuery)) { IsBackground = true };
         }
+
+        #endregion
+
+        #region 显示或切换操作界面
+
         // 挂起窗口
         private void HungWindow(object sender, EventArgs e)
         {
@@ -42,7 +56,7 @@ namespace HotelAdmin
             frm.ShowDialog();
         }
         // 打开消息列表界面
-        private void Btn_MessageLists_Click(object sender, EventArgs e)
+        private void Btn_MessageLists_Click_1(object sender, EventArgs e)
         {
             Pl_MessageLists.Visible = !Pl_MessageLists.Visible;
         }
@@ -123,6 +137,10 @@ namespace HotelAdmin
             currentWindow.Show();
         }
 
+        #endregion
+
+        #region 界面显示效果
+        // 设计鼠标移动到选项列表时显示的效果
         private void Btn_MessageLists_Enter(object sender, EventArgs e)
         {
 
@@ -140,9 +158,31 @@ namespace HotelAdmin
 
         #endregion
 
-        /*---------------- 界面显示效果 ----------------*/
-        // 设计鼠标移动到选项列表时显示的效果
+        /*---------------- 监听顾客需求业务 ----------------*/
+        static void ReceivingTheQuery(object obj)
+        {
+            //开始监听
+            tcpListener.Start();
 
+            byte[] resMsgByte = new byte[1024];
+            while (true)
+            {
+                //获取客户端的连接请求
+                TcpClient tcpClient = tcpListener.AcceptTcpClient();
 
+                //Thread thread = new Thread(new ParameterizedThreadStart(SendMsg));
+                //thread.IsBackground = true;
+                //thread.Start(tcpClient);
+
+                while (true)
+                {
+                    //接收数据
+                    NetworkStream ns = tcpClient.GetStream();
+                    //读取数据
+                    int readLength = ns.Read(resMsgByte, 0, resMsgByte.Length);
+                    MessageBox.Show(Encoding.UTF8.GetString(resMsgByte, 0, readLength), "客户");
+                }
+            }
+        }
     }
 }
