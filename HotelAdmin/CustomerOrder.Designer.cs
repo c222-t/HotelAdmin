@@ -132,11 +132,13 @@ namespace HotelAdmin
             "余额支付"});
             this.cbox_payWay.BackColor = System.Drawing.Color.Beige;
             this.cbox_payWay.FormattingEnabled = true;
+            this.cbox_payWay.Items.AddRange(new object[] {
+            "现金支付",
+            "余额支付"});
             this.cbox_payWay.Location = new System.Drawing.Point(92, 457);
             this.cbox_payWay.Name = "cbox_payWay";
             this.cbox_payWay.Size = new System.Drawing.Size(160, 20);
             this.cbox_payWay.TabIndex = 26;
-            this.cbox_payWay.Text = "现金支付";
             // 
             // label9
             // 
@@ -224,22 +226,27 @@ namespace HotelAdmin
             this.txt_bmikece.Name = "txt_bmikece";
             this.txt_bmikece.Size = new System.Drawing.Size(160, 21);
             this.txt_bmikece.TabIndex = 16;
+            this.txt_bmikece.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_bmikece_KeyPress);
             // 
             // txt_phone
             // 
             this.txt_phone.BackColor = System.Drawing.Color.Beige;
             this.txt_phone.Location = new System.Drawing.Point(92, 169);
+            this.txt_phone.MaxLength = 11;
             this.txt_phone.Name = "txt_phone";
             this.txt_phone.Size = new System.Drawing.Size(160, 21);
             this.txt_phone.TabIndex = 15;
+            this.txt_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_phone_KeyPress);
             // 
             // txt_IDcard
             // 
             this.txt_IDcard.BackColor = System.Drawing.Color.Beige;
             this.txt_IDcard.Location = new System.Drawing.Point(92, 129);
+            this.txt_IDcard.MaxLength = 18;
             this.txt_IDcard.Name = "txt_IDcard";
             this.txt_IDcard.Size = new System.Drawing.Size(160, 21);
             this.txt_IDcard.TabIndex = 14;
+            this.txt_IDcard.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_IDcard_KeyPress);
             // 
             // txt_name
             // 

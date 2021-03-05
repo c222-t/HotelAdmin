@@ -19,8 +19,7 @@ namespace HotelDAL
         /// <returns></returns>
         public DataTable RoomTable(string leiXing="")
         {
-            StringBuilder sql = new StringBuilder("SELECT rs.[RoomNumber],[Floor],rtt.Name,r.StatusName FROM [RoomSchedules] rs join RoomTypeTable rtt on rtt.[No]=rs.RoomType join RoomStatus r on r.[No]=rs.RoomStatus where 1=1");
-
+            
             var table = from rs in HotelData.Data.Tables["RoomSchedules"].AsEnumerable()
                         join rtt in new RoomTypeService().TypeTable().AsEnumerable()
                         on rs.Field<Int32>("RoomType") equals rtt.Field<Int32>("No")
@@ -139,9 +138,9 @@ namespace HotelDAL
                 }
             }
 
-            HotelData.UploadData();
             return HotelData.Data.Tables["RoomSchedules"];
         }
+
 
 
     }
