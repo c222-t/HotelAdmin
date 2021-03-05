@@ -505,6 +505,7 @@ namespace HotelAdmin
             this.Name = "HotelWireshark";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "酒店管理系统";
+            this.Load += new System.EventHandler(this.HotelWireshark_Load_1);
             this.Pl_OptionList.ResumeLayout(false);
             this.Pl_OptionList.PerformLayout();
             this.Pl_MessageLists.ResumeLayout(false);
