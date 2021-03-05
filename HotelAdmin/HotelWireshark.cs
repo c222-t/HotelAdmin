@@ -17,9 +17,9 @@ namespace HotelAdmin
 {
     public partial class HotelWireshark : Form
     {
-        // 绑定客户端服务器
-        static IPEndPoint host = new IPEndPoint(IPAddress.Any, 2001);
-        // 创建socket对象
+        /// <summary>
+        /// 创建节点对象
+        /// </summary>
         static Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         /// <summary>
         /// 当前操作界面
@@ -254,7 +254,6 @@ namespace HotelAdmin
         // 接收来自客户发送的需求信息
         private static void ReceiveAMessage(object obj)
         {
-            socket.Bind(host);                                              // 服务器绑定
             socket.Listen(10);                                              // 开始监听,且指定监听数量
             listenTo.Start();                                               // 开始接收
 
