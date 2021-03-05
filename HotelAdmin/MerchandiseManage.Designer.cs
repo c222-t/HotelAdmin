@@ -31,6 +31,14 @@ namespace HotelAdmin
         {
             this.components = new System.ComponentModel.Container();
             this.Dgv_GoodsList = new System.Windows.Forms.DataGridView();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CommodityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CommodityUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PurchasePice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.retail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Path = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Menu_goodsList = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.GoodsAlter = new System.Windows.Forms.ToolStripMenuItem();
             this.GoodsDelete = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,14 +48,6 @@ namespace HotelAdmin
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.AddGoods = new System.Windows.Forms.ToolStripMenuItem();
             this.Exit = new System.Windows.Forms.ToolStripMenuItem();
-            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CommodityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CommodityUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PurchasePice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.retail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Path = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_GoodsList)).BeginInit();
             this.Menu_goodsList.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -60,7 +60,7 @@ namespace HotelAdmin
             this.Dgv_GoodsList.AllowUserToResizeColumns = false;
             this.Dgv_GoodsList.AllowUserToResizeRows = false;
             this.Dgv_GoodsList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Dgv_GoodsList.BackgroundColor = System.Drawing.Color.Beige;
+            this.Dgv_GoodsList.BackgroundColor = System.Drawing.Color.White;
             this.Dgv_GoodsList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.Dgv_GoodsList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Number,
@@ -80,85 +80,6 @@ namespace HotelAdmin
             this.Dgv_GoodsList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv_GoodsList.Size = new System.Drawing.Size(942, 414);
             this.Dgv_GoodsList.TabIndex = 0;
-            // 
-            // Menu_goodsList
-            // 
-            this.Menu_goodsList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.GoodsAlter,
-            this.GoodsDelete});
-            this.Menu_goodsList.Name = "Menu_goodsList";
-            this.Menu_goodsList.Size = new System.Drawing.Size(101, 48);
-            // 
-            // GoodsAlter
-            // 
-            this.GoodsAlter.Name = "GoodsAlter";
-            this.GoodsAlter.Size = new System.Drawing.Size(100, 22);
-            this.GoodsAlter.Text = "修改";
-            this.GoodsAlter.Click += new System.EventHandler(this.GoodsAlter_Click);
-            // 
-            // GoodsDelete
-            // 
-            this.GoodsDelete.Name = "GoodsDelete";
-            this.GoodsDelete.Size = new System.Drawing.Size(100, 22);
-            this.GoodsDelete.Text = "删除";
-            this.GoodsDelete.Click += new System.EventHandler(this.GoodsDelete_Click);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(112, 33);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(74, 21);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "商品列表";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(798, 36);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(90, 21);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "商品类型：";
-            // 
-            // Cbox_GoodsType
-            // 
-            this.Cbox_GoodsType.BackColor = System.Drawing.Color.Beige;
-            this.Cbox_GoodsType.FormattingEnabled = true;
-            this.Cbox_GoodsType.Items.AddRange(new object[] {
-            "全部"});
-            this.Cbox_GoodsType.Location = new System.Drawing.Point(894, 37);
-            this.Cbox_GoodsType.Name = "Cbox_GoodsType";
-            this.Cbox_GoodsType.Size = new System.Drawing.Size(164, 20);
-            this.Cbox_GoodsType.TabIndex = 4;
-            this.Cbox_GoodsType.SelectedIndexChanged += new System.EventHandler(this.Cbox_GoodsType_SelectedIndexChanged);
-            // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.AddGoods,
-            this.Exit});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1168, 25);
-            this.menuStrip1.TabIndex = 5;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // AddGoods
-            // 
-            this.AddGoods.Name = "AddGoods";
-            this.AddGoods.Size = new System.Drawing.Size(68, 21);
-            this.AddGoods.Text = "添加商品";
-            this.AddGoods.Click += new System.EventHandler(this.AddGoods_Click);
-            // 
-            // Exit
-            // 
-            this.Exit.Name = "Exit";
-            this.Exit.Size = new System.Drawing.Size(44, 21);
-            this.Exit.Text = "返回";
-            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // Number
             // 
@@ -217,6 +138,85 @@ namespace HotelAdmin
             this.Path.Name = "Path";
             this.Path.ReadOnly = true;
             this.Path.Visible = false;
+            // 
+            // Menu_goodsList
+            // 
+            this.Menu_goodsList.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.GoodsAlter,
+            this.GoodsDelete});
+            this.Menu_goodsList.Name = "Menu_goodsList";
+            this.Menu_goodsList.Size = new System.Drawing.Size(101, 48);
+            // 
+            // GoodsAlter
+            // 
+            this.GoodsAlter.Name = "GoodsAlter";
+            this.GoodsAlter.Size = new System.Drawing.Size(100, 22);
+            this.GoodsAlter.Text = "修改";
+            this.GoodsAlter.Click += new System.EventHandler(this.GoodsAlter_Click);
+            // 
+            // GoodsDelete
+            // 
+            this.GoodsDelete.Name = "GoodsDelete";
+            this.GoodsDelete.Size = new System.Drawing.Size(100, 22);
+            this.GoodsDelete.Text = "删除";
+            this.GoodsDelete.Click += new System.EventHandler(this.GoodsDelete_Click);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(112, 33);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(74, 21);
+            this.label1.TabIndex = 2;
+            this.label1.Text = "商品列表";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(798, 36);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(90, 21);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "商品类型：";
+            // 
+            // Cbox_GoodsType
+            // 
+            this.Cbox_GoodsType.BackColor = System.Drawing.Color.White;
+            this.Cbox_GoodsType.FormattingEnabled = true;
+            this.Cbox_GoodsType.Items.AddRange(new object[] {
+            "全部"});
+            this.Cbox_GoodsType.Location = new System.Drawing.Point(894, 37);
+            this.Cbox_GoodsType.Name = "Cbox_GoodsType";
+            this.Cbox_GoodsType.Size = new System.Drawing.Size(164, 20);
+            this.Cbox_GoodsType.TabIndex = 4;
+            this.Cbox_GoodsType.SelectedIndexChanged += new System.EventHandler(this.Cbox_GoodsType_SelectedIndexChanged);
+            // 
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.AddGoods,
+            this.Exit});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1168, 25);
+            this.menuStrip1.TabIndex = 5;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // AddGoods
+            // 
+            this.AddGoods.Name = "AddGoods";
+            this.AddGoods.Size = new System.Drawing.Size(68, 21);
+            this.AddGoods.Text = "添加商品";
+            this.AddGoods.Click += new System.EventHandler(this.AddGoods_Click);
+            // 
+            // Exit
+            // 
+            this.Exit.Name = "Exit";
+            this.Exit.Size = new System.Drawing.Size(44, 21);
+            this.Exit.Text = "返回";
+            this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
             // MerchandiseManage
             // 
