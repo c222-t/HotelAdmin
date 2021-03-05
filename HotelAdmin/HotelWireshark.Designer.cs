@@ -312,7 +312,7 @@ namespace HotelAdmin
             // 
             // Pl_MessageLists
             // 
-            this.Pl_MessageLists.BackColor = System.Drawing.Color.Beige;
+            this.Pl_MessageLists.BackColor = System.Drawing.Color.WhiteSmoke;
             this.Pl_MessageLists.Controls.Add(this.panel4);
             this.Pl_MessageLists.Controls.Add(this.panel3);
             this.Pl_MessageLists.Controls.Add(this.panel2);
@@ -445,9 +445,9 @@ namespace HotelAdmin
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Location = new System.Drawing.Point(221, 13);
+            this.panel2.Location = new System.Drawing.Point(230, 13);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(707, 720);
+            this.panel2.Size = new System.Drawing.Size(689, 720);
             this.panel2.TabIndex = 1;
             // 
             // panel1
@@ -461,6 +461,7 @@ namespace HotelAdmin
             // 
             // lvw_Themessagelist
             // 
+            this.lvw_Themessagelist.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.lvw_Themessagelist.HideSelection = false;
             this.lvw_Themessagelist.Location = new System.Drawing.Point(0, 42);
             this.lvw_Themessagelist.Name = "lvw_Themessagelist";
@@ -489,6 +490,7 @@ namespace HotelAdmin
             this.Name = "HotelWireshark";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "酒店管理系统";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HotelWireshark_FormClosing);
             this.Load += new System.EventHandler(this.HotelWireshark_Load);
             this.Pl_OptionList.ResumeLayout(false);
             this.Pl_OptionList.PerformLayout();

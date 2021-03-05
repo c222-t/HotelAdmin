@@ -21,6 +21,14 @@ namespace HotelAdmin
         /// 当前操作界面
         /// </summary>
         private Form currentWindow = new Form();
+        /// <summary>
+        /// 后端服务绑定
+        /// </summary>
+        static ThreadStart ServiceBinding = new ThreadStart(ReceiveAMessage);
+        /// <summary>
+        /// 接收客户消息业务
+        /// </summary>
+        static Thread listenTo = new Thread(ServiceBinding);
 
         public HotelWireshark()
         {
@@ -29,7 +37,7 @@ namespace HotelAdmin
         // 加载初始化信息
         private void HotelWireshark_Load(object sender, EventArgs e)
         {
-            
+            this.lab_name.Text = Cun.Name;                                  // 获取当前用户名称
         }
 
         #region 显示或切换操作界面
@@ -242,5 +250,15 @@ namespace HotelAdmin
 
         #endregion
 
+        // 接收来自客户发送的需求信息
+        private static void ReceiveAMessage()
+        {
+            
+        }
+        // 主界面关闭时将系统临时数据上传到数据库
+        private void HotelWireshark_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            new AdministratorManager().UploadData();
+        }
     }
 }
