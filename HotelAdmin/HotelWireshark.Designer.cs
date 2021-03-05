@@ -47,6 +47,7 @@ namespace HotelAdmin
             this.Btn_CheckOut = new System.Windows.Forms.Button();
             this.Pl_Interface = new System.Windows.Forms.Panel();
             this.Pl_MessageLists = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.Dgv_GooesList = new System.Windows.Forms.DataGridView();
             this.CommodityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -59,7 +60,6 @@ namespace HotelAdmin
             this.label21 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lvw_Themessagelist = new System.Windows.Forms.ListView();
             this.Pl_OptionList.SuspendLayout();
@@ -119,7 +119,6 @@ namespace HotelAdmin
             this.label5.Size = new System.Drawing.Size(32, 17);
             this.label5.TabIndex = 15;
             this.label5.Text = "关于";
-            this.label5.Click += new System.EventHandler(this.Label5_Click);
             // 
             // label4
             // 
@@ -142,7 +141,6 @@ namespace HotelAdmin
             this.label3.Size = new System.Drawing.Size(32, 17);
             this.label3.TabIndex = 13;
             this.label3.Text = "挂起";
-            this.label3.Click += new System.EventHandler(this.HungWindow);
             // 
             // lab_name
             // 
@@ -328,6 +326,16 @@ namespace HotelAdmin
             this.Pl_MessageLists.Size = new System.Drawing.Size(1184, 747);
             this.Pl_MessageLists.TabIndex = 3;
             // 
+            // panel2
+            // 
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1184, 747);
+            this.panel2.TabIndex = 1;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
@@ -465,17 +473,6 @@ namespace HotelAdmin
             this.label17.TabIndex = 29;
             this.label17.Text = "联系方式：";
             // 
-            // panel2
-            // 
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.txtContent);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel2.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(1184, 747);
-            this.panel2.TabIndex = 1;
-            // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
@@ -508,8 +505,6 @@ namespace HotelAdmin
             this.Name = "HotelWireshark";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "酒店管理系统";
-            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.HotelWireshark_FormClosing);
-            this.Load += new System.EventHandler(this.HotelWireshark_Load);
             this.Pl_OptionList.ResumeLayout(false);
             this.Pl_OptionList.PerformLayout();
             this.Pl_MessageLists.ResumeLayout(false);
