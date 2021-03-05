@@ -36,6 +36,7 @@ namespace HotelAdmin
         // 加载初始化信息
         private void HotelWireshark_Load(object sender, EventArgs e)
         {
+            lab_name.Text = Cun.Name;
             Thread threadRes = new Thread(new ParameterizedThreadStart(ReceivingTheQuery)) { IsBackground = true };
         }
 
