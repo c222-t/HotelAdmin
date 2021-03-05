@@ -21,10 +21,6 @@ namespace HotelAdmin
         /// 当前操作界面
         /// </summary>
         private Form currentWindow = new Form();
-        //将IP和端口绑定
-        static IPEndPoint ipe = new IPEndPoint(IPAddress.Any, 2001);
-        //创建TcpListener对象
-        static TcpListener tcpListener = new TcpListener(ipe);
 
         public HotelWireshark()
         {
