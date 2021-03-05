@@ -19,36 +19,83 @@ namespace HotelDAL
         /// <returns></returns>
         public DataTable Statement(string roomName="")
         {
-            if (!(HotelData .Usele .Tables.Contains ("More")) )
+               /* StringBuilder sql = new StringBuilder("SELECT st.[Status],RoomType,st.IDCard,Floor,orderNumber,st.[RoomNumber],UserName,TelephoneNumber,[CheckInTime],[TotalConsumption]+Price*[Days] TotalConsumptions,PaymentMethod,Discount,([TotalConsumption]+Price*[Days])*Discount Prices,[Days],Balance FROM [StatementTable] st join UserTable u on u.IDCard =st.IDCard join MembershipTable mt on mt.MemberNumber=u.Member join RoomSchedules rs on rs.RoomNumber=st.RoomNumber join RoomTypeTable rt on rt.[No]=rs.RoomType where 1=1 and st.[Status]=2");*/
+
+            var table = from st in HotelData.Data.Tables["StatementTable"].AsEnumerable()
+                        join u in HotelData.Data.Tables["UserTable"].AsEnumerable()
+                        on st.Field<string>("IDCard") equals u.Field<string>("IDCard")
+                        join mt in new UserService().MembershipTable().AsEnumerable()
+                        on u.Field<Int32>("Member") equals mt.Field<Int32>("MemberNumber")
+                        join rs in HotelData.Data.Tables["RoomSchedules"].AsEnumerable()
+                        on st.Field<string>("RoomNumber") equals rs.Field<string>("RoomNumber")
+                        join rt in new RoomTypeService().TypeTable().AsEnumerable()
+                        on rs.Field<Int32>("RoomType") equals rt.Field<Int32>("No")
+                        select new
+                        {
+                            orderNumber = st.Field<string>("orderNumber"),
+                            RoomNumber = rs.Field<string>("RoomNumber"),
+                            UserName = u.Field<string>("UserName"),
+                            TelephoneNumber = u.Field<string>("TelephoneNumber"),
+                            CheckInTime = st.Field<DateTime>("CheckInTime"),
+                            TotalConsumptions = st.Field<double>("TotalConsumption"),
+                            PaymentMethod = st.Field<string>("PaymentMethod"),
+                            Discount = mt.Field<double>("Discount"),
+                            Price=rt.Field <double>("Price"),
+                            Balance = u.Field<double>("Balance"),
+                            Days = st.Field<Int32>("Days"),
+                            IDCard = st.Field<string>("IDCard"),
+                            Floor = rs.Field<string>("Floor"),
+                            RoomType = rs.Field<Int32>("RoomType"),
+                            Status=st.Field <Int32>("Status")
+                        };
+
+            DataTable dt = new DataTable();
+            dt.Columns.Add("orderNumber", typeof(string));
+            dt.Columns.Add("RoomNumber", typeof(string));
+            dt.Columns.Add("UserName", typeof(string));
+            dt.Columns.Add("TelephoneNumber", typeof(string));
+            dt.Columns.Add("CheckInTime", typeof(DateTime));
+            dt.Columns.Add("TotalConsumptions", typeof(double));
+            dt.Columns.Add("PaymentMethod", typeof(string));
+            dt.Columns.Add("Discount", typeof(double));
+            dt.Columns.Add("Price", typeof(double));
+            dt.Columns.Add("Balance", typeof(double));
+            dt.Columns.Add("Days", typeof(Int32));
+            dt.Columns.Add("IDCard", typeof(string));
+            dt.Columns.Add("Floor", typeof(string));
+            dt.Columns.Add("RoomType", typeof(Int32));
+            dt.Columns.Add("Status", typeof(Int32));
+            dt.Columns.Add("Prices", typeof(Int32));
+
+            DataTable dtNew = dt.Copy();
+
+            foreach (var item in table)
             {
-                StringBuilder sql = new StringBuilder("SELECT st.[Status],RoomType,st.IDCard,Floor,orderNumber,st.[RoomNumber],UserName,TelephoneNumber,[CheckInTime],[TotalConsumption]+Price*[Days] TotalConsumptions,PaymentMethod,Discount,([TotalConsumption]+Price*[Days])*Discount Prices,[Days],Balance FROM [StatementTable] st join UserTable u on u.IDCard =st.IDCard join MembershipTable mt on mt.MemberNumber=u.Member join RoomSchedules rs on rs.RoomNumber=st.RoomNumber join RoomTypeTable rt on rt.[No]=rs.RoomType where 1=1 and st.[Status]=2");
-
-                HotelData.Usele.Tables.Add(db.GetTable(sql.ToString(), null, "More").Copy());
-            }
-
-            if (roomName != "")
-            {
-                try
-                {
-                    var table = from row in HotelData.Usele.Tables["More"].AsEnumerable()
-                                where row["RoomNumber"].ToString ().Trim ().Equals(roomName.Trim())
-                                select row;
-                    return table.CopyToDataTable();
-                }
-                catch (Exception ex)
-                {
-                    Console.WriteLine(ex.Message);
-                    return null;
-                }
-
+                dtNew.Rows.Add(item.orderNumber.Trim(), item.RoomNumber.Trim(), item.UserName.Trim(), item.TelephoneNumber.Trim(), item.CheckInTime, item.TotalConsumptions, item.PaymentMethod, item.Discount, item.Price, item.Balance, item.Days, item.IDCard.Trim(), item.Floor.Trim(), item.RoomType,item.Status,item.TotalConsumptions+item.Price *item.Days);
             }
 
             try
             {
-                var table = from row in HotelData.Usele.Tables["More"].AsEnumerable()
-                            where (int)row["Status"]==2
-                            select row;
-                return table.CopyToDataTable();
+                var dtNewNew = from row in dtNew.AsEnumerable()
+                               where int.Parse(row["Status"].ToString()) == 2
+                               select row;
+
+                if (roomName != "")
+                {
+                    try
+                    {
+                        var dtNewNewNew = from row in dtNewNew.AsEnumerable()
+                                    where row["RoomNumber"].ToString().Trim().Equals(roomName.Trim())
+                                    select row;
+                        return dtNewNewNew.CopyToDataTable();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        return null;
+                    }
+                }
+                return dtNewNew.CopyToDataTable();
             }
             catch (Exception ex)
             {

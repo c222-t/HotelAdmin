@@ -116,5 +116,18 @@ namespace HotelDAL
                 HotelData.Data.Tables["UserTable"].Rows.Add(row);       // 向顾客表添加该顾客
             }
         }
+
+        /// <summary>
+        /// 返回会员表
+        /// </summary>
+        /// <returns></returns>
+        public DataTable MembershipTable()
+        {
+            string sql = "SELECT [MemberNumber],[MembershipLevel],[Discount] FROM [MembershipTable]";
+
+            return new DBHelper().GetTable(sql,null, "MembershipTable");
+        }
+
+
     }
 }
