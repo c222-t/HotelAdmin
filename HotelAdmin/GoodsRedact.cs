@@ -135,5 +135,6 @@ namespace HotelAdmin
             this.Folder_ImgPath.ShowDialog();                               // 选择图片路径
             this.fileName.Text = Folder_ImgPath.SelectedPath;               // 获取图片路径
         }
+
     }
 }
