@@ -376,7 +376,7 @@ namespace HotelAdmin
             this.label30.AutoSize = true;
             this.label30.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label30.ForeColor = System.Drawing.Color.Black;
-            this.label30.Location = new System.Drawing.Point(314, 332);
+            this.label30.Location = new System.Drawing.Point(218, 12);
             this.label30.Name = "label30";
             this.label30.Size = new System.Drawing.Size(79, 20);
             this.label30.TabIndex = 30;
