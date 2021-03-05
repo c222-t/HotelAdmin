@@ -29,8 +29,9 @@ namespace HotelAdmin
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.txt_age = new System.Windows.Forms.TextBox();
             this.label13 = new System.Windows.Forms.Label();
@@ -73,7 +74,7 @@ namespace HotelAdmin
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Beige;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel1.Controls.Add(this.txt_age);
             this.panel1.Controls.Add(this.label13);
@@ -102,24 +103,25 @@ namespace HotelAdmin
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(667, 12);
+            this.panel1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.panel1.Location = new System.Drawing.Point(805, 12);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(283, 583);
+            this.panel1.Size = new System.Drawing.Size(327, 672);
             this.panel1.TabIndex = 2;
             // 
             // txt_age
             // 
-            this.txt_age.BackColor = System.Drawing.Color.Beige;
-            this.txt_age.Location = new System.Drawing.Point(197, 333);
+            this.txt_age.BackColor = System.Drawing.Color.White;
+            this.txt_age.Location = new System.Drawing.Point(233, 334);
             this.txt_age.Name = "txt_age";
-            this.txt_age.Size = new System.Drawing.Size(55, 21);
+            this.txt_age.Size = new System.Drawing.Size(55, 26);
             this.txt_age.TabIndex = 28;
             // 
             // label13
             // 
             this.label13.AutoSize = true;
             this.label13.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label13.Location = new System.Drawing.Point(140, 333);
+            this.label13.Location = new System.Drawing.Point(176, 337);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(51, 20);
             this.label13.TabIndex = 27;
@@ -130,21 +132,21 @@ namespace HotelAdmin
             this.cbox_payWay.AutoCompleteCustomSource.AddRange(new string[] {
             "现金支付",
             "余额支付"});
-            this.cbox_payWay.BackColor = System.Drawing.Color.Beige;
+            this.cbox_payWay.BackColor = System.Drawing.Color.White;
             this.cbox_payWay.FormattingEnabled = true;
             this.cbox_payWay.Items.AddRange(new object[] {
             "现金支付",
             "余额支付"});
-            this.cbox_payWay.Location = new System.Drawing.Point(92, 457);
+            this.cbox_payWay.Location = new System.Drawing.Point(104, 457);
             this.cbox_payWay.Name = "cbox_payWay";
-            this.cbox_payWay.Size = new System.Drawing.Size(160, 20);
+            this.cbox_payWay.Size = new System.Drawing.Size(184, 28);
             this.cbox_payWay.TabIndex = 26;
             // 
             // label9
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label9.Location = new System.Drawing.Point(7, 210);
+            this.label9.Location = new System.Drawing.Point(19, 213);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(79, 20);
             this.label9.TabIndex = 8;
@@ -152,36 +154,36 @@ namespace HotelAdmin
             // 
             // cbox_roomClass
             // 
-            this.cbox_roomClass.BackColor = System.Drawing.Color.Beige;
+            this.cbox_roomClass.BackColor = System.Drawing.Color.White;
             this.cbox_roomClass.FormattingEnabled = true;
             this.cbox_roomClass.Items.AddRange(new object[] {
             "全部"});
-            this.cbox_roomClass.Location = new System.Drawing.Point(92, 210);
+            this.cbox_roomClass.Location = new System.Drawing.Point(104, 210);
             this.cbox_roomClass.Name = "cbox_roomClass";
-            this.cbox_roomClass.Size = new System.Drawing.Size(160, 20);
+            this.cbox_roomClass.Size = new System.Drawing.Size(184, 28);
             this.cbox_roomClass.TabIndex = 21;
             this.cbox_roomClass.SelectedIndexChanged += new System.EventHandler(this.Cbox_roomClass_SelectedIndexChanged);
             // 
             // dtpicker_leave
             // 
-            this.dtpicker_leave.Location = new System.Drawing.Point(92, 416);
+            this.dtpicker_leave.Location = new System.Drawing.Point(104, 416);
             this.dtpicker_leave.Name = "dtpicker_leave";
-            this.dtpicker_leave.Size = new System.Drawing.Size(160, 21);
+            this.dtpicker_leave.Size = new System.Drawing.Size(184, 26);
             this.dtpicker_leave.TabIndex = 25;
             // 
             // dtpicker_begin
             // 
             this.dtpicker_begin.Enabled = false;
-            this.dtpicker_begin.Location = new System.Drawing.Point(92, 375);
+            this.dtpicker_begin.Location = new System.Drawing.Point(104, 375);
             this.dtpicker_begin.Name = "dtpicker_begin";
-            this.dtpicker_begin.Size = new System.Drawing.Size(160, 21);
+            this.dtpicker_begin.Size = new System.Drawing.Size(184, 26);
             this.dtpicker_begin.TabIndex = 24;
             // 
             // Discount
             // 
             this.Discount.AutoSize = true;
             this.Discount.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Discount.Location = new System.Drawing.Point(88, 334);
+            this.Discount.Location = new System.Drawing.Point(104, 337);
             this.Discount.Name = "Discount";
             this.Discount.Size = new System.Drawing.Size(17, 20);
             this.Discount.TabIndex = 23;
@@ -189,20 +191,20 @@ namespace HotelAdmin
             // 
             // cbox_members
             // 
-            this.cbox_members.BackColor = System.Drawing.Color.Beige;
+            this.cbox_members.BackColor = System.Drawing.Color.White;
             this.cbox_members.FormattingEnabled = true;
-            this.cbox_members.Location = new System.Drawing.Point(92, 293);
+            this.cbox_members.Location = new System.Drawing.Point(104, 293);
             this.cbox_members.Name = "cbox_members";
-            this.cbox_members.Size = new System.Drawing.Size(160, 20);
+            this.cbox_members.Size = new System.Drawing.Size(184, 28);
             this.cbox_members.TabIndex = 22;
             this.cbox_members.SelectedIndexChanged += new System.EventHandler(this.Cbox_members_SelectedIndexChanged);
             // 
             // rbtn_female
             // 
             this.rbtn_female.AutoSize = true;
-            this.rbtn_female.Location = new System.Drawing.Point(142, 92);
+            this.rbtn_female.Location = new System.Drawing.Point(154, 92);
             this.rbtn_female.Name = "rbtn_female";
-            this.rbtn_female.Size = new System.Drawing.Size(35, 16);
+            this.rbtn_female.Size = new System.Drawing.Size(41, 24);
             this.rbtn_female.TabIndex = 18;
             this.rbtn_female.Text = "女";
             this.rbtn_female.UseVisualStyleBackColor = true;
@@ -211,9 +213,9 @@ namespace HotelAdmin
             // 
             this.rbtn_male.AutoSize = true;
             this.rbtn_male.Checked = true;
-            this.rbtn_male.Location = new System.Drawing.Point(92, 92);
+            this.rbtn_male.Location = new System.Drawing.Point(104, 92);
             this.rbtn_male.Name = "rbtn_male";
-            this.rbtn_male.Size = new System.Drawing.Size(35, 16);
+            this.rbtn_male.Size = new System.Drawing.Size(41, 24);
             this.rbtn_male.TabIndex = 17;
             this.rbtn_male.TabStop = true;
             this.rbtn_male.Text = "男";
@@ -221,39 +223,39 @@ namespace HotelAdmin
             // 
             // txt_bmikece
             // 
-            this.txt_bmikece.BackColor = System.Drawing.Color.Beige;
-            this.txt_bmikece.Location = new System.Drawing.Point(92, 251);
+            this.txt_bmikece.BackColor = System.Drawing.Color.White;
+            this.txt_bmikece.Location = new System.Drawing.Point(104, 251);
             this.txt_bmikece.Name = "txt_bmikece";
-            this.txt_bmikece.Size = new System.Drawing.Size(160, 21);
+            this.txt_bmikece.Size = new System.Drawing.Size(184, 26);
             this.txt_bmikece.TabIndex = 16;
             this.txt_bmikece.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_bmikece_KeyPress);
             // 
             // txt_phone
             // 
-            this.txt_phone.BackColor = System.Drawing.Color.Beige;
-            this.txt_phone.Location = new System.Drawing.Point(92, 169);
+            this.txt_phone.BackColor = System.Drawing.Color.White;
+            this.txt_phone.Location = new System.Drawing.Point(104, 169);
             this.txt_phone.MaxLength = 11;
             this.txt_phone.Name = "txt_phone";
-            this.txt_phone.Size = new System.Drawing.Size(160, 21);
+            this.txt_phone.Size = new System.Drawing.Size(184, 26);
             this.txt_phone.TabIndex = 15;
             this.txt_phone.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_phone_KeyPress);
             // 
             // txt_IDcard
             // 
-            this.txt_IDcard.BackColor = System.Drawing.Color.Beige;
-            this.txt_IDcard.Location = new System.Drawing.Point(92, 129);
+            this.txt_IDcard.BackColor = System.Drawing.Color.White;
+            this.txt_IDcard.Location = new System.Drawing.Point(104, 129);
             this.txt_IDcard.MaxLength = 18;
             this.txt_IDcard.Name = "txt_IDcard";
-            this.txt_IDcard.Size = new System.Drawing.Size(160, 21);
+            this.txt_IDcard.Size = new System.Drawing.Size(184, 26);
             this.txt_IDcard.TabIndex = 14;
             this.txt_IDcard.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_IDcard_KeyPress);
             // 
             // txt_name
             // 
-            this.txt_name.BackColor = System.Drawing.Color.Beige;
-            this.txt_name.Location = new System.Drawing.Point(92, 46);
+            this.txt_name.BackColor = System.Drawing.Color.White;
+            this.txt_name.Location = new System.Drawing.Point(104, 46);
             this.txt_name.Name = "txt_name";
-            this.txt_name.Size = new System.Drawing.Size(160, 21);
+            this.txt_name.Size = new System.Drawing.Size(184, 26);
             this.txt_name.TabIndex = 13;
             // 
             // Btn_Billing
@@ -261,8 +263,9 @@ namespace HotelAdmin
             this.Btn_Billing.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.Btn_Billing.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.Btn_Billing.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.Btn_Billing.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Btn_Billing.Location = new System.Drawing.Point(92, 506);
+            this.Btn_Billing.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Btn_Billing.ForeColor = System.Drawing.Color.White;
+            this.Btn_Billing.Location = new System.Drawing.Point(121, 506);
             this.Btn_Billing.Name = "Btn_Billing";
             this.Btn_Billing.Size = new System.Drawing.Size(99, 32);
             this.Btn_Billing.TabIndex = 12;
@@ -274,7 +277,7 @@ namespace HotelAdmin
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label12.Location = new System.Drawing.Point(7, 457);
+            this.label12.Location = new System.Drawing.Point(19, 460);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(79, 20);
             this.label12.TabIndex = 11;
@@ -284,7 +287,7 @@ namespace HotelAdmin
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label11.Location = new System.Drawing.Point(7, 416);
+            this.label11.Location = new System.Drawing.Point(19, 419);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(79, 20);
             this.label11.TabIndex = 10;
@@ -294,7 +297,7 @@ namespace HotelAdmin
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label10.Location = new System.Drawing.Point(7, 375);
+            this.label10.Location = new System.Drawing.Point(19, 378);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(79, 20);
             this.label10.TabIndex = 9;
@@ -304,7 +307,7 @@ namespace HotelAdmin
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label8.Location = new System.Drawing.Point(35, 334);
+            this.label8.Location = new System.Drawing.Point(47, 337);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(51, 20);
             this.label8.TabIndex = 7;
@@ -314,7 +317,7 @@ namespace HotelAdmin
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label7.Location = new System.Drawing.Point(7, 293);
+            this.label7.Location = new System.Drawing.Point(19, 296);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(79, 20);
             this.label7.TabIndex = 6;
@@ -324,7 +327,7 @@ namespace HotelAdmin
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(35, 252);
+            this.label6.Location = new System.Drawing.Point(47, 255);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(51, 20);
             this.label6.TabIndex = 5;
@@ -334,7 +337,7 @@ namespace HotelAdmin
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(7, 170);
+            this.label5.Location = new System.Drawing.Point(19, 173);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(79, 20);
             this.label5.TabIndex = 4;
@@ -344,7 +347,7 @@ namespace HotelAdmin
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(21, 129);
+            this.label4.Location = new System.Drawing.Point(33, 132);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(65, 20);
             this.label4.TabIndex = 3;
@@ -354,7 +357,7 @@ namespace HotelAdmin
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(7, 88);
+            this.label3.Location = new System.Drawing.Point(19, 91);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 20);
             this.label3.TabIndex = 2;
@@ -364,7 +367,7 @@ namespace HotelAdmin
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label2.Location = new System.Drawing.Point(7, 46);
+            this.label2.Location = new System.Drawing.Point(19, 49);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(79, 20);
             this.label2.TabIndex = 1;
@@ -382,13 +385,13 @@ namespace HotelAdmin
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Beige;
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel2.Controls.Add(this.Dgv_RoomList);
             this.panel2.Controls.Add(this.label14);
             this.panel2.Location = new System.Drawing.Point(12, 12);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(638, 583);
+            this.panel2.Size = new System.Drawing.Size(763, 672);
             this.panel2.TabIndex = 3;
             // 
             // Dgv_RoomList
@@ -398,34 +401,43 @@ namespace HotelAdmin
             this.Dgv_RoomList.AllowUserToResizeColumns = false;
             this.Dgv_RoomList.AllowUserToResizeRows = false;
             this.Dgv_RoomList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Dgv_RoomList.BackgroundColor = System.Drawing.Color.Beige;
+            this.Dgv_RoomList.BackgroundColor = System.Drawing.Color.White;
             this.Dgv_RoomList.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.Dgv_RoomList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Sunken;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.Dgv_RoomList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.Dgv_RoomList.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
+            this.Dgv_RoomList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_RoomList.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgv_RoomList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.RoomNumber,
             this.Price,
             this.typeName,
             this.Floor});
             this.Dgv_RoomList.GridColor = System.Drawing.Color.White;
-            this.Dgv_RoomList.Location = new System.Drawing.Point(16, 40);
+            this.Dgv_RoomList.Location = new System.Drawing.Point(16, 32);
             this.Dgv_RoomList.MultiSelect = false;
             this.Dgv_RoomList.Name = "Dgv_RoomList";
             this.Dgv_RoomList.ReadOnly = true;
             this.Dgv_RoomList.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.Dgv_RoomList.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             this.Dgv_RoomList.RowHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.Dgv_RoomList.RowsDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.Dgv_RoomList.RowsDefaultCellStyle = dataGridViewCellStyle6;
             this.Dgv_RoomList.RowTemplate.Height = 23;
             this.Dgv_RoomList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_RoomList.Size = new System.Drawing.Size(602, 498);
+            this.Dgv_RoomList.Size = new System.Drawing.Size(728, 624);
             this.Dgv_RoomList.TabIndex = 2;
             // 
             // RoomNumber
@@ -460,7 +472,7 @@ namespace HotelAdmin
             // 
             this.label14.AutoSize = true;
             this.label14.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label14.Location = new System.Drawing.Point(12, 10);
+            this.label14.Location = new System.Drawing.Point(12, 3);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(74, 21);
             this.label14.TabIndex = 1;
@@ -470,8 +482,8 @@ namespace HotelAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(964, 607);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(1144, 696);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Name = "CustomerOrder";

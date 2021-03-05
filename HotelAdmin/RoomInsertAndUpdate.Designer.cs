@@ -42,25 +42,27 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 43);
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(22, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 12);
+            this.label1.Size = new System.Drawing.Size(73, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "房 间 名：";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(13, 160);
+            this.label2.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(28, 161);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 12);
+            this.label2.Size = new System.Drawing.Size(68, 20);
             this.label2.TabIndex = 1;
             this.label2.Text = "房间类型:";
             // 
             // txtRoomName
             // 
-            this.txtRoomName.BackColor = System.Drawing.Color.Beige;
-            this.txtRoomName.Location = new System.Drawing.Point(92, 40);
+            this.txtRoomName.BackColor = System.Drawing.Color.White;
+            this.txtRoomName.Location = new System.Drawing.Point(107, 41);
             this.txtRoomName.MaxLength = 10;
             this.txtRoomName.Name = "txtRoomName";
             this.txtRoomName.Size = new System.Drawing.Size(144, 21);
@@ -72,7 +74,7 @@
             this.cbRoomType.BackColor = System.Drawing.Color.Beige;
             this.cbRoomType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRoomType.FormattingEnabled = true;
-            this.cbRoomType.Location = new System.Drawing.Point(92, 160);
+            this.cbRoomType.Location = new System.Drawing.Point(107, 161);
             this.cbRoomType.Name = "cbRoomType";
             this.cbRoomType.Size = new System.Drawing.Size(144, 20);
             this.cbRoomType.TabIndex = 3;
@@ -82,9 +84,11 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(25, 228);
+            this.button1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(59, 212);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(75, 34);
             this.button1.TabIndex = 4;
             this.button1.Text = "保存";
             this.button1.UseVisualStyleBackColor = false;
@@ -95,9 +99,11 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(141, 228);
+            this.button2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(175, 212);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(75, 34);
             this.button2.TabIndex = 4;
             this.button2.Text = "取消";
             this.button2.UseVisualStyleBackColor = false;
@@ -106,16 +112,17 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(13, 107);
+            this.label3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(28, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 12);
+            this.label3.Size = new System.Drawing.Size(63, 20);
             this.label3.TabIndex = 0;
             this.label3.Text = "楼   层：";
             // 
             // txtLou
             // 
-            this.txtLou.BackColor = System.Drawing.Color.Beige;
-            this.txtLou.Location = new System.Drawing.Point(92, 104);
+            this.txtLou.BackColor = System.Drawing.Color.White;
+            this.txtLou.Location = new System.Drawing.Point(107, 105);
             this.txtLou.MaxLength = 5;
             this.txtLou.Name = "txtLou";
             this.txtLou.Size = new System.Drawing.Size(144, 21);
@@ -125,7 +132,7 @@
             // 
             this.lblZhu.AutoSize = true;
             this.lblZhu.ForeColor = System.Drawing.Color.Red;
-            this.lblZhu.Location = new System.Drawing.Point(92, 68);
+            this.lblZhu.Location = new System.Drawing.Point(107, 69);
             this.lblZhu.Name = "lblZhu";
             this.lblZhu.Size = new System.Drawing.Size(113, 12);
             this.lblZhu.TabIndex = 5;
@@ -137,8 +144,8 @@
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
-            this.ClientSize = new System.Drawing.Size(283, 294);
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.ClientSize = new System.Drawing.Size(283, 269);
             this.Controls.Add(this.lblZhu);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

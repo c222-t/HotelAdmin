@@ -138,7 +138,7 @@ namespace HotelAdmin
                 }
                 Cbox_roomClass_SelectedIndexChanged(sender, e);
             }
-            catch (Exception ee){
+            catch {
                 MessageBox.Show("必要信息未填写或填写错误！", "提示");
             }
         }

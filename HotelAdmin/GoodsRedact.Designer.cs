@@ -51,13 +51,17 @@ namespace HotelAdmin
             // 
             // Btn_Preserve
             // 
+            this.Btn_Preserve.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.Btn_Preserve.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.Btn_Preserve.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Preserve.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Btn_Preserve.ForeColor = System.Drawing.Color.White;
             this.Btn_Preserve.Location = new System.Drawing.Point(416, 266);
             this.Btn_Preserve.Name = "Btn_Preserve";
             this.Btn_Preserve.Size = new System.Drawing.Size(75, 33);
             this.Btn_Preserve.TabIndex = 6;
             this.Btn_Preserve.Text = "保 存";
-            this.Btn_Preserve.UseVisualStyleBackColor = true;
+            this.Btn_Preserve.UseVisualStyleBackColor = false;
             this.Btn_Preserve.Click += new System.EventHandler(this.Btn_Preserve_Click);
             // 
             // Pic_Goods
@@ -72,7 +76,7 @@ namespace HotelAdmin
             // 
             // txt_conut
             // 
-            this.txt_conut.BackColor = System.Drawing.Color.Beige;
+            this.txt_conut.BackColor = System.Drawing.Color.White;
             this.txt_conut.Location = new System.Drawing.Point(69, 106);
             this.txt_conut.Name = "txt_conut";
             this.txt_conut.Size = new System.Drawing.Size(171, 21);
@@ -99,7 +103,7 @@ namespace HotelAdmin
             // 
             // Retail
             // 
-            this.Retail.BackColor = System.Drawing.Color.Beige;
+            this.Retail.BackColor = System.Drawing.Color.White;
             this.Retail.Location = new System.Drawing.Point(69, 192);
             this.Retail.Name = "Retail";
             this.Retail.Size = new System.Drawing.Size(171, 21);
@@ -108,7 +112,7 @@ namespace HotelAdmin
             // 
             // importPrice
             // 
-            this.importPrice.BackColor = System.Drawing.Color.Beige;
+            this.importPrice.BackColor = System.Drawing.Color.White;
             this.importPrice.Location = new System.Drawing.Point(69, 150);
             this.importPrice.Name = "importPrice";
             this.importPrice.Size = new System.Drawing.Size(171, 21);

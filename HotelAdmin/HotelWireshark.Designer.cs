@@ -29,9 +29,6 @@ namespace HotelAdmin
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.ListViewItem listViewItem1 = new System.Windows.Forms.ListViewItem(new System.Windows.Forms.ListViewItem.ListViewSubItem[] {
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, ""),
-            new System.Windows.Forms.ListViewItem.ListViewSubItem(null, "", System.Drawing.SystemColors.WindowText, System.Drawing.SystemColors.Window, new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134))))}, -1);
             this.Pl_OptionList = new System.Windows.Forms.Panel();
             this.Btn_MessageLists = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,8 +45,11 @@ namespace HotelAdmin
             this.Btn_TopUp = new System.Windows.Forms.Button();
             this.Btn_Reserve = new System.Windows.Forms.Button();
             this.Btn_CheckOut = new System.Windows.Forms.Button();
+            this.Pl_Interface = new System.Windows.Forms.Panel();
             this.Pl_MessageLists = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.Dgv_GooesList = new System.Windows.Forms.DataGridView();
+            this.CommodityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label6 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -62,11 +62,10 @@ namespace HotelAdmin
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lvw_Themessagelist = new System.Windows.Forms.ListView();
-            this.Pl_Interface = new System.Windows.Forms.Panel();
-            this.lvw_GoodsList = new System.Windows.Forms.ListView();
             this.Pl_OptionList.SuspendLayout();
             this.Pl_MessageLists.SuspendLayout();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_GooesList)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -312,6 +311,14 @@ namespace HotelAdmin
             this.Btn_CheckOut.Leave += new System.EventHandler(this.Btn_CheckOut_Leave);
             this.Btn_CheckOut.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Btn_CheckOut_MouseDown);
             // 
+            // Pl_Interface
+            // 
+            this.Pl_Interface.BackColor = System.Drawing.Color.WhiteSmoke;
+            this.Pl_Interface.Location = new System.Drawing.Point(200, 0);
+            this.Pl_Interface.Name = "Pl_Interface";
+            this.Pl_Interface.Size = new System.Drawing.Size(1184, 748);
+            this.Pl_Interface.TabIndex = 3;
+            // 
             // Pl_MessageLists
             // 
             this.Pl_MessageLists.BackColor = System.Drawing.Color.WhiteSmoke;
@@ -322,17 +329,43 @@ namespace HotelAdmin
             this.Pl_MessageLists.Location = new System.Drawing.Point(200, 1);
             this.Pl_MessageLists.Name = "Pl_MessageLists";
             this.Pl_MessageLists.Size = new System.Drawing.Size(1184, 747);
-            this.Pl_MessageLists.TabIndex = 2;
+            this.Pl_MessageLists.TabIndex = 3;
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
-            this.panel4.Controls.Add(this.lvw_GoodsList);
+            this.panel4.Controls.Add(this.Dgv_GooesList);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Location = new System.Drawing.Point(934, 385);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(238, 348);
             this.panel4.TabIndex = 3;
+            // 
+            // Dgv_GooesList
+            // 
+            this.Dgv_GooesList.AllowUserToAddRows = false;
+            this.Dgv_GooesList.AllowUserToDeleteRows = false;
+            this.Dgv_GooesList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.Dgv_GooesList.BackgroundColor = System.Drawing.Color.White;
+            this.Dgv_GooesList.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.Dgv_GooesList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.Dgv_GooesList.ColumnHeadersVisible = false;
+            this.Dgv_GooesList.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.CommodityName});
+            this.Dgv_GooesList.Location = new System.Drawing.Point(0, 39);
+            this.Dgv_GooesList.Name = "Dgv_GooesList";
+            this.Dgv_GooesList.ReadOnly = true;
+            this.Dgv_GooesList.RowHeadersVisible = false;
+            this.Dgv_GooesList.RowTemplate.Height = 23;
+            this.Dgv_GooesList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.Dgv_GooesList.Size = new System.Drawing.Size(238, 280);
+            this.Dgv_GooesList.TabIndex = 34;
+            // 
+            // CommodityName
+            // 
+            this.CommodityName.HeaderText = "商品名称";
+            this.CommodityName.Name = "CommodityName";
+            this.CommodityName.ReadOnly = true;
             // 
             // label6
             // 
@@ -462,26 +495,6 @@ namespace HotelAdmin
             this.lvw_Themessagelist.TabIndex = 0;
             this.lvw_Themessagelist.UseCompatibleStateImageBehavior = false;
             // 
-            // Pl_Interface
-            // 
-            this.Pl_Interface.BackColor = System.Drawing.Color.Beige;
-            this.Pl_Interface.Location = new System.Drawing.Point(200, 0);
-            this.Pl_Interface.Name = "Pl_Interface";
-            this.Pl_Interface.Size = new System.Drawing.Size(1184, 748);
-            this.Pl_Interface.TabIndex = 1;
-            // 
-            // lvw_GoodsList
-            // 
-            this.lvw_GoodsList.HideSelection = false;
-            this.lvw_GoodsList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem1});
-            this.lvw_GoodsList.Location = new System.Drawing.Point(0, 39);
-            this.lvw_GoodsList.Name = "lvw_GoodsList";
-            this.lvw_GoodsList.Size = new System.Drawing.Size(238, 279);
-            this.lvw_GoodsList.TabIndex = 34;
-            this.lvw_GoodsList.UseCompatibleStateImageBehavior = false;
-            this.lvw_GoodsList.View = System.Windows.Forms.View.List;
-            // 
             // HotelWireshark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -502,6 +515,7 @@ namespace HotelAdmin
             this.Pl_MessageLists.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Dgv_GooesList)).EndInit();
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -512,7 +526,6 @@ namespace HotelAdmin
         #endregion
 
         private System.Windows.Forms.Panel Pl_OptionList;
-        private System.Windows.Forms.Panel Pl_Interface;
         private System.Windows.Forms.Button Btn_TopUp;
         private System.Windows.Forms.Button Btn_Reserve;
         private System.Windows.Forms.Button Btn_CheckOut;
@@ -523,25 +536,27 @@ namespace HotelAdmin
         private System.Windows.Forms.Button Btn_RoomKeeper;
         private System.Windows.Forms.Button Btn_OpenInquire;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Panel Pl_MessageLists;
         private System.Windows.Forms.Label lab_name;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.ListView lvw_Themessagelist;
-        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Button Btn_MessageLists;
+        private System.Windows.Forms.Panel Pl_Interface;
+        private System.Windows.Forms.Panel Pl_MessageLists;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.DataGridView Dgv_GooesList;
+        private System.Windows.Forms.DataGridViewTextBoxColumn CommodityName;
+        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label35;
         private System.Windows.Forms.Label label33;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button Btn_MessageLists;
-        private System.Windows.Forms.ListView lvw_GoodsList;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListView lvw_Themessagelist;
     }
 }

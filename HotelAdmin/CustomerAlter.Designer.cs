@@ -46,6 +46,7 @@ namespace HotelAdmin
             // 
             // groupBox1
             // 
+            this.groupBox1.BackColor = System.Drawing.Color.White;
             this.groupBox1.Controls.Add(this.lab_Discount);
             this.groupBox1.Controls.Add(this.cbox_Member);
             this.groupBox1.Controls.Add(this.txt_Balance);
@@ -76,7 +77,7 @@ namespace HotelAdmin
             // 
             // cbox_Member
             // 
-            this.cbox_Member.BackColor = System.Drawing.Color.Beige;
+            this.cbox_Member.BackColor = System.Drawing.Color.White;
             this.cbox_Member.FormattingEnabled = true;
             this.cbox_Member.Location = new System.Drawing.Point(104, 156);
             this.cbox_Member.Name = "cbox_Member";
@@ -86,7 +87,7 @@ namespace HotelAdmin
             // 
             // txt_Balance
             // 
-            this.txt_Balance.BackColor = System.Drawing.Color.Beige;
+            this.txt_Balance.BackColor = System.Drawing.Color.White;
             this.txt_Balance.Location = new System.Drawing.Point(104, 112);
             this.txt_Balance.Name = "txt_Balance";
             this.txt_Balance.Size = new System.Drawing.Size(181, 26);
@@ -94,7 +95,7 @@ namespace HotelAdmin
             // 
             // txt_IDCard
             // 
-            this.txt_IDCard.BackColor = System.Drawing.Color.Beige;
+            this.txt_IDCard.BackColor = System.Drawing.Color.White;
             this.txt_IDCard.Enabled = false;
             this.txt_IDCard.Location = new System.Drawing.Point(104, 68);
             this.txt_IDCard.Name = "txt_IDCard";
@@ -103,7 +104,7 @@ namespace HotelAdmin
             // 
             // txt_Name
             // 
-            this.txt_Name.BackColor = System.Drawing.Color.Beige;
+            this.txt_Name.BackColor = System.Drawing.Color.White;
             this.txt_Name.Location = new System.Drawing.Point(104, 24);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(181, 26);
@@ -159,9 +160,10 @@ namespace HotelAdmin
             this.Alter.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.Alter.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.Alter.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.Alter.ForeColor = System.Drawing.Color.White;
             this.Alter.Location = new System.Drawing.Point(210, 225);
             this.Alter.Name = "Alter";
-            this.Alter.Size = new System.Drawing.Size(75, 27);
+            this.Alter.Size = new System.Drawing.Size(75, 30);
             this.Alter.TabIndex = 11;
             this.Alter.Text = "修 改";
             this.Alter.UseVisualStyleBackColor = false;
@@ -171,7 +173,7 @@ namespace HotelAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(332, 296);
             this.Controls.Add(this.groupBox1);
             this.Name = "CustomerAlter";

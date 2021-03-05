@@ -65,15 +65,13 @@ namespace HotelDAL
                                      select row;
                         return tableN.CopyToDataTable();
                     }
-                    catch (Exception ee)
-                    {
+                    catch {
                         return null;
                     }
                 }
                 return tableNew.CopyToDataTable();
             }
-            catch (Exception ee)
-            {
+            catch {
                 return null;
             }
                 

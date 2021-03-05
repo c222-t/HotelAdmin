@@ -31,6 +31,14 @@ namespace HotelAdmin
         {
             this.components = new System.ComponentModel.Container();
             this.Dgv_GoodsList = new System.Windows.Forms.DataGridView();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Menu_goodsList = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.GoodsAlter = new System.Windows.Forms.ToolStripMenuItem();
             this.GoodsDelete = new System.Windows.Forms.ToolStripMenuItem();
@@ -40,14 +48,6 @@ namespace HotelAdmin
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.AddGoods = new System.Windows.Forms.ToolStripMenuItem();
             this.Exit = new System.Windows.Forms.ToolStripMenuItem();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_GoodsList)).BeginInit();
             this.Menu_goodsList.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -79,8 +79,66 @@ namespace HotelAdmin
             this.Dgv_GoodsList.RowHeadersVisible = false;
             this.Dgv_GoodsList.RowTemplate.Height = 23;
             this.Dgv_GoodsList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_GoodsList.Size = new System.Drawing.Size(942, 414);
+            this.Dgv_GoodsList.Size = new System.Drawing.Size(942, 567);
             this.Dgv_GoodsList.TabIndex = 0;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "Number";
+            this.Column1.HeaderText = "编号";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            this.Column1.Visible = false;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "CommodityName";
+            this.Column2.HeaderText = "名称";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "CommodityUnit";
+            this.Column3.HeaderText = "单位";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Quantity";
+            this.Column4.HeaderText = "数量";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            this.Column5.DataPropertyName = "PurchasePice";
+            this.Column5.HeaderText = "进价";
+            this.Column5.Name = "Column5";
+            this.Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            this.Column6.DataPropertyName = "retail";
+            this.Column6.HeaderText = "零售";
+            this.Column6.Name = "Column6";
+            this.Column6.ReadOnly = true;
+            // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "TypeNumber";
+            this.Column7.HeaderText = "类型";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            this.Column8.DataPropertyName = "Path";
+            this.Column8.HeaderText = "图片路径";
+            this.Column8.Name = "Column8";
+            this.Column8.ReadOnly = true;
+            this.Column8.Visible = false;
             // 
             // Menu_goodsList
             // 
@@ -161,69 +219,11 @@ namespace HotelAdmin
             this.Exit.Text = "返回";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "Number";
-            this.Column1.HeaderText = "编号";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            this.Column1.Visible = false;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "CommodityName";
-            this.Column2.HeaderText = "名称";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "CommodityUnit";
-            this.Column3.HeaderText = "单位";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Quantity";
-            this.Column4.HeaderText = "数量";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            this.Column5.DataPropertyName = "PurchasePice";
-            this.Column5.HeaderText = "进价";
-            this.Column5.Name = "Column5";
-            this.Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            this.Column6.DataPropertyName = "retail";
-            this.Column6.HeaderText = "零售";
-            this.Column6.Name = "Column6";
-            this.Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "TypeNumber";
-            this.Column7.HeaderText = "类型";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            this.Column8.DataPropertyName = "Path";
-            this.Column8.HeaderText = "图片路径";
-            this.Column8.Name = "Column8";
-            this.Column8.ReadOnly = true;
-            this.Column8.Visible = false;
-            // 
             // MerchandiseManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1168, 708);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.Cbox_GoodsType);

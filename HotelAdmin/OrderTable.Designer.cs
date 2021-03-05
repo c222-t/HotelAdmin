@@ -83,19 +83,19 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(411, 36);
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(103, 39);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(93, 16);
+            this.label1.Size = new System.Drawing.Size(90, 21);
             this.label1.TabIndex = 1;
             this.label1.Text = "顾客姓名：";
             // 
             // txtUserName
             // 
-            this.txtUserName.BackColor = System.Drawing.Color.Beige;
-            this.txtUserName.Location = new System.Drawing.Point(496, 33);
+            this.txtUserName.BackColor = System.Drawing.Color.White;
+            this.txtUserName.Location = new System.Drawing.Point(199, 39);
             this.txtUserName.Name = "txtUserName";
-            this.txtUserName.Size = new System.Drawing.Size(100, 21);
+            this.txtUserName.Size = new System.Drawing.Size(136, 21);
             this.txtUserName.TabIndex = 2;
             // 
             // button1
@@ -104,20 +104,22 @@
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(602, 32);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(351, 37);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 25);
             this.button1.TabIndex = 3;
-            this.button1.Text = "查找";
+            this.button1.Text = "查 找";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvYY);
-            this.groupBox1.Location = new System.Drawing.Point(97, 61);
+            this.groupBox1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.groupBox1.Location = new System.Drawing.Point(77, 75);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(961, 413);
+            this.groupBox1.Size = new System.Drawing.Size(1002, 595);
             this.groupBox1.TabIndex = 5;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "预定订单";
@@ -132,7 +134,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvYY.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvYY.BackgroundColor = System.Drawing.Color.Beige;
+            this.dgvYY.BackgroundColor = System.Drawing.Color.White;
             this.dgvYY.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvYY.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvYY.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -155,7 +157,7 @@
             this.dgvYY.RowHeadersVisible = false;
             this.dgvYY.RowTemplate.Height = 23;
             this.dgvYY.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvYY.Size = new System.Drawing.Size(949, 387);
+            this.dgvYY.Size = new System.Drawing.Size(990, 569);
             this.dgvYY.TabIndex = 3;
             // 
             // Column1
@@ -254,7 +256,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1168, 708);
             this.Controls.Add(this.groupBox1);
             this.Controls.Add(this.button1);

@@ -39,16 +39,17 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(45, 40);
+            this.label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(50, 45);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 12);
+            this.label2.Size = new System.Drawing.Size(68, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "支出金额：";
             // 
             // txtJinE
             // 
-            this.txtJinE.BackColor = System.Drawing.Color.Beige;
-            this.txtJinE.Location = new System.Drawing.Point(45, 55);
+            this.txtJinE.BackColor = System.Drawing.Color.White;
+            this.txtJinE.Location = new System.Drawing.Point(52, 69);
             this.txtJinE.Name = "txtJinE";
             this.txtJinE.Size = new System.Drawing.Size(175, 21);
             this.txtJinE.TabIndex = 1;
@@ -57,20 +58,21 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(45, 121);
+            this.label3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label3.Location = new System.Drawing.Point(50, 112);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(65, 12);
+            this.label3.Size = new System.Drawing.Size(68, 17);
             this.label3.TabIndex = 0;
             this.label3.Text = "支出原因：";
             // 
             // txtYuan
             // 
-            this.txtYuan.BackColor = System.Drawing.Color.Beige;
-            this.txtYuan.Location = new System.Drawing.Point(45, 136);
+            this.txtYuan.BackColor = System.Drawing.Color.White;
+            this.txtYuan.Location = new System.Drawing.Point(52, 132);
             this.txtYuan.MaxLength = 25;
             this.txtYuan.Multiline = true;
             this.txtYuan.Name = "txtYuan";
-            this.txtYuan.Size = new System.Drawing.Size(175, 48);
+            this.txtYuan.Size = new System.Drawing.Size(175, 68);
             this.txtYuan.TabIndex = 1;
             // 
             // button1
@@ -78,7 +80,8 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(45, 224);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(52, 224);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 2;
@@ -91,7 +94,8 @@
             this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button2.Location = new System.Drawing.Point(145, 224);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(152, 224);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
@@ -104,7 +108,7 @@
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(280, 275);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);

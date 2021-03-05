@@ -63,7 +63,7 @@ namespace HotelAdmin
             this.Pl_User.Controls.Add(this.Dgv_UserShow);
             this.Pl_User.Location = new System.Drawing.Point(111, 55);
             this.Pl_User.Name = "Pl_User";
-            this.Pl_User.Size = new System.Drawing.Size(940, 483);
+            this.Pl_User.Size = new System.Drawing.Size(940, 602);
             this.Pl_User.TabIndex = 2;
             // 
             // Dgv_UserShow
@@ -73,7 +73,7 @@ namespace HotelAdmin
             this.Dgv_UserShow.AllowUserToResizeColumns = false;
             this.Dgv_UserShow.AllowUserToResizeRows = false;
             this.Dgv_UserShow.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.Dgv_UserShow.BackgroundColor = System.Drawing.Color.Beige;
+            this.Dgv_UserShow.BackgroundColor = System.Drawing.Color.White;
             this.Dgv_UserShow.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.Dgv_UserShow.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.None;
             this.Dgv_UserShow.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
@@ -123,7 +123,7 @@ namespace HotelAdmin
             this.Dgv_UserShow.RowsDefaultCellStyle = dataGridViewCellStyle4;
             this.Dgv_UserShow.RowTemplate.Height = 23;
             this.Dgv_UserShow.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.Dgv_UserShow.Size = new System.Drawing.Size(936, 478);
+            this.Dgv_UserShow.Size = new System.Drawing.Size(936, 598);
             this.Dgv_UserShow.TabIndex = 1;
             // 
             // UserName
@@ -216,7 +216,7 @@ namespace HotelAdmin
             // 
             // Txt_InquireBox
             // 
-            this.Txt_InquireBox.BackColor = System.Drawing.Color.Beige;
+            this.Txt_InquireBox.BackColor = System.Drawing.Color.White;
             this.Txt_InquireBox.Location = new System.Drawing.Point(467, 24);
             this.Txt_InquireBox.Name = "Txt_InquireBox";
             this.Txt_InquireBox.Size = new System.Drawing.Size(233, 21);
@@ -229,7 +229,8 @@ namespace HotelAdmin
             this.Btn_Inquire.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.Btn_Inquire.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.Btn_Inquire.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.Btn_Inquire.Location = new System.Drawing.Point(706, 21);
+            this.Btn_Inquire.ForeColor = System.Drawing.Color.White;
+            this.Btn_Inquire.Location = new System.Drawing.Point(720, 21);
             this.Btn_Inquire.Name = "Btn_Inquire";
             this.Btn_Inquire.Size = new System.Drawing.Size(75, 28);
             this.Btn_Inquire.TabIndex = 5;
@@ -240,7 +241,7 @@ namespace HotelAdmin
             // Lab_Remind
             // 
             this.Lab_Remind.AutoSize = true;
-            this.Lab_Remind.BackColor = System.Drawing.Color.Beige;
+            this.Lab_Remind.BackColor = System.Drawing.Color.White;
             this.Lab_Remind.Enabled = false;
             this.Lab_Remind.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.Lab_Remind.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(153)))), ((int)(((byte)(153)))), ((int)(((byte)(153)))));
@@ -254,7 +255,7 @@ namespace HotelAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1168, 708);
             this.Controls.Add(this.Lab_Remind);
             this.Controls.Add(this.Btn_Inquire);

@@ -28,6 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.button1 = new System.Windows.Forms.Button();
             this.dgvRoom = new System.Windows.Forms.DataGridView();
@@ -97,11 +101,11 @@
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button1.Location = new System.Drawing.Point(523, 13);
+            this.button1.Location = new System.Drawing.Point(558, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(65, 25);
             this.button1.TabIndex = 2;
-            this.button1.Text = "查找";
+            this.button1.Text = "查 找";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
@@ -116,7 +120,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvRoom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvRoom.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvRoom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvRoom.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRoom.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.dgvRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRoom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.Column1,
@@ -132,6 +144,14 @@
             this.dgvRoom.MultiSelect = false;
             this.dgvRoom.Name = "dgvRoom";
             this.dgvRoom.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvRoom.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dgvRoom.RowHeadersVisible = false;
             this.dgvRoom.RowTemplate.Height = 23;
             this.dgvRoom.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -204,10 +224,10 @@
             // 
             // txtRoomName
             // 
-            this.txtRoomName.BackColor = System.Drawing.Color.Beige;
+            this.txtRoomName.BackColor = System.Drawing.Color.White;
             this.txtRoomName.Location = new System.Drawing.Point(417, 14);
             this.txtRoomName.Name = "txtRoomName";
-            this.txtRoomName.Size = new System.Drawing.Size(100, 21);
+            this.txtRoomName.Size = new System.Drawing.Size(135, 21);
             this.txtRoomName.TabIndex = 1;
             // 
             // label1
@@ -241,7 +261,15 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvUser.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dgvUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvUser.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUser.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -261,6 +289,14 @@
             this.dgvUser.MultiSelect = false;
             this.dgvUser.Name = "dgvUser";
             this.dgvUser.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvUser.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvUser.RowHeadersVisible = false;
             this.dgvUser.RowTemplate.Height = 23;
             this.dgvUser.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
@@ -405,7 +441,7 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Location = new System.Drawing.Point(933, 84);
+            this.button3.Location = new System.Drawing.Point(933, 73);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(85, 25);
             this.button3.TabIndex = 2;
@@ -419,7 +455,7 @@
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button2.Location = new System.Drawing.Point(802, 84);
+            this.button2.Location = new System.Drawing.Point(802, 73);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(85, 25);
             this.button2.TabIndex = 2;
@@ -429,7 +465,7 @@
             // 
             // txtZon
             // 
-            this.txtZon.BackColor = System.Drawing.Color.Beige;
+            this.txtZon.BackColor = System.Drawing.Color.White;
             this.txtZon.Enabled = false;
             this.txtZon.Location = new System.Drawing.Point(723, 31);
             this.txtZon.Name = "txtZon";
@@ -449,7 +485,7 @@
             // 
             // txtYinFu
             // 
-            this.txtYinFu.BackColor = System.Drawing.Color.Beige;
+            this.txtYinFu.BackColor = System.Drawing.Color.White;
             this.txtYinFu.Enabled = false;
             this.txtYinFu.Location = new System.Drawing.Point(523, 31);
             this.txtYinFu.Name = "txtYinFu";
@@ -458,7 +494,7 @@
             // 
             // txtLing
             // 
-            this.txtLing.BackColor = System.Drawing.Color.Beige;
+            this.txtLing.BackColor = System.Drawing.Color.White;
             this.txtLing.Enabled = false;
             this.txtLing.Location = new System.Drawing.Point(918, 31);
             this.txtLing.Name = "txtLing";
@@ -485,7 +521,7 @@
             // 
             // txtDingDan
             // 
-            this.txtDingDan.BackColor = System.Drawing.Color.Beige;
+            this.txtDingDan.BackColor = System.Drawing.Color.White;
             this.txtDingDan.Enabled = false;
             this.txtDingDan.Location = new System.Drawing.Point(74, 31);
             this.txtDingDan.Name = "txtDingDan";
@@ -515,7 +551,7 @@
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1168, 708);
             this.Controls.Add(this.groupBox3);
             this.Controls.Add(this.groupBox2);

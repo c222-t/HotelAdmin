@@ -22,13 +22,13 @@ namespace HotelAdmin
         /// </summary>
         static Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
         /// <summary>
-        /// 当前操作界面
-        /// </summary>
-        private Form currentWindow = new Form();
-        /// <summary>
         /// 接收客户消息业务
         /// </summary>
         static Thread listenTo = new Thread(new ParameterizedThreadStart(ReceiveAMessage));
+        /// <summary>
+        /// 当前操作界面
+        /// </summary>
+        private Form currentWindow = new Form();
 
         public HotelWireshark()
         {
@@ -61,6 +61,7 @@ namespace HotelAdmin
         // 打开营业查询界面
         private void Btn_OpenInquire_Click_1(object sender, EventArgs e)
         {
+            CloseTheMessageScreen();
             currentWindow.Close();
             currentWindow = new RevenueTable();
             OpenTheWindow();
@@ -68,6 +69,7 @@ namespace HotelAdmin
         // 打开顾客开单界面
         private void Btn_SalesOrders_Click(object sender, EventArgs e)
         {
+            CloseTheMessageScreen();
             currentWindow.Close();
             currentWindow = new CustomerOrder();
             OpenTheWindow();
@@ -75,6 +77,7 @@ namespace HotelAdmin
         // 打开顾客结账界面
         private void Btn_CheckOut_Click(object sender, EventArgs e)
         {
+            CloseTheMessageScreen();
             currentWindow.Close();
             currentWindow = new CheckOutTable();
             OpenTheWindow();
@@ -82,6 +85,7 @@ namespace HotelAdmin
         // 打开预定管理界面
         private void Btn_Reserve_Click(object sender, EventArgs e)
         {
+            CloseTheMessageScreen();
             currentWindow.Close();
             currentWindow = new OrderTable();
             OpenTheWindow();
@@ -89,6 +93,7 @@ namespace HotelAdmin
         // 打开充值管理界面
         private void Btn_TopUp_Click(object sender, EventArgs e)
         {
+            CloseTheMessageScreen();
             currentWindow.Close();
             currentWindow = new ClientTopUp();
             OpenTheWindow();
@@ -96,6 +101,7 @@ namespace HotelAdmin
         // 打开房间管理界面
         private void Btn_RoomKeeper_Click(object sender, EventArgs e)
         {
+            CloseTheMessageScreen();
             currentWindow.Close();
             currentWindow = new RoomRegulate();
             OpenTheWindow();
@@ -103,6 +109,7 @@ namespace HotelAdmin
         // 打开客户管理界面
         private void Btn_Customer_Click(object sender, EventArgs e)
         {
+            CloseTheMessageScreen();
             currentWindow.Close();
             currentWindow = new CustomerManage();
             OpenTheWindow();
@@ -120,6 +127,13 @@ namespace HotelAdmin
             currentWindow.Close();
             currentWindow = new MerchandiseManage();
             OpenTheWindow();
+        }
+        /// <summary>
+        /// 关闭消息显示界面
+        /// </summary>
+        private void CloseTheMessageScreen()
+        {
+            if (Pl_MessageLists.Visible) { Pl_MessageLists.Visible = false; }
         }
         /// <summary>
         /// 打开指定的窗口界面
@@ -268,7 +282,7 @@ namespace HotelAdmin
         // 主界面关闭时将系统临时数据上传到数据库
         private void HotelWireshark_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //new AdministratorManager().UploadData();
+            new AdministratorManager().UploadData();
         }
     }
 }

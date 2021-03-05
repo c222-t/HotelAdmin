@@ -98,7 +98,7 @@
             // 
             // txtYuE
             // 
-            this.txtYuE.BackColor = System.Drawing.Color.Beige;
+            this.txtYuE.BackColor = System.Drawing.Color.White;
             this.txtYuE.Enabled = false;
             this.txtYuE.Location = new System.Drawing.Point(280, 547);
             this.txtYuE.Name = "txtYuE";
@@ -109,15 +109,16 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(215, 551);
+            this.label2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Location = new System.Drawing.Point(206, 549);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(65, 12);
+            this.label2.Size = new System.Drawing.Size(68, 17);
             this.label2.TabIndex = 3;
             this.label2.Text = "余额收入：";
             // 
             // txtXZ
             // 
-            this.txtXZ.BackColor = System.Drawing.Color.Beige;
+            this.txtXZ.BackColor = System.Drawing.Color.White;
             this.txtXZ.Enabled = false;
             this.txtXZ.Location = new System.Drawing.Point(83, 546);
             this.txtXZ.Name = "txtXZ";
@@ -128,9 +129,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 550);
+            this.label1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label1.Location = new System.Drawing.Point(9, 548);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(65, 12);
+            this.label1.Size = new System.Drawing.Size(68, 17);
             this.label1.TabIndex = 3;
             this.label1.Text = "现金收入：";
             // 
@@ -144,7 +146,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvRoom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRoom.BackgroundColor = System.Drawing.Color.Beige;
+            this.dgvRoom.BackgroundColor = System.Drawing.Color.White;
             this.dgvRoom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRoom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -208,9 +210,9 @@
             // 
             // txtShang
             // 
-            this.txtShang.BackColor = System.Drawing.Color.Beige;
+            this.txtShang.BackColor = System.Drawing.Color.White;
             this.txtShang.Enabled = false;
-            this.txtShang.Location = new System.Drawing.Point(144, 253);
+            this.txtShang.Location = new System.Drawing.Point(78, 252);
             this.txtShang.Name = "txtShang";
             this.txtShang.Size = new System.Drawing.Size(100, 21);
             this.txtShang.TabIndex = 4;
@@ -219,7 +221,8 @@
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(79, 257);
+            this.label7.BackColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(7, 255);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(65, 12);
             this.label7.TabIndex = 3;
@@ -267,7 +270,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvShang.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvShang.BackgroundColor = System.Drawing.Color.Beige;
+            this.dgvShang.BackgroundColor = System.Drawing.Color.White;
             this.dgvShang.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvShang.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvShang.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -315,7 +318,7 @@
             // 
             // txtChongZhi
             // 
-            this.txtChongZhi.BackColor = System.Drawing.Color.Beige;
+            this.txtChongZhi.BackColor = System.Drawing.Color.White;
             this.txtChongZhi.Enabled = false;
             this.txtChongZhi.Location = new System.Drawing.Point(144, 260);
             this.txtChongZhi.Name = "txtChongZhi";
@@ -326,9 +329,10 @@
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(79, 264);
+            this.label8.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label8.Location = new System.Drawing.Point(70, 262);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(65, 12);
+            this.label8.Size = new System.Drawing.Size(68, 17);
             this.label8.TabIndex = 3;
             this.label8.Text = "充值营收：";
             // 
@@ -374,7 +378,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUR.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUR.BackgroundColor = System.Drawing.Color.Beige;
+            this.dgvUR.BackgroundColor = System.Drawing.Color.White;
             this.dgvUR.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvUR.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUR.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -434,7 +438,7 @@
             // 
             // txtZhiChu
             // 
-            this.txtZhiChu.BackColor = System.Drawing.Color.Beige;
+            this.txtZhiChu.BackColor = System.Drawing.Color.White;
             this.txtZhiChu.Enabled = false;
             this.txtZhiChu.Location = new System.Drawing.Point(196, 546);
             this.txtZhiChu.Name = "txtZhiChu";
@@ -445,9 +449,10 @@
             // label10
             // 
             this.label10.AutoSize = true;
-            this.label10.Location = new System.Drawing.Point(125, 550);
+            this.label10.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label10.Location = new System.Drawing.Point(120, 548);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(65, 12);
+            this.label10.Size = new System.Drawing.Size(68, 17);
             this.label10.TabIndex = 3;
             this.label10.Text = "支出总计：";
             // 
@@ -461,7 +466,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvZhiChu.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvZhiChu.BackgroundColor = System.Drawing.Color.Beige;
+            this.dgvZhiChu.BackgroundColor = System.Drawing.Color.White;
             this.dgvZhiChu.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvZhiChu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvZhiChu.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -540,7 +545,9 @@
             this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(876, 23);
+            this.button1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(483, 20);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(100, 25);
             this.button1.TabIndex = 6;
@@ -552,7 +559,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1168, 708);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.dtpJie);

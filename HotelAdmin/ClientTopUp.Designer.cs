@@ -30,10 +30,10 @@ namespace HotelAdmin
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.dgv_Commodity = new System.Windows.Forms.DataGridView();
@@ -68,13 +68,13 @@ namespace HotelAdmin
             this.panel3 = new System.Windows.Forms.Panel();
             this.label9 = new System.Windows.Forms.Label();
             this.dgv_topUpRecord = new System.Windows.Forms.DataGridView();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.Delete = new System.Windows.Forms.ToolStripMenuItem();
             this.UserRechargeID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RechargeBalance = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.identity = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.RechargeTime = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CommodityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.Delete = new System.Windows.Forms.ToolStripMenuItem();
             this.panel1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgv_Commodity)).BeginInit();
@@ -90,7 +90,7 @@ namespace HotelAdmin
             // 
             // panel1
             // 
-            this.panel1.BackColor = System.Drawing.Color.Beige;
+            this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
@@ -118,7 +118,7 @@ namespace HotelAdmin
             this.dgv_Commodity.AllowUserToResizeColumns = false;
             this.dgv_Commodity.AllowUserToResizeRows = false;
             this.dgv_Commodity.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Commodity.BackgroundColor = System.Drawing.Color.Beige;
+            this.dgv_Commodity.BackgroundColor = System.Drawing.Color.White;
             this.dgv_Commodity.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Commodity.ColumnHeadersVisible = false;
             this.dgv_Commodity.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -228,6 +228,7 @@ namespace HotelAdmin
             this.recharge.Enabled = false;
             this.recharge.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.recharge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.recharge.ForeColor = System.Drawing.Color.White;
             this.recharge.Location = new System.Drawing.Point(120, 214);
             this.recharge.Name = "recharge";
             this.recharge.Size = new System.Drawing.Size(75, 34);
@@ -288,7 +289,7 @@ namespace HotelAdmin
             // 
             // cbox_Member
             // 
-            this.cbox_Member.BackColor = System.Drawing.Color.Beige;
+            this.cbox_Member.BackColor = System.Drawing.Color.White;
             this.cbox_Member.Enabled = false;
             this.cbox_Member.FormattingEnabled = true;
             this.cbox_Member.Location = new System.Drawing.Point(120, 173);
@@ -333,7 +334,7 @@ namespace HotelAdmin
             // 
             // Txt_Name
             // 
-            this.Txt_Name.BackColor = System.Drawing.Color.Beige;
+            this.Txt_Name.BackColor = System.Drawing.Color.White;
             this.Txt_Name.Location = new System.Drawing.Point(32, 30);
             this.Txt_Name.Name = "Txt_Name";
             this.Txt_Name.Size = new System.Drawing.Size(179, 26);
@@ -345,6 +346,7 @@ namespace HotelAdmin
             this.inquire.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.inquire.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.inquire.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.inquire.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.inquire.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.inquire.Location = new System.Drawing.Point(217, 29);
             this.inquire.Name = "inquire";
@@ -356,7 +358,7 @@ namespace HotelAdmin
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.Beige;
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.dgv_Client);
             this.panel2.Location = new System.Drawing.Point(12, 12);
@@ -379,16 +381,16 @@ namespace HotelAdmin
             this.dgv_Client.AllowUserToAddRows = false;
             this.dgv_Client.AllowUserToDeleteRows = false;
             this.dgv_Client.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_Client.BackgroundColor = System.Drawing.Color.Beige;
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle5.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle5.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_Client.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            this.dgv_Client.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_Client.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
             this.dgv_Client.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_Client.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UserName,
@@ -402,8 +404,8 @@ namespace HotelAdmin
             this.dgv_Client.ReadOnly = true;
             this.dgv_Client.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dgv_Client.RowHeadersVisible = false;
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgv_Client.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgv_Client.RowsDefaultCellStyle = dataGridViewCellStyle8;
             this.dgv_Client.RowTemplate.Height = 23;
             this.dgv_Client.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_Client.Size = new System.Drawing.Size(747, 301);
@@ -447,7 +449,7 @@ namespace HotelAdmin
             // 
             // panel3
             // 
-            this.panel3.BackColor = System.Drawing.Color.Beige;
+            this.panel3.BackColor = System.Drawing.Color.White;
             this.panel3.Controls.Add(this.label9);
             this.panel3.Controls.Add(this.dgv_topUpRecord);
             this.panel3.Location = new System.Drawing.Point(12, 390);
@@ -469,16 +471,16 @@ namespace HotelAdmin
             // 
             this.dgv_topUpRecord.AllowUserToAddRows = false;
             this.dgv_topUpRecord.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgv_topUpRecord.BackgroundColor = System.Drawing.Color.Beige;
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle7.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle7.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle7.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
-            dataGridViewCellStyle7.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle7.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle7.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgv_topUpRecord.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle7;
+            this.dgv_topUpRecord.BackgroundColor = System.Drawing.Color.White;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(15, 0, 0, 0);
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgv_topUpRecord.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle11;
             this.dgv_topUpRecord.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgv_topUpRecord.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.UserRechargeID,
@@ -492,26 +494,12 @@ namespace HotelAdmin
             this.dgv_topUpRecord.Name = "dgv_topUpRecord";
             this.dgv_topUpRecord.ReadOnly = true;
             this.dgv_topUpRecord.RowHeadersVisible = false;
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.dgv_topUpRecord.RowsDefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.dgv_topUpRecord.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.dgv_topUpRecord.RowTemplate.Height = 23;
             this.dgv_topUpRecord.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgv_topUpRecord.Size = new System.Drawing.Size(747, 272);
             this.dgv_topUpRecord.TabIndex = 70;
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.Delete});
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 26);
-            // 
-            // Delete
-            // 
-            this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(100, 22);
-            this.Delete.Text = "删除";
-            this.Delete.Click += new System.EventHandler(this.Delete_Click);
             // 
             // UserRechargeID
             // 
@@ -550,11 +538,25 @@ namespace HotelAdmin
             this.CommodityName.Name = "CommodityName";
             this.CommodityName.ReadOnly = true;
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Delete});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(101, 26);
+            // 
+            // Delete
+            // 
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(100, 22);
+            this.Delete.Text = "删除";
+            this.Delete.Click += new System.EventHandler(this.Delete_Click);
+            // 
             // ClientTopUp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1168, 708);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);

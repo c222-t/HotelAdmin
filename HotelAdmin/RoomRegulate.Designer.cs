@@ -28,10 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("全部");
+            System.Windows.Forms.TreeNode treeNode3 = new System.Windows.Forms.TreeNode("全部");
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RoomRegulate));
             this.tvCaiDan = new System.Windows.Forms.TreeView();
             this.dgvRoom = new System.Windows.Forms.DataGridView();
+            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.dgvUser = new System.Windows.Forms.DataGridView();
@@ -46,11 +51,6 @@
             this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
             this.toolStripButton3 = new System.Windows.Forms.ToolStripButton();
-            this.Column7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dgvRoom)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvUser)).BeginInit();
             this.tsC.SuspendLayout();
@@ -58,14 +58,14 @@
             // 
             // tvCaiDan
             // 
-            this.tvCaiDan.BackColor = System.Drawing.Color.Beige;
+            this.tvCaiDan.BackColor = System.Drawing.Color.White;
             this.tvCaiDan.Dock = System.Windows.Forms.DockStyle.Left;
             this.tvCaiDan.Location = new System.Drawing.Point(0, 0);
             this.tvCaiDan.Name = "tvCaiDan";
-            treeNode2.Name = "节点0";
-            treeNode2.Text = "全部";
+            treeNode3.Name = "节点0";
+            treeNode3.Text = "全部";
             this.tvCaiDan.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
+            treeNode3});
             this.tvCaiDan.Size = new System.Drawing.Size(158, 708);
             this.tvCaiDan.TabIndex = 0;
             this.tvCaiDan.AfterSelect += new System.Windows.Forms.TreeViewEventHandler(this.TvCaiDan_AfterSelect);
@@ -80,7 +80,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvRoom.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvRoom.BackgroundColor = System.Drawing.Color.Beige;
+            this.dgvRoom.BackgroundColor = System.Drawing.Color.White;
             this.dgvRoom.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvRoom.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvRoom.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -100,8 +100,45 @@
             this.dgvRoom.TabIndex = 1;
             this.dgvRoom.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.DgvRoom_CellContentClick);
             // 
+            // Column7
+            // 
+            this.Column7.DataPropertyName = "IDCard";
+            this.Column7.HeaderText = "身份证号";
+            this.Column7.Name = "Column7";
+            this.Column7.ReadOnly = true;
+            this.Column7.Visible = false;
+            // 
+            // Column1
+            // 
+            this.Column1.DataPropertyName = "RoomNumber";
+            this.Column1.HeaderText = "房间号";
+            this.Column1.Name = "Column1";
+            this.Column1.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            this.Column3.DataPropertyName = "statusName";
+            this.Column3.HeaderText = "房间状态";
+            this.Column3.Name = "Column3";
+            this.Column3.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            this.Column2.DataPropertyName = "Floor";
+            this.Column2.HeaderText = "楼层";
+            this.Column2.Name = "Column2";
+            this.Column2.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            this.Column4.DataPropertyName = "Name";
+            this.Column4.HeaderText = "房间类型";
+            this.Column4.Name = "Column4";
+            this.Column4.ReadOnly = true;
+            // 
             // label1
             // 
+            this.label1.BackColor = System.Drawing.Color.WhiteSmoke;
             this.label1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.Location = new System.Drawing.Point(194, 1);
             this.label1.Name = "label1";
@@ -128,7 +165,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvUser.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvUser.BackgroundColor = System.Drawing.Color.Beige;
+            this.dgvUser.BackgroundColor = System.Drawing.Color.White;
             this.dgvUser.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvUser.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvUser.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
@@ -200,6 +237,7 @@
             // 
             // tsC
             // 
+            this.tsC.BackColor = System.Drawing.Color.White;
             this.tsC.Dock = System.Windows.Forms.DockStyle.Left;
             this.tsC.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripButton1,
@@ -244,47 +282,11 @@
             this.toolStripButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.toolStripButton3.Click += new System.EventHandler(this.ToolStripButton3_Click);
             // 
-            // Column7
-            // 
-            this.Column7.DataPropertyName = "IDCard";
-            this.Column7.HeaderText = "身份证号";
-            this.Column7.Name = "Column7";
-            this.Column7.ReadOnly = true;
-            this.Column7.Visible = false;
-            // 
-            // Column1
-            // 
-            this.Column1.DataPropertyName = "RoomNumber";
-            this.Column1.HeaderText = "房间号";
-            this.Column1.Name = "Column1";
-            this.Column1.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            this.Column3.DataPropertyName = "statusName";
-            this.Column3.HeaderText = "房间状态";
-            this.Column3.Name = "Column3";
-            this.Column3.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            this.Column2.DataPropertyName = "Floor";
-            this.Column2.HeaderText = "楼层";
-            this.Column2.Name = "Column2";
-            this.Column2.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            this.Column4.DataPropertyName = "Name";
-            this.Column4.HeaderText = "房间类型";
-            this.Column4.Name = "Column4";
-            this.Column4.ReadOnly = true;
-            // 
             // RoomRegulate
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.WhiteSmoke;
             this.ClientSize = new System.Drawing.Size(1168, 708);
             this.Controls.Add(this.tsC);
             this.Controls.Add(this.dgvUser);

@@ -41,7 +41,7 @@ namespace HotelAdmin
 
         private void 新增员工ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            pnBan.Visible = true;
+            groupBox3.Visible = true;
             cbQuan.SelectedIndex = 0;
         }
 
@@ -57,7 +57,7 @@ namespace HotelAdmin
             {
                 MessageBox.Show("操作成功");
                 dgvAdministr.DataSource = am.AdministrTable(txtZH.Text.Trim());
-                pnBan.Visible = false;
+                groupBox3.Visible = false;
             }
             else
             {
@@ -68,7 +68,7 @@ namespace HotelAdmin
 
         private void Button2_Click(object sender, EventArgs e)
         {
-            pnBan.Visible = false;
+            groupBox3.Visible = false;
         }
 
         private void Button3_Click(object sender, EventArgs e)
@@ -97,7 +97,7 @@ namespace HotelAdmin
             {
                 MessageBox.Show("操作成功");
                 dgvAdministr.DataSource = am.AdministrTable(txtZH.Text.Trim());
-                pnBan.Visible = false;
+                groupBox3.Visible = false;
             }
             else
             {

@@ -31,7 +31,6 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Regard));
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.lblSJ = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
@@ -43,6 +42,7 @@
             this.label8 = new System.Windows.Forms.Label();
             this.label9 = new System.Windows.Forms.Label();
             this.label10 = new System.Windows.Forms.Label();
+            this.lblSJ = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -55,17 +55,6 @@
             this.pictureBox1.Size = new System.Drawing.Size(121, 120);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // lblSJ
-            // 
-            this.lblSJ.AutoSize = true;
-            this.lblSJ.BackColor = System.Drawing.Color.Transparent;
-            this.lblSJ.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblSJ.Location = new System.Drawing.Point(81, 9);
-            this.lblSJ.Name = "lblSJ";
-            this.lblSJ.Size = new System.Drawing.Size(62, 16);
-            this.lblSJ.TabIndex = 1;
-            this.lblSJ.Text = "label1";
             // 
             // timer1
             // 
@@ -183,6 +172,17 @@
             this.label10.TabIndex = 1;
             this.label10.Text = "张海波";
             // 
+            // lblSJ
+            // 
+            this.lblSJ.AutoSize = true;
+            this.lblSJ.BackColor = System.Drawing.Color.Transparent;
+            this.lblSJ.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold);
+            this.lblSJ.Location = new System.Drawing.Point(14, 27);
+            this.lblSJ.Name = "lblSJ";
+            this.lblSJ.Size = new System.Drawing.Size(53, 16);
+            this.lblSJ.TabIndex = 2;
+            this.lblSJ.Text = "lblSJ";
+            // 
             // Regard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -190,6 +190,7 @@
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(569, 492);
+            this.Controls.Add(this.lblSJ);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label10);
             this.Controls.Add(this.label8);
@@ -200,7 +201,6 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.lblSJ);
             this.Controls.Add(this.pictureBox1);
             this.Name = "Regard";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -215,7 +215,6 @@
         #endregion
 
         private System.Windows.Forms.PictureBox pictureBox1;
-        private System.Windows.Forms.Label lblSJ;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
@@ -227,5 +226,6 @@
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label lblSJ;
     }
 }

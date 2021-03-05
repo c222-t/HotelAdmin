@@ -41,7 +41,7 @@ namespace HotelAdmin
             // txtName
             // 
             this.txtName.BackColor = System.Drawing.Color.Beige;
-            this.txtName.Location = new System.Drawing.Point(351, 173);
+            this.txtName.Location = new System.Drawing.Point(385, 172);
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(181, 21);
             this.txtName.TabIndex = 1;
@@ -49,7 +49,7 @@ namespace HotelAdmin
             // txtPwd
             // 
             this.txtPwd.BackColor = System.Drawing.Color.Beige;
-            this.txtPwd.Location = new System.Drawing.Point(351, 222);
+            this.txtPwd.Location = new System.Drawing.Point(385, 221);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(181, 21);
             this.txtPwd.TabIndex = 2;
@@ -60,7 +60,7 @@ namespace HotelAdmin
             this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(348, 153);
+            this.label1.Location = new System.Drawing.Point(311, 172);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(68, 16);
             this.label1.TabIndex = 1;
@@ -72,7 +72,7 @@ namespace HotelAdmin
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(348, 203);
+            this.label2.Location = new System.Drawing.Point(328, 221);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(51, 16);
             this.label2.TabIndex = 1;
@@ -80,12 +80,12 @@ namespace HotelAdmin
             // 
             // button1
             // 
-            this.button1.BackColor = System.Drawing.Color.Beige;
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button1.Location = new System.Drawing.Point(351, 269);
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(385, 268);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 24);
             this.button1.TabIndex = 3;
@@ -95,12 +95,12 @@ namespace HotelAdmin
             // 
             // button2
             // 
-            this.button2.BackColor = System.Drawing.Color.Beige;
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.button2.Location = new System.Drawing.Point(457, 269);
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(491, 268);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 24);
             this.button2.TabIndex = 3;
