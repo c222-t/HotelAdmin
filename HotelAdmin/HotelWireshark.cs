@@ -246,11 +246,5 @@ namespace HotelAdmin
 
         #endregion
 
-        /*---------------- 监听顾客需求业务 ----------------*/
-        static void ReceivingTheQuery(object obj)
-        {
-            
-        }
-
     }
 }
