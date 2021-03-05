@@ -12,6 +12,9 @@ using HotelBLL;
 
 namespace HotelAdmin
 {
+    /// <summary>
+    /// 商品管理窗口
+    /// </summary>
     public partial class MerchandiseManage : Form
     {
         /// <summary>
@@ -84,7 +87,8 @@ namespace HotelAdmin
                     Quantity = int.Parse(Dgv_GoodsList.SelectedCells[3].Value.ToString()),
                     PurchasePice = double.Parse(Dgv_GoodsList.SelectedCells[4].Value.ToString()),
                     Retail = double.Parse(Dgv_GoodsList.SelectedCells[5].Value.ToString()),
-                    Type = new CommodityTypeTable { TypeName = Dgv_GoodsList.SelectedCells[6].Value.ToString() }
+                    Type = new CommodityTypeTable { TypeName = Dgv_GoodsList.SelectedCells[6].Value.ToString() },
+                    Path = Dgv_GoodsList.SelectedCells[7].Value.ToString()
                 },
                 Manage = this,
             };
@@ -122,7 +126,6 @@ namespace HotelAdmin
         }
         ~MerchandiseManage()
         {
-            this.goodsRedact.Close();
             this.typeList = null;
             this.manager = null;
             this.goodsRedact = null;

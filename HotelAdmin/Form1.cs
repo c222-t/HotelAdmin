@@ -56,7 +56,7 @@ namespace HotelAdmin
                 if (asd != 0)
                 {
                     MessageBox.Show("登录成功");
-                    Cun.No = asd;
+                    Cun.ID = asd;
                     Cun.Name = txtName.Text.Trim();
                     Cun.Pwd = txtPwd.Text.Trim();
                     MainInterface frm = new MainInterface();

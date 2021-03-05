@@ -49,7 +49,7 @@
             this.Column10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.取消预定ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.Cancellation = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvYY)).BeginInit();
@@ -239,11 +239,11 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.取消预定ToolStripMenuItem});
+            this.Cancellation});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(125, 26);
             // 
-            // 取消预定ToolStripMenuItem
+            // Cancellation
             // 
             this.取消预定ToolStripMenuItem.Name = "取消预定ToolStripMenuItem";
             this.取消预定ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
@@ -298,6 +298,6 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn Column10;
         private System.Windows.Forms.DataGridViewTextBoxColumn Column11;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 取消预定ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem Cancellation;
     }
 }

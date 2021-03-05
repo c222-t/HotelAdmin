@@ -192,6 +192,7 @@ namespace HotelAdmin
         }
         ~CustomerOrder()
         {
+            this.frm = null;
             this.userManager = null;
             this.orderManager = null;
             this.roomType = null;

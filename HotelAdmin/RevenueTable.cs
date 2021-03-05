@@ -12,6 +12,9 @@ using HotelModel;
 
 namespace HotelAdmin
 {
+    /// <summary>
+    /// 酒店营收记录窗口
+    /// </summary>
     public partial class RevenueTable : Form
     {
         UserRechargeTableManager urtm = new UserRechargeTableManager();
@@ -121,6 +124,13 @@ namespace HotelAdmin
             ExpendInsert ei = new ExpendInsert();
             ei.rt = this;
             ei.Show();
+        }
+        ~RevenueTable()
+        {
+            this.urtm = null;
+            this.etm = null;
+            this.crm = null;
+            this.stm = null;
         }
     }
 }

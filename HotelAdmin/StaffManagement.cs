@@ -12,6 +12,9 @@ using HotelModel;
 
 namespace HotelAdmin
 {
+    /// <summary>
+    /// 员工管理窗口
+    /// </summary>
     public partial class StaffManagement : Form
     {
         AdministratorManager am = new AdministratorManager();
@@ -87,7 +90,7 @@ namespace HotelAdmin
             {
                 AdministratorName = txtZHnew.Text.Trim(),
                 Password = int.Parse(txtPwd.Text.Trim()),
-                jurisdiction = int.Parse(cbQuan.Text.Trim())
+                Jurisdiction = int.Parse(cbQuan.Text.Trim())
             };
 
             if (am.AdminisreInsert(at) > 0)
@@ -102,6 +105,9 @@ namespace HotelAdmin
             }
                     
         }
-
+        ~StaffManagement()
+        {
+            this.am = null;
+        }
     }
 }

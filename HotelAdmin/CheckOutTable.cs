@@ -13,9 +13,13 @@ using HotelModel;
 
 namespace HotelAdmin
 {
+    /// <summary>
+    /// 结账窗口
+    /// </summary>
     public partial class CheckOutTable : Form
     {
         StatementTableManager stm = new StatementTableManager();
+
         public CheckOutTable()
         {
             InitializeComponent();
@@ -213,6 +217,10 @@ namespace HotelAdmin
             txtYinFu.Text = "";
             txtZon.Text = "";
             cbFuKuan.Text = "";
+        }
+        ~CheckOutTable()
+        {
+            this.stm = null;
         }
     }
 }

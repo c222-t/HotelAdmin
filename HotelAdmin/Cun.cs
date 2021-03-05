@@ -8,8 +8,17 @@ namespace HotelAdmin
 {
     public static class Cun
     {
+        /// <summary>
+        /// 当前登录用户编号
+        /// </summary>
+        public static int ID { get; set; }
+        /// <summary>
+        /// 用户名称
+        /// </summary>
         public static string Name { get; set; }
+        /// <summary>
+        /// 用户密码
+        /// </summary>
         public static string Pwd { get; set; }
-        public static int No { get; set; }
     }
 }

@@ -31,13 +31,6 @@ namespace HotelAdmin
         {
             this.components = new System.ComponentModel.Container();
             this.Dgv_GoodsList = new System.Windows.Forms.DataGridView();
-            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CommodityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.CommodityUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PurchasePice = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.retail = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.TypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Menu_goodsList = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.GoodsAlter = new System.Windows.Forms.ToolStripMenuItem();
             this.GoodsDelete = new System.Windows.Forms.ToolStripMenuItem();
@@ -47,6 +40,14 @@ namespace HotelAdmin
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.AddGoods = new System.Windows.Forms.ToolStripMenuItem();
             this.Exit = new System.Windows.Forms.ToolStripMenuItem();
+            this.Number = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CommodityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.CommodityUnit = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Quantity = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.PurchasePice = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.retail = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.TypeName = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Path = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_GoodsList)).BeginInit();
             this.Menu_goodsList.SuspendLayout();
             this.menuStrip1.SuspendLayout();
@@ -68,7 +69,8 @@ namespace HotelAdmin
             this.Quantity,
             this.PurchasePice,
             this.retail,
-            this.TypeName});
+            this.TypeName,
+            this.Path});
             this.Dgv_GoodsList.ContextMenuStrip = this.Menu_goodsList;
             this.Dgv_GoodsList.Location = new System.Drawing.Point(116, 71);
             this.Dgv_GoodsList.MultiSelect = false;
@@ -78,57 +80,6 @@ namespace HotelAdmin
             this.Dgv_GoodsList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.Dgv_GoodsList.Size = new System.Drawing.Size(942, 414);
             this.Dgv_GoodsList.TabIndex = 0;
-            // 
-            // Number
-            // 
-            this.Number.DataPropertyName = "Number";
-            this.Number.Frozen = true;
-            this.Number.HeaderText = "编号";
-            this.Number.Name = "Number";
-            this.Number.ReadOnly = true;
-            this.Number.Visible = false;
-            // 
-            // CommodityName
-            // 
-            this.CommodityName.DataPropertyName = "CommodityName";
-            this.CommodityName.HeaderText = "名称";
-            this.CommodityName.Name = "CommodityName";
-            this.CommodityName.ReadOnly = true;
-            // 
-            // CommodityUnit
-            // 
-            this.CommodityUnit.DataPropertyName = "CommodityUnit";
-            this.CommodityUnit.HeaderText = "单位";
-            this.CommodityUnit.Name = "CommodityUnit";
-            this.CommodityUnit.ReadOnly = true;
-            // 
-            // Quantity
-            // 
-            this.Quantity.DataPropertyName = "Quantity";
-            this.Quantity.HeaderText = "数量";
-            this.Quantity.Name = "Quantity";
-            this.Quantity.ReadOnly = true;
-            // 
-            // PurchasePice
-            // 
-            this.PurchasePice.DataPropertyName = "PurchasePice";
-            this.PurchasePice.HeaderText = "进价";
-            this.PurchasePice.Name = "PurchasePice";
-            this.PurchasePice.ReadOnly = true;
-            // 
-            // retail
-            // 
-            this.retail.DataPropertyName = "retail";
-            this.retail.HeaderText = "零售";
-            this.retail.Name = "retail";
-            this.retail.ReadOnly = true;
-            // 
-            // TypeName
-            // 
-            this.TypeName.DataPropertyName = "TypeName";
-            this.TypeName.HeaderText = "类型";
-            this.TypeName.Name = "TypeName";
-            this.TypeName.ReadOnly = true;
             // 
             // Menu_goodsList
             // 
@@ -209,6 +160,64 @@ namespace HotelAdmin
             this.Exit.Text = "返回";
             this.Exit.Click += new System.EventHandler(this.Exit_Click);
             // 
+            // Number
+            // 
+            this.Number.DataPropertyName = "Number";
+            this.Number.Frozen = true;
+            this.Number.HeaderText = "编号";
+            this.Number.Name = "Number";
+            this.Number.ReadOnly = true;
+            this.Number.Visible = false;
+            // 
+            // CommodityName
+            // 
+            this.CommodityName.DataPropertyName = "CommodityName";
+            this.CommodityName.HeaderText = "名称";
+            this.CommodityName.Name = "CommodityName";
+            this.CommodityName.ReadOnly = true;
+            // 
+            // CommodityUnit
+            // 
+            this.CommodityUnit.DataPropertyName = "CommodityUnit";
+            this.CommodityUnit.HeaderText = "单位";
+            this.CommodityUnit.Name = "CommodityUnit";
+            this.CommodityUnit.ReadOnly = true;
+            // 
+            // Quantity
+            // 
+            this.Quantity.DataPropertyName = "Quantity";
+            this.Quantity.HeaderText = "数量";
+            this.Quantity.Name = "Quantity";
+            this.Quantity.ReadOnly = true;
+            // 
+            // PurchasePice
+            // 
+            this.PurchasePice.DataPropertyName = "PurchasePice";
+            this.PurchasePice.HeaderText = "进价";
+            this.PurchasePice.Name = "PurchasePice";
+            this.PurchasePice.ReadOnly = true;
+            // 
+            // retail
+            // 
+            this.retail.DataPropertyName = "retail";
+            this.retail.HeaderText = "零售";
+            this.retail.Name = "retail";
+            this.retail.ReadOnly = true;
+            // 
+            // TypeName
+            // 
+            this.TypeName.DataPropertyName = "TypeName";
+            this.TypeName.HeaderText = "类型";
+            this.TypeName.Name = "TypeName";
+            this.TypeName.ReadOnly = true;
+            // 
+            // Path
+            // 
+            this.Path.HeaderText = "图片路径";
+            this.Path.Name = "Path";
+            this.Path.ReadOnly = true;
+            this.Path.Visible = false;
+            // 
             // MerchandiseManage
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -238,6 +247,12 @@ namespace HotelAdmin
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox Cbox_GoodsType;
+        private System.Windows.Forms.ContextMenuStrip Menu_goodsList;
+        private System.Windows.Forms.ToolStripMenuItem GoodsAlter;
+        private System.Windows.Forms.ToolStripMenuItem GoodsDelete;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem AddGoods;
+        private System.Windows.Forms.ToolStripMenuItem Exit;
         private System.Windows.Forms.DataGridViewTextBoxColumn Number;
         private System.Windows.Forms.DataGridViewTextBoxColumn CommodityName;
         private System.Windows.Forms.DataGridViewTextBoxColumn CommodityUnit;
@@ -245,11 +260,6 @@ namespace HotelAdmin
         private System.Windows.Forms.DataGridViewTextBoxColumn PurchasePice;
         private System.Windows.Forms.DataGridViewTextBoxColumn retail;
         private System.Windows.Forms.DataGridViewTextBoxColumn TypeName;
-        private System.Windows.Forms.ContextMenuStrip Menu_goodsList;
-        private System.Windows.Forms.ToolStripMenuItem GoodsAlter;
-        private System.Windows.Forms.ToolStripMenuItem GoodsDelete;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem AddGoods;
-        private System.Windows.Forms.ToolStripMenuItem Exit;
+        private System.Windows.Forms.DataGridViewTextBoxColumn Path;
     }
 }

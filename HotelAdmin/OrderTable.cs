@@ -12,9 +12,14 @@ using HotelModel;
 
 namespace HotelAdmin
 {
+    /// <summary>
+    /// 预定管理窗口
+    /// </summary>
     public partial class OrderTable : Form
     {
         StatementTableManager stm = new StatementTableManager();
+        CustomerOrder frm;
+
         public OrderTable()
         {
             InitializeComponent();
@@ -37,16 +42,21 @@ namespace HotelAdmin
 
         private void 预定房间ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            CustomerOrder frm = new CustomerOrder();
-            frm.frm = this;
+            frm = new CustomerOrder() { frm = this };
             frm.Show();
         }
-
-        private void 取消预定ToolStripMenuItem_Click(object sender, EventArgs e)
+        // 取消预定
+        private void Cancellation_Click(object sender, EventArgs e)
         {
             OrderManager om = new OrderManager();
-            om.DeleteOrderRecord(new StatementTable() { OrderNumber = dgvYY.SelectedRows[0].Cells[0].Value.ToString() });
+            om.DeleteOrderRecord(new StatementTable() { OrderNumber = dgvYY.SelectedRows[0].Cells[0].Value.ToString().Trim() });
             ShuaXin();
+        }
+        ~OrderTable()
+        {
+            this.frm.Close();
+            this.frm = null;
+            this.stm = null;
         }
     }
 }

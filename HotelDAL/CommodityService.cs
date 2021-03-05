@@ -66,6 +66,7 @@ namespace HotelDAL
                 row["PurchasePice"] = commodity.PurchasePice;
                 row["retail"] = commodity.Retail;
                 row["TypeNumber"] = commodity.Type.TypeNumber;
+                row["Path"] = commodity.Path;
                 HotelData.Data.Tables["CommodityTable"].Rows.Add(row);
             }
         }
@@ -101,6 +102,7 @@ namespace HotelDAL
                     row["PurchasePice"] = commodity.PurchasePice;
                     row["retail"] = commodity.Retail;
                     row["TypeNumber"] = commodity.Type.TypeNumber;
+                    row["Path"] = commodity.Path;
                     break;
                 }
             }

@@ -12,12 +12,16 @@ using HotelModel;
 
 namespace HotelAdmin
 {
+    /// <summary>
+    /// 房间管理窗口
+    /// </summary>
     public partial class RoomRegulate : Form
     {
         DataTable dt = new DataTable();//暂时保存数据
         RoomTypeManager rtm = new RoomTypeManager();
         RoomManager rm = new RoomManager();
         MoreTableManager mtm = new MoreTableManager();
+
         public RoomRegulate()
         {
             InitializeComponent();
@@ -159,6 +163,13 @@ namespace HotelAdmin
             };
             riau.roo = room;
             riau.Show();
+        }
+        ~RoomRegulate()
+        {
+            this.dt = null;
+            this.rtm = null;
+            this.rm = null;
+            this.mtm = null;
         }
     }
 }

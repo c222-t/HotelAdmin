@@ -62,7 +62,7 @@ namespace HotelDAL
             SqlParameter[] sp = {
                 new SqlParameter ("@password",at.Password),
                 new SqlParameter ("@AdministratorName",at.AdministratorName),
-                new SqlParameter ("@jurisdiction",at.jurisdiction)
+                new SqlParameter ("@jurisdiction",at.Jurisdiction)
             };
 
             return db.ExecuteNonQuery(sql.ToString (),sp);
