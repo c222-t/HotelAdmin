@@ -210,7 +210,7 @@ namespace HotelAdmin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Beige;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(510, 317);
             this.Controls.Add(this.txt_conut);
             this.Controls.Add(this.unit);
