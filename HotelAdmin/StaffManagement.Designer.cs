@@ -41,11 +41,12 @@
             this.Column2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Column4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.label2 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.辞退员工ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label2 = new System.Windows.Forms.Label();
             this.pnBan = new System.Windows.Forms.Panel();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
+            this.cbQuan = new System.Windows.Forms.ComboBox();
             this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.txtZHnew = new System.Windows.Forms.TextBox();
@@ -53,7 +54,6 @@
             this.txtPwd = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.cbQuan = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvAdministr)).BeginInit();
@@ -69,7 +69,7 @@
             this.返回ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(801, 25);
+            this.menuStrip1.Size = new System.Drawing.Size(1168, 25);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -99,6 +99,7 @@
             // 
             // txtZH
             // 
+            this.txtZH.BackColor = System.Drawing.Color.Beige;
             this.txtZH.Location = new System.Drawing.Point(295, 37);
             this.txtZH.Name = "txtZH";
             this.txtZH.Size = new System.Drawing.Size(100, 21);
@@ -106,20 +107,23 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(402, 36);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 3;
             this.button1.Text = "查找";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.dgvAdministr);
-            this.groupBox1.Location = new System.Drawing.Point(10, 65);
+            this.groupBox1.Location = new System.Drawing.Point(205, 83);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(779, 352);
+            this.groupBox1.Size = new System.Drawing.Size(789, 377);
             this.groupBox1.TabIndex = 4;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "在职员工";
@@ -150,7 +154,7 @@
             this.dgvAdministr.RowHeadersVisible = false;
             this.dgvAdministr.RowTemplate.Height = 23;
             this.dgvAdministr.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvAdministr.Size = new System.Drawing.Size(767, 326);
+            this.dgvAdministr.Size = new System.Drawing.Size(777, 351);
             this.dgvAdministr.TabIndex = 3;
             // 
             // Column1
@@ -181,15 +185,6 @@
             this.Column4.Name = "Column4";
             this.Column4.ReadOnly = true;
             // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(637, 43);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(143, 12);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "注：权限为1是超级管理员";
-            // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -204,10 +199,19 @@
             this.辞退员工ToolStripMenuItem.Text = "辞退员工";
             this.辞退员工ToolStripMenuItem.Click += new System.EventHandler(this.辞退员工ToolStripMenuItem_Click);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(637, 43);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(143, 12);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "注：权限为1是超级管理员";
+            // 
             // pnBan
             // 
             this.pnBan.Controls.Add(this.groupBox3);
-            this.pnBan.Location = new System.Drawing.Point(236, 43);
+            this.pnBan.Location = new System.Drawing.Point(455, 65);
             this.pnBan.Name = "pnBan";
             this.pnBan.Size = new System.Drawing.Size(255, 280);
             this.pnBan.TabIndex = 7;
@@ -223,35 +227,54 @@
             this.groupBox3.Controls.Add(this.txtPwd);
             this.groupBox3.Controls.Add(this.label4);
             this.groupBox3.Controls.Add(this.label5);
-            this.groupBox3.Location = new System.Drawing.Point(3, 4);
+            this.groupBox3.Location = new System.Drawing.Point(4, 4);
             this.groupBox3.Name = "groupBox3";
             this.groupBox3.Size = new System.Drawing.Size(248, 273);
             this.groupBox3.TabIndex = 4;
             this.groupBox3.TabStop = false;
             this.groupBox3.Text = "新增员工";
             // 
+            // cbQuan
+            // 
+            this.cbQuan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cbQuan.FormattingEnabled = true;
+            this.cbQuan.Items.AddRange(new object[] {
+            "1",
+            "0"});
+            this.cbQuan.Location = new System.Drawing.Point(108, 157);
+            this.cbQuan.Name = "cbQuan";
+            this.cbQuan.Size = new System.Drawing.Size(100, 20);
+            this.cbQuan.TabIndex = 4;
+            // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(133, 215);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 3;
             this.button2.Text = "取消";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // button3
             // 
+            this.button3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button3.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Location = new System.Drawing.Point(49, 215);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(75, 23);
             this.button3.TabIndex = 3;
             this.button3.Text = "添加";
-            this.button3.UseVisualStyleBackColor = true;
+            this.button3.UseVisualStyleBackColor = false;
             this.button3.Click += new System.EventHandler(this.Button3_Click);
             // 
             // txtZHnew
             // 
+            this.txtZHnew.BackColor = System.Drawing.Color.Beige;
             this.txtZHnew.Location = new System.Drawing.Point(108, 33);
             this.txtZHnew.Name = "txtZHnew";
             this.txtZHnew.Size = new System.Drawing.Size(100, 21);
@@ -269,6 +292,7 @@
             // 
             // txtPwd
             // 
+            this.txtPwd.BackColor = System.Drawing.Color.Beige;
             this.txtPwd.Location = new System.Drawing.Point(108, 94);
             this.txtPwd.Name = "txtPwd";
             this.txtPwd.Size = new System.Drawing.Size(100, 21);
@@ -294,24 +318,13 @@
             this.label5.TabIndex = 1;
             this.label5.Text = "账号：";
             // 
-            // cbQuan
-            // 
-            this.cbQuan.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cbQuan.FormattingEnabled = true;
-            this.cbQuan.Items.AddRange(new object[] {
-            "1",
-            "0"});
-            this.cbQuan.Location = new System.Drawing.Point(108, 157);
-            this.cbQuan.Name = "cbQuan";
-            this.cbQuan.Size = new System.Drawing.Size(100, 20);
-            this.cbQuan.TabIndex = 4;
-            // 
             // StaffManagement
             // 
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(801, 421);
+            this.BackColor = System.Drawing.Color.Beige;
+            this.ClientSize = new System.Drawing.Size(1168, 708);
             this.Controls.Add(this.pnBan);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.groupBox1);

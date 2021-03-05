@@ -59,6 +59,7 @@
             // 
             // txtRoomName
             // 
+            this.txtRoomName.BackColor = System.Drawing.Color.Beige;
             this.txtRoomName.Location = new System.Drawing.Point(92, 40);
             this.txtRoomName.MaxLength = 10;
             this.txtRoomName.Name = "txtRoomName";
@@ -68,6 +69,7 @@
             // 
             // cbRoomType
             // 
+            this.cbRoomType.BackColor = System.Drawing.Color.Beige;
             this.cbRoomType.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRoomType.FormattingEnabled = true;
             this.cbRoomType.Location = new System.Drawing.Point(92, 160);
@@ -77,22 +79,28 @@
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button1.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(25, 228);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
             this.button1.Text = "保存";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.Button1_Click);
             // 
             // button2
             // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button2.FlatAppearance.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(119)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Location = new System.Drawing.Point(141, 228);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 4;
             this.button2.Text = "取消";
-            this.button2.UseVisualStyleBackColor = true;
+            this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
             // label3
@@ -106,6 +114,7 @@
             // 
             // txtLou
             // 
+            this.txtLou.BackColor = System.Drawing.Color.Beige;
             this.txtLou.Location = new System.Drawing.Point(92, 104);
             this.txtLou.MaxLength = 5;
             this.txtLou.Name = "txtLou";
@@ -128,6 +137,7 @@
             this.AcceptButton = this.button1;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.Beige;
             this.ClientSize = new System.Drawing.Size(283, 294);
             this.Controls.Add(this.lblZhu);
             this.Controls.Add(this.button2);

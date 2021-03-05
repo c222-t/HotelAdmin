@@ -133,43 +133,31 @@ namespace HotelAdmin
             // 
             // label6
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label6.Location = new System.Drawing.Point(12, 222);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(51, 20);
-            this.label6.TabIndex = 22;
-            this.label6.Text = "类型：";
+            this.importPrice.BackColor = System.Drawing.Color.Beige;
+            this.importPrice.Location = new System.Drawing.Point(69, 150);
+            this.importPrice.Name = "importPrice";
+            this.importPrice.Size = new System.Drawing.Size(171, 21);
+            this.importPrice.TabIndex = 8;
+            this.importPrice.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.ImportPrice_KeyPress);
             // 
             // label5
             // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label5.Location = new System.Drawing.Point(12, 180);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(51, 20);
-            this.label5.TabIndex = 21;
-            this.label5.Text = "零售：";
+            this.Retail.BackColor = System.Drawing.Color.Beige;
+            this.Retail.Location = new System.Drawing.Point(69, 192);
+            this.Retail.Name = "Retail";
+            this.Retail.Size = new System.Drawing.Size(171, 21);
+            this.Retail.TabIndex = 9;
+            this.Retail.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Retail_KeyPress);
             // 
             // label4
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label4.Location = new System.Drawing.Point(12, 138);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(51, 20);
-            this.label4.TabIndex = 20;
-            this.label4.Text = "进价：";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label3.Location = new System.Drawing.Point(12, 93);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 20);
-            this.label3.TabIndex = 19;
-            this.label3.Text = "数量：";
+            this.Type.BackColor = System.Drawing.Color.Beige;
+            this.Type.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.Type.FormattingEnabled = true;
+            this.Type.Location = new System.Drawing.Point(69, 235);
+            this.Type.Name = "Type";
+            this.Type.Size = new System.Drawing.Size(171, 20);
+            this.Type.TabIndex = 10;
             // 
             // label2
             // 
@@ -183,19 +171,19 @@ namespace HotelAdmin
             // 
             // label1
             // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label1.Location = new System.Drawing.Point(12, 12);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
-            this.label1.TabIndex = 17;
-            this.label1.Text = "名称：";
+            this.txt_conut.BackColor = System.Drawing.Color.Beige;
+            this.txt_conut.Location = new System.Drawing.Point(69, 106);
+            this.txt_conut.Name = "txt_conut";
+            this.txt_conut.Size = new System.Drawing.Size(171, 21);
+            this.txt_conut.TabIndex = 13;
+            this.txt_conut.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Txt_conut_KeyPress);
             // 
             // GoodsRedact
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(503, 317);
+            this.BackColor = System.Drawing.Color.Beige;
+            this.ClientSize = new System.Drawing.Size(282, 317);
             this.Controls.Add(this.txt_conut);
             this.Controls.Add(this.unit);
             this.Controls.Add(this.Type);

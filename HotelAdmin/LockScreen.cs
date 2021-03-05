@@ -17,7 +17,7 @@ namespace HotelAdmin
         {
             try
             {
-                if (txtPwd.Text == "1")
+                if (txtPwd.Text == Cun.Pwd)
                 {
                     this.Close();
                 }
