@@ -245,10 +245,10 @@
             // 
             // Cancellation
             // 
-            this.取消预定ToolStripMenuItem.Name = "取消预定ToolStripMenuItem";
-            this.取消预定ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
-            this.取消预定ToolStripMenuItem.Text = "取消预定";
-            this.取消预定ToolStripMenuItem.Click += new System.EventHandler(this.取消预定ToolStripMenuItem_Click);
+            this.Cancellation.Name = "Cancellation";
+            this.Cancellation.Size = new System.Drawing.Size(124, 22);
+            this.Cancellation.Text = "取消预定";
+            this.Cancellation.Click += new System.EventHandler(this.Cancellation_Click_1);
             // 
             // OrderTable
             // 

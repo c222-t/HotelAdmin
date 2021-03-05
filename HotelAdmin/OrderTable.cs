@@ -45,18 +45,19 @@ namespace HotelAdmin
             frm = new CustomerOrder() { frm = this };
             frm.Show();
         }
-        // 取消预定
-        private void Cancellation_Click(object sender, EventArgs e)
-        {
-            OrderManager om = new OrderManager();
-            om.DeleteOrderRecord(new StatementTable() { OrderNumber = dgvYY.SelectedRows[0].Cells[0].Value.ToString().Trim() });
-            ShuaXin();
-        }
+
         ~OrderTable()
         {
             this.frm.Close();
             this.frm = null;
             this.stm = null;
+        }
+
+        private void Cancellation_Click_1(object sender, EventArgs e)
+        {
+            OrderManager om = new OrderManager();
+            om.DeleteOrderRecord(new StatementTable() { OrderNumber = dgvYY.SelectedRows[0].Cells[0].Value.ToString().Trim() });
+            ShuaXin();
         }
     }
 }
