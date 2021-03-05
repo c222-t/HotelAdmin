@@ -365,7 +365,7 @@ namespace HotelAdmin
             this.label34.AutoSize = true;
             this.label34.Font = new System.Drawing.Font("微软雅黑", 10.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label34.ForeColor = System.Drawing.Color.Black;
-            this.label34.Location = new System.Drawing.Point(314, 221);
+            this.label34.Location = new System.Drawing.Point(17, 12);
             this.label34.Name = "label34";
             this.label34.Size = new System.Drawing.Size(79, 20);
             this.label34.TabIndex = 27;
