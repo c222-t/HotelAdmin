@@ -144,6 +144,7 @@ namespace HotelAdmin
                     dicsocket.Add(socketSend.RemoteEndPoint.ToString(), socketSend);
                     //IP:链接成功
                     ShowMsg("链接成功");
+                    pbMessage.Visible = true;
                     //开启一个新线程不停的接收客户端发送过来的消息
                     Thread th = new Thread(Recive);
                     th.IsBackground = true;
@@ -213,6 +214,7 @@ namespace HotelAdmin
         private void Btn_MessageLists_Click_1(object sender, EventArgs e)
         {
             Pl_MessageLists.Visible = !Pl_MessageLists.Visible;
+            pbMessage.Visible = false;
         }
         // 打开营业查询界面
         private void Btn_OpenInquire_Click_1(object sender, EventArgs e)

@@ -29,6 +29,7 @@ namespace HotelAdmin
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(HotelWireshark));
             this.Pl_OptionList = new System.Windows.Forms.Panel();
             this.Btn_MessageLists = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
@@ -48,6 +49,7 @@ namespace HotelAdmin
             this.Pl_Interface = new System.Windows.Forms.Panel();
             this.Pl_MessageLists = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.txtContent = new System.Windows.Forms.TextBox();
             this.panel4 = new System.Windows.Forms.Panel();
             this.Dgv_GooesList = new System.Windows.Forms.DataGridView();
             this.CommodityName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -62,7 +64,7 @@ namespace HotelAdmin
             this.label17 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lvw_Themessagelist = new System.Windows.Forms.ListView();
-            this.txtContent = new System.Windows.Forms.TextBox();
+            this.pbMessage = new System.Windows.Forms.PictureBox();
             this.Pl_OptionList.SuspendLayout();
             this.Pl_MessageLists.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -70,11 +72,13 @@ namespace HotelAdmin
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_GooesList)).BeginInit();
             this.panel3.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pbMessage)).BeginInit();
             this.SuspendLayout();
             // 
             // Pl_OptionList
             // 
             this.Pl_OptionList.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(116)))), ((int)(((byte)(77)))), ((int)(((byte)(255)))));
+            this.Pl_OptionList.Controls.Add(this.pbMessage);
             this.Pl_OptionList.Controls.Add(this.Btn_MessageLists);
             this.Pl_OptionList.Controls.Add(this.label5);
             this.Pl_OptionList.Controls.Add(this.label4);
@@ -341,6 +345,18 @@ namespace HotelAdmin
             this.panel2.Size = new System.Drawing.Size(1184, 747);
             this.panel2.TabIndex = 1;
             // 
+            // txtContent
+            // 
+            this.txtContent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtContent.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtContent.Location = new System.Drawing.Point(0, 0);
+            this.txtContent.Multiline = true;
+            this.txtContent.Name = "txtContent";
+            this.txtContent.ReadOnly = true;
+            this.txtContent.Size = new System.Drawing.Size(1184, 747);
+            this.txtContent.TabIndex = 6;
+            // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.Color.White;
@@ -497,24 +513,22 @@ namespace HotelAdmin
             this.lvw_Themessagelist.TabIndex = 0;
             this.lvw_Themessagelist.UseCompatibleStateImageBehavior = false;
             // 
-            // txtContent
+            // pbMessage
             // 
-            this.txtContent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.txtContent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtContent.ForeColor = System.Drawing.SystemColors.WindowText;
-            this.txtContent.Location = new System.Drawing.Point(0, 0);
-            this.txtContent.Multiline = true;
-            this.txtContent.Name = "txtContent";
-            this.txtContent.ReadOnly = true;
-            this.txtContent.Size = new System.Drawing.Size(1184, 747);
-            this.txtContent.TabIndex = 6;
+            this.pbMessage.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pbMessage.BackgroundImage")));
+            this.pbMessage.Location = new System.Drawing.Point(138, 87);
+            this.pbMessage.Name = "pbMessage";
+            this.pbMessage.Size = new System.Drawing.Size(10, 10);
+            this.pbMessage.TabIndex = 17;
+            this.pbMessage.TabStop = false;
+            this.pbMessage.Visible = false;
             // 
             // HotelWireshark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1370, 760);
+            this.ClientSize = new System.Drawing.Size(1370, 749);
             this.Controls.Add(this.Pl_MessageLists);
             this.Controls.Add(this.Pl_Interface);
             this.Controls.Add(this.Pl_OptionList);
@@ -534,6 +548,7 @@ namespace HotelAdmin
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pbMessage)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -574,5 +589,6 @@ namespace HotelAdmin
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListView lvw_Themessagelist;
         private System.Windows.Forms.TextBox txtContent;
+        private System.Windows.Forms.PictureBox pbMessage;
     }
 }
