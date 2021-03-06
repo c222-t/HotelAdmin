@@ -119,6 +119,7 @@ namespace HotelAdmin
             this.label5.Size = new System.Drawing.Size(32, 17);
             this.label5.TabIndex = 15;
             this.label5.Text = "关于";
+            this.label5.Click += new System.EventHandler(this.Label5_Click);
             // 
             // label4
             // 
@@ -141,6 +142,7 @@ namespace HotelAdmin
             this.label3.Size = new System.Drawing.Size(32, 17);
             this.label3.TabIndex = 13;
             this.label3.Text = "挂起";
+            this.label3.Click += new System.EventHandler(this.HungWindow);
             // 
             // lab_name
             // 
@@ -505,7 +507,7 @@ namespace HotelAdmin
             this.Name = "HotelWireshark";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "酒店管理系统";
-            this.Load += new System.EventHandler(this.HotelWireshark_Load_1);
+            this.Load += new System.EventHandler(this.HotelWireshark_Load);
             this.Pl_OptionList.ResumeLayout(false);
             this.Pl_OptionList.PerformLayout();
             this.Pl_MessageLists.ResumeLayout(false);

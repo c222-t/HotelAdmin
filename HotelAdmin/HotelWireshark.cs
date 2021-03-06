@@ -17,6 +17,9 @@ namespace HotelAdmin
 {
     public partial class HotelWireshark : Form
     {
+        /// <summary>
+        /// 当前操作界面
+        /// </summary>
         private Form currentWindow = new Form();
         public HotelWireshark()
         {
