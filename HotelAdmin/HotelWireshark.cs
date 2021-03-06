@@ -17,6 +17,7 @@ namespace HotelAdmin
 {
     public partial class HotelWireshark : Form
     {
+        string ip = "";
         /// <summary>
         /// 当前操作界面
         /// </summary>
@@ -25,9 +26,174 @@ namespace HotelAdmin
         {
             InitializeComponent();
         }
+
+        #region 服务器
+        /// <summary>
+        /// 程序启动执行操作
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void Service()
+        {
+            //使CPU不检查线程
+            Control.CheckForIllegalCrossThreadCalls = false;
+            //调用IP的方法使他的返回值赋予txtIP.text
+            ip = IP();
+        }
+
+        /// <summary>
+        /// 自动获取本机IP4地址
+        /// </summary>
+        /// <returns>返回IP地址</returns>
+        static string IP()
+        {
+            try
+            {
+                //得到主机名
+                string HostName = Dns.GetHostName();
+                //提供一个IP地址容器
+                IPHostEntry IpEntry = Dns.GetHostEntry(HostName);
+                //对IP地址列表进行循环
+                for (int i = 0; i < IpEntry.AddressList.Length; i++)
+                {
+                    //从IP地址列表中筛选出IPv4类型的IP地址
+                    //AddressFamily.InterNetwork表示此IP为IPv4,
+                    //AddressFamily.InterNetworkV6表示此地址为IPv6类型
+
+                    //如果获取的IP地址族格式等于IP4地址格式
+                    if (IpEntry.AddressList[i].AddressFamily == AddressFamily.InterNetwork)
+                    {
+                        //返回获得的IP4地址
+                        return IpEntry.AddressList[i].ToString();
+                    }
+                }
+                return "";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("获取本机IP出错:" + ex.Message);
+                return "";
+            }
+        }
+        //创建一个Socket
+        Socket socketWatch;
+        private void ListenNew()
+        {
+            try
+            {
+                //点击开始侦听的时候，在服务器创建一个负责侦听IP地址跟端口号的Socket
+                socketWatch = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.IP);
+                IPAddress iP = IPAddress.Any;
+                //创建端口号对象
+                IPEndPoint point = new IPEndPoint(iP, Convert.ToInt32("52000"));
+                //侦听   绑定侦听端口point
+                socketWatch.Bind(point);
+                //调用ShowMsg方法把“侦听开始”显示到文本框上
+                ShowMsg("连接服务器成功！！");
+                //设置1S内最大的连接数
+                socketWatch.Listen(100);
+            }
+            catch
+            { }
+
+
+            try
+            {
+                //创建一个新的子线程
+                Thread th = new Thread(Listen);
+                //设置该线程为后台线程
+                th.IsBackground = true;
+
+                th.Start(socketWatch);
+            }
+            catch //(Exception ex)
+            {
+                // MessageBox.Show(ex.ToString());
+            }
+
+        }
+        Socket socketSend;
+        //将所有的IP地址和端口号存入集合中
+        Dictionary<string, Socket> dicsocket = new Dictionary<string, Socket>();
+
+        /// <summary>
+        /// 给文本框添加内容
+        /// </summary>
+        /// <param name="str">字符串</param>
+        void ShowMsg(string str)
+        {
+            //显示在txtContenr文本框上
+            txtContent.AppendText(str + "\r\n\n");
+        }
+
+
+        /// <summary>
+        /// 等待客户端的链接  并且创建一个负责通信的Socket
+        /// </summary>
+        /// <param name="o"></param>
+        void Listen(object o)
+        {
+            socketWatch = o as Socket;
+            //等待客户端的链接  并且创建一个负责通信的Socket
+            while (true)
+            {
+                try
+                {
+                    socketSend = socketWatch.Accept();//错误执行此操作前必须使用Bing方法
+                    //将所有的IP地址和端口号添加到集合中
+                    dicsocket.Add(socketSend.RemoteEndPoint.ToString(), socketSend);
+                    //IP:链接成功
+                    ShowMsg("链接成功");
+                    //开启一个新线程不停的接收客户端发送过来的消息
+                    Thread th = new Thread(Recive);
+                    th.IsBackground = true;
+                    th.Start(socketSend);
+                }
+                catch//(Exception e)
+                {
+                    //MessageBox.Show(e.ToString());
+                }
+
+            }
+        }
+
+        /// <summary>
+        /// 服务器端不停的接受客户端发来的信息
+        /// </summary>
+        /// <param name="o"></param>
+        void Recive(object o)
+        {
+            Socket socketSend = o as Socket;
+            while (true)
+            {
+                try
+
+                {
+                    //客户端链接成功后，服务器应该接受客户端发来的消息
+                    byte[] buffet = new byte[1024 * 1024 * 2];
+                    //实际接受到的有效字节数
+                    int r = socketSend.Receive(buffet);
+                    if (r == 0)
+                    {
+                        break;
+                    }
+                    string str = Encoding.UTF8.GetString(buffet, 0, r);
+                    ShowMsg(str+"\n");
+                }
+                catch//(Exception e)
+                {
+                    //MessageBox.Show(e.ToString());
+                }
+            }
+        }
+
+        #endregion
+
         // 加载初始化信息
         private void HotelWireshark_Load(object sender, EventArgs e)
         {
+            Service();
+            ListenNew();
             this.lab_name.Text = Cun.Name;                                  // 获取当前用户名称
         }
 

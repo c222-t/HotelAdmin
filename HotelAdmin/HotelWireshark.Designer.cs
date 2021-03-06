@@ -62,8 +62,10 @@ namespace HotelAdmin
             this.label17 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lvw_Themessagelist = new System.Windows.Forms.ListView();
+            this.txtContent = new System.Windows.Forms.TextBox();
             this.Pl_OptionList.SuspendLayout();
             this.Pl_MessageLists.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_GooesList)).BeginInit();
             this.panel3.SuspendLayout();
@@ -331,6 +333,7 @@ namespace HotelAdmin
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.txtContent);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Font = new System.Drawing.Font("微软雅黑", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.panel2.Location = new System.Drawing.Point(0, 0);
@@ -494,6 +497,18 @@ namespace HotelAdmin
             this.lvw_Themessagelist.TabIndex = 0;
             this.lvw_Themessagelist.UseCompatibleStateImageBehavior = false;
             // 
+            // txtContent
+            // 
+            this.txtContent.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.txtContent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.txtContent.ForeColor = System.Drawing.SystemColors.WindowText;
+            this.txtContent.Location = new System.Drawing.Point(0, 0);
+            this.txtContent.Multiline = true;
+            this.txtContent.Name = "txtContent";
+            this.txtContent.ReadOnly = true;
+            this.txtContent.Size = new System.Drawing.Size(1184, 747);
+            this.txtContent.TabIndex = 6;
+            // 
             // HotelWireshark
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -511,6 +526,8 @@ namespace HotelAdmin
             this.Pl_OptionList.ResumeLayout(false);
             this.Pl_OptionList.PerformLayout();
             this.Pl_MessageLists.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.Dgv_GooesList)).EndInit();
@@ -556,5 +573,6 @@ namespace HotelAdmin
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.ListView lvw_Themessagelist;
+        private System.Windows.Forms.TextBox txtContent;
     }
 }
