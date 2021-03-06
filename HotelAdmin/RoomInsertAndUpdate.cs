@@ -120,20 +120,15 @@ namespace HotelAdmin
         /// <param name="e"></param>
         private void TxtRoomName_TextChanged(object sender, EventArgs e)
         {
-            if (this.Text == "增加房间")
-            {
-                return;
-            }
-
             lblZhu.Visible = false;
 
-            DataTable dt = rm.RoomTable();
+            DataTable dt = rm.Room();
 
             foreach (DataRow item in dt.Rows)
             {
                 if (item["RoomNumber"].ToString().Trim() == txtRoomName.Text.Trim())
                 {
-                    if (item["RoomNumber"].ToString().Trim() == roo.RoomNumber.Trim())
+                    if (this.Text=="增加房间"?false:item["RoomNumber"].ToString().Trim() == roo.RoomNumber.Trim())
                     {
                         continue;
                     }

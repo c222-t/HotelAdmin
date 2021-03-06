@@ -60,6 +60,14 @@ namespace HotelBLL
             return service.RoomUpdate(num,room);
         }
 
+        /// <summary>
+        /// 返回整个房间表
+        /// </summary>
+        /// <returns></returns>
+        public DataTable Room()
+        {
+            return service.Room();
+        }
 
     }
 }

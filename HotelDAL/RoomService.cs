@@ -139,6 +139,10 @@ namespace HotelDAL
             return HotelData.Data.Tables["RoomSchedules"];
         }
 
+        public DataTable Room()
+        {
+            return HotelData.Data.Tables["RoomSchedules"];
+        }
 
 
     }
