@@ -28,7 +28,7 @@ namespace HotelDAL
                                 select row;
                     return table.CopyToDataTable();
                 }
-                catch {
+                catch (Exception ee){
                     return null;
                 }
             }

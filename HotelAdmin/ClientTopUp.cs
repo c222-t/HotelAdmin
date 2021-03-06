@@ -75,7 +75,7 @@ namespace HotelAdmin
             try
             {
                 // 根据充值时间查询满足条件的充值记录
-                var gain = from row in rechargeManager.UserRechargeTable(PhoneTime.ToString(), DateTime.Now.AddDays(1).ToString()).AsEnumerable()
+                var gain = from row in rechargeManager.UserRechargeTable(PhoneTime.Value.ToString(), DateTime.Now.AddDays(1).ToString()).AsEnumerable()
                            join arr in new CommodityManager().GetCommodityRecord(-1).AsEnumerable()
                            on row["GiftGiving"] equals arr["CommodityName"]
                            select new {

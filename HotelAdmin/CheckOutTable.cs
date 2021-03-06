@@ -108,7 +108,7 @@ namespace HotelAdmin
             {
                 txtLing.ForeColor = Color.Red;
             }
-
+            
         }
 
         /// <summary>
@@ -215,6 +215,7 @@ namespace HotelAdmin
             txtYinFu.Text = "";
             txtZon.Text = "";
             cbFuKuan.Text = "";
+            txtZon.Enabled = false;
         }
         ~CheckOutTable()
         {
