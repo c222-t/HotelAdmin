@@ -424,9 +424,10 @@ namespace HotelAdmin
         #endregion
 
         // 主界面关闭时将系统临时数据上传到数据库
-        private void HotelWireshark_FormClosing(object sender, FormClosingEventArgs e)
+        private void HotelWireshark_FormClosing(object sender, FormClosedEventArgs e)
         {
             new AdministratorManager().UploadData();
+            Application.Exit();
         }
     }
 }
