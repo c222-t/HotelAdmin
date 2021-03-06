@@ -257,5 +257,7 @@ namespace HotelAdmin
         {
             new AdministratorManager().UploadData();
         }
+
+
     }
 }
